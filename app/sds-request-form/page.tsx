@@ -62,7 +62,7 @@ export default function SDSRequestPage() {
   };
 
   return (
-    <section className="min-h-screen bg-[#f5f5f7] py-28 px-4 md:px-8 lg:px-16 font-sans antialiased" style={{ color: "var(--color-dark-red)" }}>
+    <section className="min-h-screen bg-[#f5f5f7] py-32 px-4 md:px-8 lg:px-16 font-sans antialiased" style={{ color: "var(--color-dark-red)" }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

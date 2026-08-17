@@ -224,14 +224,17 @@ export default function ServicesHorizontal() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-red-950 font-sans antialiased overflow-hidden text-white flex flex-col"
+      className="relative w-full h-screen bg-[#f5f5f7] font-sans antialiased overflow-hidden text-white flex flex-col"
     >
       {/* HEADER */}
       <div className="w-full px-6 md:px-16 pt-16 md:pt-24 shrink-0">
         <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4">
           Our Core <span className="text-red-600">Services</span>
         </h2>
-        <p className="text-white/70 text-sm md:text-base font-medium max-w-2xl">
+        <p
+          className="text-white/70 text-sm md:text-base font-medium max-w-2xl"
+          style={{ color: "var(--color-dark-red)" }}
+        >
           Scroll to explore our comprehensive range of chemical solutions and
           expertise.
         </p>
@@ -292,7 +295,10 @@ export default function ServicesHorizontal() {
 
                 {/* Bottom Row: Title & Description */}
                 <div className="mt-auto">
-                  <h3 className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight">
+                  <h3
+                    className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
+                    style={{ color: "var(--color-white)" }}
+                  >
                     {item.title}
                   </h3>
                   <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">

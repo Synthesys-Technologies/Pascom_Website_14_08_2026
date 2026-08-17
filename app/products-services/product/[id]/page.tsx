@@ -2337,12 +2337,12 @@ export default function ProductDetailsPage() {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-red-950 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ backgroundColor: "var(--color-primary-red)" }}>
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Product Not Found</h1>
+          <h1 className="text-4xl font-bold text-white mb-4" style={{ color: "var(--color-white)" }}>Product Not Found</h1>
           <p className="text-white/70 mb-8">The product you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/products-services">
-            <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition-colors">
+            <button className="text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg" style={{ backgroundColor: "var(--color-dark-red)" }} onMouseEnter={(e) => e.currentTarget.style.opacity = "0.9"} onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
               Back to Products
             </button>
           </Link>
@@ -2352,17 +2352,17 @@ export default function ProductDetailsPage() {
   }
 
   return (
-    <div className="bg-red-950 min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--color-primary-red)" }}>
       {/* Hero Section */}
-      <section className="w-full bg-linear-to-br from-red-900 to-red-950 py-24 px-4 md:px-8 border-b border-red-700/30">
+      <section className="w-full py-32 px-4 md:px-8" style={{ backgroundColor: "var(--color-primary-red)", borderBottom: "1px solid rgba(198, 40, 40, 0.3)" }}>
         <div className="max-w-7xl mx-auto">
-          <Link href="/products-services" className="inline-flex items-center gap-3 text-red-300 hover:text-red-200 hover:bg-red-900/40 mb-20 py-3 px-5 rounded-lg transition-all font-semibold text-base">
+          <Link href="/products-services" className="inline-flex items-center gap-3 mb-20 py-3 px-5 rounded-lg transition-all font-semibold text-base" style={{ color: "rgba(255, 255, 255, 0.8)" }} onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-white)", e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.4)")} onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.8)", e.currentTarget.style.backgroundColor = "transparent")}>
             <i className="fa-solid fa-arrow-left text-base"></i> Back to Products
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Product Image */}
-            <div className="relative h-96 rounded-2xl overflow-hidden bg-black/30 border border-red-700/30">
+            <div className="relative h-96 rounded-2xl overflow-hidden bg-black/30" style={{ border: "1px solid rgba(198, 40, 40, 0.3)" }}>
               <Image
                 src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop"
                 alt={product.name}
@@ -2374,11 +2374,11 @@ export default function ProductDetailsPage() {
             {/* Product Info */}
             <div className="flex flex-col">
               <div className="mb-6">
-                <span className="bg-red-600/40 border border-red-500/60 px-4 py-2 rounded-full text-red-200 text-sm font-bold tracking-wider uppercase inline-block mb-4">
+                <span className="border px-4 py-2 rounded-full text-sm font-bold tracking-wider uppercase inline-block mb-4 text-white" style={{ backgroundColor: "rgba(198, 40, 40, 0.4)", borderColor: "rgba(198, 40, 40, 0.6)" }}>
                   {product.category}
                 </span>
-                <h1 className="text-5xl font-bold text-white mb-4">{product.name}</h1>
-                <p className="text-white/70 text-lg leading-relaxed">
+                <h1 className="text-5xl font-bold mb-4" style={{ color: "var(--color-white)" }}>{product.name}</h1>
+                <p className="text-lg leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
                   {product.description}
                 </p>
               </div>
@@ -2386,34 +2386,34 @@ export default function ProductDetailsPage() {
               {/* Key Specs */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {product.cas_number && (
-                  <div className="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
-                    <p className="text-red-300 text-sm font-semibold mb-1">CAS Number</p>
-                    <p className="text-white font-mono">{product.cas_number}</p>
+                  <div className="rounded-lg p-4 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                    <p className="text-sm font-semibold mb-1" style={{ color: "rgba(255, 255, 255, 0.9)" }}>CAS Number</p>
+                    <p className="font-mono" style={{ color: "var(--color-white)" }}>{product.cas_number}</p>
                   </div>
                 )}
                 {product.concentration && (
-                  <div className="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
-                    <p className="text-red-300 text-sm font-semibold mb-1">Concentration</p>
-                    <p className="text-white">{product.concentration}</p>
+                  <div className="rounded-lg p-4 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                    <p className="text-sm font-semibold mb-1" style={{ color: "rgba(255, 255, 255, 0.9)" }}>Concentration</p>
+                    <p style={{ color: "var(--color-white)" }}>{product.concentration}</p>
                   </div>
                 )}
                 {product.ph && (
-                  <div className="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
-                    <p className="text-red-300 text-sm font-semibold mb-1">pH</p>
-                    <p className="text-white">{product.ph}</p>
+                  <div className="rounded-lg p-4 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                    <p className="text-sm font-semibold mb-1" style={{ color: "rgba(255, 255, 255, 0.9)" }}>pH</p>
+                    <p style={{ color: "var(--color-white)" }}>{product.ph}</p>
                   </div>
                 )}
                 {product.density && (
-                  <div className="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
-                    <p className="text-red-300 text-sm font-semibold mb-1">Density</p>
-                    <p className="text-white">{product.density}</p>
+                  <div className="rounded-lg p-4 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                    <p className="text-sm font-semibold mb-1" style={{ color: "rgba(255, 255, 255, 0.9)" }}>Density</p>
+                    <p style={{ color: "var(--color-white)" }}>{product.density}</p>
                   </div>
                 )}
               </div>
 
               {/* Action Button */}
               <Link href={`/products-services/enquiry/${productId}`}>
-                <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-full transition-all shadow-lg hover:shadow-xl">
+                <button className="w-full text-white font-bold py-4 rounded-full transition-all shadow-lg" style={{ backgroundColor: "var(--color-dark-red)" }} onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9", e.currentTarget.style.boxShadow = "0 12px 25px rgba(69, 10, 10, 0.5)")} onMouseLeave={(e) => (e.currentTarget.style.opacity = "1", e.currentTarget.style.boxShadow = "0 8px 16px rgba(69, 10, 10, 0.3)")}>
                   Request Information
                 </button>
               </Link>
@@ -2426,7 +2426,7 @@ export default function ProductDetailsPage() {
       <section className="w-full py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Tab Navigation */}
-          <div className="flex flex-wrap gap-4 mb-8 border-b border-red-700/30 pb-4">
+          <div className="flex flex-wrap gap-4 mb-8 pb-4" style={{ borderBottom: "1px solid rgba(198, 40, 40, 0.3)" }}>
             {[
               { id: 'overview', label: 'Overview', icon: 'fa-flask' },
               { id: 'properties', label: 'Properties', icon: 'fa-vial' },
@@ -2436,11 +2436,10 @@ export default function ProductDetailsPage() {
               <button
                 key={tab.id}
                 onClick={() => setSelectedTab(tab.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 ${
-                  selectedTab === tab.id
-                    ? 'bg-red-600 text-white'
-                    : 'bg-red-900/20 text-white/70 hover:text-white hover:bg-red-900/40'
-                }`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 text-white`}
+                style={selectedTab === tab.id ? { backgroundColor: "var(--color-dark-red)" } : { backgroundColor: "rgba(69, 10, 10, 0.3)", color: "rgba(255, 255, 255, 0.7)" }}
+                onMouseEnter={(e) => selectedTab !== tab.id && (e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.5)", e.currentTarget.style.color = "var(--color-white)")}
+                onMouseLeave={(e) => selectedTab !== tab.id && (e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.3)", e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)")}
               >
                 <i className={`fa-solid ${tab.icon} text-sm`}></i>
                 {tab.label}
@@ -2449,21 +2448,21 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* Tab Content */}
-          <div className="bg-red-900/20 border border-red-700/30 rounded-2xl p-8">
+          <div className="rounded-2xl p-8 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.2)", border: "1px solid rgba(198, 40, 40, 0.3)" }}>
             {/* Overview Tab */}
             {selectedTab === 'overview' && (
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white mb-6">Product Overview</h2>
-                <p className="text-white/80 leading-relaxed text-lg">
+                <h2 className="text-3xl font-bold mb-6" style={{ color: "var(--color-white)" }}>Product Overview</h2>
+                <p className="leading-relaxed text-lg" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
                   {product.description}
                 </p>
                 {product.features && (
                   <div className="mt-8">
-                    <h3 className="text-2xl font-semibold text-red-300 mb-4">Key Features</h3>
+                    <h3 className="text-2xl font-semibold mb-4" style={{ color: "var(--color-dark-red)" }}>Key Features</h3>
                     <ul className="space-y-3">
                       {product.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-3 text-white/80">
-                          <i className="fa-solid fa-check text-red-400"></i>
+                        <li key={i} className="flex items-center gap-3" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
+                          <i className="fa-solid fa-check" style={{ color: "var(--color-dark-red)" }}></i>
                           {feature}
                         </li>
                       ))}
@@ -2476,42 +2475,42 @@ export default function ProductDetailsPage() {
             {/* Properties Tab */}
             {selectedTab === 'properties' && (
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white mb-6">Physical Properties</h2>
+                <h2 className="text-3xl font-bold mb-6" style={{ color: "var(--color-white)" }}>Physical Properties</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {product.appearance && (
-                    <div className="bg-red-900/30 rounded-lg p-5 border border-red-700/40">
-                      <p className="text-red-300 font-semibold mb-2">Appearance</p>
-                      <p className="text-white/80">{product.appearance}</p>
+                    <div className="rounded-lg p-5 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Appearance</p>
+                      <p style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.appearance}</p>
                     </div>
                   )}
                   {product.odor && (
-                    <div className="bg-red-900/30 rounded-lg p-5 border border-red-700/40">
-                      <p className="text-red-300 font-semibold mb-2">Odor</p>
-                      <p className="text-white/80">{product.odor}</p>
+                    <div className="rounded-lg p-5 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Odor</p>
+                      <p style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.odor}</p>
                     </div>
                   )}
                   {product.boiling_point && (
-                    <div className="bg-red-900/30 rounded-lg p-5 border border-red-700/40">
-                      <p className="text-red-300 font-semibold mb-2">Boiling Point</p>
-                      <p className="text-white/80">{product.boiling_point}</p>
+                    <div className="rounded-lg p-5 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Boiling Point</p>
+                      <p style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.boiling_point}</p>
                     </div>
                   )}
                   {product.freezing_point && (
-                    <div className="bg-red-900/30 rounded-lg p-5 border border-red-700/40">
-                      <p className="text-red-300 font-semibold mb-2">Freezing Point</p>
-                      <p className="text-white/80">{product.freezing_point}</p>
+                    <div className="rounded-lg p-5 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Freezing Point</p>
+                      <p style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.freezing_point}</p>
                     </div>
                   )}
                   {product.solubility && (
-                    <div className="bg-red-900/30 rounded-lg p-5 border border-red-700/40">
-                      <p className="text-red-300 font-semibold mb-2">Solubility</p>
-                      <p className="text-white/80">{product.solubility}</p>
+                    <div className="rounded-lg p-5 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Solubility</p>
+                      <p style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.solubility}</p>
                     </div>
                   )}
                   {product.stability && (
-                    <div className="bg-red-900/30 rounded-lg p-5 border border-red-700/40">
-                      <p className="text-red-300 font-semibold mb-2">Stability</p>
-                      <p className="text-white/80">{product.stability}</p>
+                    <div className="rounded-lg p-5 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Stability</p>
+                      <p style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.stability}</p>
                     </div>
                   )}
                 </div>
@@ -2521,12 +2520,12 @@ export default function ProductDetailsPage() {
             {/* Applications Tab */}
             {selectedTab === 'applications' && (
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white mb-6">Applications</h2>
+                <h2 className="text-3xl font-bold mb-6" style={{ color: "var(--color-white)" }}>Applications</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {product.applications?.map((app, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-red-900/30 rounded-lg p-4 border border-red-700/40">
-                      <i className="fa-solid fa-circle-check text-red-400 text-lg shrink-0"></i>
-                      <span className="text-white/80">{app}</span>
+                    <div key={i} className="flex items-center gap-3 rounded-lg p-4 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                      <i className="fa-solid fa-circle-check text-lg shrink-0" style={{ color: "var(--color-dark-red)" }}></i>
+                      <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>{app}</span>
                     </div>
                   ))}
                 </div>
@@ -2538,25 +2537,25 @@ export default function ProductDetailsPage() {
               <div className="space-y-8">
                 {product.safety_notes && (
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                      <i className="fa-solid fa-triangle-exclamation text-red-400"></i> Safety Information
+                    <h2 className="text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
+                      <i className="fa-solid fa-triangle-exclamation" style={{ color: "var(--color-dark-red)" }}></i> Safety Information
                     </h2>
-                    <div className="bg-red-900/40 border border-red-600/40 rounded-lg p-6">
-                      <p className="text-white/80 leading-relaxed">{product.safety_notes}</p>
+                    <div className="rounded-lg p-6 text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.4)", border: "1px solid rgba(198, 40, 40, 0.5)" }}>
+                      <p className="leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.8)" }}>{product.safety_notes}</p>
                     </div>
                   </div>
                 )}
 
                 {product.packaging && (
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                      <i className="fa-solid fa-box text-red-400"></i> Packaging Options
+                    <h2 className="text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
+                      <i className="fa-solid fa-box" style={{ color: "var(--color-dark-red)" }}></i> Packaging Options
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                       {product.packaging.map((pkg, i) => (
-                        <div key={i} className="bg-red-900/30 border border-red-700/40 rounded-lg p-5 text-center">
-                          <i className="fa-solid fa-cube text-red-400 text-2xl mb-3 block"></i>
-                          <p className="text-white/80 font-medium">{pkg}</p>
+                        <div key={i} className="rounded-lg p-5 text-center text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.4)" }}>
+                          <i className="fa-solid fa-cube text-2xl mb-3 block" style={{ color: "var(--color-dark-red)" }}></i>
+                          <p className="font-medium" style={{ color: "rgba(255, 255, 255, 0.8)" }}>{pkg}</p>
                         </div>
                       ))}
                     </div>
@@ -2569,44 +2568,43 @@ export default function ProductDetailsPage() {
       </section>
 
       {/* Related Info Section */}
-      <section className="w-full py-16 px-4 md:px-8 border-t border-red-700/30">
+      <section className="w-full py-16 px-4 md:px-8" style={{ backgroundColor: "var(--color-primary-red)", borderTop: "1px solid rgba(198, 40, 40, 0.3)" }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-red-900/20 border border-red-700/30 rounded-2xl p-8 text-center">
-              <i className="fa-solid fa-globe text-4xl text-red-400 mb-4"></i>
-              <p className="text-red-300 font-semibold mb-2">Country of Origin</p>
-              <p className="text-white text-lg">{product.country}</p>
+            <div className="rounded-2xl p-8 text-center text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.3)" }}>
+              <i className="fa-solid fa-globe text-4xl mb-4" style={{ color: "var(--color-dark-red)" }}></i>
+              <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Country of Origin</p>
+              <p className="text-lg" style={{ color: "var(--color-white)" }}>{product.country}</p>
             </div>
-            <div className="bg-red-900/20 border border-red-700/30 rounded-2xl p-8 text-center">
-              <i className="fa-solid fa-building text-4xl text-red-400 mb-4"></i>
-              <p className="text-red-300 font-semibold mb-2">Supplier</p>
-              <p className="text-white text-lg">{product.supplier}</p>
+            <div className="rounded-2xl p-8 text-center text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.3)" }}>
+              <i className="fa-solid fa-building text-4xl mb-4" style={{ color: "var(--color-dark-red)" }}></i>
+              <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Supplier</p>
+              <p className="text-lg" style={{ color: "var(--color-white)" }}>{product.supplier}</p>
             </div>
-            <div className="bg-red-900/20 border border-red-700/30 rounded-2xl p-8 text-center">
-              <i className="fa-solid fa-tag text-4xl text-red-400 mb-4"></i>
-              <p className="text-red-300 font-semibold mb-2">Category</p>
-              <p className="text-white text-lg">{product.category}</p>
+            <div className="rounded-2xl p-8 text-center text-white" style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(198, 40, 40, 0.3)" }}>
+              <i className="fa-solid fa-tag text-4xl mb-4" style={{ color: "var(--color-dark-red)" }}></i>
+              <p className="font-semibold mb-2" style={{ color: "var(--color-dark-red)" }}>Category</p>
+              <p className="text-lg" style={{ color: "var(--color-white)" }}>{product.category}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-16 px-4 md:px-8">
-        <div className="max-w-4xl mx-auto bg-linear-to-br from-red-600 to-red-800 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+      <section className="w-full py-16 px-4 md:px-8" style={{ backgroundColor: "var(--color-primary-red)" }}>
+        <div className="max-w-4xl mx-auto rounded-2xl p-12 text-center text-white" style={{ background: "linear-gradient(135deg, var(--color-primary-red) 0%, var(--color-dark-red) 100%)" }}>
+          <h2 className="text-4xl font-bold mb-6" style={{ color: "var(--color-white)" }}>Ready to Get Started?</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
             Need more information about this product? Request a quote, download the SDS, or contact our team directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* href={`/products-services/enquiry/${productId}`} */}
             <Link href="/products-inqurie-form" target='_blank'>
-              <button className="bg-white text-red-600 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2">
+              <button className="font-bold px-8 py-4 rounded-full transition-colors shadow-lg flex items-center gap-2" style={{ backgroundColor: "var(--color-white)", color: "var(--color-primary-red)" }} onMouseEnter={(e) => e.currentTarget.style.opacity = "0.9"} onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
                 <i className="fa-solid fa-envelope"></i> Enquiry
               </button>
             </Link>
             <Link href="/sds-request-form" target='_blank'>
-              <button className="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2">
+              <button className="font-bold px-8 py-4 rounded-full transition-colors flex items-center gap-2 text-white" style={{ border: "2px solid white" }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)"} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}>
                 <i className="fa-solid fa-file-pdf"></i> Request SDS
               </button>
             </Link>

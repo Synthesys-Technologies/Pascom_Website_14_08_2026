@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
@@ -158,12 +158,11 @@ const services = [
   },
 ];
 
-
 export default function EnquiryPage() {
   const params = useParams();
   const serviceId = parseInt(params.id as string);
-  const selectedService = services.find(s => s.id === serviceId);
-  const otherServices = services.filter(s => s.id !== serviceId);
+  const selectedService = services.find((s) => s.id === serviceId);
+  const otherServices = services.filter((s) => s.id !== serviceId);
 
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -181,13 +180,13 @@ export default function EnquiryPage() {
         return -(track.scrollWidth - window.innerWidth);
       };
 
-      const tween = gsap.to(track, {
+      gsap.to(track, {
         x: getScrollAmount,
-        ease: 'none',
+        ease: "none",
         scrollTrigger: {
           trigger: section,
           pin: true,
-          start: 'top top',
+          start: "top top",
           end: () => `+=${track.scrollWidth - window.innerWidth}`,
           scrub: 1,
           invalidateOnRefresh: true,
@@ -196,28 +195,13 @@ export default function EnquiryPage() {
 
       gsap.to(progress, {
         scaleX: 1,
-        ease: 'none',
+        ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: 'top top',
+          start: "top top",
           end: () => `+=${track.scrollWidth - window.innerWidth}`,
           scrub: 0.1,
         },
-      });
-
-      const images = gsap.utils.toArray('.card-img-other') as HTMLElement[];
-      images.forEach((img) => {
-        gsap.to(img, {
-          xPercent: 30,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: img.parentElement,
-            containerAnimation: tween,
-            start: 'left right',
-            end: 'right left',
-            scrub: true,
-          },
-        });
       });
     }, sectionRef);
 
@@ -227,24 +211,34 @@ export default function EnquiryPage() {
   return (
     <div>
       {/* Enquiry Form Section */}
-      <section className="min-h-screen bg-red-950 p-4 md:p-10 flex items-center justify-center font-sans antialiased">
-
+      <section
+        className="min-h-screen p-4 md:py-32 flex items-center justify-center font-sans antialiased"
+        style={{ backgroundColor: "var(--color-primary-red)" }}
+      >
         {/* Main App Window */}
         <div className="w-full max-w-7xl p-8 md:p-12 lg:p-16 flex flex-col backdrop-blur-sm">
-
           {/* 2-Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-
             {/* LEFT COLUMN: Text & Contact Info */}
             <div className="flex flex-col justify-between">
               <div>
-                <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-bold leading-[1.05] tracking-tight text-white mb-6">
-                  {selectedService ? `Inquire about ${selectedService.title}` : 'Bring the specs.'}
+                <h1
+                  className="text-5xl md:text-6xl lg:text-[4rem] font-bold leading-[1.05] tracking-tight text-white mb-6"
+                  style={{ color: "var(--color-white)" }}
+                >
+                  {selectedService
+                    ? `Inquire about ${selectedService.title}`
+                    : "Bring the specs."}
                   <br />
-                  {!selectedService && <span className="text-red-400">We&apos;ll blend it.</span>}
+                  {!selectedService && (
+                    <span style={{ color: "var(--color-dark-red)" }}>
+                      We&apos;ll blend it.
+                    </span>
+                  )}
                 </h1>
-                <p className="text-[15px] text-white/70 font-medium leading-relaxed max-w-sm mb-6">
-                  We read every enquiry personally. Reaching out costs you nothing yet, but it could optimize your entire supply chain.
+                <p className="text-lg md:text-2xl text-white/80 font-medium leading-relaxed max-w-sm mb-6">
+                  We read every enquiry personally. Reaching out costs you
+                  nothing yet, but it could optimize your entire supply chain.
                 </p>
 
                 {/* Service Details */}
@@ -252,23 +246,53 @@ export default function EnquiryPage() {
                   <div className="space-y-4">
                     {/* Service Info Pills */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-red-600/40 border border-red-500/60 px-4 py-2 rounded-full text-white text-xs font-bold tracking-wider uppercase">
+                      <span
+                        className="backdrop-blur-md border px-4 py-2 rounded-full text-white text-xs font-bold tracking-wider uppercase"
+                        style={{
+                          backgroundColor: "rgba(198, 40, 40, 0.8)",
+                          borderColor: "rgba(255, 255, 255, 0.3)",
+                        }}
+                      >
                         {selectedService.badge}
                       </span>
-                      <span className="bg-red-900/30 border border-red-700/40 px-4 py-2 rounded-full text-white/80 text-xs font-semibold flex items-center gap-1.5">
-                        <i className="fa-solid fa-star text-yellow-400 text-[10px]"></i> {selectedService.rating}
+                      <span
+                        className="border px-4 py-2 rounded-full text-white/80 text-xs font-semibold flex items-center gap-1.5"
+                        style={{
+                          backgroundColor: "rgba(69, 10, 10, 0.4)",
+                          borderColor: "rgba(255, 255, 255, 0.2)",
+                        }}
+                      >
+                        <i className="fa-solid fa-star text-yellow-400 text-[10px]"></i>{" "}
+                        {selectedService.rating}
                       </span>
                       {selectedService.tags.map((tag, i) => (
-                        <span key={i} className="bg-red-900/30 border border-red-700/40 px-4 py-2 rounded-full text-white/70 text-xs font-medium">
+                        <span
+                          key={i}
+                          className="border px-4 py-2 rounded-full text-white/70 text-xs font-medium"
+                          style={{
+                            backgroundColor: "rgba(69, 10, 10, 0.4)",
+                            borderColor: "rgba(255, 255, 255, 0.2)",
+                          }}
+                        >
                           {tag}
                         </span>
                       ))}
                     </div>
 
                     {/* Long Description Box */}
-                    <div className="bg-red-900/20 border border-red-700/40 rounded-xl p-6">
-                      <h3 className="text-lg font-semibold text-red-300 mb-3 flex items-center gap-2">
-                        <i className="fa-solid fa-circle-info text-sm"></i> About this service
+                    <div
+                      className="border rounded-xl p-6"
+                      style={{
+                        backgroundColor: "rgba(69, 10, 10, 0.3)",
+                        borderColor: "rgba(198, 40, 40, 0.4)",
+                      }}
+                    >
+                      <h3
+                        className="text-lg font-semibold mb-3 flex items-center gap-2"
+                        style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                      >
+                        <i className="fa-solid fa-circle-info text-sm"></i>{" "}
+                        About this service
                       </h3>
                       <p className="text-white/80 text-sm leading-relaxed font-medium">
                         {selectedService.longDesc}
@@ -280,124 +304,273 @@ export default function EnquiryPage() {
 
               {/* Contact Details */}
               <div className="mt-16 flex flex-col gap-8">
-
                 <div className="flex flex-col gap-1.5">
-                  <div className="flex items-center gap-2 text-red-300/80 text-[13px] font-medium">
+                  <div
+                    className="flex items-center gap-2 text-[13px] font-medium"
+                    style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                  >
                     <i className="fa-regular fa-envelope"></i> Email address
                   </div>
-                  <a href="mailto:info@pascom.com.au" className="text-[15px] font-semibold text-white hover:text-red-300 transition-colors">
+                  <a
+                    href="mailto:info@pascom.com.au"
+                    className="text-[15px] font-semibold text-white transition-colors"
+                    style={{ color: "var(--color-white)" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = "var(--color-dark-red)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = "var(--color-white)")
+                    }
+                  >
                     info@pascom.com.au
                   </a>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <div className="flex items-center gap-2 text-red-300/80 text-[13px] font-medium">
+                  <div
+                    className="flex items-center gap-2 text-[13px] font-medium"
+                    style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                  >
                     <i className="fa-solid fa-phone"></i> Phone number
                   </div>
-                  <a href="tel:+61891234567" className="text-[15px] font-semibold text-white hover:text-red-300 transition-colors">
+                  <a
+                    href="tel:+61891234567"
+                    className="text-[15px] font-semibold text-white transition-colors"
+                    style={{ color: "var(--color-white)" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = "var(--color-dark-red)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = "var(--color-white)")
+                    }
+                  >
                     +61 8 9123 4567
                   </a>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <div className="flex items-center gap-2 text-red-300/80 text-[13px] font-medium">
+                  <div
+                    className="flex items-center gap-2 text-[13px] font-medium"
+                    style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                  >
                     <i className="fa-solid fa-location-dot"></i> Location
                   </div>
                   <p className="text-[15px] font-semibold text-white">
-                    14 Casino St, Welshpool,<br />WA 6106, Australia
+                    14 Casino St, Welshpool,
+                    <br />
+                    WA 6106, Australia
                   </p>
                 </div>
-
               </div>
             </div>
 
             {/* RIGHT COLUMN: The Form */}
             <div className="flex flex-col  pb-8">
               <form className="space-y-6">
-
                 {/* Row 1: Name */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[13px] font-semibold text-red-200 ml-1">First name</label>
+                  <div className="flex flex-col gap-3">
+                    <label
+                      className="text-base font-semibold ml-1"
+                      style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                    >
+                      First name
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter first name"
-                      className="w-full bg-transparent border-b border-red-700/40 placeholder-white/40 text-white px-0 py-2 text-sm outline-none focus:border-red-400 transition-all"
+                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      style={{
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                      onFocus={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.5)")
+                      }
+                      onBlur={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.2)")
+                      }
                     />
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[13px] font-semibold text-red-200 ml-1">Last name</label>
+                  <div className="flex flex-col gap-3">
+                    <label
+                      className="text-base font-semibold ml-1"
+                      style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                    >
+                      Last name
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter last name"
-                      className="w-full bg-transparent border-b border-red-700/40 placeholder-white/40 text-white px-0 py-2 text-sm outline-none focus:border-red-400 transition-all"
+                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      style={{
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                      onFocus={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.5)")
+                      }
+                      onBlur={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.2)")
+                      }
                     />
                   </div>
                 </div>
 
                 {/* Row 2: Contact Info */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[13px] font-semibold text-red-200 ml-1">Email address</label>
+                  <div className="flex flex-col gap-3">
+                    <label
+                      className="text-base font-semibold ml-1"
+                      style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                    >
+                      Email address
+                    </label>
                     <input
                       type="email"
                       placeholder="Enter email address"
-                      className="w-full bg-transparent border-b border-red-700/40 placeholder-white/40 text-white px-0 py-2 text-sm outline-none focus:border-red-400 transition-all"
+                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      style={{
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                      onFocus={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.5)")
+                      }
+                      onBlur={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.2)")
+                      }
                     />
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[13px] font-semibold text-red-200 ml-1">Phone number</label>
+                  <div className="flex flex-col gap-3">
+                    <label
+                      className="text-base font-semibold ml-1"
+                      style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                    >
+                      Phone number
+                    </label>
                     <input
                       type="tel"
                       placeholder="Enter phone number"
-                      className="w-full bg-transparent border-b border-red-700/40 placeholder-white/40 text-white px-0 py-2 text-sm outline-none focus:border-red-400 transition-all"
+                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      style={{
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                      onFocus={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.5)")
+                      }
+                      onBlur={(e) =>
+                        (e.currentTarget.style.borderBottomColor =
+                          "rgba(255, 255, 255, 0.2)")
+                      }
                     />
                   </div>
                 </div>
 
                 {/* Row 3: Dropdown */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-[13px] font-semibold text-red-200 ml-1">Service required</label>
+                <div className="flex flex-col gap-3">
+                  <label
+                    className="text-base font-semibold ml-1"
+                    style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                  >
+                    Service required
+                  </label>
                   <div className="relative">
                     <select
-                      className="w-full bg-transparent border-b border-red-700/40 text-white appearance-none px-0 py-2 text-sm outline-none focus:border-red-400 transition-all cursor-pointer"
+                      className="w-full bg-transparent text-white appearance-none px-0 py-3 text-base outline-none transition-all cursor-pointer"
+                      style={{
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
                       defaultValue={selectedService?.id || ""}
                     >
-                      <option value="" disabled className="bg-red-950 text-white">What are you looking for?</option>
-                      {services.map(service => (
-                        <option key={service.id} value={service.id} className="bg-red-950 text-white">{service.title}</option>
+                      <option
+                        value=""
+                        disabled
+                        style={{
+                          backgroundColor: "var(--color-primary-red)",
+                          color: "white",
+                        }}
+                      >
+                        What are you looking for?
+                      </option>
+                      {services.map((service) => (
+                        <option
+                          key={service.id}
+                          value={service.id}
+                          style={{
+                            backgroundColor: "var(--color-primary-red)",
+                            color: "white",
+                          }}
+                        >
+                          {service.title}
+                        </option>
                       ))}
                     </select>
-                    <i className="fa-solid fa-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-red-300 text-xs pointer-events-none"></i>
+                    <i
+                      className="fa-solid fa-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-base pointer-events-none"
+                      style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                    ></i>
                   </div>
                 </div>
 
                 {/* Row 4: Textarea */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-[13px] font-semibold text-red-200 ml-1">Project Details</label>
+                <div className="flex flex-col gap-3">
+                  <label
+                    className="text-base font-semibold ml-1"
+                    style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                  >
+                    Project Details
+                  </label>
                   <textarea
-                    rows={5}
+                    rows={6}
                     placeholder="Share chemical specifications, volumes, and concerns here..."
-                    className="w-full bg-transparent border-b border-red-700/40 placeholder-white/40 text-white px-0 py-2 text-sm outline-none focus:border-red-400 transition-all resize-none"
+                    className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all resize-none"
+                    style={{
+                      borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                    }}
+                    onFocus={(e) =>
+                      (e.currentTarget.style.borderBottomColor =
+                        "rgba(255, 255, 255, 0.5)")
+                    }
+                    onBlur={(e) =>
+                      (e.currentTarget.style.borderBottomColor =
+                        "rgba(255, 255, 255, 0.2)")
+                    }
                   ></textarea>
                 </div>
 
                 {/* Submit Row */}
-                <div className="flex items-center gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6">
                   <button
                     type="button"
-                    className="bg-red-600 hover:bg-red-700 text-white text-[13px] font-semibold px-6 py-3 rounded-full flex items-center gap-2 transition-all shadow-[0_8px_20px_rgba(220,38,38,0.4)] hover:shadow-[0_12px_25px_rgba(220,38,38,0.5)] hover:-translate-y-0.5"
+                    className="text-white text-base font-semibold px-8 py-3 rounded-full flex items-center gap-2 transition-all shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
+                    style={{ backgroundColor: "var(--color-dark-red)" }}
+                    onMouseEnter={(e) => (
+                      (e.currentTarget.style.backgroundColor =
+                        "rgba(69, 10, 10, 0.8)"),
+                      (e.currentTarget.style.boxShadow =
+                        "0 12px 25px rgba(69, 10, 10, 0.5)")
+                    )}
+                    onMouseLeave={(e) => (
+                      (e.currentTarget.style.backgroundColor =
+                        "var(--color-dark-red)"),
+                      (e.currentTarget.style.boxShadow =
+                        "0 8px 20px rgba(69, 10, 10, 0.3)")
+                    )}
                   >
-                    Get a response <i className="fa-solid fa-arrow-right text-[11px]"></i>
+                    Get a response{" "}
+                    <i className="fa-solid fa-arrow-right text-sm"></i>
                   </button>
-                  <p className="text-[11px] text-white/70 font-medium leading-snug max-w-50">
+                  <p className="text-sm text-white/75 font-medium leading-relaxed">
                     We respond within 24 hours personally, not automatically.
                   </p>
                 </div>
-
               </form>
             </div>
-
           </div>
         </div>
       </section>
@@ -405,14 +578,21 @@ export default function EnquiryPage() {
       {/* Other Services Section - Horizontal Scroll */}
       <section
         ref={sectionRef}
-        className="relative w-full h-screen bg-red-950 font-sans antialiased overflow-hidden text-white flex flex-col"
+        className="relative bg-[#f5f5f7] w-full h-screen font-sans antialiased overflow-hidden text-white flex flex-col"
       >
         {/* HEADER */}
         <div className="w-full px-6 md:px-16 pt-16 md:pt-24 shrink-0">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4">
-            Other <span className="text-red-600">Services</span>
+          <h2
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4"
+            style={{ color: "var(--color-primary-red)" }}
+          >
+            Other{" "}
+            <span style={{ color: "var(--color-dark-red)" }}>Services</span>
           </h2>
-          <p className="text-white/70 text-sm md:text-base font-medium max-w-2xl">
+          <p
+            className="text-white/70 text-sm md:text-base font-medium max-w-2xl"
+            style={{ color: "var(--color-dark-red)" }}
+          >
             Scroll to explore our other comprehensive services and solutions.
           </p>
         </div>
@@ -427,29 +607,39 @@ export default function EnquiryPage() {
               <Link
                 key={item.id}
                 href={`/products-services/enquiry/${item.id}`}
-                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 border border-red-700/50 hover:border-red-500/80 transition-all duration-500 cursor-pointer rounded-2xl"
+                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden border transition-all duration-500 cursor-pointer rounded-2xl"
                 style={{
                   transform:
-                    index % 2 === 0 ? 'translateY(-20px)' : 'translateY(20px)',
+                    index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",
+                  backgroundColor: "rgba(69, 10, 10, 0.4)",
+                  borderColor: "rgba(198, 40, 40, 0.5)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor =
+                    "rgba(69, 10, 10, 0.6)";
+                  e.currentTarget.style.borderColor = "rgba(198, 40, 40, 0.8)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor =
+                    "rgba(69, 10, 10, 0.4)";
+                  e.currentTarget.style.borderColor = "rgba(198, 40, 40, 0.5)";
                 }}
               >
                 {/* Background Image Container */}
                 <div className="absolute inset-0 w-full h-[65%] overflow-hidden bg-black z-0">
-                  <div className="card-img-other w-[130%] h-full relative left-[-15%]">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
-                    />
-                  </div>
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                  />
                 </div>
 
                 {/* Gradient Overlay */}
                 <div
                   className="absolute inset-0 z-10"
                   style={{
-                    background: `linear-gradient(to bottom, transparent 20%, ${item.color} 60%, ${item.color} 100%)`,
+                    background: `linear-gradient(to bottom, transparent 20%, rgba(198, 40, 40, 0.5) 60%, rgba(198, 40, 40, 0.7) 100%)`,
                   }}
                 ></div>
 
@@ -457,19 +647,42 @@ export default function EnquiryPage() {
                 <div className="absolute inset-0 z-20 flex flex-col p-6 md:p-8">
                   {/* Top Row: Badge & Button */}
                   <div className="flex justify-between items-start w-full">
-                    <span className="bg-red-600/80 backdrop-blur-md border border-red-500/60 px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded">
+                    <span
+                      className="backdrop-blur-md border px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded"
+                      style={{
+                        backgroundColor: "rgba(198, 40, 40, 0.8)",
+                        borderColor: "rgba(255, 255, 255, 0.3)",
+                      }}
+                    >
                       {item.badge}
                     </span>
 
                     {/* Chemical Drop Button */}
-                    <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white group-hover:from-red-400 group-hover:to-red-600 transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]">
+                    <div
+                      className="w-14 h-14 flex items-center justify-center text-white transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, var(--color-primary-red) 0%, var(--color-dark-red) 100%)",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.boxShadow =
+                          "0 0 20px rgba(198, 40, 40, 0.6)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.boxShadow =
+                          "0 8px 16px rgba(0, 0, 0, 0.2)")
+                      }
+                    >
                       <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                   </div>
 
                   {/* Bottom Row: Title & Description */}
                   <div className="mt-auto">
-                    <h3 className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight">
+                    <h3
+                      className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
+                      style={{ color: "var(--color-white)" }}
+                    >
                       {item.title}
                     </h3>
                     <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">
