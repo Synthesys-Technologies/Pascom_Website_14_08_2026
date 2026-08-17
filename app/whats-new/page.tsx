@@ -1,7 +1,13 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 // Pascom Blog Data
 const blogPosts = [
@@ -40,10 +46,18 @@ const blogPosts = [
     date: "5.02.2024",
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
   },
+  {
+    id: "6",
+    title: "Best Place for all your chemical needs in Perth Australia",
+    category: "News",
+    date: "6.23.2024",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
+  },
 ];
 
 export default function Newsroom() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Dynamically calculate category counts for the sidebar
   const categoryCounts = useMemo(() => {
@@ -55,20 +69,52 @@ export default function Newsroom() {
   }, []);
 
   // Filter posts based on active category
-  const filteredPosts = activeCategory 
+  const filteredPosts = activeCategory
     ? blogPosts.filter(post => post.category === activeCategory)
     : blogPosts;
 
+  // Add smooth reveal animation to blog cards
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Smooth staggered fade-in with upward movement for blog cards
+      gsap.fromTo(
+        '.blog-card',
+        {
+          y: 40,
+          opacity: 0,
+          scale: 0.98,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          stagger: 0.15,
+          ease: 'cubic.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="w-full min-h-screen bg-red-950 py-20 md:py-32 px-6 md:px-12 font-sans antialiased">
+    <section ref={containerRef} className="w-full min-h-screen bg-[#f5f5f7] py-20 md:py-32 px-6 md:px-12 font-sans antialiased">
       <div className="max-w-350 mx-auto">
 
         {/* Hero Header */}
         <div className="mb-20 md:mb-28">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style={{ color: "var(--color-dark-red)" }}>
             Newsroom
           </h1>
-          <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-3xl font-medium">
+          <p className="text-base md:text-lg leading-relaxed max-w-3xl font-medium"
+            style={{color: "var(--color-primary-red)"}}
+          >
             Stay updated with the latest insights, industry trends, and innovations from Pascom.
             Discover how we&apos;re shaping the chemical industry.
           </p>
@@ -80,7 +126,7 @@ export default function Newsroom() {
               LEFT SIDEBAR (Filters)
               ========================================= */}
           <aside className="w-full lg:w-48 shrink-0 lg:sticky lg:top-24">
-            <h3 className="text-red-300 font-medium text-[13px] mb-4">
+            <h3 className="font-medium text-[13px] mb-4" style={{ color: "var(--color-primary-red)" }}>
               Filter by category
             </h3>
 
@@ -89,11 +135,15 @@ export default function Newsroom() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-3 py-1 text-xs font-medium transition-colors border ${
+                  className={`px-3 py-1 text-xs font-medium transition-colors border rounded ${
                     activeCategory === category
-                      ? 'bg-red-600 text-white border-red-600'
-                      : 'bg-red-100 text-red-700 border-transparent hover:border-red-300'
+                      ? 'text-white border-transparent'
+                      : 'border-transparent hover:opacity-80'
                   }`}
+                  style={{
+                    backgroundColor: activeCategory === category ? "var(--color-primary-red)" : "var(--primary-100)",
+                    color: activeCategory === category ? "var(--color-white)" : "var(--color-primary-red)",
+                  }}
                 >
                   {category} <sup className="ml-0.5 text-[9px] font-bold">{count}</sup>
                 </button>
@@ -103,9 +153,10 @@ export default function Newsroom() {
             {/* Reset Filters Link */}
             <button
               onClick={() => setActiveCategory(null)}
-              className={`text-[13px] text-red-300 underline underline-offset-4 hover:text-red-200 transition-colors ${
+              className={`text-[13px] underline underline-offset-4 transition-colors ${
                 activeCategory ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
+              style={{ color: "var(--color-primary-red)" }}
             >
               Reset filters
             </button>
@@ -117,7 +168,11 @@ export default function Newsroom() {
               {filteredPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="group bg-red-50 rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:shadow-md cursor-pointer border border-transparent hover:border-red-200"
+                  className="blog-card group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg cursor-pointer border"
+                  style={{
+                    backgroundColor: "var(--primary-50)",
+                    borderColor: "var(--primary-100)",
+                  }}
                 >
                   {/* Image Container (Edge-to-edge at the top) */}
                   <div className="relative w-full aspect-4/3 overflow-hidden bg-gray-200">
@@ -134,16 +189,16 @@ export default function Newsroom() {
 
                     {/* Meta Tags (Category & Date) */}
                     <div className="flex flex-wrap items-center gap-2 mb-4">
-                      <span className="bg-red-100 text-red-700 text-[11px] px-2 py-0.5 rounded-sm font-medium">
+                      <span className="text-[11px] px-2 py-0.5 rounded-sm font-medium" style={{ backgroundColor: "var(--primary-100)", color: "var(--color-primary-red)" }}>
                         {post.category}
                       </span>
-                      <span className="bg-red-100 text-red-700 text-[11px] px-2 py-0.5 rounded-sm font-medium">
+                      <span className="text-[11px] px-2 py-0.5 rounded-sm font-medium" style={{ backgroundColor: "var(--primary-100)", color: "var(--color-primary-red)" }}>
                         {post.date}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-red-900 text-lg md:text-[19px] font-medium leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-4">
+                    <h3 className="text-lg md:text-[19px] font-medium leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-4" style={{ color: "var(--color-dark-red)" }}>
                       {post.title}
                     </h3>
 
@@ -154,7 +209,7 @@ export default function Newsroom() {
 
             {/* Empty State Fallback */}
             {filteredPosts.length === 0 && (
-              <div className="w-full py-20 text-center text-red-300 font-medium">
+              <div className="w-full py-20 text-center font-medium" style={{ color: "var(--color-primary-red)" }}>
                 No articles found in this category.
               </div>
             )}

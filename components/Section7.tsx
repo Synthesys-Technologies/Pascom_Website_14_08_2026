@@ -103,7 +103,7 @@ export default function CaseStudies() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full bg-[#F8FAFC] font-sans antialiased pt-16">
+    <section ref={containerRef} className="relative w-full bg-[#f5f5f7] font-sans antialiased pt-16">
       
       {/* 
         Sticky Header + Progress Bar

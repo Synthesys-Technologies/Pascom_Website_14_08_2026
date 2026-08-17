@@ -39,25 +39,47 @@ const teamMembers = [
 export default function OurTeamCard() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const progressLineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Staircase Entrance Animation
-      gsap.fromTo(
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 80%',
+          once: true,
+        },
+      });
+
+      // Horizontal progress line animation (0% to 100%)
+      timeline.fromTo(
+        progressLineRef.current,
+        { width: '0%' },
+        {
+          width: '100%',
+          duration: 2.4, // Total duration for all cards
+          ease: 'power1.inOut',
+        },
+        0 // Start at the same time as cards
+      );
+
+      // Sequential card reveal from left to right
+      timeline.fromTo(
         '.team-card',
-        { y: 100, opacity: 0 },
+        {
+          y: 60,
+          opacity: 0,
+          scale: 0.92,
+        },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          stagger: 0.2, // Creates the sequential reveal
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 75%',
-            once: true,
-          },
-        }
+          scale: 1,
+          duration: 0.9,
+          stagger: 0.5, // 0.5s delay between each card
+          ease: 'power2.out',
+        },
+        0 // Start simultaneously with the progress line
       );
     }, containerRef);
 
@@ -65,33 +87,31 @@ export default function OurTeamCard() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full font-sans antialiased overflow-hidden">
-      
-      {/* 
-        SPLIT BACKGROUND (Matches the reference image)
-        Top half is light gray/white, bottom half is dark black.
-      */}
-      <div className="absolute top-0 left-0 w-full h-[60%] bg-red-950 z-0"></div>
-      <div className="absolute bottom-0 left-0 w-full h-[40%] bg-[#F8FAFC] z-0"></div>
+    <section ref={containerRef} className="relative w-full font-sans antialiased overflow-hidden" style={{ backgroundColor: "#FFFFFF" }}>
+
+      {/* Subtle red gradient glow effect in background */}
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{
+        background: `radial-gradient(ellipse 800px 400px at 50% 20%, rgba(198, 40, 40, 0.08) 0%, transparent 70%)`
+      }}></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pt-24 pb-20 flex flex-col items-center">
-        
+
         {/* Header Section */}
         <div className="text-center max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#DC2626] leading-tight tracking-tight mb-6">
-            The Visionaries Behind <br /> Pascom&apos; Success
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6" style={{ color: "var(--color-dark-red)" }}>
+            The Visionaries Behind <br /> Pascom&apos;s Success
           </h2>
-          <p className="text-white text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base font-medium leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--color-primary-red)" }}>
             Meet the dedicated professionals driving our chemical manufacturing excellence and delivering innovative solutions to elevate your industrial projects.
           </p>
         </div>
 
         {/* 3-Column Staircase Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full mb-16">
-          
+
           {teamMembers.map((member, index) => (
-            <div 
-              key={member.id} 
+            <div
+              key={member.id}
               className="team-card relative w-full group"
               style={{
                 // THE STAIRCASE EFFECT: Increases top margin for each subsequent card on desktop
@@ -99,10 +119,13 @@ export default function OurTeamCard() {
               }}
             >
               {/* Main Card Container */}
-              <div 
-                className={`relative w-full bg-gray-200 rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-700 ease-in-out ${
+              <div
+                className={`relative w-full rounded-[2rem] overflow-hidden shadow-lg transition-all duration-700 ease-in-out border border-red-100 ${
                   expandedId === member.id ? 'h-[650px] md:h-[600px]' : 'h-[500px]'
                 }`}
+                style={{
+                  background: 'linear-gradient(135deg, rgba(198, 40, 40, 0.05) 0%, rgba(198, 40, 40, 0.02) 100%)'
+                }}
               >
                 {/* Background Profile Image */}
                 <Image 
@@ -116,53 +139,62 @@ export default function OurTeamCard() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/80 pointer-events-none"></div>
 
                 {/* Frosted Glass Overlay (Bottom Info Panel) */}
-                <div 
-                  className={`absolute bottom-3 left-3 right-3 rounded-[1.5rem] bg-black/40 backdrop-blur-xl border border-white/20 flex flex-col justify-end transition-all duration-500 overflow-hidden ${
+                <div
+                  className={`absolute bottom-3 left-3 right-3 rounded-[1.5rem] backdrop-blur-md flex flex-col justify-end transition-all duration-500 overflow-hidden ${
                     expandedId === member.id ? 'p-6 h-auto' : 'p-6'
                   }`}
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    border: '1px solid rgba(198, 40, 40, 0.15)',
+                    boxShadow: '0 4px 24px rgba(198, 40, 40, 0.1)'
+                  }}
                 >
                   
                   {/* Expand / Collapse Button (Floating Top Right inside the glass) */}
-                  <button 
+                  <button
                     onClick={() => setExpandedId(expandedId === member.id ? null : member.id)}
-                    className="absolute top-4 right-4 w-8 h-8 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-red-600 hover:border-red-600 transition-all duration-300 z-20"
+                    className="absolute top-4 right-4 w-8 h-8 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 z-20"
+                    style={{
+                      backgroundColor: expandedId === member.id ? "var(--color-primary-red)" : "rgba(198, 40, 40, 0.1)",
+                      border: expandedId === member.id ? "1px solid var(--color-primary-red)" : "1px solid rgba(198, 40, 40, 0.2)"
+                    }}
                   >
-                    <i className={`fa-solid fa-arrow-up-right text-xs transition-transform duration-300 ${expandedId === member.id ? 'rotate-180' : ''}`}></i>
+                    <i className={`fa-solid fa-arrow-up-right text-xs transition-transform duration-300 ${expandedId === member.id ? 'rotate-180' : ''}`} style={{ color: expandedId === member.id ? "white" : "var(--color-dark-red)" }}></i>
                   </button>
 
                   <div className="relative z-10 w-full pr-8">
                     {/* Title / Name */}
-                    <h3 className="text-white font-bold text-2xl mb-1 leading-snug tracking-tight">
+                    <h3 className="font-bold text-2xl mb-1 leading-snug tracking-tight" style={{ color: "var(--color-dark-red)" }}>
                       {member.title}
                     </h3>
-                    
+
                     {/* Role */}
-                    <span className="text-white/80 text-sm font-semibold tracking-wide block mb-4">
+                    <span className="text-sm font-semibold tracking-wide block mb-4" style={{ color: "var(--color-primary-red)" }}>
                       {member.client}
                     </span>
 
                     {/* Short Description */}
-                    <p className={`text-white/70 text-sm leading-relaxed font-medium transition-all duration-300 ${expandedId === member.id ? 'mb-4' : 'mb-6 line-clamp-3'}`}>
+                    <p className={`text-sm leading-relaxed font-medium transition-all duration-300 ${expandedId === member.id ? 'mb-4' : 'mb-6 line-clamp-3'}`} style={{ color: "rgba(69, 10, 10, 0.7)" }}>
                       {member.description}
                     </p>
 
                     {/* Expanded Content (Read More) */}
-                    <div 
+                    <div
                       className={`transition-all duration-500 overflow-hidden ${
                         expandedId === member.id ? 'max-h-[300px] opacity-100 mb-6' : 'max-h-0 opacity-0'
                       }`}
                     >
-                      <p className="text-white/70 text-sm leading-relaxed font-medium pt-2 border-t border-white/10">
+                      <p className="text-sm leading-relaxed font-medium pt-2" style={{ color: "rgba(69, 10, 10, 0.7)", borderTop: "1px solid rgba(198, 40, 40, 0.2)" }}>
                         {member.readMore}
                       </p>
                     </div>
 
                     {/* Social Icons Footer */}
                     <div className="flex items-center gap-3">
-                      <a href="#" className="w-7 h-7 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors">
+                      <a href="#" className="w-7 h-7 rounded-full text-white flex items-center justify-center transition-all duration-300" style={{ backgroundColor: "var(--color-primary-red)" }} onMouseEnter={(e) => e.currentTarget.style.opacity = "0.8"} onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
                         <i className="fa-brands fa-linkedin-in text-[10px]"></i>
                       </a>
-                      <a href="#" className="w-7 h-7 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors">
+                      <a href="#" className="w-7 h-7 rounded-full text-white flex items-center justify-center transition-all duration-300" style={{ backgroundColor: "var(--color-primary-red)" }} onMouseEnter={(e) => e.currentTarget.style.opacity = "0.8"} onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
                         <i className="fa-solid fa-envelope text-[10px]"></i>
                       </a>
                     </div>

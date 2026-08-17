@@ -112,7 +112,7 @@ export default function AccreditationsStrip() {
   return (
     <section
       ref={stripRef}
-      className="w-full bg-[#F8FAFC] overflow-hidden font-sans antialiased band-spacing"
+      className="w-full bg-[#f5f5f7] overflow-hidden font-sans antialiased band-spacing"
     >
       
       {/* Container for the continuous scroll */}

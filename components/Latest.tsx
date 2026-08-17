@@ -88,7 +88,8 @@ export default function CoreValues() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-red-950 font-sans antialiased overflow-hidden band-spacing"
+      className="relative w-full font-sans antialiased overflow-hidden band-spacing"
+      style={{ backgroundColor: "var(--color-primary-red)" }}
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-20 items-start">
         
@@ -98,7 +99,7 @@ export default function CoreValues() {
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.1] uppercase">
               We Value<br />
               Your<br />
-              <span className="text-[#e11d48]">Partnership</span>
+              <span style={{ color: "var(--color-white)" }}>Partnership</span>
             </h2>
 
             <p className="mt-6 text-sm text-white leading-relaxed max-w-xs">
@@ -107,7 +108,12 @@ export default function CoreValues() {
 
             <Link
               href="#"
-              className="inline-flex items-center gap-3 mt-8 bg-[#0b1329] text-white text-xs font-semibold tracking-wider uppercase px-5 py-3.5 hover:bg-[#1e293b] transition-colors group"
+              className="inline-flex items-center gap-3 mt-8 text-white text-xs font-semibold tracking-wider uppercase px-5 py-3.5 transition-colors group"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.15)",
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.25)"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)"}
             >
               Learn More About Us
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -132,10 +138,10 @@ export default function CoreValues() {
                     className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Top-left Red Square Accent */}
-                  <div className="absolute top-3 left-3 w-2.5 h-2.5 bg-[#e11d48] z-10" />
+                  <div className="absolute top-3 left-3 w-2.5 h-2.5 z-10" style={{ backgroundColor: "var(--color-white)" }} />
 
                   {/* Bottom-right Subtle Red Gradient Block */}
-                  <div className="absolute bottom-0 right-0 w-12 h-12 bg-[#991b1b]/40 pointer-events-none" />
+                  <div className="absolute bottom-0 right-0 w-12 h-12 pointer-events-none" style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }} />
                 </div>
 
                 {/* Content */}
@@ -144,8 +150,8 @@ export default function CoreValues() {
                     {item.category}
                   </span>
                   
-                  <h3 className="text-xl font-bold text-slate-800 leading-snug mb-3 group-hover:text-[#e11d48] transition-colors">
-                    <Link href={item.link}>
+                  <h3 className="text-xl font-bold text-slate-800 leading-snug mb-3 transition-colors group-hover:text-slate-900" style={{ "--group-hover-color": "var(--color-primary-red)" } as any}>
+                    <Link href={item.link} style={{ color: "inherit" }}>
                       {item.title}
                     </Link>
                   </h3>
@@ -164,7 +170,9 @@ export default function CoreValues() {
                 <Link
                   href={item.link}
                   aria-label={`Read more about ${item.title}`}
-                  className="text-slate-700 hover:text-[#e11d48] transition-colors"
+                  className="text-slate-700 transition-colors"
+                  onMouseEnter={(e) => e.currentTarget.style.color = "var(--color-primary-red)"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#78716c"}
                 >
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>

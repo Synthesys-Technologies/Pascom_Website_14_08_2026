@@ -75,7 +75,7 @@ export default function LatestUpdates() {
     : blogPosts;
 
   return (
-    <section className="w-full min-h-screen bg-white font-sans antialiased band-spacing">
+    <section className="w-full min-h-screen bg-[#f5f5f7] font-sans antialiased band-spacing">
       <div className="content-max">
         
         {/* Huge Corporate Header */}

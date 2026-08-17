@@ -72,7 +72,7 @@ export default function PartnersMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#FAFAFA] overflow-hidden font-sans antialiased band-spacing flex flex-col items-center justify-center"
+      className="relative w-full bg-[#f5f5f7] overflow-hidden font-sans antialiased band-spacing flex flex-col items-center justify-center"
     >
 
       {/* =========================================

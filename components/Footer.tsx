@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
@@ -16,19 +17,19 @@ export default function Footer() {
     const ctx = gsap.context(() => {
       // 1. Staggered Text Fade-In
       gsap.fromTo(
-        '.footer-reveal',
+        ".footer-reveal",
         { y: 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 1,
           stagger: 0.1,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: footerRef.current,
-            start: 'top 85%',
+            start: "top 85%",
           },
-        }
+        },
       );
 
       // 2. Oversized Monogram Parallax Drift
@@ -38,14 +39,14 @@ export default function Footer() {
           { yPercent: -15 },
           {
             yPercent: 15, // Slowly moves down as the user scrolls to the bottom
-            ease: 'none',
+            ease: "none",
             scrollTrigger: {
               trigger: footerRef.current,
-              start: 'top bottom',
-              end: 'bottom bottom',
+              start: "top bottom",
+              end: "bottom bottom",
               scrub: 1,
             },
-          }
+          },
         );
       }
     });
@@ -56,80 +57,111 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full bg-red-950 overflow-hidden font-sans antialiased text-white pt-24 pb-12 px-6 md:px-12 lg:px-20 min-h-[600px] flex flex-col"
+      className="relative w-full overflow-hidden font-sans antialiased text-white pt-24 pb-12 px-6 md:px-12 lg:px-20 min-h-[600px] flex flex-col"
+      style={{ backgroundColor: "var(--color-primary-red)" }}
     >
-      
       {/* =========================================
           OVERSIZED BRAND MONOGRAM (Background/Right)
           ========================================= */}
-      <div 
+      <div
         ref={monogramRef}
-        className="absolute right-[-15%] bottom-[-10%] md:right-[-5%] md:bottom-[-20%] w-[350px] h-[350px] md:w-[700px] md:h-[700px] text-[#DC2626] opacity-90 z-0 pointer-events-none"
+        className="absolute right-[-15%] bottom-[-10%] md:right-[-5%] md:bottom-[-20%] w-[350px] h-[350px] md:w-[700px] md:h-[700px] opacity-90 z-0 pointer-events-none"
+        style={{ color: "var(--color-dark-red)" }}
       >
         {/* Custom Massive Pascom 'P' inside a geometric circle */}
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" className="w-full h-full">
+        <svg
+          viewBox="0 0 100 100"
+          fill="none"
+          stroke="currentColor"
+          className="w-full h-full"
+        >
           <circle cx="50" cy="50" r="45" strokeWidth="10" />
-          <path d="M35 80 V25 H60 C70 25 70 45 60 45 H35" strokeWidth="10" strokeLinejoin="round" />
+          <path
+            d="M35 80 V25 H60 C70 25 70 45 60 45 H35"
+            strokeWidth="10"
+            strokeLinejoin="round"
+          />
         </svg>
       </div>
-
 
       {/* =========================================
           MAIN CONTENT GRID
           ========================================= */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 flex-grow">
-        
         {/* LEFT COLUMN: Brand, Tagline, Contact */}
         <div className="md:col-span-6 lg:col-span-5 flex flex-col">
-          
           {/* Wordmark */}
-          <div className="footer-reveal text-4xl md:text-5xl font-black tracking-widest uppercase mb-8">
-            PASCOM
+          <div className="footer-reveal mb-8 relative top-0 w-48 h-48 md:w-64 md:h-64">
+            <Image
+              src="https://pascom.com.au/wp-content/uploads/2024/07/Logo-colour-change-1024x1024.png"
+              alt="Pascom Manufacturing"
+              fill
+              className="object-contain transition-transform duration-700 hover:scale-105"
+            />
           </div>
 
           {/* Accent Tagline */}
-          <h2 className="footer-reveal text-3xl md:text-[2.5rem] font-light text-[#DC2626] leading-tight mb-10 tracking-tight">
+          <h2 className="footer-reveal text-3xl -mt-24 md:text-[2.5rem] font-light leading-tight mb-10 tracking-tight text-white">
             Quality. Integrity. <br /> Efficiency.
           </h2>
 
           {/* Divider */}
-          <div className="footer-reveal w-full md:w-3/4 h-px bg-red-700/40 mb-10"></div>
+          <div
+            className="footer-reveal w-full md:w-3/4 h-px mb-10"
+            style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+          ></div>
 
           {/* Contact Details */}
           <div className="footer-reveal flex flex-col gap-2 mb-10">
-            <a href="tel:+61891234567" className="text-xl md:text-2xl font-medium hover:text-[#DC2626] transition-colors w-max">
+            <a
+              href="tel:+61891234567"
+              className="text-xl md:text-2xl font-medium transition-colors w-max footer-link"
+            >
               +61 8 9123 4567
             </a>
-            <a href="mailto:info@pascom.com.au" className="text-xl md:text-2xl font-medium hover:text-[#DC2626] transition-colors w-max">
+            <a
+              href="mailto:info@pascom.com.au"
+              className="text-xl md:text-2xl font-medium transition-colors w-max footer-link"
+            >
               info@pascom.com.au
             </a>
             <p className="text-red-200/60 mt-4 max-w-xs text-sm leading-relaxed font-medium">
-              14 Casino Street,<br />
-              Welshpool, WA 6106<br />
+              14 Casino Street,
+              <br />
+              Welshpool, WA 6106
+              <br />
               Australia
             </p>
           </div>
-
         </div>
 
         {/* MIDDLE COLUMN: Sitemap Nav */}
         <div className="md:col-span-6 lg:col-span-3 flex flex-col md:pt-4">
-          <h4 className="footer-reveal text-[10px] font-bold text-red-300/70 uppercase tracking-widest mb-6">
+          <h4
+            className="footer-reveal text-[10px] font-bold uppercase tracking-widest mb-6"
+            style={{ color: "rgba(255, 255, 255, 0.7)" }}
+          >
             Navigation
           </h4>
           <ul className="footer-reveal flex flex-col gap-4">
             {[
-              'This Is Us',
-              'Products & Services',
-              'What\'s New',
-              'SDS Library',
-              'Reach Us'
+              "This Is Us",
+              "Products & Services",
+              "What's New",
+              "SDS Library",
+              "Reach Us",
             ].map((link, i) => (
               <li key={i}>
-                <a href="#" className="group relative inline-block text-lg font-medium text-white hover:text-white transition-colors">
+                <a
+                  href="#"
+                  className="group relative inline-block text-lg font-medium text-white hover:text-white transition-colors"
+                >
                   {link}
                   {/* Elegant hover underline effect */}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DC2626] transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                    style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
+                  ></span>
                 </a>
               </li>
             ))}
@@ -138,29 +170,40 @@ export default function Footer() {
 
         {/* RIGHT COLUMN: Blank space to let the giant monogram breathe */}
         <div className="hidden lg:block lg:col-span-4"></div>
-
       </div>
-
 
       {/* =========================================
           BOTTOM ROW: Legal & Copyright
           ========================================= */}
-      <div className="relative z-10 mt-16 pt-8 border-t border-red-900/30 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-
+      <div
+        className="relative z-10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+        style={{ borderTop: `1px solid rgba(255, 255, 255, 0.2)` }}
+      >
         {/* Legal Links */}
-        <div className="footer-reveal flex flex-wrap gap-6 text-[11px] font-semibold tracking-wider text-red-200/60 uppercase">
-          <a href="#" className="hover:text-red-300 transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-red-300 transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-red-300 transition-colors">Modern Slavery Statement</a>
+        <div
+          className="footer-reveal flex flex-wrap gap-6 text-[11px] font-semibold tracking-wider uppercase"
+          style={{ color: "rgba(255, 255, 255, 0.8)" }}
+        >
+          <a href="#" className="footer-legal-link transition-colors">
+            Privacy Policy
+          </a>
+          <a href="#" className="footer-legal-link transition-colors">
+            Terms of Service
+          </a>
+          <a href="#" className="footer-legal-link transition-colors">
+            Modern Slavery Statement
+          </a>
         </div>
 
         {/* Copyright */}
-        <div className="footer-reveal text-red-200/50 text-xs font-medium">
-          &copy; {new Date().getFullYear()} Pascom Commercial Pty Ltd. All Rights Reserved.
+        <div
+          className="footer-reveal text-xs font-medium"
+          style={{ color: "rgba(255, 255, 255, 0.6)" }}
+        >
+          &copy; {new Date().getFullYear()} Pascom Commercial Pty Ltd. All
+          Rights Reserved.
         </div>
-
       </div>
-
     </footer>
   );
 }

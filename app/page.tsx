@@ -10,7 +10,6 @@ import AccreditationsStrip from "@/components/Section8";
 import LatestNews from "@/components/Latest";
 import FAQ from "@/components/FAQ";
 import Blog from "@/components/Blog";
-import StackingSections from "@/components/Practise";
 
 export default function Home() {
   return (

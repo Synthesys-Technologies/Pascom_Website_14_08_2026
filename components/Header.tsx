@@ -17,7 +17,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled ? "bg-red-900" : "bg-transparent"}`}>
+    <header className="fixed top-0 left-0 w-full z-50 transition-colors duration-300" style={{ backgroundColor: isScrolled ? "var(--color-primary-red)" : "transparent" }}>
       {/* =========================================
           TOP NAVIGATION
           ========================================= */}
@@ -26,13 +26,31 @@ export default function Header() {
         <div className="hidden lg:flex gap-2 lg:gap-4 lg:w-1/3">
           <Link
             href="#"
-            className="border border-white/40 text-white text-xs lg:text-sm font-semibold px-3 lg:px-6 py-2 lg:py-2.5 rounded-full hover:bg-white/10 transition-colors whitespace-nowrap"
+            className="border-4 border-white text-white text-xs lg:text-sm font-semibold px-3 lg:px-6 py-2 lg:py-2.5 rounded-full transition-all whitespace-nowrap"
+            style={{ borderColor: "white" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
+              e.currentTarget.style.borderColor = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.borderColor = "white";
+            }}
           >
             Capabilities
           </Link>
           <Link
             href="#"
-            className="border border-white/40 text-white text-xs lg:text-sm font-semibold px-3 lg:px-6 py-2 lg:py-2.5 rounded-full hover:bg-white/10 transition-colors whitespace-nowrap"
+            className="border-4 border-white text-white text-xs lg:text-sm font-semibold px-3 lg:px-6 py-2 lg:py-2.5 rounded-full transition-all whitespace-nowrap"
+            style={{ borderColor: "white" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
+              e.currentTarget.style.borderColor = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.borderColor = "white";
+            }}
           >
             Safety & Compliance
           </Link>
@@ -40,13 +58,16 @@ export default function Header() {
 
         {/* Right Links (White Pill Container) - Hidden on mobile */}
         <div className="hidden lg:flex lg:w-[80%] lg:justify-end">
-          <div className="bg-white rounded-full p-1.5 pl-8 flex items-center gap-4 lg:gap-6 shadow-lg">
+          <div className="bg-white rounded-full p-1.5 pl-8 flex items-center gap-4 lg:gap-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <Link
               href="/"
-              className="text-xs lg:text-sm font-bold text-gray-900 relative hover:text-red-600 transition-colors"
+              className="text-xs lg:text-sm font-bold text-gray-900 relative transition-colors"
+              style={{ color: "var(--color-dark-red)" }}
+              onMouseEnter={(e) => e.currentTarget.style.color = "var(--color-primary-red)"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "var(--color-dark-red)"}
             >
               Home
-              <span className="absolute -bottom-2 left-0 w-full h-0.75 bg-red-600 rounded-t-md"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-0.75 rounded-t-md" style={{ backgroundColor: "var(--color-primary-red)" }}></span>
             </Link>
             <Link
               href="/this-is-us"
@@ -68,7 +89,10 @@ export default function Header() {
             </Link>
             <Link
               href="/reach-us"
-              className="bg-red-600 hover:bg-red-700 text-white text-xs lg:text-sm font-bold px-6 lg:px-8 py-2 lg:py-2.5 rounded-full transition-colors ml-2"
+              className="text-white text-xs lg:text-sm font-bold px-6 lg:px-8 py-2 lg:py-2.5 rounded-full transition-colors ml-2"
+              style={{ backgroundColor: "var(--color-primary-red)" }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--color-dark-red)"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "var(--color-primary-red)"}
             >
               Reach Us
             </Link>
@@ -87,39 +111,42 @@ export default function Header() {
 
       {/* Mobile Menu - Visible only on mobile when open */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0A1E1A] border-t border-white/10 px-4 py-6">
+        <div className="lg:hidden border-t border-white/10 px-4 py-6" style={{ backgroundColor: "var(--color-dark-red)" }}>
           <nav className="flex flex-col gap-4">
             <Link
               href="/"
-              className="text-white text-sm font-medium hover:text-red-600 transition-colors"
+              className="text-white text-sm font-medium hover:text-primary-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/this-is-us"
-              className="text-white text-sm font-medium hover:text-red-600 transition-colors"
+              className="text-white text-sm font-medium hover:text-primary-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               This Is Us
             </Link>
             <Link
               href="/products-services"
-              className="text-white text-sm font-medium hover:text-red-600 transition-colors"
+              className="text-white text-sm font-medium hover:text-primary-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Product & Services
             </Link>
             <Link
               href="/whats-new"
-              className="text-white text-sm font-medium hover:text-red-600 transition-colors"
+              className="text-white text-sm font-medium hover:text-primary-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               What&apos;s New
             </Link>
             <Link
               href="/reach-us"
-              className="bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-2.5 rounded-full transition-colors text-center mt-2"
+              className="text-white text-sm font-bold px-6 py-2.5 rounded-full transition-colors text-center mt-2"
+              style={{ backgroundColor: "var(--color-primary-red)" }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--color-dark-red)"}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "var(--color-primary-red)"}
               onClick={() => setMobileMenuOpen(false)}
             >
               Reach Us

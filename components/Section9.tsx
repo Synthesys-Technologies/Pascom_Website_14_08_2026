@@ -109,7 +109,7 @@ export default function FeaturedProducts() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#F4F4F2] font-sans antialiased overflow-hidden band-spacing"
+      className="w-full bg-[#f5f5f7] font-sans antialiased overflow-hidden band-spacing"
     >
       <div className="content-max">
         

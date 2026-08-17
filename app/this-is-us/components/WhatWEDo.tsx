@@ -5,14 +5,14 @@ import Image from 'next/image';
 
 export default function AboutUs() {
   return (
-    <section className="min-h-screen bg-red-950 flex items-center justify-center p-4 md:p-8 overflow-hidden font-sans antialiased">
+    <section className="min-h-screen bg-red-600 flex items-center justify-center p-4 md:p-8 overflow-hidden font-sans antialiased">
       
       {/* Layout Wrapper */}
       <div className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center mt-20 md:mt-0">
 
         {/* 1. The Overlapping Image (Left Side) */}
         {/* On mobile: sits on top. On desktop: overlaps the left edge */}
-        <div className="md:absolute left-0 top-1/2 md:-translate-y-1/2 w-[85%] sm:w-72 lg:w-96 aspect-square z-20 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden -mb-16 md:mb-0 group cursor-pointer">
+        <div className="md:absolute left-0 top-1/2 md:-translate-y-1/2 w-[85%] sm:w-72 lg:w-96 aspect-square z-20 shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden -mb-16 md:mb-0 group cursor-pointer">
           <Image 
             src="https://pascom.com.au/wp-content/uploads/2024/10/pascom-tank-600x898.png" 
             alt="Pascom Manufacturing" 
@@ -20,11 +20,11 @@ export default function AboutUs() {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           {/* Subtle Red/Orange Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-red-600/40 to-transparent mix-blend-multiply pointer-events-none"></div>
+          <div className="absolute inset-0 bg-linear-to-tr from-red-600/40 to-transparent mix-blend-multiply pointer-events-none"></div>
         </div>
 
         {/* 2. The Main White Content Card */}
-        <div className="w-full md:w-[85%] md:ml-auto  rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-8 pt-24 md:pt-16 md:pb-16 md:pl-48 lg:pl-64 md:pr-16 relative z-10 border border-gray-100/50">
+        <div className="w-full md:w-[85%] md:ml-auto  shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-8 pt-24 md:pt-16 md:pb-16 md:pl-48 lg:pl-64 md:pr-16 relative z-10 border-4 border-gray-100/50">
 
           {/* Right Edge Decorative Dots (from reference image) */}
           <div className="hidden lg:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-2">

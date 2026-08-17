@@ -1,9 +1,17 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 const processSteps = [
   {
     num: '1',
-    title: 'Customer-Centric Approach',
+    title: 'Customer Centric Approach',
     desc: 'Pascom meticulously understands and prioritizes specific needs and provides nimble tailored service that exceeds customer expectations.',
     icon: 'fa-users',
   },
@@ -28,8 +36,73 @@ const processSteps = [
 ];
 
 export default function ProcessSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const progressLineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 80%',
+          once: true,
+        },
+      });
+
+      // Horizontal progress line animation (0% to 100%)
+      timeline.fromTo(
+        progressLineRef.current,
+        { width: '0%' },
+        {
+          width: '100%',
+          duration: 2.4,
+          ease: 'power1.inOut',
+        },
+        0
+      );
+
+      // Sequential step card reveal from left to right
+      timeline.fromTo(
+        '.process-step',
+        {
+          y: 50,
+          opacity: 0,
+          scale: 0.95,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.5,
+          ease: 'power2.out',
+        },
+        0
+      );
+
+      // Hexagon icon stagger animation
+      timeline.fromTo(
+        '.hexagon-icon',
+        {
+          scale: 0.8,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.5,
+          ease: 'back.out',
+        },
+        0.2
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="w-full bg-[#F8F9FB] py-24 px-4 md:px-8 font-sans antialiased overflow-hidden">
+    <section ref={containerRef} className="w-full bg-[#F8F9FB] py-24 px-4 md:px-8 font-sans antialiased overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header Section */}
@@ -85,11 +158,11 @@ export default function ProcessSection() {
               const isTopText = index % 2 === 0; 
               
               return (
-                <div key={index} className="relative flex flex-col items-center lg:block h-full">
-                  
+                <div key={index} className="process-step relative flex flex-col items-center lg:block h-full">
+
                   {/* Hexagon Icon (Absolute on Desktop, Static on Mobile) */}
                   <div className={`
-                    lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-20 mb-6 lg:mb-0
+                    hexagon-icon lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-20 mb-6 lg:mb-0
                     ${isTopText ? 'lg:top-[65%]' : 'lg:top-[35%]'}
                     drop-shadow-[0_15px_25px_rgba(220,38,38,0.3)]
                   `}>

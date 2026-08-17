@@ -67,21 +67,21 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#f4f4f2] py-24 px-4 md:px-8 font-sans antialiased text-gray-900">
+    <section className="w-full min-h-screen py-24 px-4 md:px-8 font-sans antialiased" style={{ backgroundColor: "var(--color-primary-red)" }}>
       <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-        
+
         {/* =========================================
             LEFT COLUMN (Headers & CTA Card)
             ========================================= */}
         <div className="lg:col-span-5 flex flex-col sticky top-24">
-          
+
           {/* Main Headline (Serif Font to match the elegant image style) */}
-          <h2 className="text-5xl md:text-6xl font-serif text-[#1A1A1A] leading-[1.1] tracking-tight mb-6">
+          <h2 className="text-5xl md:text-6xl font-serif leading-[1.1] tracking-tight mb-6" style={{ color: "var(--color-white)" }}>
             Clear answers for complex operations
           </h2>
 
           {/* Sub-paragraph */}
-          <p className="text-gray-600 text-[15px] font-medium leading-relaxed max-w-md mb-12">
+          <p className="text-[15px] font-medium leading-relaxed max-w-md mb-12" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
             Clear answers on blending timelines, engagement models, compliance reporting, and measurable industrial outcomes.
           </p>
 
@@ -97,40 +97,46 @@ export default function FAQ() {
             return (
               <div
                 key={item.id}
-                className="bg-white rounded-[1.5rem] p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-all duration-300"
+                className="rounded-3xl p-6 md:p-8 transition-all duration-300 border"
+                style={{
+                  backgroundColor: isOpen ? "rgba(255, 255, 255, 0.15)" : "rgba(255, 255, 255, 0.08)",
+                  borderColor: isOpen ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 0.15)",
+                  boxShadow: isOpen ? "0 8px 24px rgba(0,0,0,0.2)" : "0 4px 12px rgba(0,0,0,0.1)",
+                }}
               >
                 {/* Question Row */}
                 <button
                   onClick={() => toggleFAQ(item.id)}
                   className="w-full flex justify-between items-center text-left focus:outline-none group"
                 >
-                  <span className="font-serif text-xl md:text-2xl text-gray-900 pr-8 leading-snug">
+                  <span className="font-serif text-xl md:text-2xl pr-8 leading-snug" style={{ color: "var(--color-white)" }}>
                     {item.question}
                   </span>
-                  
+
                   {/* Dynamic Chevron Button */}
-                  <div 
-                    className={`w-10 h-10 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm
-                      ${isOpen 
-                        ? 'bg-gray-900 text-white rotate-180' 
-                        : 'bg-[#F4EFE6] text-gray-600 group-hover:bg-gray-200'
-                      }
-                    `}
+                  <div
+                    className={`w-10 h-10 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                    style={{
+                      backgroundColor: isOpen ? "rgba(255, 255, 255, 0.25)" : "rgba(255, 255, 255, 0.12)",
+                      color: "rgba(255, 255, 255, 0.9)",
+                    }}
                   >
                     <i className="fa-solid fa-chevron-down text-sm"></i>
                   </div>
                 </button>
 
                 {/* Answer Area (Smooth Accordion Dropdown) */}
-                <div 
+                <div
                   className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen ? 'grid-rows-[1fr] opacity-100 mt-6' : 'grid-rows-[0fr] opacity-0'
+                    isOpen ? "grid-rows-[1fr] opacity-100 mt-6" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="text-gray-500 text-[15px] font-medium leading-relaxed">
-                      {item.answer.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx} className={idx > 0 ? 'mt-4' : ''}>
+                    <div className="text-[15px] font-medium leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+                      {item.answer.split("\n\n").map((paragraph, idx) => (
+                        <p key={idx} className={idx > 0 ? "mt-4" : ""}>
                           {paragraph}
                         </p>
                       ))}
