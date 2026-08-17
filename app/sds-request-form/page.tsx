@@ -62,15 +62,15 @@ export default function SDSRequestPage() {
   };
 
   return (
-    <section className="min-h-screen bg-red-950 py-28 px-4 md:px-8 lg:px-16 font-sans antialiased text-white">
+    <section className="min-h-screen bg-[#f5f5f7] py-28 px-4 md:px-8 lg:px-16 font-sans antialiased" style={{ color: "var(--color-dark-red)" }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white">
-            Request <span className="text-red-400">SDS</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style={{ color: "var(--color-white)" }}>
+            Request <span style={{ color: "var(--color-dark-red)" }}>SDS</span>
           </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
+          <p className="text-lg max-w-2xl" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
             Request Safety Data Sheets for our chemical products. Fill out the form below and we&apos;ll send the SDS to your email.
           </p>
         </div>
@@ -81,24 +81,24 @@ export default function SDSRequestPage() {
           <div className="lg:col-span-1 space-y-8">
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-white flex items-center gap-3">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                 How it Works
               </h3>
-              <ol className="space-y-3 text-white/80">
+              <ol className="space-y-3" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
                 <li className="flex items-start gap-3">
-                  <span className="bg-red-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs mt-0.5">1</span>
+                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>1</span>
                   <span>Fill out the contact form</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="bg-red-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs mt-0.5">2</span>
+                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>2</span>
                   <span>Select the products you need</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="bg-red-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs mt-0.5">3</span>
+                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>3</span>
                   <span>Submit your request</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="bg-red-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs mt-0.5">4</span>
+                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>4</span>
                   <span>Receive SDS via email</span>
                 </li>
               </ol>
@@ -114,10 +114,10 @@ export default function SDSRequestPage() {
             </div>
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-white flex items-center gap-3">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                  General Inquiries
               </h3>
-              <a href="mailto:info@pascom.com.au" className="text-red-300 hover:text-red-200 font-semibold transition-colors text-lg">
+              <a href="mailto:info@pascom.com.au" className="font-semibold transition-colors text-lg" style={{ color: "rgba(255, 255, 255, 0.9)" }} onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-dark-red)")} onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.9)")}>
                 info@pascom.com.au
               </a>
             </div>
@@ -130,7 +130,7 @@ export default function SDSRequestPage() {
 
               {/* Product Selection */}
               <div className="p-8">
-                <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                     Select Product(s)*
                 </h2>
 
@@ -139,7 +139,10 @@ export default function SDSRequestPage() {
                   placeholder="Search for a product..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-transparent border-b border-red-700/40 text-white placeholder-white/40 px-0 py-2 outline-none focus:border-red-400 transition-all text-base"
+                  className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
+                  style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
+                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
+                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
                 />
 
                 <div className="py-4 h-84 overflow-y-auto custom-scrollbar flex flex-wrap gap-2 content-start">
@@ -150,11 +153,24 @@ export default function SDSRequestPage() {
                         key={product}
                         type="button"
                         onClick={() => toggleProduct(product)}
-                        className={`text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 whitespace-nowrap ${
+                        className="text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 whitespace-nowrap text-white"
+                        style={
                           isSelected
-                            ? 'bg-red-600 text-white shadow-lg border border-red-500'
-                            : 'bg-red-900/30 text-white/80 hover:text-white hover:bg-red-900/50 border border-red-700/40 hover:border-red-600/60'
-                        }`}
+                            ? { backgroundColor: "var(--color-primary-red)", boxShadow: "0 4px 12px rgba(198, 40, 40, 0.3)", border: "1px solid rgba(255, 255, 255, 0.3)" }
+                            : { backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(69, 10, 10, 0.4)" }
+                        }
+                        onMouseEnter={(e) => {
+                          if (!isSelected) {
+                            e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.5)";
+                            e.currentTarget.style.borderColor = "rgba(69, 10, 10, 0.6)";
+                          }
+                        }}
+                        onMouseLeave={(e) => {
+                          if (!isSelected) {
+                            e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.3)";
+                            e.currentTarget.style.borderColor = "rgba(69, 10, 10, 0.4)";
+                          }
+                        }}
                       >
                         {product}
                       </button>
@@ -166,7 +182,7 @@ export default function SDSRequestPage() {
                 </div>
 
                 {selectedProducts.length > 0 && (
-                  <div className="mt-4 text-sm text-red-300 font-semibold flex items-center gap-2">
+                  <div className="mt-4 text-sm font-semibold flex items-center gap-2" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
                     <i className="fa-solid fa-check-circle"></i> {selectedProducts.length} product(s) selected
                   </div>
                 )}
@@ -174,55 +190,67 @@ export default function SDSRequestPage() {
 
               {/* Contact Details */}
               <div className="p-8">
-                <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                  Contact Details*
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="text-sm text-red-300 font-semibold mb-2 block">Full Name</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Full Name</label>
                     <input
                       type="text"
                       placeholder="Enter your full name"
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-                      className="w-full bg-transparent border-b border-red-700/40 text-white placeholder-white/40 px-0 py-2 outline-none focus:border-red-400 transition-all text-base"
+                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
+                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
                     />
                   </div>
 
                   <div>
-                    <label className="text-sm text-red-300 font-semibold mb-2 block">Company</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Company</label>
                     <input
                       type="text"
                       placeholder="Your company name"
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
-                      className="w-full bg-transparent border-b border-red-700/40 text-white placeholder-white/40 px-0 py-2 outline-none focus:border-red-400 transition-all text-base"
+                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
+                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="text-sm text-red-300 font-semibold mb-2 block">Email Address</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Email Address</label>
                     <input
                       type="email"
                       placeholder="your@email.com"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full bg-transparent border-b border-red-700/40 text-white placeholder-white/40 px-0 py-2 outline-none focus:border-red-400 transition-all text-base"
+                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
+                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="text-sm text-red-300 font-semibold mb-2 block">Additional Details</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Additional Details</label>
                     <textarea
                       rows={4}
                       placeholder="If 'Other Product' is selected, please specify the product name here..."
                       value={formData.details}
                       onChange={(e) => setFormData({...formData, details: e.target.value})}
-                      className="w-full bg-transparent border-b border-red-700/40 text-white placeholder-white/40 px-0 py-2 outline-none focus:border-red-400 transition-all text-base resize-none"
+                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base resize-none"
+                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
                     />
                   </div>
                 </div>
@@ -232,7 +260,10 @@ export default function SDSRequestPage() {
               <div className="flex gap-4">
                 <button
                   type="submit"
-                  className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2"
+                  className="text-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg flex items-center gap-2"
+                  style={{ backgroundColor: "var(--color-primary-red)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 8px 24px rgba(198, 40, 40, 0.4)", e.currentTarget.style.transform = "translateY(-2px)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "0 4px 12px rgba(198, 40, 40, 0.3)", e.currentTarget.style.transform = "translateY(0)")}
                 >
                   <i className="fa-solid fa-paper-plane"></i> Submit Request
                 </button>
@@ -243,7 +274,10 @@ export default function SDSRequestPage() {
                     setSelectedProducts([]);
                     setSearchTerm('');
                   }}
-                  className="bg-red-900/30 hover:bg-red-900/50 text-white font-bold px-8 py-4 rounded-lg transition-all border border-red-700/40 hover:border-red-600/60"
+                  className="text-white font-bold px-8 py-4 rounded-lg transition-all"
+                  style={{ backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(69, 10, 10, 0.4)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.5)", e.currentTarget.style.borderColor = "rgba(69, 10, 10, 0.6)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.3)", e.currentTarget.style.borderColor = "rgba(69, 10, 10, 0.4)")}
                 >
                   Clear Form
                 </button>
@@ -261,15 +295,15 @@ export default function SDSRequestPage() {
           width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(127, 29, 29, 0.2);
+          background: rgba(69, 10, 10, 0.15);
           border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(220, 38, 38, 0.4);
+          background: rgba(198, 40, 40, 0.4);
           border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(220, 38, 38, 0.6);
+          background: rgba(198, 40, 40, 0.6);
         }
       `}} />
     </section>
