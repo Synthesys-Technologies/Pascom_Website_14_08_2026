@@ -189,7 +189,7 @@ export default function SDSRequestPage() {
               </div>
 
               {/* Contact Details */}
-              <div className="p-8">
+              <div className="p-8" style={{ border: "2px solid var(--color-primary-red)", borderRadius: "8px", backgroundColor: "rgba(198, 40, 40, 0.02)" }}>
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                  Contact Details*
                 </h2>
@@ -203,10 +203,10 @@ export default function SDSRequestPage() {
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
-                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
 
@@ -218,10 +218,10 @@ export default function SDSRequestPage() {
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
-                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
-                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
 
@@ -233,10 +233,10 @@ export default function SDSRequestPage() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
-                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
 
@@ -247,10 +247,10 @@ export default function SDSRequestPage() {
                       placeholder="If 'Other Product' is selected, please specify the product name here..."
                       value={formData.details}
                       onChange={(e) => setFormData({...formData, details: e.target.value})}
-                      className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base resize-none"
-                      style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base resize-none"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
                 </div>
@@ -304,6 +304,10 @@ export default function SDSRequestPage() {
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background: rgba(198, 40, 40, 0.6);
+        }
+        input::placeholder,
+        textarea::placeholder {
+          color: rgba(69, 10, 10, 0.5);
         }
       `}} />
     </section>
