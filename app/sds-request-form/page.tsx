@@ -67,10 +67,10 @@ export default function SDSRequestPage() {
 
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style={{ color: "var(--color-white)" }}>
-            Request <span style={{ color: "var(--color-dark-red)" }}>SDS</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style={{ color: "var(--color-dark-red)" }}>
+            Request <span style={{ color: "var(--color-primary-red)" }}>SDS</span>
           </h1>
-          <p className="text-lg max-w-2xl" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
+          <p className="text-lg max-w-2xl" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
             Request Safety Data Sheets for our chemical products. Fill out the form below and we&apos;ll send the SDS to your email.
           </p>
         </div>
@@ -81,43 +81,43 @@ export default function SDSRequestPage() {
           <div className="lg:col-span-1 space-y-8">
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                 How it Works
               </h3>
-              <ol className="space-y-3" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
+              <ol className="space-y-3" style={{ color: "rgba(69, 10, 10, 0.8)" }}>
                 <li className="flex items-start gap-3">
-                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>1</span>
+                  <span className="font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-primary-red)", color: "var(--color-white)" }}>1</span>
                   <span>Fill out the contact form</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>2</span>
+                  <span className="font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-primary-red)", color: "var(--color-white)" }}>2</span>
                   <span>Select the products you need</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>3</span>
+                  <span className="font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-primary-red)", color: "var(--color-white)" }}>3</span>
                   <span>Submit your request</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-white font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-dark-red)" }}>4</span>
+                  <span className="font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-primary-red)", color: "var(--color-white)" }}>4</span>
                   <span>Receive SDS via email</span>
                 </li>
               </ol>
             </div>
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-white flex items-center gap-3">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                 Product Not Listed?
               </h3>
-              <p className="text-white/80 text-base leading-relaxed">
+              <p className="text-base leading-relaxed" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
                 Select &quot;Other Product&quot; from the list and provide the product name in the details section below.
               </p>
             </div>
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                  General Inquiries
               </h3>
-              <a href="mailto:info@pascom.com.au" className="font-semibold transition-colors text-lg" style={{ color: "rgba(255, 255, 255, 0.9)" }} onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-dark-red)")} onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.9)")}>
+              <a href="mailto:info@pascom.com.au" className="font-semibold transition-colors text-lg" style={{ color: "var(--color-primary-red)" }} onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-dark-red)")} onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-primary-red)")}>
                 info@pascom.com.au
               </a>
             </div>
@@ -130,7 +130,7 @@ export default function SDSRequestPage() {
 
               {/* Product Selection */}
               <div className="p-8">
-                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                     Select Product(s)*
                 </h2>
 
@@ -177,12 +177,12 @@ export default function SDSRequestPage() {
                     );
                   })}
                   {filteredProducts.length === 0 && (
-                    <p className="text-sm text-white/50 p-4 w-full">No products found matching &quot;{searchTerm}&quot;</p>
+                    <p className="text-sm p-4 w-full" style={{ color: "rgba(69, 10, 10, 0.5)" }}>No products found matching &quot;{searchTerm}&quot;</p>
                   )}
                 </div>
 
                 {selectedProducts.length > 0 && (
-                  <div className="mt-4 text-sm font-semibold flex items-center gap-2" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+                  <div className="mt-4 text-sm font-semibold flex items-center gap-2" style={{ color: "var(--color-primary-red)" }}>
                     <i className="fa-solid fa-check-circle"></i> {selectedProducts.length} product(s) selected
                   </div>
                 )}
@@ -190,7 +190,7 @@ export default function SDSRequestPage() {
 
               {/* Contact Details */}
               <div className="p-8">
-                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                  Contact Details*
                 </h2>
 
