@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 const articleData = {
   category: "News",
-  date: "June 23, 2024",
-  title: "Why Giants in the Oil and Gas Industry Choose Pascom as Their Chemical Supplier",
+  date: "6.23.2024",
+  title: "Exploring the Top 10 Chemicals Used in the Water Treatment Industry",
   author: "Pascom Commercial",
-  heroImage: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-umaraffan499-87236-768x512.jpg",
+  heroImage: "https://pascom.com.au/wp-content/uploads/2024/08/iStock-1278934193-1-768x513.jpg",
 };
 
 const relatedPosts = [
@@ -17,28 +17,46 @@ const relatedPosts = [
     title: "Optimizing Chemical Logistical Services at Pascom",
     excerpt: "At Pascom, we understand that efficient chemical logistical operations are essential to keeping your supply chain moving without delays.",
     category: "Logistics",
-    date: "August 28, 2024",
     image: "https://pascom.com.au/wp-content/uploads/2024/08/iStock-1278934193-1-768x513.jpg",
     readTime: "4 min read",
+    link:"/Optimizing_Chemical_Logistical_Services_at_Pascom"
   },
   {
     id: "2",
-    title: "The Rapid Growth of the Mining Industry in Western Australia and Its Benefits for Chemical Manufacturing",
-    excerpt: "Western Australia has long been a powerhouse in the mining sector, driving immense demand for specialized chemicals.",
-    category: "Mining",
-    date: "June 23, 2024",
-    image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg",
-    readTime: "6 min read",
+    title: "Why Giants in the Oil and Gas Industry Choose Pascom",
+    excerpt: "In the dynamic world of oil and gas exploration and refining, having a dependable partner is critical.",
+    category: "Oil & Gas",
+    image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-umaraffan499-87236-1024x683.jpg",
+    readTime: "5 min read",
+    link:"/Why_Giants_in_the_Oil_and_Gas_Industry_Choose_Pascom_as_Their_Chemical_Supplier"
   },
   {
     id: "3",
-    title: "Exploring the Top 10 Chemicals Used in the Water Treatment Industry",
+    title: "Rapid Growth of the Mining Industry in WA",
+    excerpt: "Western Australia has long been a powerhouse in the mining sector, driving immense demand for specialized chemicals.",
+    category: "Mining",
+    image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg",
+    readTime: "6 min read",
+    link:"/The_Rapid_Growth_of_the_Mining_Industry_in_Western_Australia_and_Its_Benefits_for _Chemical_Manufacturing"
+  },
+  {
+    id: "4",
+    title: "Exploring the Top 10 Chemicals in Water Treatment",
     excerpt: "Ensuring safe and clean water is essential for public health and industrial operations worldwide. Here are the leading solutions.",
     category: "Water Treatment",
-    date: "June 23, 2024",
     image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-pixabay-432786-768x512.jpg",
     readTime: "7 min read",
-  }
+    link:"/Exploring_the_Top_10_Chemicals_Used_in_the_Water_Treatment_Industry"
+  },
+  {
+    id: "5",
+    title: "Top Chemical Suppliers for the Agriculture Industry",
+    excerpt: "When it comes to ensuring robust agricultural production, reliable formulations are necessary for high yield.",
+    category: "Agriculture",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
+    readTime: "5 min read",
+    link:"/Top_Chemical_Suppliers_for_the_Agriculture_Industry"
+  },
 ];
 
 export default function BlogPost() {
@@ -61,7 +79,7 @@ export default function BlogPost() {
           </div>
 
           {/* Article Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight tracking-tight max-w-5xl drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold leading-tight tracking-tight max-w-5xl drop-shadow-lg">
             {articleData.title}
           </h1>
         </div>
@@ -127,49 +145,72 @@ export default function BlogPost() {
         <article className="lg:col-span-9 flex flex-col text-gray-800 order-1 lg:order-2 space-y-8">
 
           {/* Introduction */}
-          <p className="text-lg leading-relaxed text-gray-700 first-letter:text-3xl first-letter:font-bold first-letter:text-red-600">
-            In the dynamic world of oil and gas exploration and production, the choice of chemical suppliers plays a crucial role in ensuring operational efficiency, safety, and environmental responsibility. Pascom has emerged as a preferred partner for many giants in the oil and gas sector, offering a compelling array of reasons why industry leaders trust us with their chemical supply needs.
+          <p className="text-lg leading-relaxed text-gray-700 first-letter:text-2xl first-letter:font-bold first-letter:text-red-600">
+            Ensuring safe and clean water is essential for public health and environmental sustainability. Behind the scenes, a variety of chemicals play crucial roles in the water treatment process, each serving specific functions to purify and sanitize water supplies. Let&apos;s delve into the top 10 chemicals that are integral to the water treatment industry:
           </p>
 
-          {/* The Article Points */}
+          {/* The Top 10 List */}
           <div className="space-y-8">
             <div className="border-l-4 border-red-600 pl-6 py-2">
-              <h3 className="text-2xl text-red-700 font-bold mb-3">Commitment to Quality and Innovation</h3>
-              <p className="text-base leading-relaxed text-gray-700">At Pascom, we uphold stringent standards of quality and innovation, which resonate deeply with our oil and gas partners. Our products are meticulously formulated and rigorously tested to meet and exceed industry requirements. Whether it’s corrosion inhibitors, demulsifiers, or drilling fluids, our chemicals are designed to enhance performance, prolong equipment life, and optimize operational processes.</p>
+              <h3 className="text-2xl text-red-700 font-bold mb-3">1. Chlorine</h3>
+              <p className="text-base leading-relaxed text-gray-700">Perhaps the most widely recognized chemical used for water disinfection, chlorine effectively kills bacteria, viruses, and other harmful microorganisms present in water sources. Its ability to provide residual disinfection throughout distribution systems makes it indispensable in ensuring water safety.</p>
             </div>
 
             <div className="border-l-4 border-red-600 pl-6 py-2">
-              <h3 className="text-2xl text-red-700 font-bold mb-3">Proven Track Record</h3>
-              <p className="text-base leading-relaxed text-gray-700">With over two decades of experience in chemical manufacturing, Pascom has built a solid reputation for reliability and consistency. We have successfully supported numerous oil and gas projects, from exploration to production and refining. Our track record of delivering on time and within specifications underscores our commitment to operational excellence.</p>
+              <h3 className="text-2xl text-red-700 font-bold mb-3">2. Chlorine Dioxide</h3>
+              <p className="text-base leading-relaxed text-gray-700">Known for its strong oxidizing properties, chlorine dioxide is effective against a broad spectrum of pathogens, including bacteria, viruses, and protozoa. It is also used for controlling tastes, odors, and disinfection by-products in water.</p>
             </div>
 
             <div className="border-l-4 border-red-600 pl-6 py-2">
-              <h3 className="text-2xl text-red-700 font-bold mb-3">Tailored Solutions</h3>
-              <p className="text-base leading-relaxed text-gray-700">We understand that every oil and gas operation is unique, with specific challenges and requirements. Pascom prides itself on offering tailored solutions that address the distinct needs of our partners. Whether it’s developing customized blends of chemicals or providing technical support for complex applications, we collaborate closely with our clients to ensure optimal outcomes.</p>
+              <h3 className="text-2xl text-red-700 font-bold mb-3">3. Aluminum Sulfate (Alum)</h3>
+              <p className="text-base leading-relaxed text-gray-700">Alum is a common coagulant used in water treatment to clarify water by causing fine particles to clump together and settle out. It helps in the removal of suspended solids, turbidity, and some dissolved substances.</p>
             </div>
 
             <div className="border-l-4 border-red-600 pl-6 py-2">
-              <h3 className="text-2xl text-red-700 font-bold mb-3">Environmental Stewardship</h3>
-              <p className="text-base leading-relaxed text-gray-700">In an era of heightened environmental awareness, sustainability is a top priority for both Pascom and our oil and gas partners. We prioritize eco-friendly practices throughout our manufacturing processes and offer products that help minimize environmental impact. From biodegradable chemicals to solutions that enhance water management and reduce emissions, Pascom contributes to our client’s sustainability goals.</p>
+              <h3 className="text-2xl text-red-700 font-bold mb-3">4. Polyaluminum Chloride (PAC)</h3>
+              <p className="text-base leading-relaxed text-gray-700">Similar to alum, PAC is a coagulant used for flocculation and sedimentation in water treatment processes. It offers advantages such as lower dosage requirements and reduced sludge production compared to traditional coagulants.</p>
             </div>
 
             <div className="border-l-4 border-red-600 pl-6 py-2">
-              <h3 className="text-2xl text-red-700 font-bold mb-3">Global Reach and Support</h3>
-              <p className="text-base leading-relaxed text-gray-700">Operating in Perth, Australia, Pascom maintains a robust logistical network that spans the globe. This ensures prompt delivery and dependable supply chain management, crucial for supporting large-scale oil and gas operations operating in diverse geographical locations.</p>
+              <h3 className="text-2xl text-red-700 font-bold mb-3">5. Polyelectrolytes</h3>
+              <p className="text-base leading-relaxed text-gray-700">These are high molecular weight polymers used as flocculants in water treatment. Polyelectrolytes help in aggregating fine particles into larger flocs, which are easier to remove through filtration or sedimentation.</p>
             </div>
 
             <div className="border-l-4 border-red-600 pl-6 py-2">
-              <h3 className="text-2xl text-red-700 font-bold mb-3">Partnership Approach</h3>
-              <p className="text-base leading-relaxed text-gray-700">At Pascom, we view our relationships with oil and gas giants as true partnerships. We strive to foster trust, transparency, and collaboration in every interaction. Our dedicated team of experts is committed to providing responsive customer service, technical expertise, and ongoing support to ensure our partners’ success.</p>
+              <h3 className="text-2xl text-red-700 font-bold mb-3">6. Activated Carbon</h3>
+              <p className="text-base leading-relaxed text-gray-700">Often used in water treatment systems for its ability to adsorb organic compounds, disinfection by-products, and some heavy metals. Activated carbon improves water quality by reducing odors, tastes, and certain chemical contaminants.</p>
+            </div>
+
+            <div className="border-l-4 border-red-600 pl-6 py-2">
+              <h3 className="text-2xl text-red-700 font-bold mb-3">7. Sodium Hypochlorite</h3>
+              <p className="text-base leading-relaxed text-gray-700">A liquid chlorine disinfectant used in water treatment for its effectiveness in killing pathogens and controlling microbial growth. It is safer and easier to handle than gaseous chlorine.</p>
+            </div>
+
+            <div className="border-l-4 border-red-600 pl-6 py-2">
+              <h3 className="text-2xl text-red-700 font-bold mb-3">8. Sodium Hydroxide (Caustic Soda)</h3>
+              <p className="text-base leading-relaxed text-gray-700">Used for pH adjustment in water treatment processes, sodium hydroxide helps stabilize pH levels and facilitates coagulation and precipitation of impurities.</p>
+            </div>
+
+            <div className="border-l-4 border-red-600 pl-6 py-2">
+              <h3 className="text-2xl text-red-700 font-bold mb-3">9. Sulfuric Acid</h3>
+              <p className="text-base leading-relaxed text-gray-700">This strong acid is employed in water treatment for pH adjustment, chemical cleaning of water treatment equipment, and as a coagulant aid in some applications.</p>
+            </div>
+
+            <div className="border-l-4 border-red-600 pl-6 py-2">
+              <h3 className="text-2xl text-red-700 font-bold mb-3">10. Hydrogen Peroxide</h3>
+              <p className="text-base leading-relaxed text-gray-700">Used as an oxidizing agent in water treatment to eliminate tastes, odors, and organic contaminants. Hydrogen peroxide also aids in the oxidation of iron and manganese in water supplies.</p>
             </div>
           </div>
 
           {/* Conclusion */}
           <div className="bg-red-50 border-l-4 border-red-600 rounded-r-lg p-8 my-8">
-            <h2 className="text-3xl text-red-700 font-bold mb-6">Conclusion</h2>
+            <h2 className="text-3xl text-red-700 font-bold mb-6">Choosing the Right Chemicals for Water Treatment</h2>
             <div className="space-y-6 text-base leading-relaxed text-gray-700">
               <p>
-                The choice of Pascom as a preferred chemical supplier by giants in the oil and gas industry is grounded in our unwavering commitment to quality, innovation, sustainability, and customer-centric values. As we continue to innovate and expand our capabilities, we look forward to further strengthening our partnerships and contributing to the continued success and growth of our valued clients in the oil and gas sector. Trust Pascom for your chemical supply needs and experience the difference in quality and service that sets us apart.
+                The selection and use of these chemicals in water treatment are carefully regulated to ensure compliance with health and environmental standards. Water treatment facilities and professionals must consider factors such as water quality parameters, dosage requirements, safety protocols, and environmental impacts when choosing and applying these chemicals.
+              </p>
+              <p>
+                In conclusion, the effective use of these top 10 chemicals in water treatment processes is fundamental to providing safe, clean, and reliable drinking water to communities worldwide. Their roles in disinfection, coagulation, pH adjustment, and contaminant removal contribute significantly to maintaining public health and sustainable water management practices. As advancements in technology and environmental awareness continue to evolve, so too will the methods and chemicals used in water treatment, ensuring continued improvements in water quality and safety for future generations.
               </p>
             </div>
           </div>
@@ -189,11 +230,11 @@ export default function BlogPost() {
           <div className="flex flex-col md:flex-row justify-between gap-6 my-12">
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
               <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">← Previous Post</span>
-              <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">The Rapid Growth of the Mining Industry in Western Australia and Its Benefits for Chemical Manufacturing</p>
+              <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Top Chemical Suppliers for the Agriculture Industry</p>
             </Link>
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg text-right hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
               <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post →</span>
-              <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Optimizing Chemical Logistical Services at Pascom</p>
+              <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">The Rapid Growth of the Mining Industry in WA</p>
             </Link>
           </div>
 
@@ -276,7 +317,7 @@ export default function BlogPost() {
           {relatedPosts.map((post) => (
             <Link
               key={post.id}
-              href="#"
+              href={"/blog"+post.image}
               className="group bg-red-50 border-2 border-red-200 rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:border-red-500 hover:shadow-xl hover:-translate-y-1"
             >
               <div className="relative w-full aspect-video overflow-hidden bg-red-100">
@@ -293,7 +334,7 @@ export default function BlogPost() {
                     {post.category}
                   </span>
                   <span className="text-red-500 text-xs font-bold">•</span>
-                  <span className="text-gray-500 text-xs font-medium">{post.date}</span>
+                  <span className="text-gray-500 text-xs font-medium">{post.readTime}</span>
                 </div>
                 <h3 className="text-red-700 text-lg font-bold leading-snug tracking-tight group-hover:text-red-600 transition-colors">
                   {post.title}
