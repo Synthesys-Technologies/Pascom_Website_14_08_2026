@@ -109,7 +109,7 @@ export default function CaseStudies() {
         Sticky Header + Progress Bar
         Fixed the invalid class. Used top-[80px] assuming you have a fixed navbar above it.
       */}
-      <div className="sticky top-0 md:top-28 z-10 w-full bg-[#F8FAFC] backdrop-blur-xl px-6 md:px-12 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="sticky top-0 md:top-28 z-10 w-full bg-[#f5f5f7] backdrop-blur-xl px-6 md:px-12 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-2">
             How Industries Rely on <span className="text-red-600">Pascom</span>
