@@ -228,8 +228,12 @@ export default function ServicesHorizontal() {
     >
       {/* HEADER */}
       <div className="w-full px-6 md:px-16 pt-16 md:pt-24 shrink-0">
-        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4">
-          Our Core <span className="text-red-600">Services</span>
+        <h2
+          className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4"
+          style={{ color: "var(--color-primary-red)" }}
+        >
+          Our Core{" "}
+          <span style={{ color: "var(--color-dark-red)" }}>Services</span>
         </h2>
         <p
           className="text-white/70 text-sm md:text-base font-medium max-w-2xl"
@@ -253,7 +257,7 @@ export default function ServicesHorizontal() {
             <Link
               key={item.id}
               href={`/products-services/enquiry/${item.id}`}
-              className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 border border-red-700/50 hover:border-red-500/80 transition-all duration-500 cursor-pointer rounded-2xl"
+              className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40  hover:border-red-500/80 transition-all duration-500 cursor-pointer"
               style={{
                 transform:
                   index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",

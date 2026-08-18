@@ -2705,7 +2705,6 @@ export default function ProductsPage() {
           scrub: 0.1,
         },
       });
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -2717,175 +2716,61 @@ export default function ProductsPage() {
       style={{ backgroundColor: "var(--color-primary-red)" }}
     >
       {/* HERO SECTION */}
-      <section className="w-full pt-32 pb-16 px-4 flex flex-col items-center text-center bg-[#f5f5f7]">
-        <h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-5xl leading-[1.15] tracking-tight text-white mb-6"
-          style={{ color: "var(--color-primary-red)" }}
-        >
-          Pascom supplies high quality chemicals for the oil & gas, water
-          treatment, agriculture, and mining industries.
-        </h1>
-        <p
-          className="text-white/80 text-base md:text-lg max-w-2xl mb-8 font-medium"
-          style={{ color: "var(--color-dark-red)" }}
-        >
-          Focusing on innovative, reliable, and efficient solutions tailored to
-          meet the highest industry standards.
-        </p>
+      <section className="w-full bg-[#db0000] pt-32 pb-16 px-4 md:px-8 font-sans antialiased overflow-hidden">
+        <div className="max-w-350 mx-auto">
+          {/* =========================================
+            TOP ROW (Text & Button)
+            ========================================= */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 mb-12 lg:mb-16 px-2">
+            {/* Left: Text Content */}
+            <div className="w-full lg:w-2/3">
+              {/* Main Headline */}
+              <h1
+                className="text-4xl md:text-6xl lg:text-[4.5rem] font-medium text-white tracking-tight leading-[1.05] mb-6"
+                style={{ color: "var(--color-White)" }}
+              >
+                Products & Services
+              </h1>
 
-        <button
-          className="flex items-center gap-3 rounded-full pl-6 pr-1.5 py-1.5 shadow-lg hover:shadow-xl transition-all duration-300 mb-20 group"
-          style={{
-            backgroundColor: "var(--color-primary-red)",
-            border: "1px solid rgba(255, 255, 255, 0.2)",
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = "var(--color-dark-red)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = "var(--color-primary-red)")
-          }
-        >
-          <span className="text-sm font-bold text-white">
-            View Full Catalog
-          </span>
-          <div
-            className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
-            style={{
-              backgroundColor: "white",
-              color: "var(--color-primary-red)",
-            }}
-          >
-            <i className="fa-solid fa-arrow-right text-xs"></i>
-          </div>
-        </button>
+              {/* Sub-paragraph */}
+              <p className="text-gray-100 text-sm md:text-base leading-relaxed font-medium max-w-3xl">
+                We understand what&apos;s important to you. Pascom has evolved
+                significantly, rising to prominence as one of the top chemical
+                blenders and distributor of chemicals, ingredients, and raw
+                materials Australia-Wide.
+              </p>
+            </div>
 
-        {/* 3D Curved Image Gallery */}
-        <div
-          className="relative w-full max-w-350 h-75 md:h-100 flex justify-center items-center mb-12"
-          style={{ perspective: "1200px" }}
-        >
-          {/* Card 1 (Far Left) */}
-          <div
-            className="absolute w-[22%] h-[85%] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500"
-            style={{
-              transform: "rotateY(25deg) translateZ(-150px) translateX(-135%)",
-            }}
-          >
-            <img
-              src="https://pascom.com.au/wp-content/uploads/2024/06/pexels-umaraffan499-87236-768x512.jpg"
-              alt="Oil & Gas"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Card 2 (Mid Left) */}
-          <div
-            className="absolute w-[24%] h-[88%] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500"
-            style={{
-              transform:
-                "rotateY(10deg) translateZ(-50px) translateX(-45%) scaleY(1.02)",
-            }}
-          >
-            <img
-              src="https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg"
-              alt="Water Treatment"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Card 3 (Mid Right) */}
-          <div
-            className="absolute w-[24%] h-[88%] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500"
-            style={{
-              transform:
-                "rotateY(-10deg) translateZ(-50px) translateX(45%) scaleY(1.02)",
-            }}
-          >
-            <img
-              src="https://pascom.com.au/wp-content/uploads/2024/06/pexels-pixabay-432786-768x512.jpg"
-              alt="Agriculture"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Card 4 (Far Right) */}
-          <div
-            className="absolute w-[22%] h-[85%] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500"
-            style={{
-              transform: "rotateY(-25deg) translateZ(-150px) translateX(135%)",
-            }}
-          >
-            <img
-              src="https://pascom.com.au/wp-content/uploads/2024/06/pexels-umaraffan499-87236-768x512.jpg"
-              alt="Mining"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Gallery Labels */}
-        <div className="hidden md:flex justify-center gap-16 lg:gap-32 w-full max-w-5xl mt-12">
-          {["Oil & Gas", "Water Treatment", "Agriculture", "Mining"].map(
-            (label, i) => (
-              <div key={i} className="text-center">
-                <span className="text-red-600 font-bold text-sm block mb-2">
-                  0{i + 1}
+            {/* Right: CTA Button */}
+            <div className="w-full lg:w-1/3 flex lg:justify-end pb-1">
+              <a
+                href="#"
+                className="group flex items-center justify-between gap-6 border-4 border-white rounded-full pl-6 pr-1.5 py-1.5 hover:bg-white/10 transition-colors w-max"
+              >
+                <span className="text-white text-sm font-medium tracking-wide">
+                  View case study
                 </span>
-                <span className="text-white/70 text-xs font-semibold uppercase tracking-wider"
-                 style={{ color: "var(--color-dark-red)"}}
-                >
-                  {label}
-                </span>
-              </div>
-            ),
-          )}
-        </div>
-      </section>
-
-      {/* COMPANY DESCRIPTION SECTION */}
-      <section
-        className="py-24 px-4 md:px-12"
-        style={{
-          backgroundColor: "rgba(198, 40, 40, 0.15)",
-          borderTop: "1px solid rgba(198, 40, 40, 0.3)",
-          borderBottom: "1px solid rgba(198, 40, 40, 0.3)",
-        }}
-      >
-        <div className="max-w-350 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          <div className="space-y-6 text-white/80 text-lg leading-relaxed font-medium">
-            <p>
-              <strong className="text-white font-bold">
-                Pascom is a leader in the chemical manufacturing industry,
-              </strong>{" "}
-              specializing in providing comprehensive solutions for the oil &
-              gas, water treatment, agriculture, and mining sectors.
-            </p>
-            <p>
-              Our world-class, 540,000-square-foot manufacturing facility in
-              Welshpool is one of Australia’s finest, offering unmatched
-              capabilities in Western Australia. This state-of-the-art facility
-              is fully bunded and designed to meet the stringent standards
-              required by the oil and gas industry, reflecting our commitment to
-              excellence and innovation.
-            </p>
+                <div className="w-8 h-8 rounded-full bg-[#450A0A] flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg">
+                  <i className="fa-solid fa-arrow-right text-white text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
+                </div>
+              </a>
+            </div>
           </div>
-          <div className="space-y-6 text-white/80 text-lg leading-relaxed font-medium">
-            <p>
-              Pascom’s reputation for reliability and excellence is further
-              solidified by our{" "}
-              <strong className="text-white">
-                Class A contractor status awarded by ISN Networld
-              </strong>
-              , a recognition of our outstanding safety records, and our
-              adherence to the ISO 9001:2015 management system.
-            </p>
-            <p>
-              We take pride in maintaining total confidentiality for our diverse
-              clientele. Our commitment to delivering end-to-end solutions
-              ensures that our customers can have complete peace of mind,
-              knowing that their specific requirements are fully addressed.
-            </p>
+
+          {/* =========================================
+            BOTTOM ROW (Massive Image)
+            ========================================= */}
+          <div className="w-full h-[400px] md:h-[600px] lg:h-[75vh] relative rounded-[2rem] overflow-hidden shadow-2xl group cursor-pointer border border-white/5">
+            <Image
+              // You can replace this with any Pascom industrial/chemical image
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920&auto=format&fit=crop"
+              alt="Offshore Tank Logistics"
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              priority
+            />
+            {/* Subtle dark gradient overlay to ensure it feels grounded */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
           </div>
         </div>
       </section>
@@ -2898,14 +2783,17 @@ export default function ProductsPage() {
       >
         {/* HEADER */}
         <div className="w-full px-6 md:px-16 pt-16 md:pt-24 shrink-0">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4">
-            Comprehensive Product <span style={{ color: "var(--color-white)" }}>Catalog</span>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4"
+          style={{ color: "var(--color-white)" }}
+          >
+            Comprehensive Product{" "}
+            <span style={{ color: "var(--color-white)" }}>Catalog</span>
           </h2>
           <p
-            className="text-white/70 text-sm md:text-base font-medium max-w-2xl"
-            style={{ color: "rgba(255, 255, 255, 0.7)" }}
+            className="text-gray-100 text-sm md:text-base font-medium max-w-2xl"
           >
-            Scroll to explore our extensive range of chemical products tailored to your industry needs.
+            Scroll to explore our extensive range of chemical products tailored
+            to your industry needs.
           </p>
         </div>
 
@@ -2916,66 +2804,66 @@ export default function ProductsPage() {
             className="flex gap-8 md:gap-12 px-6 md:px-16 w-max flex-nowrap items-center h-full"
           >
             {productsList.map((product, index) => (
-                <Link
-                  key={`product-${index}`}
-                  href={`/products-services/product/${product.id}`}
-                  className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 hover:border-red-500/80 transition-all duration-500 cursor-pointer rounded-2xl"
+              <Link
+                key={`product-${index}`}
+                href={`/products-services/product/${product.id}`}
+                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 hover:border-red-500/80 transition-all duration-500 cursor-pointer"
+                style={{
+                  transform:
+                    index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",
+                }}
+              >
+                {/* Background Image Container */}
+                <div className="absolute inset-0 w-full h-[65%] overflow-hidden bg-black z-0">
+                  <div className="product-card-img w-full h-full relative">
+                    <Image
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpi-SdHUtLAa1jPLek_N2YeStJ_U0Mu2d8JJboInVPBg&s=10"
+                      alt={product.name}
+                      fill
+                      className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                    />
+                  </div>
+                </div>
+
+                {/* Gradient Overlay */}
+                <div
+                  className="absolute inset-0 z-10"
                   style={{
-                    transform:
-                      index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",
+                    background: `linear-gradient(to bottom, transparent 20%, rgba(198, 40, 40, 0.5) 60%, rgba(198, 40, 40, 0.7) 100%)`,
                   }}
-                >
-                  {/* Background Image Container */}
-                  <div className="absolute inset-0 w-full h-[65%] overflow-hidden bg-black z-0">
-                    <div className="product-card-img w-full h-full relative">
-                      <Image
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpi-SdHUtLAa1jPLek_N2YeStJ_U0Mu2d8JJboInVPBg&s=10"
-                        alt={product.name}
-                        fill
-                        className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
-                      />
+                ></div>
+
+                {/* Card Foreground Content */}
+                <div className="absolute inset-0 z-20 flex flex-col p-6 md:p-8">
+                  {/* Top Row: Badge & Button */}
+                  <div className="flex justify-between items-start w-full">
+                    <span className="bg-red-600/80 backdrop-blur-md border border-red-500/60 px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded">
+                      {product.cas_number
+                        ? `CAS: ${product.cas_number}`.substring(0, 12)
+                        : product.category.split(" ")[0].substring(0, 12)}
+                    </span>
+
+                    {/* Chemical Drop Button */}
+                    <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white group-hover:from-red-400 group-hover:to-red-600 transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]">
+                      <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                   </div>
 
-                  {/* Gradient Overlay */}
-                  <div
-                    className="absolute inset-0 z-10"
-                    style={{
-                      background: `linear-gradient(to bottom, transparent 20%, rgba(198, 40, 40, 0.5) 60%, rgba(198, 40, 40, 0.7) 100%)`,
-                    }}
-                  ></div>
-
-                  {/* Card Foreground Content */}
-                  <div className="absolute inset-0 z-20 flex flex-col p-6 md:p-8">
-                    {/* Top Row: Badge & Button */}
-                    <div className="flex justify-between items-start w-full">
-                      <span className="bg-red-600/80 backdrop-blur-md border border-red-500/60 px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded">
-                        {product.cas_number
-                          ? `CAS: ${product.cas_number}`.substring(0, 12)
-                          : product.category.split(" ")[0].substring(0, 12)}
-                      </span>
-
-                      {/* Chemical Drop Button */}
-                      <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white group-hover:from-red-400 group-hover:to-red-600 transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]">
-                        <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
-                      </div>
-                    </div>
-
-                    {/* Bottom Row: Title & Description */}
-                    <div className="mt-auto">
-                      <h3
-                        className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
-                        style={{ color: "var(--color-white)" }}
-                      >
-                        {product.name}
-                      </h3>
-                      <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">
-                        {product.description}
-                      </p>
-                    </div>
+                  {/* Bottom Row: Title & Description */}
+                  <div className="mt-auto">
+                    <h3
+                      className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
+                      style={{ color: "var(--color-white)" }}
+                    >
+                      {product.name}
+                    </h3>
+                    <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">
+                      {product.description}
+                    </p>
                   </div>
-                </Link>
-              ))}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
