@@ -79,7 +79,7 @@ const blogPosts = [
     image:
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
     readTime: "5 min read",
-    colSpan: "col-span-1",
+        colSpan: "md:col-span-2 lg:col-span-2",
     rowSpan: "row-span-1",
     link: "/Top_Chemical_Suppliers_for_the_Agriculture_Industry",
   },

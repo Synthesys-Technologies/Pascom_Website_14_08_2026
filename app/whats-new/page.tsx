@@ -18,6 +18,7 @@ const blogPosts = [
     date: "8.28.2024",
     image:
       "https://pascom.com.au/wp-content/uploads/2024/08/iStock-1278934193-1-768x513.jpg",
+    desc: "At Pascom, we understand that efficient chemical logistical services are pivotal to maintaining the smooth…",
   },
   {
     id: "2",
@@ -27,6 +28,7 @@ const blogPosts = [
     date: "6.23.2024",
     image:
       "https://pascom.com.au/wp-content/uploads/2024/06/pexels-umaraffan499-87236-1024x683.jpg",
+    desc: "In the dynamic world of oil and gas exploration and production, the choice of chemical…",
   },
   {
     id: "3",
@@ -35,6 +37,7 @@ const blogPosts = [
     date: "6.15.2024",
     image:
       "https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg",
+    desc: "Western Australia has long been a powerhouse in the mining sector, with its vast mineral…",
   },
   {
     id: "4",
@@ -44,6 +47,7 @@ const blogPosts = [
     date: "6.10.2024",
     image:
       "https://pascom.com.au/wp-content/uploads/2024/06/pexels-pixabay-432786-768x512.jpg",
+    desc: "Ensuring safe and clean water is essential for public health and environmental sustainability. Behind the…",
   },
   {
     id: "5",
@@ -52,6 +56,7 @@ const blogPosts = [
     date: "5.02.2024",
     image:
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
+    desc: "When it comes to ensuring robust agricultural production, choosing the right chemical suppliers is crucial.…",
   },
   {
     id: "6",
@@ -60,6 +65,7 @@ const blogPosts = [
     date: "6.23.2024",
     image:
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
+    desc: "Looking for a reliable source for your chemical requirements in Perth, Australia? Look no further…",
   },
 ];
 
@@ -241,11 +247,17 @@ export default function Newsroom() {
 
                     {/* Title */}
                     <h3
-                      className="text-lg md:text-[19px] font-medium leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-4"
-                      style={{ color: "var(--color-dark-red)" }}
+                      className="text-lg md:text-[19px] font-medium leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-4 md:h-16"
+                      style={{ color: "var(--color-primary-red)" }}
                     >
                       {post.title}
                     </h3>
+                    <p
+                      className="mt-5"
+                      style={{ color: "var(--color-dark-red)" }}
+                    >
+                      {post.desc}
+                    </p>
                   </div>
                 </article>
               ))}
