@@ -10,6 +10,11 @@ import AccreditationsStrip from "@/components/Section8";
 import LatestNews from "@/components/Latest";
 import FAQ from "@/components/FAQ";
 import Blog from "@/components/Blog";
+import ChemicalDrop from "@/components/Animation";
+import CaseStudies2 from "@/components/Test";
+import MolecularAnimation from "@/components/Test2";
+import ChemicalBondsProcess from "@/components/Test3";
+import FeaturesList2 from "@/components/Test4";
 
 export default function Home() {
   return (
@@ -17,11 +22,13 @@ export default function Home() {
       <Hero />
       <AboutSection />
       {/* <WhatWeDo /> */}
-      <FeaturesList />
+      {/* <FeaturesList /> */}
+      <FeaturesList2/>
       {/* <WhyChooseUs /> */}
       <PartnersMarquee />
       <SplitShowcase />
-      <CaseStudies />
+      {/* <CaseStudies /> */}
+          <CaseStudies2/>
       <AccreditationsStrip />
       <FeaturedProducts />
       <LatestNews />
@@ -34,7 +41,7 @@ export default function Home() {
       <TopIndustries />
       <FAQ />
       <Blog /> */}
-      {/* <StackingSections/>  */}
+     <ChemicalBondsProcess/>
     </main>
   );
 }

@@ -96,10 +96,12 @@ export default function CoreValues() {
         {/* Left Column: Heading and CTA (Matches ABTC left sidebar) */}
         <div className="lg:col-span-1 flex flex-col justify-between h-full pt-2">
           <div className="values-heading">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.1] uppercase">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.1] uppercase"
+            style={{color:"var(--color-white)"}}
+            >
               We Value<br />
               Your<br />
-              <span style={{ color: "var(--color-white)" }}>Partnership</span>
+              <span style={{color:"var(--color-dark-red)"}}>Partnership</span>
             </h2>
 
             <p className="mt-6 text-sm text-white leading-relaxed max-w-xs">

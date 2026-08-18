@@ -243,7 +243,7 @@ export default function AboutSection() {
 
             <div className="flex flex-wrap items-center gap-4">
               <button
-                className="group flex items-center justify-between gap-6 border-2 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
+                className="group flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor =
@@ -266,7 +266,7 @@ export default function AboutSection() {
               </button>
 
               <button
-                className="group flex items-center justify-between gap-6 border-2 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
+                className="group flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor =

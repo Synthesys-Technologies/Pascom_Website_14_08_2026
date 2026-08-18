@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TopIndustries from "./TopIndustries";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -2773,6 +2774,10 @@ export default function ProductsPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
           </div>
         </div>
+      </section>
+
+      <section>
+      <TopIndustries/>
       </section>
 
       {/* CHEMICAL PRODUCTS GRID - HORIZONTAL SCROLL */}

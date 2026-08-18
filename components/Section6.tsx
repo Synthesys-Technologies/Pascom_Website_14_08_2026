@@ -186,7 +186,7 @@ const SplitBlock = ({
           <button
             className="group flex items-center justify-between gap-6 rounded-full pl-6 pr-1.5 py-1.5 transition-all w-max"
             style={{
-              border: "1px solid rgba(255, 255, 255, 0.3)",
+              border: "4px solid rgba(255, 255, 255, 0.3)",
               backgroundColor: "transparent",
             }}
             onMouseEnter={(e) =>

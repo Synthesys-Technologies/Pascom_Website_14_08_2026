@@ -73,7 +73,7 @@ export default function FAQ() {
         {/* =========================================
             LEFT COLUMN (Headers & CTA Card)
             ========================================= */}
-        <div className="lg:col-span-5 flex flex-col sticky top-24">
+        <div className="lg:col-span-5 flex flex-col sticky top-32">
 
           {/* Main Headline (Serif Font to match the elegant image style) */}
           <h2 className="text-5xl md:text-6xl font-serif leading-[1.1] tracking-tight mb-6" style={{ color: "var(--color-white)" }}>

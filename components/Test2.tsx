@@ -93,7 +93,7 @@ export default function TopIndustries() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-200 md:min-h-screen bg-[#FDFDFD] font-sans antialiased overflow-hidden flex flex-col items-center justify-start pt-32 pb-24">
+    <section ref={containerRef} className="relative w-full min-h-[800px] md:min-h-screen bg-[#FDFDFD] font-sans antialiased overflow-hidden flex flex-col items-center justify-start pt-32 pb-24">
       
       {/* =========================================
           HERO TEXT & CTA
@@ -102,12 +102,12 @@ export default function TopIndustries() {
         <h2 className="text-3xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight mb-6">
           The world&apos;s most innovative industries trust Pascom to keep their chemistry flowing.
         </h2>
-        {/* <a href="#" className="inline-flex items-center gap-3 bg-[#DC2626] text-white text-sm font-bold px-6 py-2.5 rounded-sm hover:bg-red-700 transition-colors shadow-md group">
+        <a href="#" className="inline-flex items-center gap-3 bg-[#DC2626] text-white text-sm font-bold px-6 py-2.5 rounded-sm hover:bg-red-700 transition-colors shadow-md group">
           Get in Touch
-          <div className="w-4 h-4 bg-white flex items-center justify-center rounded-xs">
+          <div className="w-4 h-4 bg-white flex items-center justify-center rounded-[2px]">
             <i className="fa-solid fa-arrow-up-right text-[8px] text-[#DC2626] group-hover:translate-x-px group-hover:-translate-y-px transition-transform"></i>
           </div>
-        </a> */}
+        </a>
       </div>
 
       {/* =========================================

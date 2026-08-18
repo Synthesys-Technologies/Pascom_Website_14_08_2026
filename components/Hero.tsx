@@ -114,7 +114,7 @@ export default function Hero() {
         >
           <div className="mt-10 flex flex-col justify-between items-center">
             <button
-              className="hero-button group flex items-center justify-between gap-6 border-2 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
+              className="hero-button group flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor =
@@ -197,7 +197,7 @@ export default function Hero() {
       <div className="relative z-10 flex-1 flex flex-col md:flex-row justify-end items-end px-6 md:px-10 pb-10 w-full">
         {/* Bottom Left: Team Avatars */}
         <div
-          className="hero-team backdrop-blur-md border border-white/20 rounded-full p-1.5 pr-8 flex items-center gap-4 mb-6 md:mb-0 shadow-xl"
+          className="hero-team backdrop-blur-md border-4 border-white/20 rounded-full p-1.5 pr-8 flex items-center gap-4 mb-6 md:mb-0 shadow-xl"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.08)" }}
         >
           <div className="flex -space-x-3">

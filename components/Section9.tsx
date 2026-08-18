@@ -117,12 +117,14 @@ export default function FeaturedProducts() {
             SECTION HEADER ROW
             ========================================= */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 tracking-tight">
-            Explore Our Products
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 tracking-tight"
+          style={{color:"var(--color-primary-red)"}}
+          >
+            Explore Our <span style={{color:"var(--color-dark-red)"}}>Products</span>
           </h2>
           
           {/* Pill CTA Button */}
-          <a href="#" className="group flex items-center justify-between gap-6 border border-gray-900 rounded-full pl-6 pr-1.5 py-1.5 hover:bg-gray-900/5 transition-colors shrink-0">
+          <a href="#" className="group flex items-center justify-between gap-6 border-4 border-gray-900 rounded-full pl-6 pr-1.5 py-1.5 hover:bg-gray-900/5 transition-colors shrink-0">
             <span className="text-gray-900 text-xs md:text-sm font-bold tracking-wide">
               View All Products
             </span>
