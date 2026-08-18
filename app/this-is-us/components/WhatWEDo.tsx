@@ -5,41 +5,49 @@ import Image from 'next/image';
 
 export default function AboutUs() {
   return (
-    <section className="min-h-screen bg-red-600 flex items-center justify-center p-4 md:p-8 overflow-hidden font-sans antialiased">
+    // Outer Dark Background
+    <section className="w-full min-h-screen bg-[#db0000] flex items-center justify-center p-4 md:py-40 font-sans antialiased">
       
-      {/* Layout Wrapper */}
-      <div className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center mt-20 md:mt-0">
+      {/* 
+        Main Split Card Container 
+      */}
+      <div className="w-full max-w-350 flex flex-col lg:flex-row rounded-4xl md:rounded-[2.5rem] overflow-hidden shadow-2xl">
 
-        {/* 1. The Overlapping Image (Left Side) */}
-        {/* On mobile: sits on top. On desktop: overlaps the left edge */}
-        <div className="md:absolute left-0 top-1/2 md:-translate-y-1/2 w-[85%] sm:w-72 lg:w-96 aspect-square z-20 shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden -mb-16 md:mb-0 group cursor-pointer">
+        {/* =========================================
+            LEFT SIDE: Full Bleed Image
+            ========================================= */}
+        {/* Adjusted minimum height to reduce overall card size */}
+        <div className="relative w-full lg:w-1/2 h-[350px] md:h-[450px] lg:h-auto lg:min-h-[550px] bg-black group">
           <Image 
             src="https://pascom.com.au/wp-content/uploads/2024/10/pascom-tank-600x898.png" 
-            alt="Pascom Manufacturing" 
+            alt="Pascom Chemical Manufacturing" 
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            priority
           />
-          {/* Subtle Red/Orange Overlay */}
-          <div className="absolute inset-0 bg-linear-to-tr from-red-600/40 to-transparent mix-blend-multiply pointer-events-none"></div>
+          {/* Subtle dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
 
-        {/* 2. The Main White Content Card */}
-        <div className="w-full md:w-[85%] md:ml-auto  shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-8 pt-24 md:pt-16 md:pb-16 md:pl-48 lg:pl-64 md:pr-16 relative z-10 border-4 border-gray-100/50">
+        {/* =========================================
+            RIGHT SIDE: Solid Color Content Panel
+            ========================================= */}
+        {/* Reduced padding to tighten up the content height */}
+        <div className="w-full lg:w-1/2 bg-[#c85858] p-8 md:p-12 lg:p-14 xl:p-16 flex flex-col justify-center text-white">
+          
+          {/* Eyebrow Text */}
+          <span className="text-white/90 font-medium text-sm md:text-base tracking-wide mb-3 block">
+            About Us
+          </span>
 
-          {/* Right Edge Decorative Dots (from reference image) */}
-          <div className="hidden lg:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-2">
-            <div className="w-1.5 h-5 bg-red-500 rounded-full shadow-[0_0_8px_rgba(239,68,68,0.5)]"></div>
-            <div className="w-1.5 h-1.5 bg-gray-200 rounded-full"></div>
-            <div className="w-1.5 h-1.5 bg-gray-200 rounded-full"></div>
-          </div>
-
-          {/* Main Title */}
-          <h2 className="text-3xl md:text-4xl font-extrabold text-whit mb-6 tracking-tight">
-            Who We Are, What We Do
+          {/* Main Headline */}
+          <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-medium leading-[1.1] tracking-tight mb-6">
+            Who We Are, <br className="hidden lg:block" />
+            What We Do.
           </h2>
 
-          {/* Paragraph Content */}
-          <div className="space-y-4 text-white text-sm md:text-[15px] leading-relaxed font-medium mb-8 pr-0 lg:pr-8">
+          {/* Paragraphs - Reduced space between paragraphs */}
+          <div className="space-y-4 text-white/90 text-sm md:text-[15px] leading-relaxed font-medium mb-10">
             <p>
               Our journey to becoming a market leader in the Chemical Manufacturing industry has been marked by deliberate growth and steadfast commitment to excellence. Over the past two decades, Pascom has accumulated unparalleled knowledge and expertise, which we leverage to deliver quality and innovative products that our clients can rely on with confidence.
             </p>
@@ -51,8 +59,17 @@ export default function AboutUs() {
             </p>
           </div>
 
+          {/* Outlined Pill Button */}
+          <a 
+            href="#" 
+            className="group w-max inline-flex items-center gap-3 border border-white rounded-full px-8 py-3 text-sm font-bold text-white hover:bg-white hover:text-[#DC2626] transition-all duration-300"
+          >
+            Discover More
+            <i className="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+          </a>
 
         </div>
+
       </div>
     </section>
   );

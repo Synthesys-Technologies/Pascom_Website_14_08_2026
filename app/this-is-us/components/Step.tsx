@@ -102,7 +102,7 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full bg-[#F8F9FB] py-24 px-4 md:px-8 font-sans antialiased overflow-hidden">
+    <section ref={containerRef} className="w-full bg-[#FFFFFF] py-24 px-4 md:px-8 font-sans antialiased overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header Section */}
