@@ -90,25 +90,19 @@ export default function Footer() {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 flex-grow">
         {/* LEFT COLUMN: Brand, Tagline, Contact */}
         <div className="md:col-span-6 lg:col-span-5 flex flex-col">
-          {/* Wordmark */}
-          <div className="footer-reveal mb-8 relative top-0 w-48 h-48 md:w-64 md:h-64">
-            <Image
-              src="https://pascom.com.au/wp-content/uploads/2024/07/Logo-colour-change-1024x1024.png"
-              alt="Pascom Manufacturing"
-              fill
-              className="object-contain transition-transform duration-700 hover:scale-105"
-            />
+           {/* Wordmark */}
+          <div className="footer-reveal text-4xl md:text-5xl font-black tracking-widest uppercase mb-8">
+            PASCOM
           </div>
 
-          {/* Accent Tagline */}
-          <h2 className="footer-reveal text-3xl -mt-24 md:text-[2.5rem] font-light leading-tight mb-10 tracking-tight text-white">
+            {/* Accent Tagline */}
+          <h2 className="footer-reveal text-3xl md:text-[2.5rem] font-light text-[#DC2626] leading-tight mb-10 tracking-tight">
             Quality. Integrity. <br /> Efficiency.
           </h2>
 
           {/* Divider */}
           <div
-            className="footer-reveal w-full md:w-3/4 h-px mb-10"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+            className="footer-reveal w-full md:w-3/4 h-px mb-10 bg-gray-100"
           ></div>
 
           {/* Contact Details */}
@@ -125,7 +119,7 @@ export default function Footer() {
             >
               info@pascom.com.au
             </a>
-            <p className="text-red-200/60 mt-4 max-w-xs text-sm leading-relaxed font-medium">
+            <p className="text-gray-100 mt-4 max-w-xs text-sm leading-relaxed font-medium">
               14 Casino Street,
               <br />
               Welshpool, WA 6106
@@ -138,8 +132,8 @@ export default function Footer() {
         {/* MIDDLE COLUMN: Sitemap Nav */}
         <div className="md:col-span-6 lg:col-span-3 flex flex-col md:pt-4">
           <h4
-            className="footer-reveal text-[10px] font-bold uppercase tracking-widest mb-6"
-            style={{ color: "rgba(255, 255, 255, 0.7)" }}
+            className="footer-reveal text-[14px] font-bold uppercase tracking-widest mb-6"
+            style={{ color: "var(--color-dark-red)" }}
           >
             Navigation
           </h4>
@@ -176,8 +170,7 @@ export default function Footer() {
           BOTTOM ROW: Legal & Copyright
           ========================================= */}
       <div
-        className="relative z-10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
-        style={{ borderTop: `1px solid rgba(255, 255, 255, 0.2)` }}
+        className="relative z-10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-t border-t-gray-100"
       >
         {/* Legal Links */}
         <div
