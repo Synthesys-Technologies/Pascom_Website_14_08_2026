@@ -4,7 +4,7 @@ import AboutUs from "./components/WhatWEDo";
 
 export default function page() {
   return (
-    <div>
+    <div className="bg-white">
       <AboutUs />
       <ProcessSection />
       <OurTeamCard />

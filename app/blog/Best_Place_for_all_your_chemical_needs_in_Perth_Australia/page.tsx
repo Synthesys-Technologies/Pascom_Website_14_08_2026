@@ -65,7 +65,9 @@ export default function BlogPost() {
           </div>
 
           {/* Article Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight tracking-tight max-w-5xl drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight tracking-tight max-w-5xl drop-shadow-lg"
+          style={{ color: "var(--color-white)" }}
+          >
             {articleData.title}
           </h1>
         </div>

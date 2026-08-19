@@ -15,6 +15,7 @@ import CaseStudies2 from "@/components/Test";
 import MolecularAnimation from "@/components/Test2";
 import ChemicalBondsProcess from "@/components/Test3";
 import FeaturesList2 from "@/components/Test4";
+import LatestUpdate from "@/components/LatestUpdate";
 
 export default function Home() {
   return (
@@ -23,25 +24,26 @@ export default function Home() {
       <AboutSection />
       {/* <WhatWeDo /> */}
       {/* <FeaturesList /> */}
-      <FeaturesList2/>
+      <FeaturesList2 />
       {/* <WhyChooseUs /> */}
       <PartnersMarquee />
       <SplitShowcase />
       {/* <CaseStudies /> */}
-          <CaseStudies2/>
+      <CaseStudies2 />
       <AccreditationsStrip />
       <FeaturedProducts />
       <LatestNews />
       {/* <CoreValues /> */}
       <CtaBand />
       <FAQ />
-      <Blog />
+      {/* <Blog /> */}
+      {/* <LatestUpdate /> */}
       {/* <WhyChooseUsGrid/>
       <LookingForProducts />
       <TopIndustries />
       <FAQ />
       <Blog /> */}
-     <ChemicalBondsProcess/>
+      <ChemicalBondsProcess />
     </main>
   );
 }

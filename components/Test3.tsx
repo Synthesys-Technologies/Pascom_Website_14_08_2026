@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,102 +10,140 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const processSteps = [
+// Your provided Blog Posts array
+const blogPosts = [
   {
-    id: '01',
-    title: 'RAW MATERIALS',
-    desc: 'Sourcing & Procurement',
-    left: '34.37%', // Corresponds to X: 55 in viewBox
-    top: '25%',    // Corresponds to Y: 25 in viewBox
-    type: 'filled',
-    align: 'right', // Text aligns to the right of the node
+    id: "1",
+    title: "Optimizing Chemical Logistical Services at Pascom",
+    excerpt: "At Pascom, we understand that efficient chemical logistical operations are essential to keeping your supply chain moving without delays.",
+    category: "Logistics",
+    image: "https://pascom.com.au/wp-content/uploads/2024/08/iStock-1278934193-1-768x513.jpg",
+    readTime: "4 min read",
+    link: "/Optimizing_Chemical_Logistical_Services_at_Pascom",
   },
   {
-    id: '02',
-    title: 'FORMULATION',
-    desc: 'Custom Chemical Blending',
-    left: '46.87%', // Corresponds to X: 75 in viewBox
-    top: '45%',    // Corresponds to Y: 45 in viewBox
-    type: 'filled',
-    align: 'left',
+    id: "2",
+    title: "Why Giants in the Oil and Gas Industry Choose Pascom",
+    excerpt: "In the dynamic world of oil and gas exploration and refining, having a dependable partner is critical.",
+    category: "Oil & Gas",
+    image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-umaraffan499-87236-1024x683.jpg",
+    readTime: "5 min read",
+    link: "/Why_Giants_in_the_Oil_and_Gas_Industry_Choose_Pascom_as_Their_Chemical_Supplier",
   },
   {
-    id: '03',
-    title: 'QUALITY ASSURANCE',
-    desc: 'Rigorous Lab Testing',
-    left: '37.50%', // Corresponds to X: 60 in viewBox
-    top: '75%',    // Corresponds to Y: 75 in viewBox
-    type: 'outlined',
-    align: 'right',
+    id: "3",
+    title: "Rapid Growth of the Mining Industry in WA",
+    excerpt: "Western Australia has long been a powerhouse in the mining sector, driving immense demand for specialized chemicals.",
+    category: "Mining",
+    image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg",
+    readTime: "6 min read",
+    link: "/The_Rapid_Growth_of_the_Mining_Industry",
   },
   {
-    id: '04',
-    title: 'LOGISTICS',
-    desc: 'Safe & Compliant Transit',
-    left: '56.25%', // Corresponds to X: 90 in viewBox
-    top: '75%',    // Corresponds to Y: 75 in viewBox
-    type: 'filled',
-    align: 'left',
-  }
+    id: "4",
+    title: "Exploring the Top 10 Chemicals in Water Treatment",
+    excerpt: "Ensuring safe and clean water is essential for public health and industrial operations worldwide. Here are the leading solutions.",
+    category: "Water Treatment",
+    image: "https://pascom.com.au/wp-content/uploads/2024/06/pexels-pixabay-432786-768x512.jpg",
+    readTime: "7 min read",
+    link: "/Exploring_the_Top_10_Chemicals_Used_in_the_Water_Treatment_Industry",
+  },
+  {
+    id: "5",
+    title: "Top Chemical Suppliers for the Agriculture Industry",
+    excerpt: "When it comes to ensuring robust agricultural production, reliable formulations are necessary for high yield.",
+    category: "Agriculture",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
+    readTime: "5 min read",
+    link: "/Top_Chemical_Suppliers_for_the_Agriculture_Industry",
+  },
+  {
+    id: "6",
+    title: "Best Place for all your chemical needs in Perth Australia",
+    excerpt: "Looking for a reliable source for your chemical requirements in Perth? Look no further than Pascom, your trusted partner.",
+    category: "News",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920&auto=format&fit=crop",
+    readTime: "3 min read",
+    link: "/best-place-perth",
+  },
 ];
 
-export default function ChemicalBondsProcess() {
+// Map the blog posts to their alternating zig-zag layout coordinates
+const mappedPosts = blogPosts.map((post, index) => {
+  const isLeft = index % 2 === 0;
+  // We divide the Y-axis into 6 equal sections along the 180-unit SVG ViewBox
+  const yValues = [15, 45, 75, 105, 135, 165]; 
+  
+  return {
+    ...post,
+    x: isLeft ? '40%' : '60%',
+    y: `${(yValues[index] / 180) * 100}%`,
+    align: isLeft ? 'left' : 'right',
+  };
+});
+
+export default function ChemicalBlogTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       
-      // 1. Animate SVG Chemical Bonds drawing themselves
+      // 1. Draw the Chemical Bonds dynamically on scroll
       const bonds = gsap.utils.toArray('.chem-bond') as SVGPathElement[];
-      
       bonds.forEach((bond) => {
         const length = bond.getTotalLength();
         gsap.set(bond, { strokeDasharray: length, strokeDashoffset: length });
 
         gsap.to(bond, {
           strokeDashoffset: 0,
-          duration: 2,
-          ease: 'power2.inOut',
+          duration: 1.5,
+          ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top 60%',
             end: 'bottom 80%',
-            scrub: 1, // Binds animation perfectly to scroll
+            scrub: 1, 
           }
         });
       });
 
-      // 2. Animate Atoms (Nodes) popping in
-      gsap.fromTo('.chem-node',
-        { scale: 0, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.2,
-          ease: 'back.out(2)',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 50%',
+      // 2. Pop in the Atoms (Nodes)
+      const nodes = gsap.utils.toArray('.chem-atom');
+      nodes.forEach((node: any) => {
+        gsap.fromTo(node,
+          { scale: 0, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.5,
+            ease: 'back.out(2)',
+            scrollTrigger: {
+              trigger: node,
+              start: 'top 75%',
+            }
           }
-        }
-      );
+        );
+      });
 
-      // 3. Animate Text Labels fading up
-      gsap.fromTo('.chem-label',
-        { y: 20, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 45%',
+      // 3. Slide in the Blog Edge Cards
+      const cards = gsap.utils.toArray('.edge-card');
+      cards.forEach((card: any) => {
+        const isLeft = card.classList.contains('card-left');
+        gsap.fromTo(card,
+          { x: isLeft ? -50 : 50, opacity: 0, y: 20 },
+          {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+            }
           }
-        }
-      );
+        );
+      });
 
     }, containerRef);
 
@@ -111,107 +151,156 @@ export default function ChemicalBondsProcess() {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full bg-[#FAFAFA] py-24 md:py-32 font-sans antialiased overflow-hidden">
+    <section className="w-full md:h-[190rem] bg-[#F8FAFC]  font-sans antialiased overflow-hidden">
       
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto px-6 mb-16">
-        <span className="text-[#DC2626] font-bold text-xs tracking-widest uppercase mb-4 block">
-          Our Process
-        </span>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-[1.1]">
-          The Building Blocks of <br /> Pascom Chemistry.
+      <div className="pt-24 pb-12 text-center max-w-3xl mx-auto px-6 relative z-20">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+          Top Industries We Serve
         </h2>
+        <p className="mt-6 text-lg text-gray-600 font-medium">
+          Follow our latest updates, industry breakthroughs, and logistical achievements across Australia.
+        </p>
       </div>
 
-      {/* 
-        Interactive Chemical Diagram Container 
-        Using an exact aspect ratio ensures the HTML elements perfectly overlay the SVG background at all screen sizes!
-      */}
-      <div className="relative w-full max-w-[1200px] mx-auto aspect-[3/4] md:aspect-[16/10] px-4">
+      {/* =========================================
+          DESKTOP: CHEMICAL EDGE LAYOUT
+          ========================================= */}
+      <div ref={containerRef} className="relative w-full max-w-[1400px] mx-auto h-[2200px] px-6 hidden lg:block mb-32">
         
-        {/* =========================================
-            THE SVG CHEMICAL BONDS (Drawn by GSAP)
-            ========================================= */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          {/* viewBox 0 0 160 100 creates a 16:10 grid for mapping coordinates */}
-          <svg viewBox="0 0 160 100" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
-            <g stroke="#0F172A" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        {/* --- SVG CHEMICAL MOLECULE (Background) --- */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <svg viewBox="0 0 100 180" className="w-full h-full" preserveAspectRatio="none">
+            <g strokeLinecap="round" strokeLinejoin="round">
               
-              {/* Central Hexagon */}
-              <path className="chem-bond" d="M 75 45 L 90 55 L 90 75 L 75 85 L 60 75 L 60 55 Z" />
-              {/* Inner Double Bond for Hexagon */}
-              <path className="chem-bond" d="M 63 53 L 73 45" />
+              {/* --- MAIN POLYMER BACKBONE (Extended for 6 items) --- */}
+              <path className="chem-bond" 
+                d="M 50 0 L 40 15 L 50 30 L 60 45 L 50 60 L 40 75 L 50 90 L 60 105 L 50 120 L 40 135 L 50 150 L 60 165 L 50 180" 
+                stroke="#DC2626" strokeWidth="0.3" fill="none" 
+              />
+              
+              {/* Chemical Double Bonds (Offset parallel lines) */}
+              <path className="chem-bond" d="M 42 16.5 L 50 28.5" stroke="#DC2626" strokeWidth="0.1" fill="none" />
+              <path className="chem-bond" d="M 58 46.5 L 50 58.5" stroke="#DC2626" strokeWidth="0.1" fill="none" />
+              <path className="chem-bond" d="M 42 76.5 L 50 88.5" stroke="#DC2626" strokeWidth="0.1" fill="none" />
+              <path className="chem-bond" d="M 58 106.5 L 50 118.5" stroke="#DC2626" strokeWidth="0.1" fill="none" />
+              <path className="chem-bond" d="M 42 136.5 L 50 148.5" stroke="#DC2626" strokeWidth="0.1" fill="none" />
 
-              {/* Top Link (Node 1 to Node 2) */}
-              <path className="chem-bond" d="M 55 25 L 75 25 L 75 45" />
+              {/* --- SECONDARY BRANCHING GROUPS (Grey Atoms) --- */}
+              <path className="chem-bond" d="M 50 30 L 56 30" stroke="#94A3B8" strokeWidth="0.2" fill="none" />
+              <circle className="chem-atom" cx="56" cy="30" r="0.8" fill="#94A3B8" />
 
-              {/* Far Top Right Double Bond */}
-              <path className="chem-bond" d="M 75 25 L 90 10" />
-              <path className="chem-bond" d="M 77 27 L 92 12" />
+              <path className="chem-bond" d="M 50 60 L 44 60" stroke="#94A3B8" strokeWidth="0.2" fill="none" />
+              <circle className="chem-atom" cx="44" cy="60" r="0.8" fill="#94A3B8" />
 
-              {/* Top Left Branches */}
-              <path className="chem-bond" d="M 55 25 L 55 40" />
-              <path className="chem-bond" d="M 55 25 L 45 35" />
+              <path className="chem-bond" d="M 50 90 L 56 90" stroke="#94A3B8" strokeWidth="0.2" fill="none" />
+              <circle className="chem-atom" cx="56" cy="90" r="0.8" fill="#94A3B8" />
 
-              {/* Mid Right Branches (With Outlined Node Placeholder) */}
-              <path className="chem-bond" d="M 90 55 L 105 45 L 105 25 L 115 15" />
-              <circle className="chem-bond" cx="105" cy="45" r="4" fill="#FAFAFA" />
+              <path className="chem-bond" d="M 50 120 L 44 120" stroke="#94A3B8" strokeWidth="0.2" fill="none" />
+              <circle className="chem-atom" cx="44" cy="120" r="0.8" fill="#94A3B8" />
 
-              {/* Bottom Legs */}
-              <path className="chem-bond" d="M 90 75 L 100 85" />
-              <path className="chem-bond" d="M 60 75 L 50 85" />
+              <path className="chem-bond" d="M 50 150 L 56 150" stroke="#94A3B8" strokeWidth="0.2" fill="none" />
+              <circle className="chem-atom" cx="56" cy="150" r="0.8" fill="#94A3B8" />
+
+              {/* --- HORIZONTAL TIE-LINES CONNECTING TO BLOG CARDS --- */}
+              <path className="chem-bond" d="M 40 15 L 35 15" stroke="#CBD5E1" strokeWidth="0.2" strokeDasharray="0.5, 0.5" fill="none" />
+              <path className="chem-bond" d="M 60 45 L 65 45" stroke="#CBD5E1" strokeWidth="0.2" strokeDasharray="0.5, 0.5" fill="none" />
+              <path className="chem-bond" d="M 40 75 L 35 75" stroke="#CBD5E1" strokeWidth="0.2" strokeDasharray="0.5, 0.5" fill="none" />
+              <path className="chem-bond" d="M 60 105 L 65 105" stroke="#CBD5E1" strokeWidth="0.2" strokeDasharray="0.5, 0.5" fill="none" />
+              <path className="chem-bond" d="M 40 135 L 35 135" stroke="#CBD5E1" strokeWidth="0.2" strokeDasharray="0.5, 0.5" fill="none" />
+              <path className="chem-bond" d="M 60 165 L 65 165" stroke="#CBD5E1" strokeWidth="0.2" strokeDasharray="0.5, 0.5" fill="none" />
 
             </g>
           </svg>
         </div>
 
-        {/* =========================================
-            HTML INTERACTIVE ATOMS & LABELS
-            ========================================= */}
-        {processSteps.map((step) => (
-          <div 
-            key={step.id} 
-            className="absolute flex items-center justify-center group"
-            style={{ 
-              left: step.left, 
-              top: step.top, 
-              transform: 'translate(-50%, -50%)',
-              zIndex: 10
-            }}
-          >
-            {/* The Atom (Node) */}
-            <div className={`
-              chem-node relative w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center shrink-0 shadow-lg cursor-pointer transition-transform duration-300 group-hover:scale-125
-              ${step.type === 'filled' ? 'bg-[#111111]' : 'bg-white border-4 border-[#111111]'}
-            `}>
-              {/* Subtle inner highlight to make it look 3D */}
-              {step.type === 'filled' && (
-                <div className="absolute top-[20%] left-[20%] w-[20%] h-[20%] bg-white/30 rounded-full blur-[1px]"></div>
-              )}
+        {/* --- HTML MAIN ATOMS & EDGE BLOG CARDS --- */}
+        {mappedPosts.map((post) => (
+          <div key={post.id} className="absolute w-full left-0" style={{ top: post.y }}>
+            
+            {/* The Main Atom (Node) placed exactly on the zigzag vertex */}
+            <div 
+              className="chem-atom absolute w-8 h-8 bg-white border-[6px] border-[#DC2626] rounded-full shadow-lg z-20"
+              style={{ left: post.x, transform: 'translate(-50%, -50%)' }}
+            >
+               <div className="absolute -inset-4 bg-red-500/20 rounded-full animate-pulse pointer-events-none"></div>
             </div>
 
-            {/* The Floating Text Label */}
-            <div 
-              className={`
-                chem-label absolute w-max bg-white/80 backdrop-blur-sm border border-gray-200 shadow-md p-3 md:p-4 rounded-xl pointer-events-none transition-all duration-300 group-hover:border-red-400 group-hover:shadow-red-500/20
-                ${step.align === 'left' ? 'right-12 md:right-16 text-right' : 'left-12 md:left-16 text-left'}
-              `}
+            {/* The Blog Card - Pushed to the extreme left or right edges! */}
+            <Link 
+              href={post.link}
+              className={`edge-card ${post.align === 'left' ? 'card-left left-0' : 'card-right right-0'} absolute top-0 -translate-y-1/2 w-[35%] bg-white rounded-[2rem] p-6 shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-100 hover:shadow-[0_20px_50px_rgba(220,38,38,0.15)] hover:border-red-200 transition-all duration-300 z-30 group flex flex-col`}
             >
-              <span className="text-[#DC2626] font-bold text-[10px] md:text-xs uppercase tracking-widest mb-1 block">
-                0{step.id}
-              </span>
-              <h3 className="text-gray-900 font-extrabold text-sm md:text-base leading-tight mb-1">
-                jo
+              {/* Card Image */}
+              <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                <Image 
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
+
+              {/* Tags */}
+              <div className="flex items-center gap-3 mb-3">
+                <span className="bg-red-50 text-[#DC2626] text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-md">
+                  {post.category}
+                </span>
+                <span className="text-gray-400 text-xs font-semibold">
+                  <i className="fa-regular fa-clock mr-1"></i> {post.readTime}
+                </span>
+              </div>
+
+              {/* Title & Excerpt */}
+              <h3 className="text-gray-900 font-bold text-xl md:text-2xl tracking-tight leading-snug mb-3 group-hover:text-[#DC2626] transition-colors">
+                {post.title}
               </h3>
-              <p className="text-gray-500 font-medium text-[11px] md:text-xs">
-                {step.desc}
+              <p className="text-gray-500 font-medium text-sm leading-relaxed line-clamp-2 mb-4">
+                {post.excerpt}
               </p>
-            </div>
-            
+
+              <div className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-[#DC2626]">
+                Read Article <i className="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </Link>
+
           </div>
         ))}
-
       </div>
+
+      {/* =========================================
+          MOBILE FALLBACK (Standard Stack)
+          ========================================= */}
+      {/* Structural SVG plotting breaks on mobile screens, so we drop to a clean vertical stack. */}
+      <div className="w-full px-6 flex flex-col gap-8 lg:hidden relative z-10 pb-20">
+        {blogPosts.map((post) => (
+          <Link key={post.id} href={post.link} className="bg-white border border-gray-100 shadow-lg p-5 rounded-3xl group">
+            <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-5 bg-gray-100">
+              <Image 
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+            </div>
+            <div className="flex items-center gap-3 mb-3">
+              <span className="bg-red-50 text-[#DC2626] text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-md">
+                {post.category}
+              </span>
+              <span className="text-gray-400 text-xs font-semibold">
+                {post.readTime}
+              </span>
+            </div>
+            <h3 className="text-gray-900 font-bold text-xl leading-snug mb-2 group-hover:text-[#DC2626] transition-colors">
+              {post.title}
+            </h3>
+            <p className="text-gray-500 font-medium text-sm leading-relaxed line-clamp-2">
+              {post.excerpt}
+            </p>
+          </Link>
+        ))}
+      </div>
+
     </section>
   );
 }

@@ -614,7 +614,7 @@ export default function CaseStudies2() {
                 group
                 w-full
                 min-h-125
-                md:h-[65vh]
+                md:h-[75vh]
                 overflow-hidden
                 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)]
                 hover:-translate-y-2
@@ -636,7 +636,7 @@ export default function CaseStudies2() {
                 className="
                   w-full
                   lg:w-[55%]
-                  h-[35vh]
+                  h-[45vh]
                   lg:h-full
                   relative
                   overflow-hidden
