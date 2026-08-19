@@ -2777,7 +2777,7 @@ export default function ProductsPage() {
       </section>
 
       <section>
-      <TopIndustries/>
+        <TopIndustries />
       </section>
 
       {/* CHEMICAL PRODUCTS GRID - HORIZONTAL SCROLL */}
@@ -2787,16 +2787,15 @@ export default function ProductsPage() {
         style={{ backgroundColor: "var(--color-primary-red)" }}
       >
         {/* HEADER */}
-        <div className="w-full px-6 md:px-16 pt-16 md:pt-24 shrink-0">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4"
-          style={{ color: "var(--color-white)" }}
+        <div className="w-full px-6 md:px-16 pt-36 md:pt-32 shrink-0">
+          <h2
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4"
+            style={{ color: "var(--color-white)" }}
           >
             Comprehensive Product{" "}
             <span style={{ color: "var(--color-white)" }}>Catalog</span>
           </h2>
-          <p
-            className="text-gray-100 text-sm md:text-base font-medium max-w-2xl"
-          >
+          <p className="text-gray-100 text-sm md:text-base font-medium max-w-2xl">
             Scroll to explore our extensive range of chemical products tailored
             to your industry needs.
           </p>
@@ -2849,7 +2848,7 @@ export default function ProductsPage() {
                     </span>
 
                     {/* Chemical Drop Button */}
-                    <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white group-hover:from-red-400 group-hover:to-red-600 transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]">
+                    <div className="w-14 h-14  flex items-center justify-center text-white group-hover:from-red-400 group-hover:to-red-600 transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]">
                       <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                   </div>
