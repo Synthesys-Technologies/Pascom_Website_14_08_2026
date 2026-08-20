@@ -3,9 +3,11 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     // Respect prefers-reduced-motion
@@ -69,6 +71,19 @@ export default function Hero() {
         clearProps: "all",
       },
     );
+
+    // PASCOM text opacity follows scroll position (smoothly decreases/increases with scroll)
+    gsap.to(".hero-char", {
+      opacity: 0.1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top top",
+        end: "bottom center",
+        scrub: 1,
+        markers: false,
+      },
+    });
   }, []);
 
   return (
