@@ -129,28 +129,59 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* MIDDLE COLUMN: Sitemap Nav */}
-        <div className="md:col-span-6 lg:col-span-3 flex flex-col md:pt-4">
+        {/* MIDDLE COLUMN: Quick Links */}
+        <div className="md:col-span-3 lg:col-span-2 flex flex-col md:pt-4">
           <h4
             className="footer-reveal text-[14px] font-bold uppercase tracking-widest mb-6"
             style={{ color: "var(--color-dark-red)" }}
           >
-            Navigation
+            Quick Links
           </h4>
           <ul className="footer-reveal flex flex-col gap-4">
             {[
-              "This Is Us",
-              "Products & Services",
-              "What's New",
-              "SDS Library",
-              "Reach Us",
+              { name: "Home", href: "/" },
+              { name: "This Is Us", href: "/this-is-us" },
+              { name: "Products & Services", href: "/products-services" },
+              { name: "What's New", href: "/whats-new" },
+              { name: "Reach Us", href: "/reach-us" },
             ].map((link, i) => (
               <li key={i}>
                 <a
-                  href="#"
+                  href={link.href}
                   className="group relative inline-block text-lg font-medium text-white hover:text-white transition-colors"
                 >
-                  {link}
+                  {link.name}
+                  {/* Elegant hover underline effect */}
+                  <span
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                    style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
+                  ></span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* MIDDLE-RIGHT COLUMN: Additional Navigation */}
+        <div className="md:col-span-3 lg:col-span-2 flex flex-col md:pt-4">
+          <h4
+            className="footer-reveal text-[14px] font-bold uppercase tracking-widest mb-6"
+            style={{ color: "var(--color-dark-red)" }}
+          >
+            Important Links
+          </h4>
+          <ul className="footer-reveal flex flex-col gap-4">
+            {[
+              { name: "SDS Library", href: "/sds-request-form" },
+              { name: "Blog", href: "/blog" },
+              { name: "Contact", href: "/reach-us" },
+            ].map((link, i) => (
+              <li key={i}>
+                <a
+                  href={link.href}
+                  className="group relative inline-block text-lg font-medium text-white hover:text-white transition-colors"
+                >
+                  {link.name}
                   {/* Elegant hover underline effect */}
                   <span
                     className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
@@ -163,7 +194,7 @@ export default function Footer() {
         </div>
 
         {/* RIGHT COLUMN: Blank space to let the giant monogram breathe */}
-        <div className="hidden lg:block lg:col-span-4"></div>
+        <div className="hidden lg:block lg:col-span-1"></div>
       </div>
 
       {/* =========================================
@@ -181,10 +212,13 @@ export default function Footer() {
             Privacy Policy
           </a>
           <a href="#" className="footer-legal-link transition-colors">
-            Terms of Service
+            Terms of Use
           </a>
           <a href="#" className="footer-legal-link transition-colors">
-            Modern Slavery Statement
+            Our Products
+          </a>
+          <a href="#" className="footer-legal-link transition-colors">
+            Our Services
           </a>
         </div>
 
