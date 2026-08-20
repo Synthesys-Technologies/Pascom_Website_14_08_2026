@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -140,7 +140,7 @@ export default function BlogPost() {
           {/* Section 1: Comprehensive Product Range */}
           <h2 className="text-3xl text-red-700 font-bold mt-8 mb-2">Comprehensive Product Range</h2>
           <p className="text-base leading-relaxed text-gray-700 mb-6">
-            At Pascom, we pride ourselves on offering a diverse range of chemical products tailored to meet the specific needs of different industries. Whether you’re in agriculture, mining, oil & gas, water treatment, or other sectors, we have the expertise and resources to support your operations effectively. Our products include:
+            At Pascom, we pride ourselves on offering a diverse range of chemical products tailored to meet the specific needs of different industries. Whether youâ€™re in agriculture, mining, oil & gas, water treatment, or other sectors, we have the expertise and resources to support your operations effectively. Our products include:
           </p>
 
           <div className="space-y-6">
@@ -195,7 +195,7 @@ export default function BlogPost() {
             <h2 className="text-3xl text-red-700 font-bold mb-6">Partner with Pascom Today</h2>
             <div className="space-y-6 text-base leading-relaxed text-gray-700">
               <p>
-                Whether you’re a large corporation or a small business, Pascom is ready to be your partner of choice for all your chemical needs in Perth, Australia. Explore our comprehensive range of products and experience firsthand why Pascom is the best place for quality, reliability, and innovation in chemical solutions. 
+                Whether youâ€™re a large corporation or a small business, Pascom is ready to be your partner of choice for all your chemical needs in Perth, Australia. Explore our comprehensive range of products and experience firsthand why Pascom is the best place for quality, reliability, and innovation in chemical solutions. 
               </p>
               <p>
                 Contact us today to discuss how we can support your business goals and contribute to your success.
@@ -217,11 +217,11 @@ export default function BlogPost() {
           {/* Prev / Next Navigation */}
           <div className="flex flex-col md:flex-row justify-between gap-6 my-12">
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 hover:border-red-300 transition-all duration-300 group opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto">
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">← Previous Post</span>
+              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">â† Previous Post</span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Exploring the Top 10 Chemicals Used in the Water Treatment Industry</p>
             </Link>
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg text-right hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post →</span>
+              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post â†’</span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Top Chemical Suppliers for the Agriculture Industry</p>
             </Link>
           </div>
@@ -322,7 +322,7 @@ export default function BlogPost() {
                   <span className="bg-red-100 text-red-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">
                     {post.category}
                   </span>
-                  <span className="text-red-500 text-xs font-bold">•</span>
+                  <span className="text-red-500 text-xs font-bold">â€¢</span>
                   <span className="text-gray-500 text-xs font-medium">{post.date}</span>
                 </div>
                 <h3 className="text-red-700 text-lg font-bold leading-snug tracking-tight group-hover:text-red-600 transition-colors">
@@ -340,3 +340,4 @@ export default function BlogPost() {
     </main>
   );
 }
+

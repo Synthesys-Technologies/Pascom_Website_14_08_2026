@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -107,21 +107,43 @@ export default function BlogPost() {
             </h3>
           </div>
 
-          {/* Share Box */}
+         {/* Share Box */}
           <div className="bg-red-600 hover:bg-red-700 p-6 rounded-lg flex flex-col gap-4 shadow-lg transition-all duration-300">
-            <span className="text-white text-sm font-bold tracking-wide">Share This Article</span>
+            <span className="text-white text-sm font-bold tracking-wide">
+              Share This Article
+            </span>
             <div className="flex items-center gap-3">
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-solid fa-link text-sm"></i>
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-facebook-f text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-facebook-f text-sm"></i>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;text=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                >
+                  <i className="fa-solid fa-times text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-linkedin-in text-sm"></i>
+                <a
+                  href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;title=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-x-twitter text-sm"></i>
+                <a
+                  href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;title=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-pinterest-p text-sm"></i>
+                </a>
               </button>
             </div>
           </div>
@@ -158,7 +180,7 @@ export default function BlogPost() {
 
             <div className="border-l-4 border-red-600 pl-6 py-2">
               <h3 className="text-xl text-red-700 font-bold mb-2">Global Demand</h3>
-              <p className="text-base leading-relaxed text-gray-700">Increasing global demand for commodities, driven by urbanization, infrastructure development, and the transition to renewable energy sources, continues to underpin growth in Western Australia’s mining sector.</p>
+              <p className="text-base leading-relaxed text-gray-700">Increasing global demand for commodities, driven by urbanization, infrastructure development, and the transition to renewable energy sources, continues to underpin growth in Western Australiaâ€™s mining sector.</p>
             </div>
           </div>
 
@@ -193,7 +215,7 @@ export default function BlogPost() {
             <h2 className="text-3xl text-red-700 font-bold mb-6">Conclusion</h2>
             <div className="space-y-6 text-base leading-relaxed text-gray-700">
               <p>
-                As Western Australia’s mining industry continues to expand rapidly, driven by rich mineral reserves and technological advancements, the chemical manufacturing sector stands poised to benefit significantly. By providing essential chemical solutions tailored to mining operations’ needs, fostering innovation through collaborative partnerships, and contributing to economic growth and sustainability, chemical manufacturers play a pivotal role in supporting the mining sector’s ongoing success. 
+                As Western Australiaâ€™s mining industry continues to expand rapidly, driven by rich mineral reserves and technological advancements, the chemical manufacturing sector stands poised to benefit significantly. By providing essential chemical solutions tailored to mining operationsâ€™ needs, fostering innovation through collaborative partnerships, and contributing to economic growth and sustainability, chemical manufacturers play a pivotal role in supporting the mining sectorâ€™s ongoing success. 
               </p>
               <p>
                 Together, these industries can capitalize on synergies to propel Western Australia towards continued prosperity and leadership in global resource extraction and chemical innovation.
@@ -215,11 +237,11 @@ export default function BlogPost() {
           {/* Prev / Next Navigation */}
           <div className="flex flex-col md:flex-row justify-between gap-6 my-12">
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">← Previous Post</span>
+              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">â† Previous Post</span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Exploring the Top 10 Chemicals Used in the Water Treatment Industry</p>
             </Link>
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg text-right hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post →</span>
+              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post â†’</span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Why Giants in the Oil and Gas Industry Choose Pascom as Their Chemical Supplier</p>
             </Link>
           </div>
@@ -319,7 +341,7 @@ export default function BlogPost() {
                   <span className="bg-red-100 text-red-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">
                     {post.category}
                   </span>
-                  <span className="text-red-500 text-xs font-bold">•</span>
+                  <span className="text-red-500 text-xs font-bold">â€¢</span>
                   <span className="text-gray-500 text-xs font-medium">{post.date}</span>
                 </div>
                 <h3 className="text-red-700 text-lg font-bold leading-snug tracking-tight group-hover:text-red-600 transition-colors">
@@ -337,3 +359,4 @@ export default function BlogPost() {
     </main>
   );
 }
+

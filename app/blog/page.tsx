@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -224,11 +224,11 @@ export default function BlogPost() {
           {/* Prev / Next Navigation */}
           <div className="flex flex-col md:flex-row justify-between gap-6 my-12">
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">← Previous Post</span>
+              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">â† Previous Post</span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">Top Chemical Suppliers for the Agriculture Industry</p>
             </Link>
             <Link href="#" className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg text-right hover:bg-red-100 hover:border-red-300 transition-all duration-300 group">
-              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post →</span>
+              <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">Next Post â†’</span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">The Rapid Growth of the Mining Industry in WA</p>
             </Link>
           </div>
@@ -328,7 +328,7 @@ export default function BlogPost() {
                   <span className="bg-red-100 text-red-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">
                     {post.category}
                   </span>
-                  <span className="text-red-500 text-xs font-bold">•</span>
+                  <span className="text-red-500 text-xs font-bold">â€¢</span>
                   <span className="text-gray-500 text-xs font-medium">{post.readTime}</span>
                 </div>
                 <h3 className="text-red-700 text-lg font-bold leading-snug tracking-tight group-hover:text-red-600 transition-colors">
@@ -346,3 +346,5 @@ export default function BlogPost() {
     </main>
   );
 }
+
+

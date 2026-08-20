@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -122,16 +122,36 @@ export default function BlogPost() {
             </span>
             <div className="flex items-center gap-3">
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-solid fa-link text-sm"></i>
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-facebook-f text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-facebook-f text-sm"></i>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;text=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                >
+                  <i className="fa-solid fa-times text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-linkedin-in text-sm"></i>
+                <a
+                  href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;title=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-x-twitter text-sm"></i>
+                <a
+                  href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;title=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-pinterest-p text-sm"></i>
+                </a>
               </button>
             </div>
           </div>
@@ -319,7 +339,7 @@ export default function BlogPost() {
               className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 hover:border-red-300 transition-all duration-300 group"
             >
               <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">
-                ← Previous Post
+                â† Previous Post
               </span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">
                 Top Chemical Suppliers for the Agriculture Industry
@@ -330,7 +350,7 @@ export default function BlogPost() {
               className="flex-1 p-6 bg-red-50 border border-red-200 rounded-lg text-right hover:bg-red-100 hover:border-red-300 transition-all duration-300 group"
             >
               <span className="text-xs text-red-600 font-bold uppercase tracking-wider block mb-2 group-hover:text-red-700">
-                Next Post →
+                Next Post â†’
               </span>
               <p className="text-red-800 font-bold leading-snug group-hover:text-red-900">
                 The Rapid Growth of the Mining Industry in Western Australia and
@@ -453,7 +473,7 @@ export default function BlogPost() {
                   <span className="bg-red-100 text-red-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">
                     {post.category}
                   </span>
-                  <span className="text-red-500 text-xs font-bold">•</span>
+                  <span className="text-red-500 text-xs font-bold">â€¢</span>
                   <span className="text-gray-500 text-xs font-medium">
                     {post.date}
                   </span>
@@ -472,3 +492,5 @@ export default function BlogPost() {
     </main>
   );
 }
+
+

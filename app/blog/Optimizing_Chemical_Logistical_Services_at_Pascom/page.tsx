@@ -124,19 +124,41 @@ export default function BlogPost() {
 
           {/* Share Box */}
           <div className="bg-red-600 hover:bg-red-700 p-6 rounded-lg flex flex-col gap-4 shadow-lg transition-all duration-300">
-            <span className="text-white text-sm font-bold tracking-wide">Share This Article</span>
+            <span className="text-white text-sm font-bold tracking-wide">
+              Share This Article
+            </span>
             <div className="flex items-center gap-3">
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-solid fa-link text-sm"></i>
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-facebook-f text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-facebook-f text-sm"></i>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;text=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                >
+                  <i className="fa-solid fa-times text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-linkedin-in text-sm"></i>
+                <a
+                  href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;title=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
               </button>
               <button className="w-10 h-10 rounded-full bg-white text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors font-bold">
-                <i className="fa-brands fa-x-twitter text-sm"></i>
+                <a
+                  href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fpascom.com.au%2Fchoose-pascom-as-their-chemical-supplier%2F&amp;title=Optimizing%20Chemical%20Logistical%20Services%20at%20Pascom"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-pinterest-p text-sm"></i>
+                </a>
               </button>
             </div>
           </div>
@@ -319,7 +341,7 @@ export default function BlogPost() {
           {relatedPosts.map((post) => (
             <Link
               key={post.id}
-              href={"/blog"+post.image}
+              href={"/blog"+post.link}
               className="group bg-red-50 border-2 border-red-200 rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:border-red-500 hover:shadow-xl hover:-translate-y-1"
             >
               <div className="relative w-full aspect-video overflow-hidden bg-red-100">
