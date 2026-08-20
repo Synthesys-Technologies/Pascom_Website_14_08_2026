@@ -92,7 +92,7 @@ export default function BlogPost() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
         {/* --- LEFT SIDEBAR (Sticky) --- */}
-        <aside className="lg:col-span-3 flex flex-col gap-6 lg:sticky lg:top-24 order-2 lg:order-1">
+        <aside className="lg:col-span-3 flex flex-col gap-6 lg:sticky lg:top-32 order-2 lg:order-1">
 
           {/* Current Article Box */}
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 lg:p-8">
@@ -341,7 +341,6 @@ export default function BlogPost() {
                   <span className="bg-red-100 text-red-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">
                     {post.category}
                   </span>
-                  <span className="text-red-500 text-xs font-bold">â€¢</span>
                   <span className="text-gray-500 text-xs font-medium">{post.date}</span>
                 </div>
                 <h3 className="text-red-700 text-lg font-bold leading-snug tracking-tight group-hover:text-red-600 transition-colors">

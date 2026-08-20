@@ -228,7 +228,8 @@ export default function ChemicalBlogTimeline() {
 
             {/* The Blog Card - Pushed to the extreme left or right edges! */}
             <Link 
-              href={post.link}
+              href={"/blog"+post.link}
+              target='_blank'
               className={`edge-card ${post.align === 'left' ? 'card-left left-0' : 'card-right right-0'} absolute top-0 -translate-y-1/2 w-[35%] bg-white rounded-[2rem] p-6 shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-100 hover:shadow-[0_20px_50px_rgba(220,38,38,0.15)] hover:border-red-200 transition-all duration-300 z-30 group flex flex-col`}
             >
               {/* Card Image */}
@@ -274,7 +275,7 @@ export default function ChemicalBlogTimeline() {
       {/* Structural SVG plotting breaks on mobile screens, so we drop to a clean vertical stack. */}
       <div className="w-full px-6 flex flex-col gap-8 lg:hidden relative z-10 pb-20">
         {blogPosts.map((post) => (
-          <Link key={post.id} href={post.link} className="bg-white border border-gray-100 shadow-lg p-5 rounded-3xl group">
+          <Link key={post.id} href={`/blog${post.link}`} target='_blank' className="bg-white border border-gray-100 shadow-lg p-5 rounded-3xl group">
             <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-5 bg-gray-100">
               <Image 
                 src={post.image}

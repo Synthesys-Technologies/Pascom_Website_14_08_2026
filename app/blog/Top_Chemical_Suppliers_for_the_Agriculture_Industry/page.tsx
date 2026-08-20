@@ -482,7 +482,6 @@ export default function BlogPost() {
                   <span className="bg-red-100 text-red-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">
                     {post.category}
                   </span>
-                  <span className="text-red-500 text-xs font-bold">â€¢</span>
                   <span className="text-gray-500 text-xs font-medium">
                     {post.date}
                   </span>

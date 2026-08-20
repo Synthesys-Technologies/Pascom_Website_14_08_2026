@@ -27,6 +27,19 @@ export default function Hero() {
         ease: "power2.out",
         delay: 0.5,
         clearProps: "y",
+        onComplete: () => {
+          gsap.to(".hero-char", {
+            opacity: 0.2,
+            ease: "none",
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: "top top",
+              end: "+=100",
+              scrub: 1,
+              markers: false,
+            },
+          });
+        },
       },
     );
 
@@ -73,17 +86,18 @@ export default function Hero() {
     );
 
     // PASCOM text opacity follows scroll position (smoothly decreases/increases with scroll)
-    gsap.to(".hero-char", {
-      opacity: 0.1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top top",
-        end: "bottom center",
-        scrub: 1,
-        markers: false,
-      },
-    });
+    // Opacity tied directly to scroll position via scrub - no delay
+    // gsap.to(".hero-char", {
+    //   opacity: 0.2,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: heroRef.current,
+    //     start: "top top",
+    //     end: "+=1200",
+    //     scrub: 1.2,
+    //     markers: false,
+    //   },
+    // });
   }, []);
 
   return (
