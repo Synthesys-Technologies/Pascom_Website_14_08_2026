@@ -26,7 +26,7 @@ export default function Hero() {
         duration: 1.4,
         ease: "power2.out",
         delay: 0.5,
-        clearProps: "all",
+        clearProps: "y",
       },
     );
 
