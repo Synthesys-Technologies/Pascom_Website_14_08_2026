@@ -55,15 +55,15 @@ const blogPosts = [
   },
 ];
 
-export default function Newsroom() {
+export default function NewsroomList() {
   // Split the data: first post becomes the "Featured", the rest go into the list
   const featuredPost = blogPosts[0];
   const listPosts = blogPosts.slice(1);
 
   return (
     // Outer Background - Deep Industrial Green (Kept exactly from your reference image)
-    <section className="w-full min-h-screen bg-[#db0000] font-sans antialiased text-white py-20 md:py-32">
-      <div className="max-w-350 mx-auto px-6 md:px-12">
+    <section className="w-full min-h-screen bg-[#0A1C16] font-sans antialiased text-white py-20 md:py-32">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
         {/* =========================================
             PAGE HEADER (Newsroom Title & Desc)
@@ -115,7 +115,7 @@ export default function Newsroom() {
           </div>
 
           {/* Featured Image */}
-          <div className="w-full h-100 md:h-[60vh] lg:h-[75vh] relative rounded-4xl overflow-hidden group border border-white/10">
+          <div className="w-full h-[400px] md:h-[60vh] lg:h-[75vh] relative rounded-[2rem] overflow-hidden group border border-white/10">
             <Image 
               src={featuredPost.image} 
               alt={featuredPost.title} 

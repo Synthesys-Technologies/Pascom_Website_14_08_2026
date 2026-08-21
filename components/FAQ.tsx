@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import gsap from 'gsap';
 
 interface FAQItem {
   id: string;
@@ -55,6 +56,7 @@ const faqItems: FAQItem[] = [
 
 export default function FAQ() {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(['1'])); // Open first item by default
+  const itemRefs = useRef<{ [key: string]: HTMLDivElement }>({});
 
   const toggleFAQ = (id: string) => {
     const newExpanded = new Set(expandedItems);
@@ -64,6 +66,48 @@ export default function FAQ() {
       newExpanded.add(id);
     }
     setExpandedItems(newExpanded);
+  };
+
+  const handleMouseEnter = (id: string) => {
+    const element = itemRefs.current[id];
+    if (element) {
+      gsap.to(element, {
+        y: -8,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+      handleBorderMouseEnter(id);
+    }
+  };
+
+  const handleMouseLeave = (id: string) => {
+    const element = itemRefs.current[id];
+    if (element) {
+      gsap.to(element, {
+        y: 0,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+      // Animate border back to normal
+      gsap.to(element, {
+        borderColor: 'rgba(255, 255, 255, 0.15)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    }
+  };
+
+  const handleBorderMouseEnter = (id: string) => {
+    const element = itemRefs.current[id];
+    if (element) {
+      gsap.to(element, {
+        borderColor: 'rgba(255, 255, 255, 0.4)',
+        boxShadow: '0 8px 32px rgba(255, 255, 255, 0.15)',
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    }
   };
 
   return (
@@ -97,25 +141,30 @@ export default function FAQ() {
             return (
               <div
                 key={item.id}
-                className="rounded-3xl p-6 md:p-8 transition-all duration-300 border"
+                ref={(el) => {
+                  if (el) itemRefs.current[item.id] = el;
+                }}
+                className="rounded-3xl p-6 md:p-8 transition-all duration-300 border cursor-pointer"
                 style={{
                   backgroundColor: isOpen ? "rgba(255, 255, 255, 0.15)" : "rgba(255, 255, 255, 0.08)",
                   borderColor: isOpen ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 0.15)",
                   boxShadow: isOpen ? "0 8px 24px rgba(0,0,0,0.2)" : "0 4px 12px rgba(0,0,0,0.1)",
                 }}
+                onMouseEnter={() => handleMouseEnter(item.id)}
+                onMouseLeave={() => handleMouseLeave(item.id)}
               >
                 {/* Question Row */}
                 <button
                   onClick={() => toggleFAQ(item.id)}
                   className="w-full flex justify-between items-center text-left focus:outline-none group"
                 >
-                  <span className="font-serif text-xl md:text-2xl pr-8 leading-snug" style={{ color: "var(--color-white)" }}>
+                  <span className="font-serif text-xl md:text-2xl pr-8 leading-snug transition-colors duration-300 group-hover:text-white" style={{ color: "var(--color-white)" }}>
                     {item.question}
                   </span>
 
                   {/* Dynamic Chevron Button */}
                   <div
-                    className={`w-10 h-10 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+                    className={`w-10 h-10 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm group-hover:scale-110 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                     style={{
