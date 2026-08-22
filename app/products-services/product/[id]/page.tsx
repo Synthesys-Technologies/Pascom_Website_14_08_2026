@@ -2458,7 +2458,7 @@ export default function ProductDetailsPage() {
                 </p>
                 {product.features && (
                   <div className="mt-8">
-                    <h3 className="text-2xl font-semibold mb-4" style={{ color: "var(--color-dark-red)" }}>Key Features</h3>
+                    <h3 className="text-2xl font-semibold mb-4" style={{ color: "var(--color-white)" }}>Key Features</h3>
                     <ul className="space-y-3">
                       {product.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3" style={{ color: "rgba(255, 255, 255, 0.8)" }}>

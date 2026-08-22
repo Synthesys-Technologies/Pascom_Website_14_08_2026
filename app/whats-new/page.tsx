@@ -68,7 +68,7 @@ export default function Newsroom() {
         {/* =========================================
             PAGE HEADER (Newsroom Title & Desc)
             ========================================= */}
-        <div className="mb-20 md:mb-28 max-w-4xl">
+        <div className="mb-20 md:mb-14 max-w-4xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white">
             Newsroom
           </h1>
@@ -89,9 +89,6 @@ export default function Newsroom() {
             
             {/* Left: Text Content */}
             <div className="max-w-3xl">
-              <span className="block text-[13px] font-bold text-[#DC2626] mb-4 tracking-widest uppercase">
-                Featured • {featuredPost.category}
-              </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6">
                 {featuredPost.title}
               </h2>
@@ -103,12 +100,12 @@ export default function Newsroom() {
             {/* Right: CTA Button */}
             <a 
               href="#" 
-              className="group shrink-0 inline-flex items-center gap-6 border border-white/50 rounded-full pl-6 pr-1.5 py-1.5 hover:bg-white/5 transition-all duration-300"
+              className="group shrink-0 inline-flex items-center gap-6 border-4 border-white/50 rounded-full pl-6 pr-1.5 py-1.5 hover:bg-white/5 transition-all duration-300"
             >
               <span className="text-white text-sm font-bold tracking-wide">
                 Read Article
               </span>
-              <div className="w-9 h-9 rounded-full bg-[#DC2626] flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg">
+              <div className="w-9 h-9 rounded-full bg-[#450A0A] flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg">
                 <i className="fa-solid fa-arrow-right text-white text-[11px] group-hover:translate-x-0.5 transition-transform"></i>
               </div>
             </a>

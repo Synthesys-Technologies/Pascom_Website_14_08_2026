@@ -62,15 +62,15 @@ export default function SDSRequestPage() {
   };
 
   return (
-    <section className="min-h-screen bg-[#f5f5f7] py-32 px-4 md:px-8 lg:px-16 font-sans antialiased" style={{ color: "var(--color-dark-red)" }}>
+    <section className="min-h-screen py-32 px-4 md:px-8 lg:px-16 font-sans antialiased" style={{ backgroundColor: "var(--color-primary-red)", color: "var(--color-white)" }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style={{ color: "var(--color-dark-red)" }}>
-            Request <span style={{ color: "var(--color-primary-red)" }}>SDS</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" style={{ color: "var(--color-white)" }}>
+            Request <span style={{ color: "rgba(255, 255, 255, 0.9)" }}>SDS</span>
           </h1>
-          <p className="text-lg max-w-2xl" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
+          <p className="text-lg max-w-2xl" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
             Request Safety Data Sheets for our chemical products. Fill out the form below and we&apos;ll send the SDS to your email.
           </p>
         </div>
@@ -81,10 +81,10 @@ export default function SDSRequestPage() {
           <div className="lg:col-span-1 space-y-8">
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                 How it Works
               </h3>
-              <ol className="space-y-3" style={{ color: "rgba(69, 10, 10, 0.8)" }}>
+              <ol className="space-y-3" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
                 <li className="flex items-start gap-3">
                   <span className="font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs mt-0.5" style={{ backgroundColor: "var(--color-primary-red)", color: "var(--color-white)" }}>1</span>
                   <span>Fill out the contact form</span>
@@ -105,19 +105,19 @@ export default function SDSRequestPage() {
             </div>
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                 Product Not Listed?
               </h3>
-              <p className="text-base leading-relaxed" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
+              <p className="text-base leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.8)" }}>
                 Select &quot;Other Product&quot; from the list and provide the product name in the details section below.
               </p>
             </div>
 
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3" style={{ color: "var(--color-white)" }}>
                  General Inquiries
               </h3>
-              <a href="mailto:info@pascom.com.au" className="font-semibold transition-colors text-lg" style={{ color: "var(--color-primary-red)" }} onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-dark-red)")} onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-primary-red)")}>
+              <a href="mailto:info@pascom.com.au" className="font-semibold transition-colors text-lg" style={{ color: "rgba(255, 255, 255, 0.9)" }} onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)")} onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.9)")}>
                 info@pascom.com.au
               </a>
             </div>
@@ -129,7 +129,7 @@ export default function SDSRequestPage() {
             <form onSubmit={handleSubmit} className="space-y-8">
 
               {/* Product Selection */}
-              <div className="p-8">
+              <div className="p-8 rounded-lg" style={{ backgroundColor: "var(--color-white)" }}>
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                     Select Product(s)*
                 </h2>
@@ -139,13 +139,13 @@ export default function SDSRequestPage() {
                   placeholder="Search for a product..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-transparent text-white placeholder-white/40 px-0 py-2 outline-none transition-all text-base"
-                  style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
-                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)")}
-                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(255, 255, 255, 0.2)")}
+                  className="w-full bg-transparent text-gray-800 placeholder-gray-400 px-0 py-2 outline-none transition-all text-base"
+                  style={{ borderBottom: "1px solid rgba(69, 10, 10, 0.2)" }}
+                  onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)")}
+                  onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(69, 10, 10, 0.2)")}
                 />
 
-                <div className="py-4 h-84 overflow-y-auto custom-scrollbar flex flex-wrap gap-2 content-start">
+                <div className="py-4 h-84 overflow-y-auto custom-scrollbar-dark flex flex-wrap gap-2 content-start">
                   {filteredProducts.map((product) => {
                     const isSelected = selectedProducts.includes(product);
                     return (
@@ -153,22 +153,22 @@ export default function SDSRequestPage() {
                         key={product}
                         type="button"
                         onClick={() => toggleProduct(product)}
-                        className="text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 whitespace-nowrap text-white"
+                        className="text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 whitespace-nowrap"
                         style={
                           isSelected
-                            ? { backgroundColor: "var(--color-primary-red)", boxShadow: "0 4px 12px rgba(198, 40, 40, 0.3)", border: "1px solid rgba(255, 255, 255, 0.3)" }
-                            : { backgroundColor: "rgba(69, 10, 10, 0.3)", border: "1px solid rgba(69, 10, 10, 0.4)" }
+                            ? { backgroundColor: "var(--color-primary-red)", color: "white", boxShadow: "0 4px 12px rgba(198, 40, 40, 0.3)", border: "1px solid rgba(198, 40, 40, 0.5)" }
+                            : { backgroundColor: "rgba(198, 40, 40, 0.08)", color: "var(--color-dark-red)", border: "1px solid rgba(198, 40, 40, 0.2)" }
                         }
                         onMouseEnter={(e) => {
                           if (!isSelected) {
-                            e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.5)";
-                            e.currentTarget.style.borderColor = "rgba(69, 10, 10, 0.6)";
+                            e.currentTarget.style.backgroundColor = "rgba(198, 40, 40, 0.15)";
+                            e.currentTarget.style.borderColor = "rgba(198, 40, 40, 0.4)";
                           }
                         }}
                         onMouseLeave={(e) => {
                           if (!isSelected) {
-                            e.currentTarget.style.backgroundColor = "rgba(69, 10, 10, 0.3)";
-                            e.currentTarget.style.borderColor = "rgba(69, 10, 10, 0.4)";
+                            e.currentTarget.style.backgroundColor = "rgba(198, 40, 40, 0.08)";
+                            e.currentTarget.style.borderColor = "rgba(198, 40, 40, 0.2)";
                           }
                         }}
                       >
@@ -189,68 +189,68 @@ export default function SDSRequestPage() {
               </div>
 
               {/* Contact Details */}
-              <div className="p-8" style={{ border: "2px solid var(--color-primary-red)", borderRadius: "8px", backgroundColor: "rgba(198, 40, 40, 0.02)" }}>
+              <div className="p-8 rounded-lg" style={{ backgroundColor: "var(--color-white)" }}>
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ color: "var(--color-dark-red)" }}>
                  Contact Details*
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Full Name</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "var(--color-dark-red)" }}>Full Name</label>
                     <input
                       type="text"
                       placeholder="Enter your full name"
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base"
-                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base text-gray-800 placeholder-gray-400"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid rgba(198, 40, 40, 0.3)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(198, 40, 40, 0.3)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
 
                   <div>
-                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Company</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "var(--color-dark-red)" }}>Company</label>
                     <input
                       type="text"
                       placeholder="Your company name"
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
-                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base"
-                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base text-gray-800 placeholder-gray-400"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid rgba(198, 40, 40, 0.3)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(198, 40, 40, 0.3)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Email Address</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "var(--color-dark-red)" }}>Email Address</label>
                     <input
                       type="email"
                       placeholder="your@email.com"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base"
-                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base text-gray-800 placeholder-gray-400"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid rgba(198, 40, 40, 0.3)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(198, 40, 40, 0.3)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="text-sm font-semibold mb-2 block" style={{ color: "rgba(198, 40, 40, 0.9)" }}>Additional Details</label>
+                    <label className="text-sm font-semibold mb-2 block" style={{ color: "var(--color-dark-red)" }}>Additional Details</label>
                     <textarea
                       rows={4}
                       placeholder="If 'Other Product' is selected, please specify the product name here..."
                       value={formData.details}
                       onChange={(e) => setFormData({...formData, details: e.target.value})}
-                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base resize-none"
-                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid var(--color-primary-red)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-dark-red)", e.currentTarget.style.borderBottomWidth = "2px")}
-                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      className="w-full bg-transparent px-0 py-2 outline-none transition-all text-base resize-none text-gray-800 placeholder-gray-400"
+                      style={{ color: "var(--color-dark-red)", borderBottom: "2px solid rgba(198, 40, 40, 0.3)" }}
+                      onFocus={(e) => (e.currentTarget.style.borderBottomColor = "var(--color-primary-red)", e.currentTarget.style.borderBottomWidth = "2px")}
+                      onBlur={(e) => (e.currentTarget.style.borderBottomColor = "rgba(198, 40, 40, 0.3)", e.currentTarget.style.borderBottomWidth = "2px")}
                     />
                   </div>
                 </div>
@@ -260,8 +260,8 @@ export default function SDSRequestPage() {
               <div className="flex gap-4">
                 <button
                   type="submit"
-                  className="text-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg flex items-center gap-2"
-                  style={{ backgroundColor: "var(--color-primary-red)" }}
+                  className="text-[#db0000] bg-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg flex items-center gap-2"
+                  style={{ backgroundColor: "var(--color-white" }}
                   onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 8px 24px rgba(198, 40, 40, 0.4)", e.currentTarget.style.transform = "translateY(-2px)")}
                   onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "0 4px 12px rgba(198, 40, 40, 0.3)", e.currentTarget.style.transform = "translateY(0)")}
                 >
@@ -304,6 +304,20 @@ export default function SDSRequestPage() {
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background: rgba(198, 40, 40, 0.6);
+        }
+        .custom-scrollbar-dark::-webkit-scrollbar {
+          width: 6px;
+        }
+        .custom-scrollbar-dark::-webkit-scrollbar-track {
+          background: rgba(198, 40, 40, 0.08);
+          border-radius: 4px;
+        }
+        .custom-scrollbar-dark::-webkit-scrollbar-thumb {
+          background: rgba(198, 40, 40, 0.3);
+          border-radius: 4px;
+        }
+        .custom-scrollbar-dark::-webkit-scrollbar-thumb:hover {
+          background: rgba(198, 40, 40, 0.5);
         }
         input::placeholder,
         textarea::placeholder {

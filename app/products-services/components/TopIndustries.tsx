@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -12,20 +13,26 @@ const processNodes = [
   {
     id: '01',
     label: 'Oil & Gas',
+    desc: 'Advanced chemical solutions for drilling, refining, and pipeline maintenance to ensure maximum efficiency.',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop',
     x: '15%',
     y: '30%',
-    align: 'left',
+    align: 'left', // Label/Card aligns to the right of the node
   },
   {
     id: '02',
     label: 'Mining',
+    desc: 'Specialized formulations for mineral processing, dust suppression, and environmental remediation.',
+    image: 'https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?q=80&w=400&auto=format&fit=crop',
     x: '35%',
     y: '70%',
-    align: 'right',
+    align: 'right', // Label/Card aligns to the left of the node
   },
   {
     id: '03',
     label: 'Agriculture',
+    desc: 'High-yield fertilizers and crop protection chemicals to support sustainable farming practices.',
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=400&auto=format&fit=crop',
     x: '65%',
     y: '70%',
     align: 'left',
@@ -33,6 +40,8 @@ const processNodes = [
   {
     id: '04',
     label: 'Water Treatment',
+    desc: 'Innovative chemicals that guarantee clean water supply and safe municipal wastewater treatment.',
+    image: 'https://images.unsplash.com/photo-1543419992-628d052ceba4?q=80&w=400&auto=format&fit=crop',
     x: '85%',
     y: '30%',
     align: 'right',
@@ -65,7 +74,7 @@ export default function TopIndustries() {
             trigger: containerRef.current,
             start: 'top 60%',
             end: 'bottom 80%',
-            scrub: 1, // Ties the drawing animation directly to the user's scroll speed
+            scrub: 8, // Ties the drawing animation directly to the user's scroll speed
           }
         });
       });
@@ -93,7 +102,8 @@ export default function TopIndustries() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-200 md:min-h-screen bg-[#FDFDFD] font-sans antialiased overflow-hidden flex flex-col items-center justify-start pt-32 pb-24">
+    // Removed overflow-hidden so the popup cards don't get cut off at the bottom edges
+    <section ref={containerRef} className="relative w-full min-h-200 md:min-h-screen bg-[#FDFDFD] font-sans antialiased flex flex-col items-center justify-start pt-32 pb-40">
       
       {/* =========================================
           HERO TEXT & CTA
@@ -102,18 +112,11 @@ export default function TopIndustries() {
         <h2 className="text-3xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight mb-6">
           The world&apos;s most innovative industries trust Pascom to keep their chemistry flowing.
         </h2>
-        {/* <a href="#" className="inline-flex items-center gap-3 bg-[#DC2626] text-white text-sm font-bold px-6 py-2.5 rounded-sm hover:bg-red-700 transition-colors shadow-md group">
-          Get in Touch
-          <div className="w-4 h-4 bg-white flex items-center justify-center rounded-xs">
-            <i className="fa-solid fa-arrow-up-right text-[8px] text-[#DC2626] group-hover:translate-x-px group-hover:-translate-y-px transition-transform"></i>
-          </div>
-        </a> */}
       </div>
 
       {/* =========================================
           SVG CHEMICAL BOND LINES (Background)
           ========================================= */}
-      {/* We use a specific viewBox and preserveAspectRatio="none" to stretch the lines across the container while maintaining node intersections */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none mt-20">
         <svg 
           viewBox="0 0 1000 500" 
@@ -151,14 +154,13 @@ export default function TopIndustries() {
       </div>
 
       {/* =========================================
-          HTML OVERLAY NODES ("Atoms")
+          HTML OVERLAY NODES & POPUP CARDS
           ========================================= */}
-      {/* Positioned absolutely using percentages to perfectly match the SVG vertices */}
-      <div className="absolute inset-0 w-full h-full z-10 pointer-events-none mt-20">
+      <div className="absolute inset-0 w-full h-full z-10 mt-20 pointer-events-none">
         {processNodes.map((node, index) => (
           <div 
             key={index}
-            className="process-node absolute flex items-center justify-center"
+            className="process-node absolute flex items-center justify-center pointer-events-auto"
             style={{ 
               left: node.x, 
               top: node.y, 
@@ -166,27 +168,68 @@ export default function TopIndustries() {
             }}
           >
             
-            {/* The Hexagonal "Atom" Node */}
-            <div className="relative flex items-center justify-center pointer-events-auto group cursor-pointer">
+            {/* The Hexagonal "Atom" Node (Wrapper contains the 'group' class for hover targeting) */}
+            <div className="relative flex items-center justify-center cursor-pointer group">
               {/* Outer pulsing ring */}
               <div className="absolute w-8 h-8 rounded-full bg-red-100 animate-ping opacity-70"></div>
               
               {/* Hexagon Shape */}
               <div 
-                className="w-5 h-5 bg-[#DC2626] flex items-center justify-center transition-transform group-hover:scale-125 shadow-[0_0_15px_rgba(220,38,38,0.5)]"
+                className="w-5 h-5 bg-[#DC2626] flex items-center justify-center transition-transform group-hover:scale-125 shadow-[0_0_15px_rgba(220,38,38,0.5)] z-20"
                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
               >
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
 
-              {/* Text Label (Blueprint/Monospace style matching reference) */}
+              {/* Default Text Label (Blueprint/Monospace style) */}
               <div 
-                className={`absolute w-max ${node.align === 'left' ? 'right-8 pr-2' : 'left-8 pl-2'} text-left`}
+                className={`absolute w-max z-10 transition-opacity duration-300 group-hover:opacity-0 ${node.align === 'left' ? 'left-8' : 'right-8'} text-left`}
               >
-                <span className="block text-[11px] font-mono font-bold text-[#111111] uppercase tracking-[0.15em] bg-white/80 backdrop-blur-sm py-1 px-2 rounded border border-gray-100 shadow-sm group-hover:text-[#DC2626] transition-colors">
+                <span className="block text-[11px] font-mono font-bold text-[#111111] uppercase tracking-[0.15em] bg-white/80 backdrop-blur-sm py-1 px-2 rounded border border-gray-100 shadow-sm transition-colors">
                   {node.label}
                 </span>
               </div>
+
+              {/* =========================================
+                  THE HOVER POPUP CARD VIEW
+                  ========================================= */}
+              <div 
+                className={`
+                  absolute top-6 w-[280px] bg-white rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-gray-200 overflow-hidden z-50
+                  opacity-0 invisible translate-y-4 scale-95
+                  transition-all duration-300 ease-out pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto
+                  ${node.align === 'left' ? 'left-4 origin-top-left' : 'right-4 origin-top-right'}
+                `}
+              >
+                {/* Small Image Place on Top */}
+                <div className="relative w-full h-32 bg-gray-100 overflow-hidden">
+                  <Image 
+                    src={node.image} 
+                    alt={node.label} 
+                    fill 
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <span className="absolute bottom-3 left-4 text-white font-bold tracking-tight text-lg drop-shadow-md">
+                    {node.label}
+                  </span>
+                </div>
+
+                {/* Description & Button */}
+                <div className="p-5 flex flex-col gap-4">
+                  <p className="text-gray-600 text-[13px] font-medium leading-relaxed">
+                    {node.desc}
+                  </p>
+                  
+                  {/* Discover More Button */}
+                  <a href="#" className="w-full bg-[#111111] hover:bg-[#DC2626] text-white text-xs font-bold uppercase tracking-widest py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-md group/btn">
+                    Discover More 
+                    <i className="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                  </a>
+                </div>
+              </div>
+
             </div>
 
           </div>

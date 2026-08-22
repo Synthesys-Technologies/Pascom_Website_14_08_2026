@@ -365,31 +365,31 @@ export default function EnquiryPage() {
             </div>
 
             {/* RIGHT COLUMN: The Form */}
-            <div className="flex flex-col  pb-8">
+            <div className="flex flex-col pb-8 h-220 rounded-2xl p-8 md:p-10" style={{ backgroundColor: "var(--color-white)" }}>
               <form className="space-y-6">
                 {/* Row 1: Name */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-3">
                     <label
                       className="text-base font-semibold ml-1"
-                      style={{ color: "rgba(255, 255, 255, 0.9)" }}
+                      style={{ color: "var(--color-dark-red)" }}
                     >
                       First name
                     </label>
                     <input
                       type="text"
                       placeholder="Enter first name"
-                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      className="w-full bg-transparent placeholder-gray-400 text-gray-800 px-0 py-3 text-base outline-none transition-all"
                       style={{
-                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                        borderBottom: "1px solid rgba(69, 10, 10, 0.2)",
                       }}
                       onFocus={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.5)")
+                          "var(--color-primary-red)")
                       }
                       onBlur={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.2)")
+                          "rgba(69, 10, 10, 0.2)")
                       }
                     />
                   </div>
@@ -403,17 +403,17 @@ export default function EnquiryPage() {
                     <input
                       type="text"
                       placeholder="Enter last name"
-                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      className="w-full bg-transparent placeholder-gray-400 text-gray-800 px-0 py-3 text-base outline-none transition-all"
                       style={{
-                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                        borderBottom: "1px solid rgba(69, 10, 10, 0.2)",
                       }}
                       onFocus={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.5)")
+                          "var(--color-primary-red)")
                       }
                       onBlur={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.2)")
+                          "rgba(69, 10, 10, 0.2)")
                       }
                     />
                   </div>
@@ -431,17 +431,17 @@ export default function EnquiryPage() {
                     <input
                       type="email"
                       placeholder="Enter email address"
-                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      className="w-full bg-transparent placeholder-gray-400 text-gray-800 px-0 py-3 text-base outline-none transition-all"
                       style={{
-                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                        borderBottom: "1px solid rgba(69, 10, 10, 0.2)",
                       }}
                       onFocus={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.5)")
+                          "var(--color-primary-red)")
                       }
                       onBlur={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.2)")
+                          "rgba(69, 10, 10, 0.2)")
                       }
                     />
                   </div>
@@ -455,17 +455,17 @@ export default function EnquiryPage() {
                     <input
                       type="tel"
                       placeholder="Enter phone number"
-                      className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all"
+                      className="w-full bg-transparent placeholder-gray-400 text-gray-800 px-0 py-3 text-base outline-none transition-all"
                       style={{
-                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                        borderBottom: "1px solid rgba(69, 10, 10, 0.2)",
                       }}
                       onFocus={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.5)")
+                          "var(--color-primary-red)")
                       }
                       onBlur={(e) =>
                         (e.currentTarget.style.borderBottomColor =
-                          "rgba(255, 255, 255, 0.2)")
+                          "rgba(69, 10, 10, 0.2)")
                       }
                     />
                   </div>
@@ -481,9 +481,9 @@ export default function EnquiryPage() {
                   </label>
                   <div className="relative">
                     <select
-                      className="w-full bg-transparent text-white appearance-none px-0 py-3 text-base outline-none transition-all cursor-pointer"
+                      className="w-full bg-transparent text-gray-800 appearance-none px-0 py-3 text-base outline-none transition-all cursor-pointer"
                       style={{
-                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                        borderBottom: "1px solid rgba(69, 10, 10, 0.2)",
                       }}
                       defaultValue={selectedService?.id || ""}
                     >
@@ -512,7 +512,7 @@ export default function EnquiryPage() {
                     </select>
                     <i
                       className="fa-solid fa-chevron-down absolute right-0 top-1/2 -translate-y-1/2 text-base pointer-events-none"
-                      style={{ color: "rgba(255, 255, 255, 0.7)" }}
+                      style={{ color: "var(--color-dark-red)" }}
                     ></i>
                   </div>
                 </div>
@@ -528,9 +528,9 @@ export default function EnquiryPage() {
                   <textarea
                     rows={6}
                     placeholder="Share chemical specifications, volumes, and concerns here..."
-                    className="w-full bg-transparent placeholder-white/40 text-white px-0 py-3 text-base outline-none transition-all resize-none"
+                    className="w-full bg-transparent placeholder-gray-400 text-gray-800 px-0 py-3 text-base outline-none transition-all resize-none"
                     style={{
-                      borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      borderBottom: "1px solid rgba(69, 10, 10, 0.2)",
                     }}
                     onFocus={(e) =>
                       (e.currentTarget.style.borderBottomColor =
@@ -565,7 +565,7 @@ export default function EnquiryPage() {
                     Get a response{" "}
                     <i className="fa-solid fa-arrow-right text-sm"></i>
                   </button>
-                  <p className="text-sm text-white/75 font-medium leading-relaxed">
+                  <p className="text-sm font-medium leading-relaxed" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
                     We respond within 24 hours personally, not automatically.
                   </p>
                 </div>
