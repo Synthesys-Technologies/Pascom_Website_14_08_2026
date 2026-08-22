@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        heading: ["var(--font-poppins)", "sans-serif"],
+        serif: ["var(--font-playfair)", "serif"],
       },
     },
   },
