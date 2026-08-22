@@ -5,8 +5,13 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -16,88 +21,39 @@ export default function Hero() {
     ).matches;
     if (prefersReducedMotion) return;
 
-    // PASCOM text - professional bottom-up entrance animation (all together)
-    gsap.fromTo(
-      ".hero-char",
-      { y: 120, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.4,
-        ease: "power2.out",
-        delay: 0.5,
-        clearProps: "y",
-        onComplete: () => {
-          gsap.to(".hero-char", {
-            opacity: 0.2,
-            ease: "none",
-            scrollTrigger: {
-              trigger: heroRef.current,
-              start: "top top",
-              end: "+=100",
-              scrub: 1,
-              markers: false,
-            },
+    // Setup liquid fill animation
+    const button = buttonRef.current;
+    if (button) {
+      const liquidFill = button.querySelector(".liquid-fill") as HTMLElement;
+
+      if (liquidFill) {
+        const handleMouseEnter = () => {
+          gsap.to(liquidFill, {
+            height: "100%",
+            duration: 0.7,
+            ease: "power2.out",
+            overwrite: "auto",
           });
-        },
-      },
-    );
+        };
 
-    // Center logo smooth entrance
-    gsap.fromTo(
-      ".hero-logo",
-      { scale: 0, opacity: 0 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        ease: "back.out(1.2)",
-        delay: 0.2,
-        clearProps: "all",
-      },
-    );
+        const handleMouseLeave = () => {
+          gsap.to(liquidFill, {
+            height: "0%",
+            duration: 0.6,
+            ease: "power2.inOut",
+            overwrite: "auto",
+          });
+        };
 
-    // Bottom team avatars fade-up
-    gsap.fromTo(
-      ".hero-team",
-      { y: 60, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.1,
-        ease: "power2.out",
-        delay: 1.8,
-        clearProps: "all",
-      },
-    );
+        button.addEventListener("mouseenter", handleMouseEnter);
+        button.addEventListener("mouseleave", handleMouseLeave);
 
-    // Button fade-up
-    gsap.fromTo(
-      ".hero-button",
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-        delay: 1.2,
-        clearProps: "all",
-      },
-    );
-
-    // PASCOM text opacity follows scroll position (smoothly decreases/increases with scroll)
-    // Opacity tied directly to scroll position via scrub - no delay
-    // gsap.to(".hero-char", {
-    //   opacity: 0.2,
-    //   ease: "none",
-    //   scrollTrigger: {
-    //     trigger: heroRef.current,
-    //     start: "top top",
-    //     end: "+=1200",
-    //     scrub: 1.2,
-    //     markers: false,
-    //   },
-    // });
+        return () => {
+          button.removeEventListener("mouseenter", handleMouseEnter);
+          button.removeEventListener("mouseleave", handleMouseLeave);
+        };
+      }
+    }
   }, []);
 
   return (
@@ -143,22 +99,48 @@ export default function Hero() {
         >
           <div className="mt-10 flex flex-col justify-between items-center">
             <button
-              className="hero-button group flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
-              style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor =
-                  "rgba(255, 255, 255, 0.15)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor =
-                  "rgba(255, 255, 255, 0.1)")
-              }
+              ref={buttonRef}
+              className="hero-button group relative flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5"
+              style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", overflow: "hidden" }}
             >
-              <span className="text-white text-xs font-bold tracking-wide">
+              {/* Liquid Fill Background - Simple version */}
+              <div
+                className="liquid-fill absolute bottom-0 left-0 w-full pointer-events-none"
+                style={{
+                  height: "0%",
+                  backgroundColor: "var(--color-primary-red)",
+                  zIndex: 1,
+                  transition: "none",
+                }}
+              >
+                {/* Subtle wave effect using gradient */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "-2px",
+                    left: 0,
+                    right: 0,
+                    height: "4px",
+                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                    animation: "wave-shimmer 2s ease-in-out infinite",
+                  }}
+                ></div>
+              </div>
+
+              {/* Wave shimmer animation */}
+              <style dangerouslySetInnerHTML={{__html: `
+                @keyframes wave-shimmer {
+                  0%, 100% { transform: translateX(0) scaleX(1); }
+                  50% { transform: translateX(4px) scaleX(0.98); }
+                }
+              `}} />
+
+              {/* Content (Text + Arrow) - keeps them on top */}
+              <span className="text-white text-xs font-bold tracking-wide relative z-10 transition-all duration-300">
                 Explore Our Products
               </span>
               <div
-                className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform"
+                className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform relative z-10"
                 style={{ backgroundColor: "var(--color-dark-red)" }}
               >
                 <i className="fa-solid fa-arrow-right text-white text-[10px]"></i>
@@ -209,9 +191,9 @@ export default function Hero() {
       {/* =========================================
           GIANT EDGE-TO-EDGE TEXT
           ========================================= */}
-      <div className="relative -bottom-80 -translate-y-1/2 w-full px-4 z-0 pointer-events-none select-none overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-[50vh] flex items-end px-4 z-0 pointer-events-none select-none overflow-hidden">
         <h1
-          className="flex justify-between w-full font-black text-[18vw] leading-none tracking-tight m-0 p-0 drop-shadow-xl"
+          className="flex justify-between items-end w-full font-black text-[18vw] leading-none tracking-tight m-0 p-0"
           style={{ color: "var(--color-white)" }}
         >
           <span className="hero-char">P</span>
