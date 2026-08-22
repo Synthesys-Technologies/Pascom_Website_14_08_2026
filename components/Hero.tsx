@@ -1,87 +1,35 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+import LiquidButton from "./LiquidButton";
 
 export default function Hero() {
-  const heroRef = useRef<HTMLElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  gsap.registerPlugin(ScrollTrigger);
+  const router = useRouter();
 
-  useEffect(() => {
-    // Respect prefers-reduced-motion
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    if (prefersReducedMotion) return;
-
-    // Setup liquid fill animation
-    const button = buttonRef.current;
-    if (button) {
-      const liquidFill = button.querySelector(".liquid-fill") as HTMLElement;
-
-      if (liquidFill) {
-        const handleMouseEnter = () => {
-          gsap.to(liquidFill, {
-            height: "100%",
-            duration: 0.7,
-            ease: "power2.out",
-            overwrite: "auto",
-          });
-        };
-
-        const handleMouseLeave = () => {
-          gsap.to(liquidFill, {
-            height: "0%",
-            duration: 0.6,
-            ease: "power2.inOut",
-            overwrite: "auto",
-          });
-        };
-
-        button.addEventListener("mouseenter", handleMouseEnter);
-        button.addEventListener("mouseleave", handleMouseLeave);
-
-        return () => {
-          button.removeEventListener("mouseenter", handleMouseEnter);
-          button.removeEventListener("mouseleave", handleMouseLeave);
-        };
-      }
-    }
-  }, []);
+  const handleExploreClick = () => {
+    router.push("/products-services");
+  };
 
   return (
     <section
-      ref={heroRef}
       className="relative w-full h-screen min-h-200 overflow-hidden font-sans antialiased flex flex-col"
       style={{ backgroundColor: "var(--color-primary-red)" }}
     >
       {/* Bottom Half Background Image with Red Overlay */}
-      <div className="absolute bottom-0 left-0 w-full h-[55%] z-10">
-        <Image
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920&auto=format&fit=crop"
-          alt="Industrial Facility"
-          fill
-          className="object-cover"
-        />
+      <div className="absolute bottom-0 left-0 w-full h-[55%] z-10 flex flex-col items-stretch">
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src="/hero_video.mp4" type="video/mp4" />
         </video>
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-0 pointer-events-none"
           style={{
             background: `
             linear-gradient(
@@ -96,84 +44,41 @@ export default function Hero() {
             )
           `,
           }}
-        >
-          <div className="mt-10 flex flex-col justify-between items-center">
-            <button
-              ref={buttonRef}
-              className="hero-button group relative flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5"
-              style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", overflow: "hidden" }}
-            >
-              {/* Liquid Fill Background - Simple version */}
-              <div
-                className="liquid-fill absolute bottom-0 left-0 w-full pointer-events-none"
-                style={{
-                  height: "0%",
-                  backgroundColor: "var(--color-primary-red)",
-                  zIndex: 1,
-                  transition: "none",
-                }}
-              >
-                {/* Subtle wave effect using gradient */}
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "-2px",
-                    left: 0,
-                    right: 0,
-                    height: "4px",
-                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
-                    animation: "wave-shimmer 2s ease-in-out infinite",
-                  }}
-                ></div>
-              </div>
+        />
 
-              {/* Wave shimmer animation */}
-              <style dangerouslySetInnerHTML={{__html: `
-                @keyframes wave-shimmer {
-                  0%, 100% { transform: translateX(0) scaleX(1); }
-                  50% { transform: translateX(4px) scaleX(0.98); }
-                }
-              `}} />
+        {/* Button Section - Above overlay */}
+        <div className="relative z-20 mt-10 flex flex-col justify-start items-center pointer-events-auto">
+          <LiquidButton onClick={handleExploreClick}>
+            <span>Explore Our Products</span>
+            <i className="fa-solid fa-arrow-right text-white text-[11px]"></i>
+          </LiquidButton>
+        </div>
 
-              {/* Content (Text + Arrow) - keeps them on top */}
-              <span className="text-white text-xs font-bold tracking-wide relative z-10 transition-all duration-300">
-                Explore Our Products
-              </span>
-              <div
-                className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform relative z-10"
-                style={{ backgroundColor: "var(--color-dark-red)" }}
-              >
-                <i className="fa-solid fa-arrow-right text-white text-[10px]"></i>
-              </div>
-            </button>
-          </div>
-
-          {/* Heading and subheading */}
-          <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-6 md:px-12 py-12">
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-4"
-              style={{ color: "var(--color-white)" }}
+        {/* Heading and subheading */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-6 md:px-12 py-12">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-4"
+            style={{ color: "var(--color-white)" }}
+          >
+            Chemical Suppliers{" "}
+            <span
+              className="block md:inline"
+              style={{ color: "var(--color-primary-red)" }}
             >
-              Chemical Suppliers{" "}
-              <span
-                className="block md:inline"
-                style={{ color: "var(--color-primary-red)" }}
-              >
-                Australia
-              </span>
-            </h2>
-            <h3
-              className="text-lg md:text-2xl font-semibold text-white mb-8 leading-relaxed"
-              style={{ color: "var(--color-white)" }}
-            >
-              One Stop Solution For All Your Chemical Needs
-            </h3>
-            <p className="text-white/75 text-sm md:text-base leading-relaxed font-medium max-w-2xl">
-              Explore our extensive range of high-quality chemical products
-              designed to meet your industry requirements. Contact us today for
-              reliable chemical solutions and expert support.
-            </p>
-          </div>
+              Australia
+            </span>
+          </h2>
+          <h3
+            className="text-lg md:text-2xl font-semibold text-white mb-8 leading-relaxed"
+            style={{ color: "var(--color-white)" }}
+          >
+            One Stop Solution For All Your Chemical Needs
+          </h3>
+          <p className="text-white/75 text-sm md:text-base leading-relaxed font-medium max-w-2xl">
+            Explore our extensive range of high-quality chemical products
+            designed to meet your industry requirements. Contact us today for
+            reliable chemical solutions and expert support.
+          </p>
         </div>
       </div>
 

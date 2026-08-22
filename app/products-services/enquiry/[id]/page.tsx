@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LiquidButton from "@/components/LiquidButton";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -545,26 +546,10 @@ export default function EnquiryPage() {
 
                 {/* Submit Row */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6">
-                  <button
-                    type="button"
-                    className="text-white text-base font-semibold px-8 py-3 rounded-full flex items-center gap-2 transition-all shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
-                    style={{ backgroundColor: "var(--color-dark-red)" }}
-                    onMouseEnter={(e) => (
-                      (e.currentTarget.style.backgroundColor =
-                        "rgba(69, 10, 10, 0.8)"),
-                      (e.currentTarget.style.boxShadow =
-                        "0 12px 25px rgba(69, 10, 10, 0.5)")
-                    )}
-                    onMouseLeave={(e) => (
-                      (e.currentTarget.style.backgroundColor =
-                        "var(--color-dark-red)"),
-                      (e.currentTarget.style.boxShadow =
-                        "0 8px 20px rgba(69, 10, 10, 0.3)")
-                    )}
-                  >
-                    Get a response{" "}
+                  <LiquidButton>
+                    <span>Get a response</span>
                     <i className="fa-solid fa-arrow-right text-sm"></i>
-                  </button>
+                  </LiquidButton>
                   <p className="text-sm font-medium leading-relaxed" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
                     We respond within 24 hours personally, not automatically.
                   </p>

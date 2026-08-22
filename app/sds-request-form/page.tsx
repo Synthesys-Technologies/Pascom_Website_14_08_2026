@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import LiquidButton from '@/components/LiquidButton';
 
 const productsList = [
   "Other Product",
@@ -258,15 +259,10 @@ export default function SDSRequestPage() {
 
               {/* Submit Button */}
               <div className="flex gap-4">
-                <button
-                  type="submit"
-                  className="text-[#db0000] bg-white font-bold px-8 py-4 rounded-lg transition-all shadow-lg flex items-center gap-2"
-                  style={{ backgroundColor: "var(--color-white" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 8px 24px rgba(198, 40, 40, 0.4)", e.currentTarget.style.transform = "translateY(-2px)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "0 4px 12px rgba(198, 40, 40, 0.3)", e.currentTarget.style.transform = "translateY(0)")}
-                >
-                  <i className="fa-solid fa-paper-plane"></i> Submit Request
-                </button>
+                <LiquidButton type="submit">
+                  <i className="fa-solid fa-paper-plane"></i>
+                  <span>Submit Request</span>
+                </LiquidButton>
                 <button
                   type="reset"
                   onClick={() => {

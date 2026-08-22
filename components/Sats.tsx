@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LiquidButton from "./LiquidButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +103,7 @@ const cards: ServiceCard[] = [
 ];
 
 export default function AboutSection() {
+  const router = useRouter();
   const yearsRef = useRef<HTMLSpanElement>(null);
   const productsRef = useRef<HTMLSpanElement>(null);
   const industriesRef = useRef<HTMLSpanElement>(null);
@@ -234,59 +237,46 @@ export default function AboutSection() {
             </h2>
           </div>
 
-          <div className="lg:col-span-6 flex flex-col justify-start pt-2">
-            <p className="text-white/90 text-sm md:text-base leading-relaxed font-medium mb-8 max-w-lg">
+          {/* Right Card View */}
+          <div
+            className="lg:col-span-6 flex flex-col justify-start pt-8 pb-8 px-8 rounded-2xl"
+            style={{ backgroundColor: "white" }}
+          >
+            <p
+              className="text-sm md:text-base leading-relaxed font-medium mb-8 max-w-lg"
+              style={{ color: "var(--color-dark-red)" }}
+            >
               With decades of experience in formulating, blending and supplying
               commodity and specialty chemicals, Pascom delivers quality-driven
               solutions with integrity across demanding industries.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <button
-                className="group flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor =
-                    "rgba(255, 255, 255, 0.15)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor =
-                    "rgba(255, 255, 255, 0.1)")
-                }
+              <LiquidButton
+                onClick={() => router.push("/products-services")}
+                style={{
+                  borderColor: "var(--color-primary-red)",
+                  background: "var(--color-dark-red)",
+                }}
               >
-                <span className="text-white text-xs font-bold tracking-wide">
+                <span style={{ color: "var(--color-white)" }}>
                   Explore Our Products
                 </span>
-                <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform"
-                  style={{ backgroundColor: "var(--color-dark-red)" }}
-                >
-                  <i className="fa-solid fa-arrow-right text-white text-[10px]"></i>
-                </div>
-              </button>
+                <i className="fa-solid fa-arrow-right text-[11px]"></i>
+              </LiquidButton>
 
-              <button
-                className="group flex items-center justify-between gap-6 border-4 border-white/30 rounded-full pl-6 pr-1.5 py-1.5 transition-all duration-300"
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor =
-                    "rgba(255, 255, 255, 0.15)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor =
-                    "rgba(255, 255, 255, 0.1)")
-                }
+              <LiquidButton
+                onClick={() => router.push("/")}
+                style={{
+                  borderColor: "var(--color-primary-red)",
+                  background: "var(--color-dark-red)",
+                }}
               >
-                <span className="text-white text-xs font-bold tracking-wide">
+                <span style={{ color: "var(--color-white)" }}>
                   Download Capability
                 </span>
-                <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform"
-                  style={{ backgroundColor: "var(--color-dark-red)" }}
-                >
-                  <i className="fa-solid fa-arrow-right text-white text-[10px]"></i>
-                </div>
-              </button>
+                <i className="fa-solid fa-arrow-right text-[11px]"></i>
+              </LiquidButton>
             </div>
           </div>
         </div>
@@ -444,28 +434,13 @@ export default function AboutSection() {
                 </div>
 
                 {/* Card Button */}
-                <button
-                  className="group mt-auto w-full border border-white/30 rounded-full pl-6 pr-1.5 py-1.5 flex items-center justify-between transition-all duration-300"
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.backgroundColor =
-                      "rgba(255, 255, 255, 0.1)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.backgroundColor =
-                      "rgba(255, 255, 255, 0.05)")
-                  }
+                <LiquidButton
+                  onClick={() => router.push("/products-services")}
+                  className="mt-auto w-full"
                 >
-                  <span className="text-white text-xs font-bold">
-                    Discover More
-                  </span>
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform shrink-0"
-                    style={{ backgroundColor: "var(--color-primary-red)" }}
-                  >
-                    <i className="fa-solid fa-arrow-right text-white text-[10px]"></i>
-                  </div>
-                </button>
+                  <span>Discover More</span>
+                  <i className="fa-solid fa-arrow-right text-white text-[11px]"></i>
+                </LiquidButton>
               </div>
             ))}
           </div>
