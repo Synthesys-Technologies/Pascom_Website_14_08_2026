@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import LiquidButton from "@/components/LiquidButton";
 
 interface FAQItem {
   id: string;
@@ -83,14 +84,30 @@ export default function ContactPage() {
             blending capabilities, we&apos;d love to hear from you.
           </p>
 
-          {/* Outlined Pill Buttons */}
+          {/* Liquid Button Controls */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto px-8 py-3 rounded-full border-4 border-white/70 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
-              General Enquiries
-            </button>
-            <button className="w-full sm:w-auto px-8 py-3 rounded-full border-4 border-white/70 text-white text-sm font-semibold hover:bg-white/10 transition-colors">
-              Product Information
-            </button>
+            <LiquidButton
+              onClick={() => {}}
+              liquidColor="rgba(255, 255, 255, 0.75)"
+              style={{
+                borderColor: "rgba(255, 255, 255, 0.4)",
+                color: "var(--color-white)",
+              }}
+              className="w-full sm:w-auto text-sm font-semibold"
+            >
+              <span style={{ color: "var(--color-dark-red)"}}>General Enquiries</span>
+            </LiquidButton>
+            <LiquidButton
+              onClick={() => {}}
+              liquidColor="rgba(255, 255, 255, 0.75)"
+              style={{
+                borderColor: "rgba(255, 255, 255, 0.4)",
+                color: "var(--color-white)",
+              }}
+              className="w-full sm:w-auto text-sm font-semibold"
+            >
+              <span style={{ color: "var(--color-dark-red)"}}>Product Information</span>
+            </LiquidButton>
           </div>
         </div>
       </section>
@@ -274,13 +291,18 @@ export default function ContactPage() {
 
             {/* Submit Button */}
             <div className="flex justify-end pt-4">
-              <button
-                type="button"
-                className="bg-[#DC2626] hover:bg-red-700 text-white text-xs font-bold uppercase tracking-widest px-8 py-3.5 rounded-full flex items-center gap-3 transition-all duration-300 shadow-[0_10px_20px_rgba(220,38,38,0.2)] hover:shadow-[0_10px_25px_rgba(220,38,38,0.4)] hover:-translate-y-0.5"
+              <LiquidButton
+                onClick={() => {}}
+                liquidColor="var(--color-primary-red)"
+                style={{
+                  borderColor: "var(--color-primary-red)",
+                  color: "var(--color-primary-red)",
+                }}
+                className="text-xs font-bold uppercase tracking-widest gap-3"
               >
-                Submit Inquiry{" "}
-                <i className="fa-solid fa-arrow-right text-[10px]"></i>
-              </button>
+                <span style={{ color: "var(--color-dark-red)"}}>Submit Inquiry</span>
+                <i className="fa-solid fa-arrow-right text-[10px]" style={{ color: "var(--color-dark-red)"}}></i>
+              </LiquidButton>
             </div>
           </form>
         </div>

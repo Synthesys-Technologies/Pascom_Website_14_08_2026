@@ -6,6 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TopIndustries from "./TopIndustries";
+import LiquidButton from "@/components/LiquidButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -2744,17 +2745,18 @@ export default function ProductsPage() {
 
             {/* Right: CTA Button */}
             <div className="w-full lg:w-1/3 flex lg:justify-end pb-1">
-              <a
-                href="#"
-                className="group flex items-center justify-between gap-6 border-4 border-white rounded-full pl-6 pr-1.5 py-1.5 hover:bg-white/10 transition-colors w-max"
+              <LiquidButton
+                onClick={() => {}}
+                liquidColor="rgba(255, 255, 255, 0.75)"
+                style={{
+                  borderColor: "rgba(255, 255, 255, 0.4)",
+                  color: "var(--color-white)",
+                }}
+                className="text-sm font-medium tracking-wide gap-3"
               >
-                <span className="text-white text-sm font-medium tracking-wide">
-                  View case study
-                </span>
-                <div className="w-8 h-8 rounded-full bg-[#450A0A] flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg">
-                  <i className="fa-solid fa-arrow-right text-white text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
-                </div>
-              </a>
+                <span style={{ color: "var(--color-dark-red)",}}>View case study</span>
+                <i className="fa-solid fa-arrow-right text-[10px]"></i>
+              </LiquidButton>
             </div>
           </div>
 

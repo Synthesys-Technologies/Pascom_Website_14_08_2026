@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import LiquidButton from '@/components/LiquidButton';
 
 // Pascom Blog Data
 const blogPosts = [
@@ -98,17 +99,18 @@ export default function Newsroom() {
             </div>
 
             {/* Right: CTA Button */}
-            <a 
-              href="#" 
-              className="group shrink-0 inline-flex items-center gap-6 border-4 border-white/50 rounded-full pl-6 pr-1.5 py-1.5 hover:bg-white/5 transition-all duration-300"
+            <LiquidButton
+              onClick={() => {}}
+              liquidColor="rgba(255, 255, 255, 0.75)"
+              style={{
+                borderColor: "rgba(255, 255, 255, 0.35)",
+                color: "var(--color-white)",
+              }}
+              className="shrink-0 text-sm font-bold tracking-wide gap-3"
             >
-              <span className="text-white text-sm font-bold tracking-wide">
-                Read Article
-              </span>
-              <div className="w-9 h-9 rounded-full bg-[#450A0A] flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg">
-                <i className="fa-solid fa-arrow-right text-white text-[11px] group-hover:translate-x-0.5 transition-transform"></i>
-              </div>
-            </a>
+              <span style={{ color: "var(--color-dark-red)"}}>Read Article</span>
+              <i className="fa-solid fa-arrow-right text-[11px]"></i>
+            </LiquidButton>
           </div>
 
           {/* Featured Image */}

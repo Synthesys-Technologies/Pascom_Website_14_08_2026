@@ -402,33 +402,54 @@ export default function AboutSection() {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="w-[320px] md:w-[360px] rounded-2xl p-6 md:p-8 flex flex-col shrink-0 shadow-xl transition-colors"
+                className="w-[320px] md:w-[360px] rounded-2xl p-6 md:p-8 flex flex-col shrink-0 shadow-xl transition-all border-2"
                 style={{
-                  background:
-                    "linear-gradient(145deg, #8B1E1E 0%, #641414 45%, #3D0A0A 100%)",
+                  backgroundColor: "white",
+                  borderColor: "var(--color-primary-red)",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = "var(--color-dark-red)";
+                  e.currentTarget.style.boxShadow =
+                    "0 12px 32px rgba(198, 40, 40, 0.25)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = "var(--color-primary-red)";
+                  e.currentTarget.style.boxShadow =
+                    "0 10px 25px rgba(0, 0, 0, 0.1)";
+                }}
               >
-                {/* Circular Icon Placeholder (Matches the reference circular images) */}
-                <div className="w-20 h-20 rounded-full border border-white/20 bg-white/5 flex items-center justify-center mb-8 shrink-0">
+                {/* Circular Icon Placeholder */}
+                <div
+                  className="w-20 h-20 rounded-full border-2 flex items-center justify-center mb-8 shrink-0"
+                  style={{
+                    backgroundColor: "rgba(198, 40, 40, 0.08)",
+                    borderColor: "var(--color-primary-red)",
+                  }}
+                >
                   <i
-                    className={`fa-solid ${card.icon} text-3xl text-[#ffffff]`}
+                    className={`fa-solid ${card.icon} text-3xl`}
+                    style={{ color: "var(--color-primary-red)" }}
                   ></i>
                 </div>
 
                 {/* Text Content */}
                 <div className="mb-10 flex-1">
-                  <span className="text-white/70 font-bold text-[10px] tracking-wider uppercase mb-2 block">
+                  <span
+                    className="font-bold text-[10px] tracking-wider uppercase mb-2 block"
+                    style={{ color: "var(--color-dark-red)" }}
+                  >
                     {card.id.replace("-", " ")}
                   </span>
                   <h4
-                    className="text-white font-medium text-2xl leading-tight mb-4 pr-4"
-                    style={{ color: "var(--color-white)" }}
+                    className="font-medium text-2xl leading-tight mb-4 pr-4"
+                    style={{ color: "var(--color-dark-red)" }}
                   >
                     {card.title}
                   </h4>
-                  <p className="text-white/60 text-sm leading-relaxed font-medium">
+                  <p
+                    className="text-sm leading-relaxed font-medium"
+                    style={{ color: "rgba(69, 10, 10, 0.7)" }}
+                  >
                     {card.description}
                   </p>
                 </div>
@@ -437,9 +458,13 @@ export default function AboutSection() {
                 <LiquidButton
                   onClick={() => router.push("/products-services")}
                   className="mt-auto w-full"
+                  style={{
+                    borderColor: "var(--color-primary-red)",
+                    background: "var(--color-dark-red)",
+                  }}
                 >
                   <span>Discover More</span>
-                  <i className="fa-solid fa-arrow-right text-white text-[11px]"></i>
+                  <i className="fa-solid fa-arrow-right text-[11px]"></i>
                 </LiquidButton>
               </div>
             ))}

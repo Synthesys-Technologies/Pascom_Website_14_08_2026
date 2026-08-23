@@ -6,6 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
+import LiquidButton from "./LiquidButton";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -66,16 +67,25 @@ export default function CoreValues() {
         },
       );
 
-      // Card stagger animation
+      // Card stagger animation with smooth bottom-to-up entrance
+      const cards = gsap.utils.toArray(".values-card") as HTMLElement[];
       gsap.fromTo(
-        ".values-card",
-        { y: 60, opacity: 0 },
+        cards,
         {
-          y: 0,
+          y: 100,
+          opacity: 0,
+          scale: 0.95,
+        },
+        {
+          y: (index) => (index === 0 ? -24 : index === 1 ? 0 : 24),
           opacity: 1,
-          duration: 0.9,
+          scale: 1,
+          duration: 1.1,
           ease: "power3.out",
-          stagger: 0.15,
+          stagger: {
+            amount: 0.5,
+            from: "start",
+          },
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 70%",
@@ -117,33 +127,61 @@ export default function CoreValues() {
               quality.
             </p>
 
-            <Link
-              href="#"
-              className="inline-flex items-center border-4 border-gray-100 gap-3 mt-8 text-white text-xs font-semibold tracking-wider uppercase px-5 py-3.5 transition-colors group"
+            <LiquidButton
+              onClick={() => {}}
+              liquidColor="white"
               style={{
-                backgroundColor: "rgba(255, 255, 255, 0.15)",
+                borderColor: "var(--color-primary-red)",
+                background: "var(--color-dark-red)",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor =
-                  "rgba(255, 255, 255, 0.25)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor =
-                  "rgba(255, 255, 255, 0.15)")
-              }
+              className="text-xs mt-5 font-semibold tracking-wider uppercase gap-3"
             >
-              Learn More About Us
+              <span
+                style={{
+                  color: "var(--color-primary-red)",
+                }}
+              >
+                Learn More About Us
+              </span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            </LiquidButton>
           </div>
         </div>
 
-        {/* Right Column: Card Grid (Matches ABTC card layout) */}
-        <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {coreValues.map((item) => (
+        {/* Right Column: Card Grid (Staircase Layout) */}
+        <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {coreValues.map((item, index) => (
             <article
               key={item.id}
-              className="values-card rounded-4xl bg-white flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300 group"
+              className="values-card rounded-4xl bg-white flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+              style={{
+                transform:
+                  index === 0
+                    ? "translateY(-24px)"
+                    : index === 1
+                      ? "translateY(0px)"
+                      : "translateY(24px)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform =
+                  index === 0
+                    ? "translateY(-40px)"
+                    : index === 1
+                      ? "translateY(-16px)"
+                      : "translateY(8px)";
+                e.currentTarget.style.boxShadow =
+                  "0 20px 45px rgba(198, 40, 40, 0.2)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform =
+                  index === 0
+                    ? "translateY(-24px)"
+                    : index === 1
+                      ? "translateY(0px)"
+                      : "translateY(24px)";
+                e.currentTarget.style.boxShadow =
+                  "0 2px 8px rgba(0, 0, 0, 0.08)";
+              }}
             >
               <div>
                 {/* Image Container with Red Accent Square */}
@@ -152,12 +190,7 @@ export default function CoreValues() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Top-left Red Square Accent */}
-                  <div
-                    className="absolute top-3 left-3 w-2.5 h-2.5 z-10"
-                    style={{ backgroundColor: "var(--color-white)" }}
+                    className="object-cover opacity-85 group-hover:scale-110 transition-transform duration-500"
                   />
 
                   {/* Bottom-right Subtle Red Gradient Block */}
@@ -218,6 +251,41 @@ export default function CoreValues() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        /* Responsive staircase adjustments */
+        @media (max-width: 768px) {
+          .values-card {
+            transform: translateY(0) !important;
+          }
+
+          .values-card:nth-child(1),
+          .values-card:nth-child(2),
+          .values-card:nth-child(3) {
+            transform: translateY(0) !important;
+          }
+        }
+
+        /* Tablet: subtle staircase */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .values-card:nth-child(1) {
+            transform: translateY(-12px);
+          }
+
+          .values-card:nth-child(2) {
+            transform: translateY(0);
+          }
+
+          .values-card:nth-child(3) {
+            transform: translateY(12px);
+          }
+        }
+
+        /* Smooth transitions for staircase */
+        .values-card {
+          will-change: transform, box-shadow;
+        }
+      `}</style>
     </section>
   );
 }

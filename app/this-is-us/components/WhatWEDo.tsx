@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import LiquidButton from "@/components/LiquidButton";
 
 export default function AboutUs() {
   return (
@@ -75,14 +76,19 @@ export default function AboutUs() {
             </p>
           </div>
 
-          {/* Outlined Pill Button */}
-          <a
-            href="#"
-            className="group w-max inline-flex items-center gap-3 border border-white rounded-full px-8 py-3 text-sm font-bold text-white hover:bg-white hover:text-[#DC2626] transition-all duration-300"
+          {/* Liquid Fill Button */}
+          <LiquidButton
+            onClick={() => {}}
+            liquidColor="rgba(255, 255, 255, 0.7)"
+            style={{
+              borderColor: "rgba(255, 255, 255, 0.5)",
+              color: "var(--color-white)",
+            }}
+            className="w-max text-sm font-bold gap-3"
           >
-            Discover More
-            <i className="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
-          </a>
+            <span style={{ color: "var(--color-primary-red)",}}>Discover More</span>
+            <i className="fa-solid fa-arrow-right text-[11px]"></i>
+          </LiquidButton>
         </div>
       </div>
     </section>
