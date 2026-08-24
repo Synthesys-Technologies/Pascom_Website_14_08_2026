@@ -1,23 +1,15 @@
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/Sats";
-import FeaturesList from "@/components/Section3";
 import PartnersMarquee from "@/components/Section5";
 import SplitShowcase from "@/components/Section6";
-import CaseStudies from "@/components/Section7";
 import FeaturedProducts from "@/components/Section9";
 import CtaBand from "@/components/Section10";
 import AccreditationsStrip from "@/components/Section8";
 import LatestNews from "@/components/Latest";
 import FAQ from "@/components/FAQ";
-import Blog from "@/components/Blog";
-import ChemicalDrop from "@/components/Animation";
 import CaseStudies2 from "@/components/Test";
-import MolecularAnimation from "@/components/Test2";
 import ChemicalBondsProcess from "@/components/Test3";
 import FeaturesList2 from "@/components/Test4";
-import LatestUpdate from "@/components/LatestUpdate";
-import CaseStudiesList from "@/components/NewBlog";
-import MoleculeAnimation from "@/components/A1";
 
 export default function Home() {
   return (
@@ -46,7 +38,6 @@ export default function Home() {
       <FAQ />
       <Blog /> */}
       <ChemicalBondsProcess />
-      <MoleculeAnimation/>
     </main>
   );
 }
