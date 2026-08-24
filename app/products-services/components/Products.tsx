@@ -160,7 +160,7 @@ export default function ProductsPage() {
               <Link
                 key={`product-${index}`}
                 href={`/products-services/product/${product.slug || ""}`}
-                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 hover:border-red-500/80 transition-all duration-500 cursor-pointer"
+                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 hover:border-red-500/80 transition-all duration-500 cursor-pointer rounded-4xl"
                 style={{
                   transform:
                     index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",

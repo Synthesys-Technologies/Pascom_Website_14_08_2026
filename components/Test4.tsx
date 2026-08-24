@@ -345,7 +345,7 @@ export default function FeaturesList() {
             INTRO - LEFT & RIGHT LAYOUT
         ================================== */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  md:h-120">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12   md:h-120">
           {/* LEFT SIDE - TEXT */}
           <div>
             <p

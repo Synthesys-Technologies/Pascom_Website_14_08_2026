@@ -72,7 +72,7 @@ export default function ChemicalMolecule() {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full min-h-screen text-white">
+    <section ref={containerRef} className="w-full  text-white">
       <div className="max-w-7xl w-full grid grid-cols-1 mx-auto">
         {/* =========================================
             RIGHT CONTENT: Pure SVG 3D Molecule
@@ -91,7 +91,7 @@ export default function ChemicalMolecule() {
               <radialGradient id="heavy-gray" cx="30%" cy="30%" r="70%">
                 <stop offset="0%" stopColor="#A1A1AA" /> {/* Light Zinc */}
                 <stop offset="50%" stopColor="#450A0A" /> {/* Dark Zinc */}
-                <stop offset="100%" stopColor="#450A0A" /> {/* Near Black */}
+                <stop offset="100%" stopColor="#CBD5E1" /> {/* Near Black */}
               </radialGradient>
 
               {/* Light Gray for Hydrogen equivalents */}
@@ -189,7 +189,7 @@ export default function ChemicalMolecule() {
             {/* --- TRAVELING ELECTRON (Single Red Particle) --- */}
             <g className="electron">
               {/* Core Particle Only */}
-              <circle cx="0" cy="0" r="18" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="18" fill="#db0000" />
             </g>
 
           </svg>
