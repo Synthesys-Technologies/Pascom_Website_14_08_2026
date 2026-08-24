@@ -1,15 +1,50 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LiquidButton from "./LiquidButton";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const router = useRouter();
+  const pascomTextRef = useRef<HTMLDivElement>(null);
 
   const handleExploreClick = () => {
     router.push("/products-services");
   };
+
+  useEffect(() => {
+    if (!pascomTextRef.current) return;
+
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: pascomTextRef.current,
+        start: "top top",
+        end: "+=500",
+        scrub: true,
+
+        onUpdate: (self) => {
+          if (!pascomTextRef.current) return;
+
+          // Scroll progress: 0 → 1
+          const progress = self.progress;
+
+          // Opacity: 1 → 0
+          const opacity = 1 - progress;
+
+          gsap.set(pascomTextRef.current, {
+            opacity,
+          });
+        },
+      });
+    }, pascomTextRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section
@@ -96,7 +131,10 @@ export default function Hero() {
       {/* =========================================
           GIANT EDGE-TO-EDGE TEXT
           ========================================= */}
-      <div className="absolute top-0 left-0 w-full h-[45vh] md:h-[50vh] flex items-end px-2 md:px-4 z-0 pointer-events-none select-none overflow-hidden md:top-4.5">
+      <div
+        ref={pascomTextRef}
+        className="absolute top-0 left-0 w-full h-[45vh] md:h-[50vh] flex items-end px-2 md:px-4 z-0 pointer-events-none select-none overflow-hidden md:top-4.5"
+      >
         <h1
           className="flex justify-between items-end w-full font-black text-[12vw] md:text-[18vw] leading-none tracking-tight m-0 p-0"
           style={{ color: "var(--color-white)" }}

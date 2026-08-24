@@ -479,9 +479,9 @@ export default function CaseStudies2() {
                       ref={waveRef}
                       className="
                         absolute
-                        -top-[5px]
+                        -top-1.25
                         left-[-15%]
-                        h-[10px]
+                        h-2.5
                         w-[130%]
                         rounded-[50%]
                         bg-red-600
@@ -677,20 +677,6 @@ export default function CaseStudies2() {
                   overflow-y-auto
                 "
               >
-
-                <span
-                  className="
-                    text-xs
-                    font-bold
-                    uppercase
-                    tracking-widest
-                    text-red-600
-                    mb-4
-                    block
-                  "
-                >
-                  Case Study {study.id}
-                </span>
 
                 <h3
                   className="
