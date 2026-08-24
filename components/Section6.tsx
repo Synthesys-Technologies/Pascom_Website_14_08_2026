@@ -51,8 +51,7 @@ const blockBData = {
   paragraph:
     "Pascom is committed to setting the benchmark for safety within the chemical industry. We adhere strictly to ISO 9001 standards, ensuring our products and processes meet the highest levels of quality and regulatory compliance.",
   buttonText: "Discover Safety & Training",
-  bgGradient:
-    "linear-gradient(135deg, rgba(198, 40, 40, 1) 0%, rgba(198, 40, 40, 0.95) 100%)",
+  bgGradient: "linear-gradient(135deg, #DB0000 0%, #DB0000 100%)",
   image:
     "	https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg",
   carousel: [
