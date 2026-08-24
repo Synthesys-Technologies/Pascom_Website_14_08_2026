@@ -89,7 +89,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f5f5f7;
     --foreground: #ededed;
   }
 }
@@ -109,9 +109,9 @@ body {
   line-height: 1.5;
 }
 
-/* Playfair Display for headings */
+/* IBM Plex Sans for headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), sans-serif;
+  font-family: var(--font-ibm-plex), sans-serif;
   font-weight: 700;
   color: var(--color-dark-red);
 }

@@ -17,7 +17,7 @@ export default function Hero() {
       style={{ backgroundColor: "var(--color-primary-red)" }}
     >
       {/* Bottom Half Background Image with Red Overlay */}
-      <div className="absolute bottom-0 left-0 w-full h-[55%] z-10 flex flex-col items-stretch">
+      <div className="absolute bottom-0 left-0 w-full h-[55%] md:h-[50%] z-10 flex flex-col items-stretch">
         <video
           autoPlay
           muted
@@ -47,17 +47,17 @@ export default function Hero() {
         />
 
         {/* Button Section - Above overlay */}
-        <div className="relative z-20 mt-10 flex flex-col justify-start items-center pointer-events-auto">
+        <div className="relative z-20 mt-4 md:mt-10 flex flex-col justify-start items-center pointer-events-auto">
           <LiquidButton onClick={handleExploreClick}>
-            <span>Explore Our Products</span>
+            <span className="text-xs md:text-sm">Explore Our Products</span>
             <i className="fa-solid fa-arrow-right text-white text-[11px]"></i>
           </LiquidButton>
         </div>
 
         {/* Heading and subheading */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-6 md:px-12 py-12">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4 md:px-12 py-6 md:py-12">
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-2 md:mb-4"
             style={{ color: "var(--color-white)" }}
           >
             Chemical Suppliers{" "}
@@ -69,12 +69,12 @@ export default function Hero() {
             </span>
           </h2>
           <h3
-            className="text-lg md:text-2xl font-semibold text-white mb-8 leading-relaxed"
+            className="text-base md:text-2xl font-semibold text-white mb-4 md:mb-8 leading-relaxed"
             style={{ color: "var(--color-white)" }}
           >
             One Stop Solution For All Your Chemical Needs
           </h3>
-          <p className="text-white/75 text-sm md:text-base leading-relaxed font-medium max-w-2xl">
+          <p className="text-white/75 text-xs md:text-base leading-relaxed font-medium max-w-2xl">
             Explore our extensive range of high-quality chemical products
             designed to meet your industry requirements. Contact us today for
             reliable chemical solutions and expert support.
@@ -96,9 +96,9 @@ export default function Hero() {
       {/* =========================================
           GIANT EDGE-TO-EDGE TEXT
           ========================================= */}
-      <div className="absolute top-0 left-0 w-full h-[50vh] flex items-end px-4 z-0 pointer-events-none select-none overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-[45vh] md:h-[50vh] flex items-end px-2 md:px-4 z-0 pointer-events-none select-none overflow-hidden md:top-4.5">
         <h1
-          className="flex justify-between items-end w-full font-black text-[18vw] leading-none tracking-tight m-0 p-0"
+          className="flex justify-between items-end w-full font-black text-[12vw] md:text-[18vw] leading-none tracking-tight m-0 p-0"
           style={{ color: "var(--color-white)" }}
         >
           <span className="hero-char">P</span>
@@ -110,37 +110,37 @@ export default function Hero() {
         </h1>
       </div>
 
-      <div className="relative z-10 flex-1 flex flex-col md:flex-row justify-end items-end px-6 md:px-10 pb-10 w-full">
-        {/* Bottom Left: Team Avatars */}
+      <div className="relative z-10 flex-1 flex flex-col justify-end items-end px-4 md:px-10 pb-6 md:pb-10 w-full">
+        {/* Bottom: Team Avatars */}
         <div
-          className="hero-team backdrop-blur-md border-4 border-white/20 rounded-full p-1.5 pr-8 flex items-center gap-4 mb-6 md:mb-0 shadow-xl"
+          className="hero-team backdrop-blur-md border-4 border-white/20 rounded-full p-1 md:p-1.5 pr-4 md:pr-8 flex items-center gap-2 md:gap-4 shadow-xl whitespace-nowrap"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.08)" }}
         >
-          <div className="flex -space-x-3">
+          <div className="flex -space-x-2 md:-space-x-3">
             <Image
               src="https://pascom.com.au/wp-content/uploads/2024/10/IMG_1763-600x940.jpeg"
               alt="Team"
               width={40}
               height={40}
-              className="w-10 h-10 rounded-full border-2 border-[#0A1E1A] object-cover"
+              className="w-7 md:w-10 h-7 md:h-10 rounded-full border-2 border-[#0A1E1A] object-cover"
             />
             <Image
               src="https://pascom.com.au/wp-content/uploads/2024/10/DSC1625-600x900.jpeg"
               alt="Team"
               width={40}
               height={40}
-              className="w-10 h-10 rounded-full border-2 border-[#0A1E1A] object-cover"
+              className="w-7 md:w-10 h-7 md:h-10 rounded-full border-2 border-[#0A1E1A] object-cover"
             />
             <Image
               src="https://pascom.com.au/wp-content/uploads/2024/10/DSC16025-600x900.jpeg"
               alt="Team"
               width={40}
               height={40}
-              className="w-10 h-10 rounded-full border-2 border-[#0A1E1A] object-cover"
+              className="w-7 md:w-10 h-7 md:h-10 rounded-full border-2 border-[#0A1E1A] object-cover"
             />
           </div>
-          <span className="text-white text-sm font-semibold tracking-wide">
-            Meet the Experts Behind Pascom
+          <span className="text-white text-xs md:text-sm font-semibold tracking-wide whitespace-nowrap">
+            Meet the Experts
           </span>
         </div>
       </div>

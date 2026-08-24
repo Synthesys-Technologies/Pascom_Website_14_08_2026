@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,10 +10,10 @@ const inter = Inter({
   weight: ["400"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-ibm-plex",
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${inter.variable} ${ibmPlexSans.variable} h-full antialiased`}
     >
       <head>
         <link
