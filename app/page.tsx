@@ -17,6 +17,7 @@ import ChemicalBondsProcess from "@/components/Test3";
 import FeaturesList2 from "@/components/Test4";
 import LatestUpdate from "@/components/LatestUpdate";
 import CaseStudiesList from "@/components/NewBlog";
+import MoleculeAnimation from "@/components/A1";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
       <FAQ />
       <Blog /> */}
       <ChemicalBondsProcess />
+      <MoleculeAnimation/>
     </main>
   );
 }

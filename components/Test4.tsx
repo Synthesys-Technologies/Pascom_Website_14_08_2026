@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ChemicalMolecule from "./A1";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -341,28 +342,35 @@ export default function FeaturesList() {
         "
       >
         {/* ==================================
-            INTRO
+            INTRO - LEFT & RIGHT LAYOUT
         ================================== */}
 
-        <div className="text-center">
-          <p
-            className="
-              mx-auto
-              max-w-5xl
-              text-4xl
-              leading-relaxed
-            "
-            style={{
-              color: "var(--color-white)",
-              fontSize: "var(--text-display)",
-              letterSpacing: "-2px",
-              textTransform: "uppercase",
-              fontWeight: 900,
-            }}
-          >
-            Pascom handles formulation-to-delivery with full transparency, so
-            your operation keeps running.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  md:h-120">
+          {/* LEFT SIDE - TEXT */}
+          <div>
+            <p
+              className="
+                text-3xl
+                md:text-4xl
+                lg:text-5xl
+                leading-relaxed
+                font-bold
+              "
+              style={{
+                color: "var(--color-white)",
+                letterSpacing: "-1px",
+                textTransform: "uppercase",
+              }}
+            >
+              Pascom handles formulation-to-delivery with full transparency, so
+              your operation keeps running.
+            </p>
+          </div>
+
+          {/* RIGHT SIDE - MOLECULE */}
+          <div className="flex justify-center items-center">
+            <ChemicalMolecule />
+          </div>
         </div>
 
         {/* ==================================

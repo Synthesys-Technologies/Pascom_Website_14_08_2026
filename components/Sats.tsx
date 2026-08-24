@@ -217,7 +217,7 @@ export default function AboutSection() {
 
   return (
     <section
-      className="w-full font-sans antialiased overflow-hidden band-spacing"
+      className="w-full font-sans antialiased overflow-hidden band-spacing-abouth"
       style={{ backgroundColor: "var(--color-primary-red)" }}
     >
       {/* =========================================

@@ -153,7 +153,7 @@ export default function CoreValues() {
           {coreValues.map((item, index) => (
             <article
               key={item.id}
-              className="values-card rounded-4xl bg-white flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+              className="values-card rounded-2xl bg-white flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 group cursor-pointer"
               style={{
                 transform:
                   index === 0
@@ -185,7 +185,7 @@ export default function CoreValues() {
             >
               <div>
                 {/* Image Container with Red Accent Square */}
-                <div className="relative w-full h-56 rounded-t-4xl bg-slate-900 overflow-hidden">
+                <div className="relative w-full h-56 rounded-t-2xl bg-slate-900 overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
