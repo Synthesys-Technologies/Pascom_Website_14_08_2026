@@ -13,7 +13,7 @@ const processNodes = [
   {
     id: '01',
     label: 'Oil & Gas',
-    desc: 'Advanced chemical solutions for drilling, refining, and pipeline maintenance to ensure maximum efficiency.',
+    desc: 'Pascom supplies essential chemicals for drilling, production, and refining in the oil and gas industry, enhancing efficiency and sustainability',
     image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400&auto=format&fit=crop',
     x: '15%',
     y: '30%',
@@ -22,7 +22,7 @@ const processNodes = [
   {
     id: '02',
     label: 'Mining',
-    desc: 'Specialized formulations for mineral processing, dust suppression, and environmental remediation.',
+    desc: 'Our chemicals cater to mineral processing, environmental control, and dust management, optimizing extraction efficiency and sustainability.',
     image: 'https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?q=80&w=400&auto=format&fit=crop',
     x: '35%',
     y: '70%',
@@ -31,7 +31,7 @@ const processNodes = [
   {
     id: '03',
     label: 'Agriculture',
-    desc: 'High-yield fertilizers and crop protection chemicals to support sustainable farming practices.',
+    desc: 'Pascom develops chemicals that improve crop health, soil fertility, and pest control, supporting sustainable farming practices and higher yields',
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=400&auto=format&fit=crop',
     x: '65%',
     y: '70%',
@@ -40,7 +40,7 @@ const processNodes = [
   {
     id: '04',
     label: 'Water Treatment',
-    desc: 'Innovative chemicals that guarantee clean water supply and safe municipal wastewater treatment.',
+    desc: 'Our innovative chemicals guarantee clean water solutions and wastewater treatment for municipal, industrial, and environmental and standards.',
     image: 'https://images.unsplash.com/photo-1543419992-628d052ceba4?q=80&w=400&auto=format&fit=crop',
     x: '85%',
     y: '30%',
@@ -221,12 +221,6 @@ export default function TopIndustries() {
                   <p className="text-gray-600 text-[13px] font-medium leading-relaxed">
                     {node.desc}
                   </p>
-                  
-                  {/* Discover More Button */}
-                  <a href="#" className="w-full bg-[#111111] hover:bg-[#DC2626] text-white text-xs font-bold uppercase tracking-widest py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-md group/btn">
-                    Discover More 
-                    <i className="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
-                  </a>
                 </div>
               </div>
 

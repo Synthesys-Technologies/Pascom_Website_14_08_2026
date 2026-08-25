@@ -366,7 +366,10 @@ export default function EnquiryPage() {
             </div>
 
             {/* RIGHT COLUMN: The Form */}
-            <div className="flex flex-col pb-8 h-220 rounded-2xl p-8 md:p-10" style={{ backgroundColor: "var(--color-white)" }}>
+            <div
+              className="flex flex-col pb-8 h-220 rounded-2xl p-8 md:p-10"
+              style={{ backgroundColor: "var(--color-white)" }}
+            >
               <form className="space-y-6">
                 {/* Row 1: Name */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -546,11 +549,20 @@ export default function EnquiryPage() {
 
                 {/* Submit Row */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6">
-                  <LiquidButton>
+                  <LiquidButton
+                    style={{
+                      borderColor: "var(--color-dark-red)",
+                      color: "var(--color-white)",
+                      background: "var(--color-dark-red)",
+                    }}
+                  >
                     <span>Get a response</span>
                     <i className="fa-solid fa-arrow-right text-sm"></i>
                   </LiquidButton>
-                  <p className="text-sm font-medium leading-relaxed" style={{ color: "rgba(69, 10, 10, 0.7)" }}>
+                  <p
+                    className="text-sm font-medium leading-relaxed"
+                    style={{ color: "rgba(69, 10, 10, 0.7)" }}
+                  >
                     We respond within 24 hours personally, not automatically.
                   </p>
                 </div>
@@ -635,31 +647,12 @@ export default function EnquiryPage() {
                     <span
                       className="backdrop-blur-md border px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded"
                       style={{
-                        backgroundColor: "rgba(198, 40, 40, 0.8)",
+                        backgroundColor: "#db0000",
                         borderColor: "rgba(255, 255, 255, 0.3)",
                       }}
                     >
                       {item.badge}
                     </span>
-
-                    {/* Chemical Drop Button */}
-                    <div
-                      className="w-14 h-14 flex items-center justify-center text-white transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, var(--color-primary-red) 0%, var(--color-dark-red) 100%)",
-                      }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.boxShadow =
-                          "0 0 20px rgba(198, 40, 40, 0.6)")
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.boxShadow =
-                          "0 8px 16px rgba(0, 0, 0, 0.2)")
-                      }
-                    >
-                      <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
-                    </div>
                   </div>
 
                   {/* Bottom Row: Title & Description */}
@@ -681,7 +674,7 @@ export default function EnquiryPage() {
         </div>
 
         {/* PROGRESS BAR */}
-        <div className="absolute bottom-10 left-6 right-6 md:left-16 md:right-16 flex items-center gap-4 z-50">
+        <div className="hidden absolute bottom-10 left-6 right-6 md:left-16 md:right-16 flex items-center gap-4 z-50">
           <div className="flex-1 h-0.5 bg-red-700/30 relative overflow-hidden">
             <div
               ref={progressBarRef}

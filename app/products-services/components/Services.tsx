@@ -136,23 +136,7 @@ export default function ServicesHorizontal() {
         },
       });
 
-      // 2. PARALLAX IMAGE EFFECT INSIDE CARDS
-      const images = gsap.utils.toArray('.card-img') as HTMLElement[];
-      images.forEach((img) => {
-        gsap.to(img, {
-          xPercent: 30, 
-          ease: 'none',
-          scrollTrigger: {
-            trigger: img.parentElement,
-            containerAnimation: tween,
-            start: 'left right',
-            end: 'right left',
-            scrub: true,
-          },
-        });
-      });
-
-      // 3. CHEMICAL BOND PATH-DRAWING PROGRESS BAR
+      // 2. CHEMICAL BOND PATH-DRAWING PROGRESS BAR
       const drawPaths = gsap.utils.toArray('.chem-progress-draw') as SVGGeometryElement[];
       
       // Calculate length and set initially hidden (offset = length)
@@ -181,12 +165,12 @@ export default function ServicesHorizontal() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-[#f5f5f7] font-sans antialiased overflow-hidden text-white flex flex-col"
+      className="relative w-full h-screen bg-[#ebedec] font-sans antialiased overflow-hidden text-white flex flex-col"
     >
       {/* =========================================
           HEADER & CHEMICAL PROGRESS SVG
           ========================================= */}
-      <div className="w-full px-6 md:px-16 pt-12 md:pt-24 shrink-0 flex justify-between items-start relative z-50">
+      <div className="w-full px-6 md:px-16 pt-12 md:pt-32 shrink-0 flex justify-between items-start relative z-50">
         
         {/* Left: Text */}
         <div className="max-w-2xl">
@@ -278,19 +262,20 @@ export default function ServicesHorizontal() {
           ref={trackRef}
           className="flex gap-8 md:gap-12 px-6 md:px-16 w-max flex-nowrap items-center h-full"
         >
+          {/* Service Card */}
           {services.map((item, index) => (
             <Link
               key={item.id}
               href={`/products-services/enquiry/${item.id}`}
-              className="group relative block w-[300px] md:w-[400px] lg:w-[450px] h-[60vh] min-h-[450px] max-h-[650px] shrink-0 overflow-hidden bg-red-900/40 hover:border-red-500/80 transition-all duration-500 cursor-pointer"
+              className="group relative flex flex-col w-60 h-115 md:w-80 lg:w-96 shrink-0 overflow-hidden bg-white hover:shadow-xl transition-all duration-500 cursor-pointer rounded-3xl md:rounded-2xl"
               style={{
-                transform: index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",
-                borderRadius: '1.5rem',
+                transform:
+                  index % 2 === 0 ? "translateY(-12px)" : "translateY(12px)",
               }}
             >
-              {/* Background Image Container */}
-              <div className="absolute inset-0 w-full h-[65%] overflow-hidden bg-black z-0 rounded-t-[1.5rem]">
-                <div className="card-img w-[130%] h-full relative left-[-30%]">
+              {/* Image Container */}
+              <div className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden bg-black">
+                <div className="card-img w-full h-full relative">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -298,43 +283,27 @@ export default function ServicesHorizontal() {
                     className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                   />
                 </div>
+
+                {/* Gradient Overlay on Image */}
+                <div
+                  className="absolute inset-0 z-10"
+                  style={{
+                    background: `linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.3) 100%)`,
+                  }}
+                ></div>
               </div>
 
-              {/* Gradient Overlay */}
-              <div
-                className="absolute inset-0 z-10"
-                style={{
-                  background: `linear-gradient(to bottom, transparent 20%, ${item.color} 60%, ${item.color} 100%)`,
-                }}
-              ></div>
-
-              {/* Card Foreground Content */}
-              <div className="absolute inset-0 z-20 flex flex-col p-6 md:p-8">
-                
-                {/* Top Row: Badge & Chemical Drop Icon */}
-                <div className="flex justify-between items-start w-full">
-                  <span className="bg-red-600/80 backdrop-blur-md border border-red-500/60 px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded">
-                    {item.badge}
-                  </span>
-
-                  {/* Chemical Drop Button */}
-                  <div className="w-12 h-12 flex items-center justify-center text-white group-hover:text-red-400 transition-colors duration-300 z-30 relative drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">
-                    <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
-                  </div>
-                </div>
-
-                {/* Bottom Row: Title & Description */}
-                <div className="mt-auto">
-                  <h3
-                    className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
-                    style={{ color: "var(--color-white)" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">
-                    {item.desc}
-                  </p>
-                </div>
+              {/* Title & Description - Below Image */}
+              <div className="flex flex-col flex-1 p-4 md:p-5 lg:p-6 bg-white">
+                <h3
+                  className="text-lg md:text-xl lg:text-2xl font-semibold leading-tight mb-2 tracking-tight"
+                  style={{ color: "var(--color-primary-red)" }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-gray-700 text-xs md:text-sm leading-relaxed font-medium line-clamp-2 md:line-clamp-3">
+                  {item.desc}
+                </p>
               </div>
             </Link>
           ))}

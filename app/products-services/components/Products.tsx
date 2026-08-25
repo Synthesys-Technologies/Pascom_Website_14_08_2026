@@ -94,14 +94,14 @@ export default function ProductsPage() {
             <div className="w-full lg:w-1/3 flex lg:justify-end pb-1">
               <LiquidButton
                 onClick={() => {}}
-                liquidColor="rgba(255, 255, 255, 0.75)"
                 style={{
-                  borderColor: "rgba(255, 255, 255, 0.4)",
-                  color: "var(--color-white)",
-                }}
+                      borderColor: "var(--color-dark-red)",
+                      color: "var(--color-white)",
+                      background: "var(--color-dark-red)",
+                    }}
                 className="text-sm font-medium tracking-wide gap-3"
               >
-                <span style={{ color: "var(--color-dark-red)",}}>View case study</span>
+                <span style={{ color: "var(--color-white)",}}>View case study</span>
                 <i className="fa-solid fa-arrow-right text-[10px]"></i>
               </LiquidButton>
             </div>
@@ -154,20 +154,21 @@ export default function ProductsPage() {
         <div className="flex-1 w-full flex items-center relative z-10 overflow-hidden">
           <div
             ref={trackRef}
-            className="flex gap-8 md:gap-12 px-6 md:px-16 w-max flex-nowrap items-center h-full"
+            className="flex gap-4 md:gap-8 lg:gap-12 px-4 md:px-8 lg:px-16 w-max flex-nowrap items-center h-full"
           >
+            {/* Product Card */}
             {productsList.map((product, index) => (
               <Link
                 key={`product-${index}`}
                 href={`/products-services/product/${product.slug || ""}`}
-                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden bg-red-900/40 hover:border-red-500/80 transition-all duration-500 cursor-pointer rounded-4xl"
+                className="group relative flex flex-col w-60 h-115 md:w-80 lg:w-96 shrink-0 overflow-hidden bg-white hover:shadow-xl transition-all duration-500 cursor-pointer rounded-3xl md:rounded-2xl"
                 style={{
                   transform:
-                    index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",
+                    index % 2 === 0 ? "translateY(-12px)" : "translateY(12px)",
                 }}
               >
-                {/* Background Image Container */}
-                <div className="absolute inset-0 w-full h-[65%] overflow-hidden bg-black z-0">
+                {/* Image Container */}
+                <div className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden bg-black">
                   <div className="product-card-img w-full h-full relative">
                     <Image
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpi-SdHUtLAa1jPLek_N2YeStJ_U0Mu2d8JJboInVPBg&s=10"
@@ -176,42 +177,28 @@ export default function ProductsPage() {
                       className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                     />
                   </div>
+
+
+                  {/* Gradient Overlay on Image */}
+                  <div
+                    className="absolute inset-0 z-10"
+                    style={{
+                      background: `linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.3) 100%)`,
+                    }}
+                  ></div>
                 </div>
 
-                {/* Gradient Overlay */}
-                <div
-                  className="absolute inset-0 z-10"
-                  style={{
-                    background: `linear-gradient(to bottom, transparent 20%, rgba(198, 40, 40, 0.5) 60%, rgba(198, 40, 40, 0.7) 100%)`,
-                  }}
-                ></div>
-
-                {/* Card Foreground Content */}
-                <div className="absolute inset-0 z-20 flex flex-col p-6 md:p-8">
-                  {/* Top Row: Badge & Button */}
-                  <div className="flex justify-between items-start w-full">
-                    <span className="bg-red-600/80 backdrop-blur-md border border-red-500/60 px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded">
-                      {product.slug ? product.slug.split("-")[0].substring(0, 12).toUpperCase() : "CHEMICAL"}
-                    </span>
-
-                    {/* Chemical Drop Button */}
-                    <div className="w-14 h-14  flex items-center justify-center text-white group-hover:from-red-400 group-hover:to-red-600 transition-all duration-300 shadow-lg rounded-full hover:scale-125 z-30 relative hover:shadow-[0_0_20px_rgba(220,38,38,0.6)]">
-                      <i className="fa-solid fa-droplet text-2xl group-hover:scale-110 transition-transform duration-300"></i>
-                    </div>
-                  </div>
-
-                  {/* Bottom Row: Title & Description */}
-                  <div className="mt-auto">
-                    <h3
-                      className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
-                      style={{ color: "var(--color-white)" }}
-                    >
-                      {product.name}
-                    </h3>
-                    <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">
-                      {product.description}
-                    </p>
-                  </div>
+                {/* Title & Description - Below Image */}
+                <div className="flex flex-col flex-1 p-4 md:p-5 lg:p-6 bg-white">
+                  <h3
+                    className="text-lg md:text-xl lg:text-2xl font-semibold leading-tight mb-2 tracking-tight"
+                    style={{ color: "var(--color-primary-red)" }}
+                  >
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-700 text-xs md:text-sm leading-relaxed font-medium line-clamp-2 md:line-clamp-3">
+                    {product.description}
+                  </p>
                 </div>
               </Link>
             ))}
