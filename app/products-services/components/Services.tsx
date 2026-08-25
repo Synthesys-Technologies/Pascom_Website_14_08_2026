@@ -240,12 +240,12 @@ export default function ServicesHorizontal() {
               </g>
               <g stroke="#DC2626" strokeWidth="2.5" fill="none">
                 {/* Circles drawn over atoms */}
-                <circle className="chem-progress-draw" cx="50" cy="20" r="5.5" />
-                <circle className="chem-progress-draw" cx="34" cy="65" r="5.5" />
+                {/* <circle className="chem-progress-draw" cx="50" cy="20" r="5.5" /> */}
+                {/* <circle className="chem-progress-draw" cx="34" cy="65" r="5.5" />
                 <circle className="chem-progress-draw" cx="82" cy="35" r="5.5" />
                 <circle className="chem-progress-draw" cx="50" cy="37" r="6" />
                 <circle className="chem-progress-draw" cx="66" cy="65" r="6" />
-                <circle className="chem-progress-draw" cx="30" cy="15" r="6" />
+                <circle className="chem-progress-draw" cx="30" cy="15" r="6" /> */}
               </g>
             </svg>
 

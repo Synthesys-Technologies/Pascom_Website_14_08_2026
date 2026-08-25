@@ -90,8 +90,8 @@ export default function FAQ() {
       });
       // Animate border back to normal
       gsap.to(element, {
-        borderColor: 'rgba(255, 255, 255, 0.15)',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+        borderColor: 'var(--color-primary-red)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
         duration: 0.3,
         ease: 'power2.out',
       });
@@ -102,8 +102,8 @@ export default function FAQ() {
     const element = itemRefs.current[id];
     if (element) {
       gsap.to(element, {
-        borderColor: 'rgba(255, 255, 255, 0.4)',
-        boxShadow: '0 8px 32px rgba(255, 255, 255, 0.15)',
+        borderColor: 'var(--color-primary-red)',
+        boxShadow: '0 8px 32px rgba(219, 0, 0, 0.2)',
         duration: 0.3,
         ease: 'power2.out',
       });
@@ -146,9 +146,9 @@ export default function FAQ() {
                 }}
                 className="rounded-3xl p-6 md:p-8 transition-all duration-300 border cursor-pointer"
                 style={{
-                  backgroundColor: isOpen ? "rgba(255, 255, 255, 0.15)" : "rgba(255, 255, 255, 0.08)",
-                  borderColor: isOpen ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 0.15)",
-                  boxShadow: isOpen ? "0 8px 24px rgba(0,0,0,0.2)" : "0 4px 12px rgba(0,0,0,0.1)",
+                  backgroundColor: "var(--color-white)",
+                  borderColor: isOpen ? "var(--color-primary-red)" : "var(--color-primary-red)",
+                  boxShadow: isOpen ? "0 8px 24px rgba(219, 0, 0, 0.15)" : "0 4px 12px rgba(0,0,0,0.08)",
                 }}
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={() => handleMouseLeave(item.id)}
@@ -158,7 +158,7 @@ export default function FAQ() {
                   onClick={() => toggleFAQ(item.id)}
                   className="w-full flex justify-between items-center text-left focus:outline-none group"
                 >
-                  <span className="font-serif text-xl md:text-2xl pr-8 leading-snug transition-colors duration-300 group-hover:text-white" style={{ color: "var(--color-white)" }}>
+                  <span className="font-serif text-xl md:text-2xl pr-8 leading-snug transition-colors duration-300" style={{ color: "var(--color-primary-red)" }}>
                     {item.question}
                   </span>
 
@@ -168,8 +168,8 @@ export default function FAQ() {
                       isOpen ? "rotate-180" : ""
                     }`}
                     style={{
-                      backgroundColor: isOpen ? "rgba(255, 255, 255, 0.25)" : "rgba(255, 255, 255, 0.12)",
-                      color: "rgba(255, 255, 255, 0.9)",
+                      backgroundColor: isOpen ? "var(--color-primary-red)" : "var(--color-dark-red)",
+                      color: "var(--color-white)",
                     }}
                   >
                     <i className="fa-solid fa-chevron-down text-sm"></i>
@@ -183,7 +183,7 @@ export default function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="text-[15px] font-medium leading-relaxed" style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+                    <div className="text-[15px] font-medium leading-relaxed" style={{ color: "var(--color-dark-red)" }}>
                       {item.answer.split("\n\n").map((paragraph, idx) => (
                         <p key={idx} className={idx > 0 ? "mt-4" : ""}>
                           {paragraph}

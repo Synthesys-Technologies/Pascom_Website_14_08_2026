@@ -88,25 +88,29 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <LiquidButton
               onClick={() => {}}
-              liquidColor="rgba(255, 255, 255, 0.75)"
               style={{
-                borderColor: "rgba(255, 255, 255, 0.4)",
+                borderColor: "var(--color-dark-red)",
                 color: "var(--color-white)",
+                background: "var(--color-dark-red)",
               }}
               className="w-full sm:w-auto text-sm font-semibold"
             >
-              <span style={{ color: "var(--color-dark-red)"}}>General Enquiries</span>
+              <span style={{ color: "var(--color-white)" }}>
+                General Enquiries
+              </span>
             </LiquidButton>
             <LiquidButton
               onClick={() => {}}
-              liquidColor="rgba(255, 255, 255, 0.75)"
               style={{
-                borderColor: "rgba(255, 255, 255, 0.4)",
+                borderColor: "var(--color-dark-red)",
                 color: "var(--color-white)",
+                background: "var(--color-dark-red)",
               }}
               className="w-full sm:w-auto text-sm font-semibold"
             >
-              <span style={{ color: "var(--color-dark-red)"}}>Product Information</span>
+              <span style={{ color: "var(--color-white)" }}>
+                Product Information
+              </span>
             </LiquidButton>
           </div>
         </div>
@@ -207,8 +211,9 @@ export default function ContactPage() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 pb-32">
         {/* LEFT: The Message Form */}
         <div className="flex  flex-col bg-white p-8 md:p-12 md:h-180 rounded-4xl shadow-sm border border-gray-100">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900"
-          style={{ color: "var(--color-primary-red)" }}
+          <h2
+            className="text-3xl font-bold mb-4 text-gray-900"
+            style={{ color: "var(--color-primary-red)" }}
           >
             Send a Message
           </h2>
@@ -300,8 +305,13 @@ export default function ContactPage() {
                 }}
                 className="text-xs font-bold uppercase tracking-widest gap-3"
               >
-                <span style={{ color: "var(--color-dark-red)"}}>Submit Inquiry</span>
-                <i className="fa-solid fa-arrow-right text-[10px]" style={{ color: "var(--color-dark-red)"}}></i>
+                <span style={{ color: "var(--color-dark-red)" }}>
+                  Submit Inquiry
+                </span>
+                <i
+                  className="fa-solid fa-arrow-right text-[10px]"
+                  style={{ color: "var(--color-dark-red)" }}
+                ></i>
               </LiquidButton>
             </div>
           </form>
@@ -310,8 +320,9 @@ export default function ContactPage() {
         {/* RIGHT: Frequently Asked Questions */}
         <div className="flex flex-col">
           <div className="mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-gray-900"
-            style={{ color: "var(--color-white)" }}
+            <h2
+              className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-gray-900"
+              style={{ color: "var(--color-white)" }}
             >
               Frequently Asked Questions
             </h2>
