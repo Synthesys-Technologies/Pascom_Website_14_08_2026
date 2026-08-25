@@ -12,13 +12,13 @@ if (typeof window !== 'undefined') {
 const accreditations = [
   {
     id: 'iso-9001',
-    name: 'ISO 9001:2015',
+    name: 'ISO 9001',
     element: (
       <div className="flex items-center gap-3 border-2 border-blue-800 px-4 py-2 rounded-sm bg-white">
         <i className="fa-solid fa-check-to-slot text-blue-800 text-2xl"></i>
         <div className="flex flex-col">
-          <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase leading-none mb-0.5">Certified</span>
-          <span className="text-sm font-black text-blue-900 leading-none">ISO 9001:2015</span>
+          <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase leading-none mb-0.5">BUREAU VERITAS</span>
+          <span className="text-sm font-black text-blue-900 leading-none">Certified</span>
         </div>
       </div>
     )
@@ -37,37 +37,10 @@ const accreditations = [
     )
   },
   {
-    id: 'dangerous-goods',
-    name: 'Dangerous Goods',
-    element: (
-      <div className="flex items-center gap-3 px-4 py-2">
-        <div className="w-8 h-8 bg-red-600 rotate-45 flex items-center justify-center border-2 border-white outline outline-2 outline-red-600 shrink-0">
-          <i className="fa-solid fa-skull-crossbones text-white -rotate-45 text-[10px]"></i>
-        </div>
-        <div className="flex flex-col ml-2">
-          <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase leading-none mb-0.5">Approved</span>
-          <span className="text-sm font-black text-red-700 leading-none tracking-tight">DG Transport</span>
-        </div>
-      </div>
-    )
-  },
-  {
-    id: 'nata',
-    name: 'NATA Accredited',
-    element: (
-      <div className="flex items-center gap-2 border-l-4 border-teal-600 px-3 py-1">
-        <div className="flex flex-col">
-          <span className="text-xl font-black text-teal-800 leading-none tracking-tighter">NATA</span>
-          <span className="text-[9px] font-bold text-gray-500 tracking-widest uppercase leading-none mt-1">Accredited Lab</span>
-        </div>
-      </div>
-    )
-  },
-  {
     id: 'wa-owned',
     name: 'WA Owned',
     element: (
-      <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-yellow-400 bg-yellow-50">
+      <div className="flex items-center gap-3 px-4 py-2 rounded-md border border-yellow-400 bg-yellow-50">
         <i className="fa-solid fa-map-location-dot text-yellow-600 text-xl"></i>
         <div className="flex flex-col">
           <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase leading-none mb-0.5">100% Local</span>

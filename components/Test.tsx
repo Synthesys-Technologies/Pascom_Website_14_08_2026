@@ -468,8 +468,7 @@ export default function CaseStudies2() {
                     "
                     style={{
                       height: "0%",
-                      background:
-                        "linear-gradient(to top, #7f0000, #dc0000, #ef4444)",
+                      background: "#db0000",
                     }}
                   >
 
@@ -484,21 +483,10 @@ export default function CaseStudies2() {
                         h-2.5
                         w-[130%]
                         rounded-[50%]
-                        bg-red-600
                       "
-                    />
-
-                    {/* Soft highlight */}
-
-                    <div
-                      className="
-                        absolute
-                        inset-0
-                        bg-gradient-to-r
-                        from-transparent
-                        via-white/[0.08]
-                        to-transparent
-                      "
+                      style={{
+                        backgroundColor: "#db0000",
+                      }}
                     />
 
                   </div>

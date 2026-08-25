@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import LiquidButton from "./LiquidButton";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,36 +30,28 @@ export default function Header() {
 
         {/* Left Links (Outlined Pills) - Hidden on mobile */}
         <div className="hidden lg:flex gap-2 lg:gap-4">
-          <Link
-            href="#"
-            className="border-4 border-white text-white text-xs lg:text-sm font-semibold px-3 lg:px-6 py-2 lg:py-2.5 rounded-full transition-all whitespace-nowrap"
-            style={{ borderColor: "white" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
-              e.currentTarget.style.borderColor = "white";
+          <LiquidButton
+            onClick={() => {}}
+            liquidColor="rgba(255, 255, 255, 0.8)"
+            style={{
+              borderColor: "var(--color-white)",
+              color: "var(--color-white)",
             }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.borderColor = "white";
-            }}
+            className="text-xs lg:text-sm font-semibold"
           >
-            Capabilities
-          </Link>
-          <Link
-            href="#"
-            className="border-4 border-white text-white text-xs lg:text-sm font-semibold px-3 lg:px-6 py-2 lg:py-2.5 rounded-full transition-all whitespace-nowrap"
-            style={{ borderColor: "white" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
-              e.currentTarget.style.borderColor = "white";
+            <span style={{color: "var(--color-dark-red)"}}>Capabilities</span>
+          </LiquidButton>
+          <LiquidButton
+            onClick={() => {}}
+            liquidColor="rgba(255, 255, 255, 0.8)"
+            style={{
+              borderColor: "var(--color-white)",
+              color: "var(--color-white)",
             }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.borderColor = "white";
-            }}
+            className="text-xs lg:text-sm font-semibold"
           >
-            Safety & Compliance
-          </Link>
+            <span style={{color: "var(--color-dark-red)",}}>Safety & Compliance</span>
+          </LiquidButton>
         </div>
 
         {/* Right Side Container */}
