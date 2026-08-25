@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LiquidButton from "./LiquidButton";
 
 // Register GSAP Plugin
 if (typeof window !== "undefined") {
@@ -168,9 +169,6 @@ const SplitBlock = ({
 
         {/* Text Content */}
         <div className="relative z-10 reveal-text">
-          <span className="block text-white/80 font-bold text-[10px] uppercase tracking-widest mb-4">
-            {data.eyebrow}
-          </span>
           <h2
             className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium text-white leading-[1.05] tracking-tight mb-6"
             style={{ color: "var(--color-white)" }}
@@ -182,30 +180,18 @@ const SplitBlock = ({
           </p>
 
           {/* Pill CTA Button */}
-          <button
-            className="group flex items-center justify-between gap-6 rounded-full pl-6 pr-1.5 py-1.5 transition-all w-max"
+          <LiquidButton
+            onClick={() => {}}
+            liquidColor="rgba(255, 255, 255, 0.8)"
             style={{
-              border: "4px solid rgba(255, 255, 255, 0.3)",
-              backgroundColor: "transparent",
+              borderColor: "rgba(255, 255, 255, 0.5)",
+              color: "var(--color-white)",
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor =
-                "rgba(255, 255, 255, 0.1)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "transparent")
-            }
+            className="text-xs font-bold gap-3"
           >
-            <span className="text-white text-xs font-bold tracking-wide">
-              {data.buttonText}
-            </span>
-            <div
-              className="w-8 h-8 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform"
-              style={{ backgroundColor: "var(--color-primary-red)" }}
-            >
-              <i className="fa-solid fa-arrow-right text-white text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
-            </div>
-          </button>
+            <span style={{color:data.buttonText=== "Discover Safety & Training"?"var(--color-dark-red)":"var(--color-primary-red)"}}>{data.buttonText}</span>
+            <i style={{color:data.buttonText=== "Discover Safety & Training"?"var(--color-dark-red)":"var(--color-primary-red)"}} className="fa-solid fa-arrow-right text-[10px]"></i>
+          </LiquidButton>
         </div>
       </div>
 

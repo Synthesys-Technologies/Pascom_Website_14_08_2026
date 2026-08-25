@@ -70,7 +70,7 @@ const cards: ServiceCard[] = [
     title: "Leak Proof Testing",
     description:
       "Rigorous testing to ensure safety and integrity for containers.",
-    icon: "fa-shield-halved",
+    icon: "fa-shield",
   },
   {
     id: "analytical",

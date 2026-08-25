@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import LiquidButton from './LiquidButton';
 
 // Register GSAP Plugin
 if (typeof window !== 'undefined') {
@@ -113,19 +114,19 @@ export default function CtaBand() {
         </h2>
 
         {/* Accent CTA Button */}
-        {/* Note: I used the bright green from your reference image. If you prefer Pascom Red, change 'bg-[#22C55E]' to 'bg-[#DC2626]' */}
         <div className="reveal-item">
-          <a
-            href="#"
-            className="group relative inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-bold text-sm rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_30px_rgba(220,38,38,0.4)] hover:bg-red-700"
+          <LiquidButton
+            onClick={() => {}}
+            liquidColor="var(--color-primary-red)"
+            style={{
+              borderColor: "var(--color-primary-red)",
+              backgroundColor: "var(--color-dark-red)",
+              color: "var(--color-white)",
+            }}
+            className="text-sm font-bold gap-2"
           >
-            {/* Hover shine effect */}
-            <span className="absolute inset-0 w-full h-full -ml-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine"></span>
-            
-            <span className="relative z-10 flex items-center gap-2 tracking-wide">
-              Request a Quote 
-            </span>
-          </a>
+            <span>Request a Quote</span>
+          </LiquidButton>
         </div>
 
       </div>

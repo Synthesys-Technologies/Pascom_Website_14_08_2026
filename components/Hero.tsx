@@ -133,7 +133,7 @@ export default function Hero() {
           ========================================= */}
       <div
         ref={pascomTextRef}
-        className="absolute top-0 left-0 w-full h-[45vh] md:h-[50vh] flex items-end px-2 md:px-4 z-0 pointer-events-none select-none overflow-hidden md:top-4.5"
+        className="absolute top-0 left-0 w-full h-[45vh] md:h-[55vh] flex items-end px-2 md:px-4 z-0 pointer-events-none select-none overflow-hidden"
       >
         <h1
           className="flex justify-between items-end w-full font-black text-[12vw] md:text-[18vw] leading-none tracking-tight m-0 p-0"

@@ -13,7 +13,7 @@ const solutions = [
     title: "Toll Blending & Contract Manufacturing",
     description: "Your formula, our plant. Batched, QC'd, delivered.",
     icon: "fa-truck-fast",
-    bgColor: "var(--color-primary-red)",
+     bgColor: "var(--color-dark-red)",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const solutions = [
     title: "Chemical Logistics & Storage",
     description: "IBC supply, tank hire and compliant storage across WA.",
     icon: "fa-truck-fast",
-    bgColor: "var(--color-primary-red)",
+    bgColor: "var(--color-dark-red)",
   },
 ];
 
@@ -414,6 +414,7 @@ export default function FeaturesList() {
                       transition-colors
                       duration-500
                       md:p-8
+                  
                     "
                   style={{
                     background: active
@@ -422,11 +423,11 @@ export default function FeaturesList() {
 
                     border: active
                       ? "1px solid rgba(255,255,255,0.3)"
-                      : "1px solid rgba(198,40,40,0.25)",
+                      : "1px solid rgba(198,40,40,1)",
 
                     boxShadow: active
                       ? "0 15px 35px rgba(0,0,0,0.16)"
-                      : "0 4px 12px rgba(198,40,40,0.1)",
+                      : "0 4px 12px rgba(198,40,40,0.16)",
                   }}
                   onMouseEnter={() => handleEnter(index)}
                   onMouseLeave={() => handleLeave(index)}
