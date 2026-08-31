@@ -124,7 +124,9 @@ export default function ProductDetailsPage({ slug }: ProductDetailsPageProps) {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <LiquidButton
-                  onClick={() => {}}
+                  onClick={() => {
+                    window.open("/products-inqurie-form", "_blank");
+                  }}
                   liquidColor="var(--color-primary-red)"
                   style={{
                     borderColor: "var(--color-white)",
@@ -142,7 +144,9 @@ export default function ProductDetailsPage({ slug }: ProductDetailsPageProps) {
                   ></i>
                 </LiquidButton>
                 <LiquidButton
-                  onClick={() => {}}
+                  onClick={() => {
+                    window.open("/sds-request-form", "_blank");
+                  }}
                   liquidColor="var(--color-primary-red)"
                   style={{
                     borderColor: "var(--color-white)",

@@ -13,7 +13,7 @@ const solutions = [
     title: "Toll Blending & Contract Manufacturing",
     description: "Your formula, our plant. Batched, QC'd, delivered.",
     icon: "fa-truck-fast",
-     bgColor: "var(--color-dark-red)",
+    bgColor: "var(--color-dark-red)",
   },
   {
     id: 2,
@@ -191,7 +191,7 @@ export default function FeaturesList() {
      * selected solution.
      */
 
-    const scale = [0.78, 0.9, 1][hoveredIndex];
+    const scale = [1, 1, 1][hoveredIndex];
 
     gsap.to(container, {
       scale,

@@ -155,8 +155,7 @@ export default function ProductInquiryForm() {
             Send us your <span style={{ color: "var(--color-dark-red)" }}>requirement</span>
           </h1>
           <p className="text-gray-100 text-lg max-w-2xl leading-relaxed">
-            Select the products you need and complete the form below. We&apos;ll
-            respond to your inquiry as soon as possible.
+            ease select your product and complete the form. Once submitted, we will respond to your inquiry as soon as possible.If the product you are interested in is not listed below, please select the “Other Product” option and provide the product name in the comment section for further details.
           </p>
         </div>
 

@@ -246,7 +246,7 @@ export default function Hero() {
             {/* AVATARS */}
             <div className="flex -space-x-2 md:-space-x-3">
               <Image
-                src="https://pascom.com.au/wp-content/uploads/2024/10/IMG_1763-600x940.jpeg"
+                src="/this-is-us/David_Schwartz.jpg"
                 alt="Team"
                 width={40}
                 height={40}
@@ -262,7 +262,7 @@ export default function Hero() {
               />
 
               <Image
-                src="https://pascom.com.au/wp-content/uploads/2024/10/DSC16025-600x900.jpeg"
+                src="/this-is-us/Ian_Schwartz.jpg"
                 alt="Team"
                 width={40}
                 height={40}
