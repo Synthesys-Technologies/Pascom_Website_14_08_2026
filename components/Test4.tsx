@@ -775,38 +775,6 @@ export default function FeaturesList() {
                 "
               />
 
-              <div
-                className="
-                  absolute
-                  left-1/2
-                  top-1/2
-                  flex
-                  h-20
-                  w-20
-                  -translate-x-1/2
-                  -translate-y-1/2
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-white/10
-                  bg-white/[0.025]
-                  backdrop-blur-sm
-                "
-              >
-                <span
-                  className="
-                    text-[8px]
-                    font-bold
-                    uppercase
-                    tracking-[0.3em]
-                    text-white/30
-                  "
-                >
-                  CHEM
-                </span>
-              </div>
-
               {/* =================================
                   MOVING CHEMICAL DROP
               ================================= */}
