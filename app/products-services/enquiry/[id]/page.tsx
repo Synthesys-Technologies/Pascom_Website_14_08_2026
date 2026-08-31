@@ -575,7 +575,7 @@ export default function EnquiryPage() {
       {/* Other Services Section - Horizontal Scroll */}
       <section
         ref={sectionRef}
-        className="relative bg-[#f5f5f7] w-full h-screen font-sans antialiased overflow-hidden text-white flex flex-col"
+        className="relative bg-[#ebedec] w-full h-screen font-sans antialiased overflow-hidden text-white flex flex-col"
       >
         {/* HEADER */}
         <div className="w-full px-6 md:px-16 pt-16 md:pt-24 shrink-0">
@@ -600,73 +600,48 @@ export default function EnquiryPage() {
             ref={trackRef}
             className="flex gap-8 md:gap-12 px-6 md:px-16 w-max flex-nowrap items-center h-full"
           >
+            {/* Other Services Card */}
             {otherServices.map((item, index) => (
               <Link
                 key={item.id}
                 href={`/products-services/enquiry/${item.id}`}
-                className="group relative block w-75 md:w-100 lg:w-112.5 h-[60vh] min-h-112.5 max-h-162.5 shrink-0 overflow-hidden border transition-all duration-500 cursor-pointer rounded-2xl"
+                className="group relative flex flex-col w-60 h-115 md:w-80 lg:w-96 shrink-0 overflow-hidden bg-white hover:shadow-xl transition-all duration-500 cursor-pointer rounded-3xl md:rounded-2xl"
                 style={{
                   transform:
-                    index % 2 === 0 ? "translateY(-20px)" : "translateY(20px)",
-                  backgroundColor: "rgba(69, 10, 10, 0.4)",
-                  borderColor: "rgba(198, 40, 40, 0.5)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "rgba(69, 10, 10, 0.6)";
-                  e.currentTarget.style.borderColor = "rgba(198, 40, 40, 0.8)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "rgba(69, 10, 10, 0.4)";
-                  e.currentTarget.style.borderColor = "rgba(198, 40, 40, 0.5)";
+                    index % 2 === 0 ? "translateY(-12px)" : "translateY(12px)",
                 }}
               >
-                {/* Background Image Container */}
-                <div className="absolute inset-0 w-full h-[65%] overflow-hidden bg-black z-0">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
-                  />
+                {/* Image Container */}
+                <div className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden bg-black">
+                  <div className="card-img w-full h-full relative">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                    />
+                  </div>
+
+                  {/* Gradient Overlay on Image */}
+                  <div
+                    className="absolute inset-0 z-10"
+                    style={{
+                      background: `linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.3) 100%)`,
+                    }}
+                  ></div>
                 </div>
 
-                {/* Gradient Overlay */}
-                <div
-                  className="absolute inset-0 z-10"
-                  style={{
-                    background: `linear-gradient(to bottom, transparent 20%, rgba(198, 40, 40, 0.5) 60%, rgba(198, 40, 40, 0.7) 100%)`,
-                  }}
-                ></div>
-
-                {/* Card Content */}
-                <div className="absolute inset-0 z-20 flex flex-col p-6 md:p-8">
-                  {/* Top Row: Badge & Button */}
-                  <div className="flex justify-between items-start w-full">
-                    <span
-                      className="backdrop-blur-md border px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm rounded"
-                      style={{
-                        backgroundColor: "#db0000",
-                        borderColor: "rgba(255, 255, 255, 0.3)",
-                      }}
-                    >
-                      {item.badge}
-                    </span>
-                  </div>
-
-                  {/* Bottom Row: Title & Description */}
-                  <div className="mt-auto">
-                    <h3
-                      className="text-2xl md:text-3xl font-semibold text-white leading-tight mb-4 tracking-tight"
-                      style={{ color: "var(--color-white)" }}
-                    >
-                      {item.title}
-                    </h3>
-                    <p className="text-white/70 text-sm leading-relaxed font-medium line-clamp-3">
-                      {item.desc}
-                    </p>
-                  </div>
+                {/* Title & Description - Below Image */}
+                <div className="flex flex-col flex-1 p-4 md:p-5 lg:p-6 bg-white">
+                  <h3
+                    className="text-lg md:text-xl lg:text-2xl font-semibold leading-tight mb-2 tracking-tight"
+                    style={{ color: "var(--color-primary-red)" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 text-xs md:text-sm leading-relaxed font-medium line-clamp-2 md:line-clamp-3">
+                    {item.desc}
+                  </p>
                 </div>
               </Link>
             ))}

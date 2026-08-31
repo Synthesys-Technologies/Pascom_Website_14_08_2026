@@ -120,7 +120,16 @@ export default function Hero() {
               color: "var(--color-white)",
             }}
           >
-            <span className="hero-char">P</span>
+            <span
+              className="hero-char"
+              style={{
+                color: "transparent",
+                WebkitTextFillColor: "transparent",
+                WebkitTextStroke: "10px var(--color-white)",
+              }}
+            >
+              P
+            </span>
             <span className="hero-char">A</span>
             <span className="hero-char">S</span>
             <span className="hero-char">C</span>
@@ -194,7 +203,15 @@ export default function Hero() {
               <span
                 className="block md:inline"
                 style={{
-                  color: "var(--color-primary-red)",
+                  /* 1. Makes the inside of the text completely see-through */
+                  color: "transparent",
+                  WebkitTextFillColor: "transparent",
+
+                  /* 2. Creates the clean, professional outline using your brand red */
+                  WebkitTextStroke: "3px var(--color-white)",
+
+                  /* 3. Slightly reduces the "heat" (intensity) of the red for a calmer, premium look */
+                  opacity: 0.8,
                 }}
               >
                 Australia

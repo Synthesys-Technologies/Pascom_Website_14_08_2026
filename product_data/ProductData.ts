@@ -1948,5 +1948,3664 @@ export const productsList: Product[] = [
       },
     ],
   },
-  
+
+  {
+    slug: "methanol",
+    name: "Methanol",
+    description:
+      "Methanol, also known as wood alcohol, is a clear, colorless liquid with a slightly sweet odor. It is widely used as a solvent, antifreeze, and in the production of chemicals. Due to its toxic nature, it requires careful handling and proper storage.",
+    sections: [
+      {
+        type: "overview",
+        title: "Methanol – Essential Solvent & Industrial Chemical",
+        content:
+          "Methanol is a clear liquid used in lots of industries. People use it as a solvent, fuel additive, or to make other chemicals. It works well in factories and labs. You'll see it in energy plants, drug manufacturing, and production lines.\n\nIn Australia, many businesses use this chemical because it's clean, reliable, and not too expensive. It helps in making fuel, plastics, and even in cleaning dirty water.",
+      },
+      {
+        type: "",
+        title: "What Is It?",
+        content:
+          "Methanol is also called methyl alcohol or wood alcohol. It's the simplest type of alcohol with the formula CH₃OH. It's light, burns easily, and smells like regular alcohol but a bit sweeter. Big factories make it by mixing carbon monoxide and hydrogen with a catalyst. The result is a clean product that works in many ways.\n\nBecause it dissolves things well and doesn't freeze easily, methanol shows up in antifreeze, biodiesel, and in making formaldehyde and other chemicals.",
+      },
+      {
+        type: "",
+        title: "Common Uses for Methanol",
+        content:
+          "In fuel, it helps petrol burn better and cuts down on smoke.\n\nIn chemical plants, it helps make things like formaldehyde and acetic acid.\n\nIn water treatment, it helps clean water by feeding bacteria that remove bad stuff.\n\nDrug companies use it to make medicine.\n\nIt's also used in paint, plastics, adhesives, and pesticides because it mixes well with other chemicals.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "Pascom supplies methanol across Australia. You can get it in drums, big containers, or full truckloads. We deliver on time and help you pick what works best for you. If you want a quote, click here.",
+      },
+      {
+        type: "safety",
+        title: "How to Handle Methanol Safely",
+        content:
+          "Methanol burns easily and is toxic. Don't breathe it in or drink it. Always use gloves and goggles. Keep it away from fire and heat. Use it where there's fresh air.\n\nFor full safety details, you can get the Safety Data Sheet (SDS).",
+      },
+      {
+        type: "",
+        title: "Need Methanol in Australia?",
+        content:
+          "Pascom can help. We deliver all over Australia and offer good prices on methanol. Contact us here to get a quote or ask a question.",
+      },
+      {
+        type: "",
+        title: "Quick Facts",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "67-56-1",
+          },
+          {
+            label: "Look",
+            value: "Clear, colourless",
+          },
+          {
+            label: "Smell",
+            value: "Sweet, like alcohol",
+          },
+          {
+            label: "Purity",
+            value: "99.85% or higher",
+          },
+          {
+            label: "Mixes with water",
+            value: "Yes",
+          },
+          {
+            label: "Boils at",
+            value: "64.7°C",
+          },
+          {
+            label: "Density",
+            value: "0.7918 g/cm³ at 20°C",
+          },
+          {
+            label: "Fire risk",
+            value: "High, flash point at 11°C",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Basics",
+        properties: [
+          {
+            label: "Danger",
+            value:
+              "Toxic, can cause blindness or death if swallowed or breathed in.",
+          },
+          {
+            label: "Use",
+            value: "Always wear gloves and eye protection.",
+          },
+          {
+            label: "Store",
+            value: "Keep in a cool, dry place, away from fire.",
+          },
+          {
+            label: "Disposal",
+            value: "Follow the rules, don't dump it anywhere.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "methylene-chloride",
+    name: "Methylene Chloride",
+    description:
+      "Methylene chloride, also known as dichloromethane, is a volatile, colorless liquid with a sweet smell. It is widely used as a solvent in industrial processes, paint stripping, and as a laboratory reagent. Due to its high evaporation rate and solvent properties, it requires careful handling.",
+    sections: [
+      {
+        type: "overview",
+        title: "Methylene Chloride – A Reliable Solvent for Industrial Use",
+        content:
+          "Methylene Chloride, also known as dichloromethane (DCM), is a clear, fast-evaporating liquid used in a wide range of industries. It's valued for how well it dissolves tough materials and how little it leaves behind. You'll find it in everything from paint strippers and adhesives to metal cleaners and foam production.\n\nMany businesses across Australia use Methylene Chloride because it works—whether that's breaking down old paint, cleaning metal parts, or helping make pharmaceutical products.",
+      },
+      {
+        type: "",
+        title: "What is Methylene Chloride?",
+        content:
+          "Methylene Chloride (DCM) is a type of chlorinated solvent. It has the chemical formula CH₂Cl₂. It's colourless, has a slightly sweet smell, and doesn't mix with water—but it does mix well with most other solvents. It boils at about 39.6°C, so it dries fast. That's useful in any job where quick evaporation matters.\n\nIt's powerful, but it also needs careful handling. This is a chemical that comes with health risks, so proper safety practices are important.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Here are some of the main ways Methylene Chloride is used in industry:\n\nPaint Removal: Breaks down paint quickly and effectively. Often used in commercial strippers.\n\nMetal Cleaning: Helps clean and degrease metal parts, especially in automotive and aerospace work.\n\nAdhesives: Used to make glues and sealants—its quick drying helps speed up production.\n\nFoam Production: Acts as a blowing agent in making polyurethane foams.\n\nPharmaceuticals: Used in processes like extraction and purification.\n\nIt's a go-to solvent when strength, speed, and reliability matter.",
+      },
+      {
+        type: "",
+        title: "Why Work with Pascom?",
+        content:
+          "Pascom supplies high-quality Methylene Chloride across Australia. We offer it in different package sizes—drums, IBCs, and more—so you can get what fits your setup. We also follow strict quality and safety standards to make sure you're getting a product you can rely on.\n\nNeed it delivered? We've got you covered, with delivery and pickup options Australia-wide.\nRequest a quote here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Use and Storage",
+        content:
+          "Always wear gloves, eye protection, and a respirator when working with Methylene Chloride. Only use it in well-ventilated areas, and don't breathe in the vapour.\n\nStore it somewhere cool and dry, away from sparks or anything it might react with (like strong oxidisers). For full safety info, get the SDS here.",
+      },
+      {
+        type: "",
+        title: "Order Methylene Chloride in Australia",
+        content:
+          "We supply Methylene Chloride in bulk or smaller volumes, with flexible options for delivery and pickup.\nContact us to get a quote.",
+      },
+    ],
+  },
+  {
+    slug: "monoethylene-glycol",
+    name: "Monoethylene glycol",
+    description:
+      "Monoethylene glycol is a colorless, odorless liquid commonly used as an antifreeze and coolant in automotive and industrial applications. It is also utilized in the production of resins, plastics, and as a solvent in various processes. This compound is toxic and requires careful handling.",
+    sections: [
+      {
+        type: "overview",
+        title: "Monoethylene Glycol – Industrial Coolant and Solvent",
+        content:
+          "Monoethylene Glycol (MEG) is a simple but important chemical. It's mainly used as a coolant, heat transfer fluid, and raw material in different industries. It's a good choice for companies that need something reliable for cooling systems or industrial processes. You'll often see it used in automotive, HVAC, textiles, and plastics.\n\nMEG mixes well with water and stays liquid in cold temperatures, which makes it useful in closed cooling systems, in making polyester fibres, and as an ingredient in chemical production.",
+      },
+      {
+        type: "",
+        title: "What Is Monoethylene Glycol?",
+        content:
+          "Monoethylene Glycol (MEG) is an organic liquid. It has the chemical formula C₂H₆O₂. It's colourless, odourless, and a little thick. It's made from ethylene oxide. People use it because it holds water (hygroscopic), doesn't freeze easily, and boils at a high temperature.\n\nIt's a main ingredient in antifreeze, de-icing fluids, and is used to make polyester fibres and resins. Some people call it just ethylene glycol, but in Australia, Monoethylene Glycol is the common term.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "You can find Monoethylene Glycol in a lot of industries:\n\nCoolants and antifreeze: MEG keeps car and industrial engines from freezing or overheating.\n\nPolyester fibre production: MEG is one of the main ingredients for making polyester.\n\nHeat transfer fluid: HVAC systems use it to keep temperatures steady.\n\nSolvent and humectant: MEG is used in inks, adhesives, and paints because it helps products stay stable and perform well.",
+      },
+      {
+        type: "",
+        title: "Why Buy from Pascom?",
+        content:
+          "Pascom supplies Monoethylene Glycol across Australia. We provide high-purity MEG in drums, IBCs, and bulk. We follow all industry standards, and our deliveries are on time. Our team can help you with product advice or questions.\nRequest a quote.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling and Storage",
+        content:
+          "Handle MEG like you would any industrial chemical. Use gloves and eye protection. Work in a ventilated space if you're using a lot. Don't swallow it or let it touch your skin for too long. You can find more safety details in the Safety Data Sheet (SDS).\n\nStore MEG in a cool, dry area, away from heat and oxidisers. This keeps it safe and effective for longer.",
+      },
+      {
+        type: "",
+        title: "Buy Monoethylene Glycol in Australia",
+        content:
+          "Pascom supplies Monoethylene Glycol with fast delivery and local pickup across Australia.\nContact us for prices, packaging, and other details.",
+      },
+    ],
+  },
+  {
+    slug: "monoethylene-glycol-fiber-grade",
+    name: "Monoethylene Glycol Fiber Grade",
+    description:
+      "Monoethylene glycol fiber grade is a high-purity form of monoethylene glycol used primarily in the production of synthetic fibers like polyester. This colorless, odorless liquid is used to enhance fiber properties and improve manufacturing processes.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Monoethylene Glycol Fiber Grade – Essential Raw Material for Polyester and Textiles",
+        content:
+          "Monoethylene Glycol Fiber Grade is a high-purity chemical. It's used to make polyester fibres, PET plastics, and textiles. You'll find it in packaging, clothing, and even plastic bottles. Companies choose it because it's clean, stable, and works well in big production lines.\n\nIn Australia, Monoethylene Glycol Fiber Grade is common in factories making polyester and plastic. It's known for being consistent and easy to work with.",
+      },
+      {
+        type: "",
+        title: "What Is Monoethylene Glycol Fiber Grade?",
+        content:
+          "Monoethylene Glycol, or MEG, is a simple chemical. It looks like a clear liquid and doesn't have much of a smell. The chemical formula is C₂H₆O₂.\n\nWhen people say \"fiber grade,\" they mean it's very pure. It's made for making polyester fibres and textiles. It has very low impurities and moisture, which helps when making plastics and fabrics.",
+      },
+      {
+        type: "",
+        title: "Where Is It Used?",
+        content:
+          "Monoethylene Glycol Fiber Grade is mainly used to make polyester. This includes things like clothes, fabric, and yarn. It's also used to make plastic bottles and containers (PET plastic).\n\nOutside of textiles and plastics, MEG helps control humidity in paper making. It's also used as a solvent in glues, inks, and resins. People like it because it mixes well with water and doesn't break down easily.",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us",
+        content:
+          "We supply Monoethylene Glycol Fiber Grade across Australia. Our MEG is high purity, low in moisture, and packed for easy use. You can get it in drums, IBCs, or bulk tankers.\n\nWe ship quickly and can give technical support if needed.\n\nRequest a Quote",
+      },
+      {
+        type: "safety",
+        title: "How To Handle It Safely",
+        content:
+          "Always use gloves, goggles, and protective clothes when handling MEG. Work in a space with good airflow. Store it in a cool, dry place, away from heat and strong chemicals.\n\nFor full safety details, get the SDS here.",
+      },
+      {
+        type: "",
+        title: "Buying MEG in Australia",
+        content:
+          "We offer delivery and pick-up options across Australia. You can choose from different packaging sizes to suit your needs.\n\nContact us here for more details.",
+      },
+      {
+        type: "",
+        title: "Quick Facts About MEG Fiber Grade",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "107-21-1",
+          },
+          {
+            label: "Look",
+            value: "Clear, colourless liquid",
+          },
+          {
+            label: "Smell",
+            value: "Almost none",
+          },
+          {
+            label: "Mixes with Water",
+            value: "Yes, in any amount",
+          },
+          {
+            label: "Purity",
+            value: "At least 99.9%",
+          },
+          {
+            label: "Density",
+            value: "1.115 g/cm³ (at 20°C)",
+          },
+          {
+            label: "Boiling Point",
+            value: "197.6°C",
+          },
+          {
+            label: "Freezing Point",
+            value: "-12.9°C",
+          },
+          {
+            label: "pH",
+            value: "Neutral",
+          },
+          {
+            label: "Stability",
+            value: "Stable in normal use. Keep away from strong oxidisers.",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Reminders",
+        properties: [
+          {
+            label: "Skin & Eyes",
+            value: "Can cause slight irritation. Use gloves and goggles.",
+          },
+          {
+            label: "Breathing It In",
+            value: "Vapours may irritate if the air isn't fresh.",
+          },
+          {
+            label: "Swallowing",
+            value: "Harmful if taken in large amounts.",
+          },
+          {
+            label: "Storage",
+            value: "Keep it sealed and away from heat or unsafe chemicals.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "nickel-catalysed-ammonium-bisulfite-65",
+    name: "Nickel Catalysed Ammonium Bisulfite 65%",
+    description:
+      "Nickel Catalysed Ammonium Bisulfite 65% is a specialized chemical solution used primarily in industrial and laboratory processes. It contains ammonium bisulfite catalyzed by nickel, and is often employed in organic synthesis and as a reducing agent. This solution is typically clear and requires careful handling due to its chemical reactivity.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Nickel Catalysed Ammonium Bisulfite 65% – Oxygen Scavenger for Industrial Use",
+        content:
+          "Nickel Catalysed Ammonium Bisulfite 65% is a concentrated chemical that helps remove oxygen from water and fluid systems. It contains 65% ammonium bisulfite (NH₄HSO₃) with a small amount of nickel to make it work faster. It's mostly used in industries like oil and gas, power generation, and water treatment across Australia.\n\nThis product helps lower the risk of corrosion, keeps systems running longer, and cuts down on repairs.",
+      },
+      {
+        type: "",
+        title: "What It Is",
+        content:
+          "This is a liquid solution of ammonium bisulfite with nickel added. The nickel helps it react faster with oxygen. It's usually used at 65% strength and works well where fast oxygen removal is needed. In some places, it's also called ammonium Bisulphite (UK spelling).\n\nIt protects pipelines, boilers, and storage tanks, especially in systems with changing temperatures and high flow rates.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Nickel Catalysed Ammonium Bisulfite 65% is mainly used in boiler water treatment to stop corrosion. It's also used in oil and gas operations to protect pipelines and lower maintenance costs.\n\nOther common uses:\n\nWater treatment in power plants\n\nProcess water in refineries and chemical plants\n\nProtecting equipment during shutdowns\n\nWhen people compare sulfite vs bisulfite, bisulfite is often picked because it dissolves better and is easier to handle, especially in closed systems.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling and Storage",
+        content:
+          "Wear gloves, eye protection, and make sure there's good airflow when using this product. Knowing the difference between sulfite and bisulfite helps you use it safely.\n\nKeep it in a cool, dry place away from heat and oxidisers. For full safety info, check the Safety Data Sheet (SDS).",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10102-40-6",
+          },
+          {
+            label: "Concentration",
+            value: "65% Ammonium Bisulfate with Nickel",
+          },
+          {
+            label: "Appearance",
+            value: "Pale yellow liquid",
+          },
+          {
+            label: "Smell",
+            value: "Mild",
+          },
+          {
+            label: "Solubility",
+            value: "Fully dissolves in water",
+          },
+          {
+            label: "pH",
+            value: "4.0 – 6.0",
+          },
+          {
+            label: "Density",
+            value: "1.3 – 1.4 g/cm³",
+          },
+          {
+            label: "Use",
+            value: "Oxygen scavenger, corrosion inhibitor",
+          },
+          {
+            label: "Packaging",
+            value: "Drums, IBCs, bulk tankers",
+          },
+          {
+            label: "Delivery",
+            value: "Available Australia-wide",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "potassium-chloride-kcl-98",
+    name: "Potassium Chloride KCI, 98%",
+    description:
+      "Potassium chloride (KCl) and potassium chloride 98% are white, crystalline salts commonly used in fertilizers, medicine, and as a salt substitute. It is soluble in water and provides potassium, an essential nutrient for plant growth and human health. It is generally safe to handle, but requires proper storage and usage.",
+    sections: [
+      {
+        type: "overview",
+        title: "Potassium Chloride KCl – Industrial Grades",
+        content:
+          "Potassium Chloride KCl comes in different purity grades. It's used in pharmaceuticals, water treatment, food production, fertilizers, and labs. It's a white crystalline salt that dissolves well in water.",
+      },
+      {
+        type: "",
+        title: "What Is Potassium Chloride KCl?",
+        content:
+          "Potassium Chloride is KCl – potassium and chlorine ions. It's a mineral salt found in nature. Dissolves easily in water. Has neutral pH. Also called muriate of potash or sylvite. It's a source of potassium ions for industrial uses. Looks like white or colorless crystals. No smell. Good for food and pharmaceutical use.",
+      },
+      {
+        type: "",
+        title: "Available Grades",
+        content:
+          "We have different purity levels for different needs.\n\nStandard Grade\nStandard grade works for general industrial use when you don't need high purity. Used in water treatment, de-icing, and basic chemical manufacturing. Good performance for bulk processes. Comes as white crystalline granules. Flows well and dissolves consistently.\n\n98% High Purity Grade\nThe 98% grade meets strict standards for pharmaceuticals, food production, and labs. Has minimal impurities. Good for sensitive processes that need precise chemical composition. Dissolves well in water. Better for applications where contamination matters.",
+      },
+      {
+        type: "",
+        title: "Industrial Uses",
+        content:
+          "Potassium Chloride is used in many industries. Water treatment plants use it for pH adjustment and nutrients. Drug makers use the high-purity grade for medications and electrolyte solutions. Food companies use it instead of table salt and as a flavor enhancer.\n\nLabs use it in buffer solutions and as an electrolyte for analysis. Fertilizer companies use it as a potassium source for plants. Industrial processes use it as a flux in metal processing and to make specialty chemicals.\n\nIt's thermally stable. Dissolves predictably. Cost-effective in different grades. Both standard and high-purity work well at different temperatures and pH levels.",
+      },
+      {
+        type: "",
+        title: "Why Choose Our Potassium Chloride?",
+        content:
+          "Our products meet Australian quality standards. We follow industry regulations. We control quality during manufacturing and packaging. This keeps product specs consistent. We have custom packaging for different volume needs.\n\nWe're a trusted supplier in Australia. We provide technical support and documentation for all grades. We handle storage properly and deliver on time nationwide.\n\nRequest a Quote",
+      },
+      {
+        type: "safety",
+        title: "Packaging, Delivery & Documentation",
+        content:
+          "CAS Number: 7447-40-7\n\nWe have bags, drums, and bulk containers. Pick what works for your application. Store it cool and dry. Keep it away from moisture and incompatible materials. Use sealed containers to prevent caking.\n\nWe deliver or you can pick up. All shipments have proper labels and handling instructions.\n\nRequest SDS",
+      },
+      {
+        type: "",
+        title: "Buy Potassium Chloride KCl in Australia",
+        content:
+          "Our Potassium Chloride gives you reliable performance and quality. Standard grade for general use. 98% for specialized processes. Both give good value and work well.\n\nWe handle small lab orders to large industrial orders. We provide documentation, technical support, and deliver nationwide.\n\nContact us about your Potassium Chloride needs",
+      },
+    ],
+  },
+  {
+    slug: "potassium-hydroxide-solution",
+    name: "Potassium Hydroxide Solution 45%, 49%",
+    description:
+      "Potassium hydroxide 45% and 49% are highly concentrated solutions of potassium hydroxide used in various industrial and chemical processes. This colorless, caustic liquid is a strong base and is highly corrosive, necessitating careful handling and storage.",
+    sections: [
+      {
+        type: "overview",
+        title: "Potassium Hydroxide Solution – Industrial Grades",
+        content:
+          "Potassium hydroxide solution is an alkaline chemical. We have different concentrations. It's used in pharmaceuticals, water treatment, food production, soap making, and chemical processing.",
+      },
+      {
+        type: "",
+        title: "What Is Potassium Hydroxide Solution?",
+        content:
+          "It's a clear, colorless liquid. KOH dissolved in water. Strong alkaline. Very caustic and absorbs moisture from air. Used for pH adjustment, neutralization, and industrial reactions. Also called caustic potash solution or potassium hydrate solution. It's a raw material for manufacturing.",
+      },
+      {
+        type: "",
+        title: "Available Concentrations",
+        content:
+          "We have different concentrations for different needs.\n\n45% Solution\nMedium concentration for general industrial use. Good for soap making, biodiesel production, and pH adjustment. Handles well while staying effective. Clear, colorless liquid. Thick and caustic.\n\n49% Solution\nHigh concentration for demanding processes. Works for chemical synthesis, water treatment, and when you need strong alkaline conditions. More cost-effective when you need high alkalinity. Dissolves well. Works at different temperatures.",
+      },
+      {
+        type: "",
+        title: "Industrial Uses",
+        content:
+          "Potassium hydroxide solution is used for:\n\npH adjustment in water treatment and industrial processes\nSoap making – needed for saponification\nBiodiesel production – catalyst for the process\nChemical synthesis – makes pharmaceuticals and specialty chemicals\nMetal processing – cleaning and etching\nFood processing – pH control (food-grade versions)\nBattery manufacturing – goes in alkaline batteries\n\nIt's strongly alkaline. Dissolves well. Cost-effective for pH control. Works reliably at different concentrations.",
+      },
+      {
+        type: "",
+        title: "Why Choose Our Potassium Hydroxide?",
+        content:
+          "We meet Australian and international standards. Follow local regulations and safety standards. Have flexible packaging from small containers to bulk. Keep consistent supply and deliver fast across Australia. Our team can help with application and handling.\n\nWe're a trusted supplier in Australia. We provide technical expertise and good customer service.\n\nRequest a Quote",
+      },
+      {
+        type: "safety",
+        title: "Packaging, Delivery & Documentation",
+        content:
+          "CAS Number: 1310-58-3\n\nStorage & Handling:\nStore cool and dry away from incompatible materials\nWear proper protective equipment\nMake sure ventilation is good\nKeep containers sealed tight to prevent moisture absorption\n\nDelivery & Pickup:\nWe deliver across Australia\nYou can pick up from our facilities\nWe have lab quantities to bulk industrial volumes\nSafe transport with proper hazmat handling\n\nRequest SDS",
+      },
+      {
+        type: "",
+        title: "Buy Potassium Hydroxide Solution in Australia",
+        content:
+          "Our 45% and 49% grades work well for different industrial uses. Both are quality products with consistent alkalinity and good handling.\n\nNeed moderate alkalinity for soap making? Or high concentration for chemical synthesis? Our products work reliably. We provide technical support and flexible supply.\n\nContact us about your needs.",
+      },
+    ],
+  },
+  {
+    slug: "silfax-1000",
+    name: "Silfax 1000",
+    description:
+      "Silfax 1000 is a high-performance silicone-based fluid used primarily in industrial applications for lubrication and as a release agent. This clear, non-reactive liquid offers excellent thermal stability and low surface tension, making it ideal for use in demanding environments.",
+    sections: [
+      {
+        type: "overview",
+        title: "Silfax 1000 – Industrial Silicone Defoamer",
+        content:
+          "Silfax 1000 is a silicone defoamer for industrial use. It controls foam in water treatment, paper making, and chemical processes. It's a concentrated liquid.\n\nManufacturing plants use Silfax 1000 to stop foam during production. Foam slows things down and affects quality. This product works fast and lasts a long time, even in tough conditions.",
+      },
+      {
+        type: "",
+        title: "What Is Silfax 1000?",
+        content:
+          "It's a defoamer with silicone polymers and stabilizers. Works at different pH levels. Works in water-based and non-water systems. You don't need much, which saves money.",
+      },
+      {
+        type: "",
+        title: "Where to Use It",
+        content:
+          "Water treatment plants use Silfax 1000 in aeration tanks and clarifiers. It stops foam buildup and helps treatment work better. Paper mills use it because foam messes with coating and quality.\n\nChemical plants use it in reactors, distillation columns, and mixers. It handles high temperatures and extreme pH levels. Works with surfactants and other chemicals too.",
+      },
+      {
+        type: "",
+        title: "Why Buy from Pascom?",
+        content:
+          "We're a silicone defoamer supplier in Australia. We keep quality consistent and stock reliable. We have different sizes – small containers to bulk IBCs. Our team helps you figure out the right amount to use.\n\nNeed help picking the right product? We'll show you how to use it. For specs or bulk orders, request a quote today.",
+      },
+      {
+        type: "safety",
+        title: "How to Handle and Store",
+        content:
+          "Keep Silfax 1000 in its original container. Store it somewhere cool and dry. Keep it out of sunlight and extreme temperatures. Wear gloves and eye protection. Make sure you have good ventilation. Don't get it on your skin or in your eyes.\n\nFor safety info, request the safety data sheet.",
+      },
+      {
+        type: "",
+        title: "Buy Silfax 1000 in Australia",
+        content:
+          "Contact Pascom for pricing and delivery across Australia. We deliver or you can pick up. Our team can help with your foam problems.",
+      },
+      {
+        type: "",
+        title: "Product Specifications",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. We might have custom options too.",
+          },
+          {
+            label: "CAS",
+            value: "Proprietary blend",
+          },
+          {
+            label: "Appearance",
+            value: "Clear to slightly hazy liquid",
+          },
+          {
+            label: "Odour",
+            value: "Mild smell",
+          },
+          {
+            label: "Solubility",
+            value: "Mixes with water",
+          },
+          {
+            label: "pH",
+            value: "Neutral (6.0-8.0)",
+          },
+          {
+            label: "Density",
+            value: "About 1.0 g/cm³",
+          },
+          {
+            label: "Viscosity",
+            value: "Low to medium thickness",
+          },
+          {
+            label: "Stability",
+            value: "Stable in normal storage",
+          },
+          {
+            label: "Reactivity",
+            value: "Works with most industrial chemicals",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Contact",
+            value:
+              "Can irritate. Wear gloves, goggles, and protective clothing",
+          },
+          {
+            label: "Inhalation Risk",
+            value: "Use where there's good air flow. Don't breathe vapours",
+          },
+          {
+            label: "Ingestion Hazard",
+            value: "Don't swallow. Get medical help if you do",
+          },
+          {
+            label: "Environmental",
+            value: "Don't let it get into waterways. Dispose properly",
+          },
+          {
+            label: "Storage",
+            value: "Keep in original containers. Store cool and dry",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "soda-ash-dense",
+    name: "Soda Ash Dense",
+    description:
+      "Soda Ash Dense is a granular form of sodium carbonate, widely used in glass manufacturing, water treatment, and chemical production. This white, odorless powder is a strong alkali, making it effective in raising pH levels and acting as a cleaning agent in various industrial processes.",
+    sections: [
+      {
+        type: "overview",
+        title: "Soda Ash Dense – Sodium Carbonate for Industrial Use",
+        content:
+          "Soda Ash Dense is sodium carbonate used in industrial processes across Australia. It's a white, crystalline powder with high bulk density. Works well in manufacturing, water treatment, and chemical processing.\n\nIndustries use Soda Ash Dense because it dissolves well and stays stable. The dense form is better for storage, transport, and automated feeding than the light version.",
+      },
+      {
+        type: "",
+        title: "What Is Soda Ash Dense?",
+        content:
+          "Soda Ash Dense is sodium carbonate (Na₂CO₃). Made through the Solvay process. Has higher bulk density than soda ash light. Also called washing soda in some uses. Usually 99.2% pure minimum. Flows well for industrial use.",
+      },
+      {
+        type: "",
+        title: "Industrial Applications",
+        content:
+          "In glass manufacturing, Soda Ash Dense works as a flux agent. Lowers the melting point of silica. Makes container glass, flat glass, and fiberglass production more efficient. Water treatment facilities use it as a pH adjuster. Neutralizes acid conditions and softens hard water by removing calcium and magnesium.\n\nDetergent makers use it as a builder. Makes cleaning work better and stops dirt from sticking back. Chemical industry uses it to make sodium bicarbonate, sodium silicates, and other sodium compounds. Knowing the difference between soda ash dense vs light helps you pick the right grade.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "We're a soda ash supplier in Australia. We deliver quality product with reliable supply. Have flexible packaging – 25kg bags to bulk containers. Our team helps with application guidance and quality assurance. Contact us for pricing.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Documentation",
+        content:
+          "Store Soda Ash Dense somewhere dry with good ventilation. Keep away from acids and moisture. Wear gloves and eye protection. Generally safe but can irritate skin and eyes. Request the Safety Data Sheet for full safety info. You can also check chemical properties for more details.",
+      },
+      {
+        type: "",
+        title: "Product Specifications",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. Custom packaging might be available.",
+          },
+          {
+            label: "CAS",
+            value: "497-19-8",
+          },
+          {
+            label: "Appearance",
+            value: "White, crystalline powder or granular solid",
+          },
+          {
+            label: "Odour",
+            value: "No smell",
+          },
+          {
+            label: "Solubility",
+            value: "Dissolves easily in water",
+          },
+          {
+            label: "pH",
+            value: "Strongly alkaline (pH 11.0-12.0 for 1% solution)",
+          },
+          {
+            label: "Bulk Density",
+            value: "About 1.0-1.2 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "851°C",
+          },
+          {
+            label: "Stability",
+            value: "Stable normally but absorbs moisture and CO₂ from air",
+          },
+          {
+            label: "Reactivity",
+            value:
+              "Works with most substances but reacts with acids, releases CO₂",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value:
+              "Can irritate. Wear gloves, goggles, and protective clothing",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Dust can irritate breathing. Use with good ventilation or wear dust mask",
+          },
+          {
+            label: "Ingestion Hazard",
+            value: "Can cause stomach irritation if you swallow a lot",
+          },
+          {
+            label: "Reactivity Risk",
+            value: "Keep away from strong acids – releases carbon dioxide gas",
+          },
+          {
+            label: "Storage",
+            value: "Store cool, dry, ventilated. Away from acids and moisture",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "soda-ash-dense-fcc-food-grade",
+    name: "Soda Ash Dense FCC (Food Grade)",
+    description:
+      "Soda Ash Dense FCC (Food Grade) is a high-purity sodium carbonate used in food processing and various industrial applications. This white, odorless powder is essential for controlling pH levels and as a leavening agent in baking. It is highly effective but must be handled with care due to its alkalinity.",
+    sections: [
+      {
+        type: "overview",
+        title: "Soda Ash Dense FCC Food Grade – Food Grade Sodium Carbonate",
+        content:
+          "Soda Ash Dense FCC Food Grade is high-purity sodium carbonate that meets Food Chemicals Codex standards. Used in food processing, beverage production, and pharmaceuticals. It's a white, crystalline powder. Works as an alkaline chemical for pH adjustment and buffering.\n\nIndustries across Australia use Soda Ash Dense FCC Food Grade for its quality and food safety compliance. It helps maintain good processing conditions while meeting safety standards for consumer products.",
+      },
+      {
+        type: "",
+        title: "What Is Soda Ash Dense FCC Food Grade?",
+        content:
+          'This sodium carbonate meets Food Chemicals Codex specs. Has minimal impurities. Safe for food contact. "Dense" means higher bulk density than light soda ash. Good for applications needing controlled dissolution rates. Also called sodium carbonate dense grade or washing soda in some industries.',
+      },
+      {
+        type: "",
+        title: "Food Industry Applications",
+        content:
+          "In food processing, Soda Ash Dense FCC Food Grade does several jobs. Regulates pH in baking. Treats water for beverage production. Processing aid in dairy operations. Works as a pH buffer in food manufacturing. Keeps acidity levels right during production. Pharmaceutical companies use it for tablets and as a neutralizing agent.\n\nDense vs light soda ash – dense has better flow and controlled dissolution. Works better in automated dosing systems for large-scale food production.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "We're a soda ash supplier in Australia. We provide reliable bulk supply. Have 25kg bags to bulk containers. We test for quality. Fast delivery across Australia. Technical support for your applications. Contact us for enquiries or bulk orders.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Documentation",
+        content:
+          "Store Soda Ash Dense FCC Food Grade somewhere cool and dry. Keep away from moisture and incompatible materials. Wear gloves and eye protection. Request our Safety Data Sheet for details. Also see NIOSH guidelines for sodium carbonate.",
+      },
+      {
+        type: "",
+        title: "Product Specifications",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. Custom packaging might be available.",
+          },
+          {
+            label: "CAS",
+            value: "497-19-8",
+          },
+          {
+            label: "Appearance",
+            value: "White, crystalline powder or granular solid",
+          },
+          {
+            label: "Odour",
+            value: "No smell",
+          },
+          {
+            label: "Solubility",
+            value: "Dissolves easily in water",
+          },
+          {
+            label: "pH",
+            value: "Strongly alkaline (pH 11.0-12.0 for 1% solution)",
+          },
+          {
+            label: "Bulk Density",
+            value: "About 1.0-1.2 g/cm³ (dense grade)",
+          },
+          {
+            label: "Melting Point",
+            value: "851°C (1564°F)",
+          },
+          {
+            label: "Stability",
+            value: "Stable normally but absorbs moisture",
+          },
+          {
+            label: "Reactivity",
+            value:
+              "Works with most substances. Can react with acids, releases carbon dioxide",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value:
+              "Can cause moderate irritation. Wear gloves, safety goggles, and protective clothing",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Dust can irritate breathing. Use with good ventilation or wear respiratory protection",
+          },
+          {
+            label: "Ingestion Hazard",
+            value:
+              "Can cause stomach irritation if you swallow a lot. Get medical help if ingested",
+          },
+          {
+            label: "Reactivity Risk",
+            value:
+              "Keep away from strong acids – releases carbon dioxide gas quickly",
+          },
+          {
+            label: "Storage",
+            value:
+              "Store cool, dry, ventilated. Away from acids and moisture-sensitive materials",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-acetate-anhydrous",
+    name: "Sodium acetate anhydrous",
+    description:
+      "Sodium acetate anhydrous is a white, crystalline powder commonly used in various industrial processes, including chemical synthesis, textile dyeing, and as a food preservative. It is the sodium salt of acetic acid and is highly soluble in water, making it useful in buffering solutions and other applications.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Acetate Anhydrous – Industrial Chemical",
+        content:
+          "Sodium Acetate Anhydrous is a food grade chemical used in food processing, pharmaceuticals, textiles, and labs. It's a white crystalline powder (CH₃COONa). Dissolves well in water. Works as a buffering agent, preservative, and chemical intermediate.\n\nIndustries in Australia use Sodium Acetate Anhydrous for everything from concrete acceleration to drug manufacturing. The anhydrous form has no water, so it's more potent and lasts longer than hydrated versions.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Acetate Anhydrous?",
+        content:
+          "It's the sodium salt of acetic acid. Made by neutralizing acetic acid with sodium hydroxide or sodium carbonate. Has no water molecules, unlike the trihydrate form. Good for applications needing exact chemical concentrations. Also called sodium ethanoate. Stable under normal storage.",
+      },
+      {
+        type: "",
+        title: "Industrial Applications",
+        content:
+          "In food, Sodium Acetate Anhydrous works as a pH buffer and flavor enhancer. Makes salt and vinegar chips taste tangy. Textile industry uses it as a mordant for dyeing. Helps fabrics get bright, lasting colors. In concrete, it accelerates curing in cold weather.\n\nDrug makers use it for buffer prep and in tablets. Labs use it for buffer solutions and protein crystallization studies.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "We're a sodium acetate supplier in Australia. We deliver quality product with documentation and technical support. Have flexible packaging – lab quantities to bulk industrial. Meet Australian standards. Full traceability documentation. Contact us for pricing.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Product Info",
+        content:
+          "Store Sodium Acetate Anhydrous cool and dry. Keep from moisture and incompatible materials. Generally safe but use protective equipment and good ventilation. Request our Safety Data Sheet",
+      },
+      {
+        type: "",
+        title: "Available for Delivery & Pick up",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. Custom packaging might be available.",
+          },
+          {
+            label: "CAS",
+            value: "127-09-3",
+          },
+          {
+            label: "Appearance",
+            value: "White, crystalline powder or granular solid",
+          },
+          {
+            label: "Odour",
+            value: "No smell",
+          },
+          {
+            label: "Solubility",
+            value: "Very soluble in water (1230 g/L at 20°C)",
+          },
+          {
+            label: "pH",
+            value: "Slightly alkaline (pH 8.0–9.0 for 1% solution)",
+          },
+          {
+            label: "Density",
+            value: "About 1.528 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "324°C (615°F)",
+          },
+          {
+            label: "Stability",
+            value: "Stable normally, absorbs moisture from air",
+          },
+          {
+            label: "Reactivity",
+            value:
+              "Works with most substances. Can react with strong acids and oxidizers",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value:
+              "Usually not irritating but can cause mild irritation with long contact. Wear gloves and safety glasses",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Dust can mildly irritate breathing. Use with good ventilation or wear dust mask for large amounts",
+          },
+          {
+            label: "Ingestion Hazard",
+            value:
+              "Safe for food use in regulated amounts. Large amounts can upset stomach",
+          },
+          {
+            label: "Reactivity Risk",
+            value:
+              "Keep away from strong acids and oxidizers – can cause decomposition",
+          },
+          {
+            label: "Storage",
+            value:
+              "Store cool, dry, ventilated in sealed containers to prevent moisture absorption",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-bicarbonate",
+    name: "Sodium Bicarbonate",
+    description:
+      "Sodium bicarbonate, commonly known as baking soda, is a white, crystalline powder widely used in baking, cleaning, and as an antacid. It is a mild base that reacts with acids, making it useful in various household and industrial applications. This compound is non-toxic but should be handled with care to avoid irritation.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Bicarbonate – Multi-Purpose Industrial Chemical",
+        content:
+          "Sodium Bicarbonate is a white crystalline powder. Works as a pH buffer chemical in many industrial applications. Also called baking soda or sodium hydrogen carbonate. The formula is NaHCO₃. Used in water treatment, food processing, pharmaceuticals, and manufacturing in Australia and worldwide.\n\nIndustries use Sodium Bicarbonate for its buffering properties, mild alkalinity, and non-toxic nature. It neutralizes acids while keeping systems stable. Good for applications needing precise pH control and safe handling.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Bicarbonate?",
+        content:
+          "It's a white, fine powder made through the Solvay process. Combines sodium chloride, ammonia, and carbon dioxide. Molecular weight is 84.01 g/mol. Dissolves well in water. In the US, it's called sodium hydrogen carbonate. Both names mean the same thing. Chemically stable and food-grade safe for many uses.",
+      },
+      {
+        type: "",
+        title: "Industrial Applications",
+        content:
+          "In water treatment systems, Sodium Bicarbonate adjusts pH to maintain alkalinity in boilers, cooling towers, and municipal water. Works as an acid neutralization agent. Safely neutralizes acidic waste and prevents corrosion in pipes and tanks. Drug companies use it in tablets and antacids. Food industry uses it for baking, beverages, and preservation.\n\nBicarbonate vs carbonate – bicarbonate gives gentler pH adjustment than stronger carbonates. Better for sensitive processes.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "We're a sodium bicarbonate supplier in Australia. We have pharmaceutical-grade and technical-grade with consistent quality. Flexible packaging from small drums to bulk IBCs. Competitive pricing and fast delivery across Australia. Contact us for inquiries or bulk orders.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Product Info",
+        content:
+          "Store Sodium Bicarbonate dry and cool. Keep away from acids and moisture to prevent decomposition. Generally safe but use dust masks when handling fine powders. Request our SDS",
+      },
+      {
+        type: "",
+        title: "Product Specifications & Availability",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. Custom packaging might be available.",
+          },
+          {
+            label: "CAS",
+            value: "144-55-8",
+          },
+          {
+            label: "Appearance",
+            value: "White, crystalline powder or granular solid",
+          },
+          {
+            label: "Odour",
+            value: "No smell",
+          },
+          {
+            label: "Solubility",
+            value: "Very soluble in water (96 g/L at 20°C)",
+          },
+          {
+            label: "pH",
+            value: "Mildly alkaline (pH 8.1-8.3 for 1% solution)",
+          },
+          {
+            label: "Density",
+            value: "About 2.16 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "Decomposes at 50°C, releases CO₂ and H₂O",
+          },
+          {
+            label: "Stability",
+            value: "Stable normally but decomposes when heated above 50°C",
+          },
+          {
+            label: "Reactivity",
+            value:
+              "Works with most substances. Reacts with acids to release carbon dioxide",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Contact",
+            value:
+              "Usually not irritating. Minimal protective equipment needed",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Dust can cause mild breathing irritation. Use with good ventilation",
+          },
+          {
+            label: "Ingestion",
+            value: "Food-grade is safe to eat in normal amounts",
+          },
+          {
+            label: "Reactivity",
+            value: "Keep from strong acids – releases CO₂ gas",
+          },
+          {
+            label: "Storage",
+            value: "Store cool, dry, ventilated. Away from acids and moisture",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-bicarbonate-7-2",
+    name: "Sodium Bicarbonate 7.2%",
+    description:
+      "Sodium bicarbonate 7.2% is a buffered solution used in medical, laboratory, and industrial settings to neutralize acids and regulate pH levels. This clear, odorless liquid is commonly employed in various applications, including as an antacid or in chemical processes requiring precise pH control.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Bicarbonate 7.2% – Medical Grade Buffer Solution",
+        content:
+          "Sodium bicarbonate 7.2% is a sterile, isotonic buffer solution. Used in medical and industrial applications for pH control and alkalinity management. It's pharmaceutical-grade – 7.2% sodium bicarbonate in purified water. Good for IV therapy, dialysis, and lab work.\n\nHealthcare facilities and industrial operations in Australia use sodium bicarbonate 7.2% to maintain pH levels in critical processes. Helps ensure safe treatment outcomes while meeting quality standards.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Bicarbonate 7.2%?",
+        content:
+          "Made by dissolving pharmaceutical-grade sodium bicarbonate (NaHCO₃) in sterile water for injection. Creates a stable liquid for controlled alkalinization. Also called sodium hydrogen carbonate solution. Works as a buffering agent in medical and industrial processes. The exact concentration makes it good for consistent pH modification and correcting metabolic alkalosis.",
+      },
+      {
+        type: "",
+        title: "Medical & Industrial Uses",
+        content:
+          "In IV therapy, sodium bicarbonate 7.2% corrects metabolic acidosis and restores acid-base balance in patients. Works as a pH adjustment chemical in dialysis. Ensures proper electrolyte balance during treatment. Labs use it for buffer prep and analytical procedures needing precise alkalinity control. Industrial water treatment uses it when pH modification is needed for system performance.\n\nBicarbonate vs carbonate solutions – bicarbonate is often better for medical use. Has gentler buffering action. Works better with biological systems.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "We're a sodium bicarbonate supplier in Australia. We supply pharmaceutical-grade solutions. Have packaging from ampoules to bulk containers. We ensure quality, regulatory compliance, and fast delivery. Technical support for your applications. Contact us for enquiries or bulk orders.",
+      },
+      {
+        type: "safety",
+        title: "Safe Use & Documentation",
+        content:
+          "Store sodium bicarbonate 7.2% cool and dry. Away from sunlight and incompatible materials. Use protective equipment when handling. Use sterile technique for medical applications.",
+      },
+      {
+        type: "",
+        title: "Product Information",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. Custom packaging might be available.",
+          },
+          {
+            label: "CAS",
+            value: "144-55-8",
+          },
+          {
+            label: "SDS Available",
+            value: "Request SDS here",
+          },
+          {
+            label: "Appearance",
+            value: "Clear, colorless liquid",
+          },
+          {
+            label: "Odour",
+            value: "No smell",
+          },
+          {
+            label: "Concentration",
+            value: "7.2% w/v sodium bicarbonate",
+          },
+          {
+            label: "pH",
+            value: "About 7.0-8.5",
+          },
+          {
+            label: "Osmolality",
+            value: "About 857 mOsm/kg",
+          },
+          {
+            label: "Density",
+            value: "About 1.05 g/mL",
+          },
+          {
+            label: "Stability",
+            value: "Stable under normal storage",
+          },
+          {
+            label: "Sterility",
+            value: "Sterile when properly made and stored",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Contact",
+            value:
+              "Usually not irritating but can cause mild irritation. Rinse with water if contact happens",
+          },
+          {
+            label: "Inhalation",
+            value:
+              "Minimal risk with normal use. Make sure work areas have good ventilation",
+          },
+          {
+            label: "Ingestion",
+            value:
+              "Medical use only under professional supervision. Small accidental amounts usually not harmful",
+          },
+          {
+            label: "Medical Precautions",
+            value:
+              "Monitor electrolyte levels during therapeutic use. Don't use in patients with severe alkalosis",
+          },
+          {
+            label: "Storage",
+            value:
+              "Store at room temperature (15-25°C) in original container. Protect from light and contamination",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-bisulfite-solutions",
+    name: "Sodium Bisulfite Solutions 30%, 40%",
+    description:
+      "Sodium bisulfite 30% and 40% are aqueous solutions of sodium bisulfite, commonly used as a reducing agent, preservative, and in water treatment processes. This clear to pale yellow liquid has a strong sulfurous odor and is known for its ability to neutralize chlorine and bleach, requiring careful handling.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Bisulfite Solutions – Industrial Grades",
+        content:
+          "Sodium bisulfite solutions come in different concentrations. Used in water treatment, food production, pulp and paper manufacturing, and photography. Good for oxygen scavenging, chlorine neutralization, and preservation.",
+      },
+      {
+        type: "",
+        title: "What Is It?",
+        content:
+          "Sodium bisulfite (NaHSO₃) is a white crystalline powder. Forms clear, slightly acidic solutions in water. Works as a reducing agent and antioxidant. Dissolves well. Also called sodium hydrogen sulfite. Removes dissolved oxygen and neutralizes chlorine in industrial processes.",
+      },
+      {
+        type: "",
+        title: "Available Concentrations",
+        content:
+          "We have two concentrations for different industrial needs.\n\n30% Solution\nThe 30% grade works for water treatment, boiler oxygen scavenging, and preservative processes. Handles well. Used in municipal water treatment and food processing. Clear to slightly yellow liquid. Has a sulfur dioxide smell.\n\n40% Solution\nThe 40% solution is for demanding applications. Pulp bleaching, heavy-duty oxygen scavenging, and large-scale chlorine neutralization. Works well in paper manufacturing and industrial water treatment when you need stronger chemical action.",
+      },
+      {
+        type: "",
+        title: "Industrial Uses",
+        content:
+          "These chemical solutions work as oxygen scavengers in boiler water treatment. Prevents corrosion and makes equipment last longer. Protects metal surfaces in closed-loop systems as a corrosion inhibitor. Neutralizes chlorine in wastewater treatment, swimming pools, and textile processing.\n\nBenefits include fast oxygen removal, cost-effective corrosion protection, and reliable performance at different concentrations. Good pH buffering. Stable in various operating conditions.",
+      },
+      {
+        type: "",
+        title: "Why Choose Our Sodium Bisulfite?",
+        content:
+          "Our solutions meet Australian quality standards and industrial specs. We test consistently for quality. Custom packaging available for your needs and delivery schedule.\n\nWe're a trusted sodium bisulfite supplier in Australia. Reliable supply and technical support for all concentrations. Made to pharmaceutical and food-grade standards where needed.\n\nRequest a Quote",
+      },
+      {
+        type: "safety",
+        title: "Packaging, Delivery & Documentation",
+        content:
+          "CAS Number: 7631-90-5\n\nAvailable in drums, IBCs, and bulk. Store cool and dry. Away from sunlight and incompatible materials. Use proper protective equipment and ventilation when handling.\n\nPickup and delivery available across Australia. Flexible scheduling. Complete documentation and certificates of analysis included with shipments.\n\nRequest SDS",
+      },
+      {
+        type: "",
+        title: "Buy Sodium Bisulfite Solutions in Australia",
+        content:
+          "Contact us for 30% and 40% sodium bisulfite solutions. Industrial-grade with reliable performance, consistent quality, and competitive pricing. Custom supply options for your operations.\n\nWe're Australia's trusted chemical supplier for sodium bisulfite. Technical expertise and dependable logistics.",
+      },
+    ],
+  },
+  {
+    slug: "sodium-bromide-photo-grade",
+    name: "Sodium Bromide (Photo Grade)",
+    description:
+      "Sodium bromide photo grade is a high-purity chemical used primarily in photographic processes, such as the preparation of photographic emulsions and developer solutions. This white crystalline powder is soluble in water and is essential in producing high-quality photographic materials.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Sodium Bromide (Photo Grade) – High Purity for Industrial and Photographic Use",
+        content:
+          "Sodium Bromide (Photo Grade) is a high-purity chemical used in industries like photography, water treatment, and oil drilling. It dissolves easily in water and stays stable during use. It's especially useful in photographic processing and chemical manufacturing where low impurities are important.\n\nWe supply Sodium Bromide (Photo Grade) across Australia. Many businesses choose it because it's consistent and reliable for demanding industrial tasks.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Bromide (Photo Grade)?",
+        content:
+          "Sodium Bromide (NaBr) is a simple salt. It looks like a white powder or small crystals. There's no smell. It mixes well with water and has a neutral or slightly alkaline pH (around 6.5 to 8.5 in a 1% solution). \"Photo Grade\" means it's very pure, making it suitable for sensitive work like photographic emulsions and specialty chemicals.\n\nIts CAS Number is 7647-15-6. People use it when they need a clean, stable chemical with very low contamination.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "You'll find Sodium Bromide (Photo Grade) in:\n\nPhotography: Used in developers and emulsions to help with image quality.\n\nOil and Gas: Works as a dense fluid to help control pressure and limit corrosion during drilling.\n\nWater Treatment: Used in some water cleaning systems.\n\nChemical Manufacturing: Helps make certain organic chemicals and medicines.\n\nIt's often chosen because it helps protect equipment from rust and keeps processes running smoothly.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "7647-15-6",
+          },
+          {
+            label: "Appearance",
+            value: "White powder or crystals",
+          },
+          {
+            label: "Smell",
+            value: "None",
+          },
+          {
+            label: "Solubility",
+            value: "Mixes easily with water",
+          },
+          {
+            label: "pH (1% solution)",
+            value: "6.5–8.5",
+          },
+          {
+            label: "Density",
+            value: "About 3.21 g/cm³",
+          },
+          {
+            label: "Stability",
+            value: "Stable at normal temperatures",
+          },
+          {
+            label: "Reactivity",
+            value:
+              "Can react with strong acids or oxidisers and give off bromine gas",
+          },
+        ],
+      },
+      {
+        type: "safety",
+        title: "Safety Basics",
+        content:
+          "Wear gloves, goggles, and protective clothing when handling this product. Use it in areas with good airflow to avoid breathing in dust. Keep it away from strong acids and oxidisers. Store it in a dry, cool place.\n\nYou can check the full safety sheet on our SDS page.",
+      },
+      {
+        type: "",
+        title: "Ordering Information",
+        content:
+          "We supply Sodium Bromide (Photo Grade) in different packaging sizes, from 25 kg bags to bulk options. Delivery and local pick-up are both available. For a quote or any questions, contact us here.",
+      },
+    ],
+  },
+  {
+    slug: "sodium-carbonate-solutions",
+    name: "Sodium Carbonate Solutions 10%, 20%",
+    description:
+      "Sodium Carbonate 10% and 20% are solutions of sodium carbonate in water, commonly used in cleaning products, water softening, and various industrial processes. This alkaline solution is effective for removing grease and stains but can be irritating to the skin and eyes, necessitating careful handling.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Carbonate Solution – Simple, Reliable, Industrial Use",
+        content:
+          "We supply Sodium Carbonate Solution in 10% and 20% strengths. It's used in many industries like water treatment, food processing, cleaning, and manufacturing. The product mixes easily with water and does the job well.",
+      },
+      {
+        type: "",
+        title: "What is It?",
+        content:
+          "Sodium Carbonate (also called soda ash or washing soda) is a basic chemical with the formula Na₂CO₃. It's mostly used to control pH, clean surfaces, or help in making other products. In liquid form, it looks clear or a little cloudy.",
+      },
+      {
+        type: "",
+        title: "Product Options",
+        content:
+          "10% Solution:\nThe 10% version is a milder option. It's useful when you don't need strong alkalinity, like for:\n\nCleaning product mixes\npH control in water plants\nTextile industry work\nAppearance: Clear to slightly cloudy, no smell, fully dissolves in water.\n\n20% Solution:\nThe 20% version is stronger and suits tougher jobs, like:\n\nHeavy-duty industrial cleaning\nStronger pH adjustment in chemical work\nBoiler water treatment\nAppearance: Clear to slightly cloudy, no smell, stronger alkaline, dissolves fully in water.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Both 10% and 20% options are good for:\n\nKeeping pH levels steady in water systems\nSimple and cost-effective cleaning\nWork across different industries\nEasy to handle or dilute as needed",
+      },
+      {
+        type: "",
+        title: "Why Order From Us?",
+        content:
+          "Good quality, made to meet Australian standards\nPackaging that fits your needs\nFast supply across Australia\nAsk for a Quote",
+      },
+      {
+        type: "safety",
+        title: "Product Details",
+        content:
+          "CAS Number: 497-19-8\nPackaging: Bulk drums, IBCs, or custom amounts\nStorage: Keep in a dry, cool place away from materials it might react with\nDelivery: Quick delivery across Australia, pickup available too\nRequest the SDS",
+      },
+      {
+        type: "",
+        title: "Order Sodium Carbonate in Australia",
+        content:
+          "Need 10% or 20% Sodium Carbonate Solution in Australia? We keep things simple — good quality, fair prices, flexible supply.\n\nGet a Quote and we'll sort it out for you.",
+      },
+    ],
+  },
+  {
+    slug: "sodium-hexametaphosphate",
+    name: "Sodium Hexametaphosphate",
+    description:
+      "Sodium hexametaphosphate is a white, crystalline powder commonly used as a sequestrant, emulsifier, and texturizer in various industrial and food applications. It plays a key role in water treatment, food processing, and detergents. This chemical is highly soluble in water and requires careful handling due to its potential health effects.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Hexametaphosphate – Simple Water Softener & Dispersant",
+        content:
+          "Sodium Hexametaphosphate (SHMP) is a common chemical used to soften water and keep solids dispersed in liquids. It's used in industries like water treatment, food processing, ceramics, and detergents. In Australia, it helps businesses prevent scale build-up, stabilise mixtures, and improve product consistency.\n\nIt comes as a white powder or granules. It dissolves well in water, which makes it easy to use in both factories and households.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Hexametaphosphate?",
+        content:
+          "Sodium Hexametaphosphate is a type of phosphate salt. It's made from polymer chains of sodium phosphate. Its main job is to grab onto minerals like calcium and magnesium so they don't cause scale. It's usually sold at 65%–70% purity. You'll find it in water treatment plants, food factories, and other industrial processes.\n\nSome people call it sodium metaphosphate, but in Australia, Sodium Hexametaphosphate is the usual name.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Sodium Hexametaphosphate is used for:\n\nWater Treatment: It binds to calcium and magnesium, stopping scale from building up in boilers, cooling systems, and pipes.\n\nFood Processing: Approved as a food additive (E452i). It helps meat, poultry, and seafood keep the right texture and hold together during processing.\n\nCeramics: Helps disperse clay so ceramic mixtures flow better.\n\nDetergents: Stops minerals in water from leaving stains or interfering with washing.",
+      },
+      {
+        type: "",
+        title: "Why Get It from Pascom?",
+        content:
+          "Pascom supplies Sodium Hexametaphosphate across Australia in 25kg bags or bulk sacks. We keep stock ready and offer reliable delivery. You can order food-grade or industrial-grade SHMP. Request a quote to get details and pricing.",
+      },
+      {
+        type: "safety",
+        title: "Safe Use & Storage",
+        content:
+          "Wear gloves and eye protection when handling SHMP, since it can irritate skin and eyes. Use it in well-ventilated areas to avoid breathing in dust. Request the SDS for full safety information. Store it in a dry place, away from acids, to keep it stable.",
+      },
+      {
+        type: "",
+        title: "Where to Buy SHMP in Australia",
+        content:
+          "Pascom delivers Sodium Hexametaphosphate anywhere in Australia. You can also pick it up from our locations. Custom packaging is available if you need it. Get in touch for ordering info.",
+      },
+      {
+        type: "",
+        title: "Product Specs",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10124-56-8",
+          },
+          {
+            label: "Form",
+            value: "White powder or granules",
+          },
+          {
+            label: "Smell",
+            value: "None",
+          },
+          {
+            label: "Water Solubility",
+            value: "High",
+          },
+          {
+            label: "pH (1% Solution)",
+            value: "6.0 – 8.0",
+          },
+          {
+            label: "Density",
+            value: "~2.48 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "Softens at 616°C before breaking down",
+          },
+          {
+            label: "Storage",
+            value: "Stable if kept dry and away from acids",
+          },
+          {
+            label: "Delivery",
+            value:
+              "Delivery and pickup available across Australia. Packaging includes 25kg bags, bulk sacks, or custom sizes.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-hypochlorite-3",
+    name: "Sodium Hypochlorite 3%",
+    description:
+      "Sodium hypochlorite 5-12.5% is a solution commonly used as a disinfectant and bleach. This clear to slightly yellow liquid is effective for sanitizing surfaces, purifying water, and removing stains. Its strength varies based on concentration, but it requires careful handling due to its corrosive nature.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Hypochlorite 3%",
+        content:
+          "Sodium hypochlorite 3% is a solution commonly used as a disinfectant and bleach. This clear to slightly yellow liquid is effective for sanitizing surfaces, purifying water, and removing stains. It requires careful handling due to its corrosive nature.",
+      },
+      {
+        type: "",
+        title: "Available for Delivery & Pick up",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Purchasing Options for Packaging",
+            value:
+              "Details are available upon request. Customizable options may be available. Please inquire about the options.",
+          },
+          {
+            label: "CAS",
+            value: "7681-52-9",
+          },
+          {
+            label: "Appearance",
+            value: "Clear, pale yellow to greenish liquid",
+          },
+          {
+            label: "Odor",
+            value: "Strong chlorine-like smell",
+          },
+          {
+            label: "Solubility",
+            value: "Fully soluble in water",
+          },
+          {
+            label: "pH",
+            value:
+              "Strongly alkaline (typically between 10.0–11.5 for a 3% solution)",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.05 g/cm³",
+          },
+          {
+            label: "Stability",
+            value:
+              "Decomposes over time when exposed to heat, light, or acidic conditions",
+          },
+          {
+            label: "Oxidizing Properties",
+            value:
+              "Strong oxidizer; reacts with organic materials and reducing agents",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Other Names",
+        content:
+          "Liquid Bleach\nHypochlorous Acid, Sodium Salt\nSodium Oxychloride Solution",
+      },
+      {
+        type: "safety",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value:
+              "Can cause mild to moderate irritation; wear gloves and protective eyewear.",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Vapors or mist may cause respiratory discomfort; use in a well-ventilated area.",
+          },
+          {
+            label: "Ingestion Hazard",
+            value:
+              "Harmful if swallowed; may cause nausea, vomiting, and gastrointestinal distress.",
+          },
+          {
+            label: "Reactivity Risk",
+            value:
+              "Avoid contact with acids, ammonia, and organic materials to prevent toxic gas formation.",
+          },
+          {
+            label: "Storage",
+            value:
+              "Store in a cool, dry, well-ventilated area, away from heat, sunlight, and incompatible substances.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-metabisulfite-hp",
+    name: "Sodium Metabisulfite HP",
+    description:
+      "Sodium metabisulfite HP is a white crystalline powder used primarily as a preservative and antioxidant in food and beverage processing. It also serves as a reducing agent in various industrial applications. This chemical is soluble in water and has a sulfurous odor.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Metabisulfite HP – Food and Industrial Grade",
+        content:
+          "Sodium Metabisulfite HP is a high-purity white powder used in food, water treatment, and industry. It works well where clean, reliable chemicals are needed. You'll find it in food factories, mines, and water plants. People use it as a preservative, antioxidant, and reducing agent to keep products stable and processes running smoothly.\n\nBusinesses across Australia use Sodium Metabisulfite HP because it's consistent and helps them meet safety and quality rules.",
+      },
+      {
+        type: "",
+        title: "What is Sodium Metabisulfite HP?",
+        content:
+          "It's a refined version of sodium metabisulfite (Na₂S₂O₅). It comes as a white, odourless powder that dissolves easily in water. The solution is mildly acidic. Most people use it to remove oxygen or unwanted chemicals. In food, it stops spoilage and helps keep colours fresh. You might also see it called \"sodium metabisulphite\" in some countries. It's used in industries that need high-purity chemicals.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "Food: Helps preserve dried fruit, juices, and wine.\n\nMining: Used in ore flotation and cyanide removal.\n\nWater: Removes chlorine and treats wastewater.\n\nOther: Found in photo chemicals, medicines, and textiles.\n\nIt dissolves quickly and doesn't leave much residue, which helps with cleaner production.",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us?",
+        content:
+          "We supply Sodium Metabisulfite HP in Australia. Our product meets high standards and comes in different pack sizes to suit your needs. You can order in bulk or smaller amounts. Delivery is fast and reliable. Request a quote here.",
+      },
+      {
+        type: "safety",
+        title: "How to Store and Handle It",
+        content:
+          "Use it in a well-ventilated place. Wear gloves and eye protection. Don't breathe in the dust. Store it somewhere cool and dry, away from acids and oxidisers. Ask for the SDS here if you need full safety details.",
+      },
+      {
+        type: "",
+        title: "Buy Sodium Metabisulfite HP in Australia",
+        content:
+          "Order Sodium Metabisulfite HP today with fast delivery or pickup. We offer bulk orders or custom pack sizes. Get a quote here.",
+      },
+      {
+        type: "",
+        title: "Product Information",
+        properties: [
+          {
+            label: "CAS",
+            value: "10102-40-6",
+          },
+          {
+            label: "Appearance",
+            value: "White powder",
+          },
+          {
+            label: "Odour",
+            value: "None",
+          },
+          {
+            label: "Solubility",
+            value: "High",
+          },
+          {
+            label: "pH (1% Solution)",
+            value: "7.0–10.0",
+          },
+          {
+            label: "Density",
+            value: "~3.24 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "Breaks down at high heat",
+          },
+          {
+            label: "Stability",
+            value: "Stable if stored properly",
+          },
+          {
+            label: "Delivery",
+            value:
+              "Delivery and pickup across Australia. Available in drums, bags, or custom amounts. Inquire here.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-molybdate-dihydrate",
+    name: "Sodium Molybdate Dihydrate",
+    description:
+      "Sodium molybdate dihydrate is a crystalline compound used as a molybdenum source in various industrial and chemical processes. It is commonly employed in analytical chemistry and as a corrosion inhibitor. This white, water-soluble powder has applications in metallurgy and agriculture.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Molybdate Dihydrate – Corrosion Protection Made Simple",
+        content:
+          "Sodium Molybdate Dihydrate is a white powder used to stop corrosion in many industries. You'll see it in water treatment, metal finishing, and cooling systems. It dissolves easily in water and helps protect equipment without being toxic.\n\nIn Australia, many businesses use Sodium Molybdate Dihydrate to reduce corrosion in closed systems. It slows down rusting, keeps equipment in better shape, and helps systems last longer.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Molybdate Dihydrate?",
+        content:
+          "It's a chemical made from molybdenum oxide and sodium hydroxide. You get a stable white powder that contains water (called a dihydrate). When mixed with water, it stays neutral (not too acidic or alkaline). In Australia, people usually use the dihydrate form because it's easy to store and handle.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Sodium Molybdate Dihydrate works well as a corrosion inhibitor in boiler water, cooling towers, and closed-loop systems. Some companies also use it instead of oxygen scavengers because it's less harmful to the environment. You'll also find it in metal finishing, lubricants, and even in farming as a micronutrient.\n\nIf you compare sulphite vs molybdate, molybdate systems often win. They cut down corrosion and don't cause as many environmental problems.",
+      },
+      {
+        type: "",
+        title: "How to Order",
+        content:
+          "We supply Sodium Molybdate Dihydrate across Australia. You can get it in 25kg bags or order in bulk. Our team keeps stock ready and delivers quickly. We also help with custom orders if you need something specific. Request a quote anytime.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling Tips",
+        content:
+          "Wear gloves and eye protection when handling Sodium Molybdate Dihydrate. Make sure you work in a space with good airflow. Store it somewhere cool and dry. Keep it away from strong acids because that can release molybdic acid. You can get the SDS from us.",
+      },
+      {
+        type: "",
+        title: "Buy Sodium Molybdate Dihydrate in Australia",
+        content:
+          "We offer pickup and delivery options. You can order small or large amounts depending on what you need. Contact us here to get started.",
+      },
+      {
+        type: "",
+        title: "Quick Facts",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10102-40-6",
+          },
+          {
+            label: "Looks Like",
+            value: "White powder",
+          },
+          {
+            label: "Smell",
+            value: "No smell",
+          },
+          {
+            label: "Solubility",
+            value: "Dissolves easily in water",
+          },
+          {
+            label: "pH Level",
+            value: "Around 7–10 when mixed in water",
+          },
+          {
+            label: "Density",
+            value: "3.24 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "Breaks down at high heat",
+          },
+          {
+            label: "Storage Tip",
+            value: "Keep away from strong acids",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-silicate-n-grade-38",
+    name: "Sodium Silicate N Grade 38%",
+    description:
+      "Sodium silicate N grade 38% is a concentrated aqueous solution of sodium silicate, often used in industrial applications such as adhesives, detergents, and water treatment. This clear, viscous liquid has a high alkaline pH and acts as a binding and protective agent.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Silicate N Grade 38% – A Reliable Industrial Liquid",
+        content:
+          "Sodium Silicate N Grade 38% is a clear, alkaline liquid. It's used in many industries as a binder, adhesive, or coating. It contains 38% silicon dioxide (SiO₂), which makes it stable and easy to use.\n\nIndustries across Australia use it to lower costs, improve performance, and make processes more efficient.",
+      },
+      {
+        type: "",
+        title: "What Is It?",
+        content:
+          'Sodium silicate (also called liquid glass) is made of sodium oxide (Na₂O) and silicon dioxide (SiO₂). The "N Grade 38%" means it has 38% silica content. This makes it useful in demanding processes where strong bonding and chemical resistance are needed.\n\nIt\'s easy to handle. It flows well and works with most dosing systems — manual or automated.',
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Sodium Silicate N Grade 38% is used in:\n\nDetergents and cleaners – It boosts cleaning power in powders and liquids.\n\nCeramics and refractories – It binds materials and helps them handle high heat.\n\nWater treatment – It prevents corrosion and scale buildup in pipes and tanks.\n\nConstruction – It helps harden concrete and stabilise soil.",
+      },
+      {
+        type: "",
+        title: "Why Get It from Pascom",
+        content:
+          "Pascom supplies Sodium Silicate N Grade 38% across Australia. We offer:\n\nReliable quality\n\nFast delivery\n\nPackaging options from 200-litre drums to 1000-litre IBCs\n\nCustom orders if needed\n\nWe test each batch to make sure it's consistent. Request a quote for pricing or bulk supply.",
+      },
+      {
+        type: "safety",
+        title: "Safety and Storage",
+        content:
+          "Wear gloves, goggles, and protective gear when handling it. Work in a well-ventilated area. Don't let it touch your skin or eyes.\n\nStore it in a cool, dry place. Keep it away from acids. It reacts with acids and gives off heat. Request the SDS for full safety info.",
+      },
+      {
+        type: "",
+        title: "Order Sodium Silicate N Grade 38% in Australia",
+        content:
+          "You can pick up your order or get it delivered. We offer flexible packaging — bulk, drums, or IBCs. Send an enquiry for more details or to place a bulk order.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "1344-09-8",
+          },
+          {
+            label: "Appearance",
+            value: "Clear, viscous liquid",
+          },
+          {
+            label: "Odour",
+            value: "None",
+          },
+          {
+            label: "Solubility",
+            value: "Fully water-soluble",
+          },
+          {
+            label: "pH",
+            value: "Around 11–13 (strongly alkaline)",
+          },
+          {
+            label: "Density",
+            value: "~1.38 g/cm³ at 20°C",
+          },
+          {
+            label: "Stability",
+            value: "Stable in normal conditions",
+          },
+          {
+            label: "Reactivity",
+            value: "Reacts with acids to form silica gel and heat",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "solvent-150",
+    name: "Solvent 150",
+    description:
+      "Solvent 150 is a versatile industrial solvent used in various applications such as cleaning, degreasing, and as a carrier in chemical formulations. It is a clear, volatile liquid known for its effectiveness in dissolving oils, greases, and resins. Proper handling is essential to ensure safety and effectiveness.",
+    sections: [
+      {
+        type: "overview",
+        title: "Solvent 150 – High-Flash Aromatic Solvent for Industrial Use",
+        content:
+          "Solvent 150 is an aromatic hydrocarbon solvent used in a wide range of industries across Australia. It has strong solvency, a high flash point, and low odour. That makes it a reliable option for paints, adhesives, cleaning products, and degreasers.\n\nIndustries like mining, automotive, and manufacturing use it often. It's effective, but not overly volatile like some lighter solvents, which helps with safety and handling.",
+      },
+      {
+        type: "",
+        title: "What Is Solvent 150?",
+        content:
+          "Solvent 150 is made during petroleum refining. It's a narrow-cut aromatic solvent with a flash point above 60°C and aromatic content between 98–99%. It works well as a cleaner and diluent and is less toxic than many faster-evaporating options.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "You'll find Solvent 150 used in:\n\nPaints and coatings – helps with pigment mixing and film formation.\n\nAdhesives – works well with most resins and binders.\n\nDegreasing – used in workshops and factories for cleaning parts and surfaces.\n\nPrinting inks – improves flow and helps manage drying times.\n\nBecause of its high flash point, it's safer to use in busy work environments where heat or open flames are a concern.",
+      },
+      {
+        type: "",
+        title: "Why Get It From Us?",
+        content:
+          "We supply Solvent 150 across Australia in different packaging options — drums, IBCs, or bulk. We keep quality consistent, and we deliver fast. If you have special packaging or delivery needs, let us know.\nRequest a quote here.",
+      },
+      {
+        type: "safety",
+        title: "Handling and Storage",
+        content:
+          "When using Solvent 150, wear gloves, goggles, and other protective gear. Work in a well-ventilated space. Avoid skin and eye contact. Don't breathe in vapours.\nTo get the full safety details, request the SDS.",
+      },
+      {
+        type: "",
+        title: "Order Solvent 150 in Australia",
+        content:
+          "We offer both small and bulk quantities of Solvent 150, available for pickup or delivery across the country.\nContact us to talk about what you need.",
+      },
+      {
+        type: "",
+        title: "Product Info",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "64742-94-5",
+          },
+          {
+            label: "Appearance",
+            value: "Clear liquid, colourless to pale yellow",
+          },
+          {
+            label: "Odour",
+            value: "Mild aromatic",
+          },
+          {
+            label: "Flash Point",
+            value: ">60°C",
+          },
+          {
+            label: "Boiling Range",
+            value: "190–210°C",
+          },
+          {
+            label: "Aromatic Content",
+            value: "98–99%",
+          },
+          {
+            label: "Density",
+            value: "~0.88 g/cm³",
+          },
+          {
+            label: "Solubility",
+            value: "Not soluble in water; mixes with hydrocarbons",
+          },
+          {
+            label: "Storage",
+            value: "Keep in a cool, dry place away from heat and flames",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sulfamic-acid-15-solution",
+    name: "Sulfamic Acid 15% Solution",
+    description:
+      "Sulfamic acid 15% is an aqueous solution of sulfamic acid, widely utilized as a descaling agent and cleaner in various industrial and household applications. This clear, acidic liquid is particularly effective at removing limescale, rust, and other mineral deposits. It also finds use in certain electroplating processes and as a catalyst in some chemical reactions.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sulfamic Acid 15% Solution – Simple and Safe Descaling Option",
+        content:
+          "Sulfamic Acid 15% Solution is a reliable cleaning and descaling liquid. It's used in many industries across Australia. The solution contains 15% sulphamic acid and is ready to use. You don't need to mix anything. It works well for removing rust, scale, and mineral deposits in industrial cleaning, water treatment, and maintenance jobs.\n\nMany businesses choose this product because it's safer to handle than stronger acids. It does the job without damaging your equipment.",
+      },
+      {
+        type: "",
+        title: "What Is Sulfamic Acid 15%?",
+        content:
+          "Sulfamic acid (or amidosulfonic acid) is a stable acid that doesn't give off fumes. This 15% solution is already diluted, so you can use it straight away. There's no need to handle powder or make up a mix. This makes the process quicker and safer.\n\nSulfamic acid is known for being gentle on metals like stainless steel and copper while still being strong enough to clean off tough scale and rust.",
+      },
+      {
+        type: "",
+        title: "Where You Can Use It",
+        content:
+          "You can use Sulfamic Acid 15% Solution in many places:\n\nIn boilers and cooling systems to clean pipes and remove scale.\n\nIn food factories to clean equipment.\n\nIn paper mills to keep digesters clean.\n\nIn oil and gas sites for cleaning without much risk of corrosion.\n\nIt helps keep machines running properly without causing extra wear.",
+      },
+      {
+        type: "",
+        title: "Buying from Pascom",
+        content:
+          "Pascom supplies Sulfamic Acid 15% Solution in Australia. You can get it in small or large amounts. Delivery is fast, and you can ask for custom packaging if you need it. To place an order, request a quote.",
+      },
+      {
+        type: "safety",
+        title: "Safe Use and Storage",
+        content:
+          "Always wear gloves and eye protection when using this product. Use it in a well-ventilated area. Don't mix it with strong oxidisers or chlorine-based products. You can request the SDS here.\n\nIf you need to know more about how it compares to other cleaners, like sulphite or bisulphite, we can help.",
+      },
+      {
+        type: "",
+        title: "Ordering in Australia",
+        content:
+          "Pascom offers Sulfamic Acid 15% Solution for pick-up or delivery anywhere in Australia. You can get it in drums or IBCs. Get in touch to talk about what you need.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "5329-14-6",
+          },
+          {
+            label: "Appearance",
+            value: "Clear, colourless liquid",
+          },
+          {
+            label: "Smell",
+            value: "None",
+          },
+          {
+            label: "Concentration",
+            value: "15% sulphamic acid",
+          },
+          {
+            label: "pH Level",
+            value: "About 1.2–1.5",
+          },
+          {
+            label: "Density",
+            value: "About 1.07–1.09 g/cm³",
+          },
+          {
+            label: "Solubility",
+            value: "Mixes completely with water",
+          },
+          {
+            label: "Stability",
+            value: "Safe to store normally",
+          },
+          {
+            label: "Packaging",
+            value: "Custom sizes available.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tetrakis-hydroxymethyl-phosphonium-sulfate-75",
+    name: "Tetrakis Hydroxymethyl Phosphonium Sulfate 75%",
+    description:
+      "Tetrakis Hydroxymethyl Phosphonium Sulfate 75% is a concentrated aqueous solution of Tetrakis Hydroxymethyl Phosphonium Sulfate (THPS), widely recognized as an environmentally friendly biocide. This clear to pale yellow liquid is primarily used in water treatment, oil and gas operations, and papermaking industries for its excellent microbial control properties. It also functions as a flame retardant in textiles and other materials.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Tetrakis Hydroxymethyl Phosphonium Sulfate 75% – Industrial Biocide",
+        content:
+          "Tetrakis Hydroxymethyl Phosphonium Sulfate 75% is a biocide chemical for industrial water treatment systems. Controls microbes and prevents biofilm. It's a concentrated solution with 75% active THPS. Used in oil and gas operations, cooling towers, and industrial process water.\n\nIndustries in Australia and worldwide use Tetrakis Hydroxymethyl Phosphonium Sulfate 75% to kill bacteria, fungi, and algae in water systems. Keeps systems running efficiently. Prevents microbial corrosion.",
+      },
+      {
+        type: "",
+        title: "What Is Tetrakis Hydroxymethyl Phosphonium Sulfate 75%?",
+        content:
+          "High-purity THPS dissolved in water. Makes a stable liquid with broad-spectrum antimicrobial activity. Also called THPS 75%. Works better than traditional biocides because of its phosphonium chemistry. The concentrated formula means efficient dosing for large water systems.",
+      },
+      {
+        type: "",
+        title: "Industrial Uses",
+        content:
+          "In water treatment systems, Tetrakis Hydroxymethyl Phosphonium Sulfate 75% controls microbial growth and prevents biofilm in cooling circuits and process water loops. Works as an antimicrobial in oil and gas drilling. Prevents bacterial contamination in drilling fluids and completion brines. In industrial cleaning, it kills bacteria fast – both free-floating and attached. Low environmental impact.\n\nTHPS vs glutaraldehyde biocides – THPS often works better. It's more stable, works at different pH levels, and doesn't persist in the environment as long.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom?",
+        content:
+          "We're a THPS supplier in Australia. We supply quality concentrated solutions. Have drums to bulk containers. We ensure quality, regulatory compliance, and fast delivery. Technical support for your applications. Contact us for enquiries or bulk orders.",
+      },
+      {
+        type: "safety",
+        title: "Safe Use & Documentation",
+        content:
+          "Store Tetrakis Hydroxymethyl Phosphonium Sulfate 75% cool and dry. Away from incompatible materials and sunlight. Wear gloves, eye protection, and respiratory protection when handling concentrated solutions.",
+      },
+      {
+        type: "",
+        title: "Product Information",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Packaging Options",
+            value: "Ask us about options. Custom packaging might be available.",
+          },
+          {
+            label: "CAS",
+            value: "55566-30-8",
+          },
+          {
+            label: "SDS Available",
+            value: "Request SDS here",
+          },
+          {
+            label: "Appearance",
+            value: "Clear to pale yellow liquid",
+          },
+          {
+            label: "Odour",
+            value: "Mild smell",
+          },
+          {
+            label: "Concentration",
+            value: "75% w/w THPS in water",
+          },
+          {
+            label: "pH",
+            value: "About 3.0-5.0 (1% solution)",
+          },
+          {
+            label: "Specific Gravity",
+            value: "About 1.4-1.5 g/mL",
+          },
+          {
+            label: "Viscosity",
+            value: "Low viscosity liquid",
+          },
+          {
+            label: "Stability",
+            value: "Stable under normal storage",
+          },
+          {
+            label: "Solubility",
+            value: "Mixes completely with water",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Contact",
+            value:
+              "Can cause severe irritation or burns. Wear chemical-resistant gloves and safety goggles",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Can irritate breathing. Use with good ventilation or wear respiratory protection",
+          },
+          {
+            label: "Ingestion Hazard",
+            value:
+              "Harmful if swallowed. Get medical help immediately if accidentally ingested",
+          },
+          {
+            label: "Environmental Precautions",
+            value:
+              "Don't let it get into waterways. Biodegradable under aerobic conditions",
+          },
+          {
+            label: "Storage",
+            value:
+              "Keep in original container. Store cool, dry, ventilated. Away from incompatible materials and heat",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tetrapotassium-pyrophosphate",
+    name: "Tetrapotassium Pyrophosphate",
+    description:
+      "Tetrapotassium Pyrophosphate is a white, crystalline salt used as a food additive, detergent, and in water treatment. It acts as a buffering agent and sequestrant, helping to stabilize and improve the effectiveness of various products. This compound is commonly utilized in both industrial and household applications.",
+    sections: [
+      {
+        type: "overview",
+        title: "Tetrapotassium Pyrophosphate – What It Is and How It's Used",
+        content:
+          "Tetrapotassium Pyrophosphate (TKPP) is a simple, white powder or granules that dissolve well in water. It's used in lots of industries because it helps with cleaning, controlling pH, and stopping scale build-up. You'll find it in cleaning products, water treatment, and some food products.\n\nIn Australia, many businesses use TKPP to make cleaners work better, manage pH during manufacturing, and keep food products stable. It doesn't leave much residue and is easy to mix, which is why it's popular.",
+      },
+      {
+        type: "",
+        title: "What Exactly Is Tetrapotassium Pyrophosphate?",
+        content:
+          "TKPP is a type of phosphate salt with the formula K₄P₂O₇. It's mildly alkaline, with a pH around 7 to 10 when mixed with water. People use it because it grabs onto metal ions, prevents scale, and keeps formulas stable. It comes in both food-grade and industrial-grade forms, depending on what you need.",
+      },
+      {
+        type: "",
+        title: "Common Uses in Australia",
+        content:
+          "Here's where it shows up most:\n\nCleaning products: TKPP helps break down dirt and grease. It's used in dishwashing powders and industrial cleaners.\n\nWater treatment: Stops scale and rust from building up in pipes and systems.\n\nFood industry: It's allowed as a food additive (E450), used to improve texture in meats, seafood, and dairy.\n\nCeramics and paints: Keeps mixtures smooth and easy to work with.\n\nTKPP is useful because it works in lots of different places without causing problems.",
+      },
+      {
+        type: "",
+        title: "Why Buy from Pascom?",
+        content:
+          "Pascom supplies tetrapotassium pyrophosphate in Australia with options for 25 kg bags or bulk packaging. You get good quality, reliable deliveries, and helpful support. Request a quote if you need bulk amounts or special packaging.",
+      },
+      {
+        type: "safety",
+        title: "How to Handle It Safely",
+        content:
+          "When working with TKPP, wear gloves and safety goggles. Avoid breathing in dust. Keep it in a dry place away from acids. You can request the SDS if you need full safety details.",
+      },
+      {
+        type: "",
+        title: "Buying Tetrapotassium Pyrophosphate in Australia",
+        content:
+          "Pascom delivers across Australia and can organise pickup too. We offer flexible packaging for your needs. Contact us for more info or to place an order.",
+      },
+      {
+        type: "",
+        title: "Quick Product Info",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "7320-34-5",
+          },
+          {
+            label: "Look",
+            value: "White, powder or granules",
+          },
+          {
+            label: "Smell",
+            value: "Odourless",
+          },
+          {
+            label: "Solubility",
+            value: "Dissolves easily in water",
+          },
+          {
+            label: "pH (1% solution)",
+            value: "7.0–10.0",
+          },
+          {
+            label: "Density",
+            value: "About 2.33 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "Breaks down before melting",
+          },
+          {
+            label: "Stability",
+            value:
+              "Safe under normal conditions, but keep away from acids and heat",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Notes",
+        properties: [
+          {
+            label: "Safety Notes",
+            value:
+              "Can mildly irritate skin and eyes, so wear PPE.\n\nDon't breathe in the dust—use ventilation or a mask.\n\nIt's not meant to be eaten.\n\nStore it dry, cool, and away from acids.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "triethylene-glycol",
+    name: "Triethylene Glycol",
+    description:
+      "Triethylene glycol is a colorless, odorless, and hygroscopic liquid used primarily as a solvent and in the production of plastics and resins. It is commonly employed in industrial processes and as a component in antifreeze formulations. This chemical is known for its low toxicity and ability to retain moisture.",
+    sections: [
+      {
+        type: "overview",
+        title: "Triethylene Glycol – Simple and Reliable for Industrial Use",
+        content:
+          "Triethylene Glycol (TEG) is a clear, odourless liquid that's used in many industries. It's mainly known for removing water from gas and air systems. Because it absorbs water so well, it helps keep pipelines and equipment running safely.\n\nIn Australia, it's commonly used in gas plants, air-conditioning systems, and chemical production. People choose it because it's stable, doesn't evaporate easily, and is low in toxicity.",
+      },
+      {
+        type: "",
+        title: "What Is Triethylene Glycol?",
+        content:
+          "Triethylene Glycol comes from mixing ethylene oxide with water. It's a thick liquid with strong water-absorbing ability. Its chemical formula is C₆H₁₄O₄. It boils at 285°C and doesn't produce much vapour, which makes it good for closed systems. The industrial grade is usually 99% pure and stores well under normal conditions.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "TEG is mainly used to dry out natural gas. It helps stop rust and blockages in pipelines. It's also used in air systems, especially in HVAC setups, to keep moisture levels down. You'll also find it in things like plasticisers, lubricants, and solvents. Because it's fairly safe and biodegradable, it sometimes shows up in cosmetic products and cleaning fluids too.",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us?",
+        content:
+          "We supply Triethylene Glycol in bulk, with options like drums or IBCs. You get steady quality, quick delivery across Australia, and support if you need help with your setup. To get pricing, request a quote here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling Tips",
+        content:
+          "Wear gloves and goggles when handling TEG. Work in a space with good airflow and avoid getting it on your skin or in your eyes. You can get the full safety sheet here. Store it in a cool, dry place, away from things like oxidisers.",
+      },
+      {
+        type: "",
+        title: "Order Triethylene Glycol in Australia",
+        content:
+          "Need Triethylene Glycol for your site? We offer pick-up and delivery across Australia. To ask a question or get a price, contact us or submit your enquiry online.",
+      },
+      {
+        type: "",
+        title: "Product Info",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "112-27-6",
+          },
+          {
+            label: "Looks Like",
+            value: "Clear, colourless liquid",
+          },
+          {
+            label: "Smell",
+            value: "Odourless or slight smell",
+          },
+          {
+            label: "Solubility",
+            value: "Mixes fully with water",
+          },
+          {
+            label: "pH Level",
+            value: "Neutral",
+          },
+          {
+            label: "Density",
+            value: "About 1.12 g/cm³ (20°C)",
+          },
+          {
+            label: "Boiling Point",
+            value: "285°C",
+          },
+          {
+            label: "Stability",
+            value: "Stays stable under normal storage",
+          },
+          {
+            label: "Reacts With",
+            value: "Keep away from strong oxidisers",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Quick Safety Notes",
+        properties: [
+          {
+            label: "Skin & Eyes",
+            value: "Can irritate, wear protective gear.",
+          },
+          {
+            label: "Breathing",
+            value: "Low vapour risk, avoid breathing heated vapour.",
+          },
+          {
+            label: "Swallowing",
+            value: "Low toxicity but not for eating.",
+          },
+          {
+            label: "Storage",
+            value:
+              "Seal containers well. Keep in a ventilated, cool place away from sunlight and reactive chemicals.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "trisodium-phosphate-98",
+    name: "Trisodium Phosphate 98%",
+    description:
+      "Trisodium phosphate 98% is a highly concentrated, crystalline salt used primarily as a cleaning agent, pH regulator, and in various industrial processes. This white, odorless powder is highly alkaline and effective in degreasing and cleaning applications.",
+    sections: [
+      {
+        type: "overview",
+        title: "Trisodium Phosphate 98% – Industrial Cleaning Agent",
+        content:
+          "Trisodium Phosphate 98% is a strong cleaner used in many industries. It removes grease, oil, and mineral build-up. It's common in food processing, metal work, and water systems in Australia.\n\nWith 98% purity, it works well for heavy cleaning and surface prep, making it a reliable choice for factories and workshops.",
+      },
+      {
+        type: "",
+        title: "What Is Trisodium Phosphate 98%?",
+        content:
+          "Trisodium Phosphate (TSP) is a simple chemical (Na₃PO₄). It looks like a white powder, dissolves easily in water, and makes an alkaline solution.\n\nThis makes it good for tough cleaning, surface preparation, and fixing water pH levels. It also helps remove stubborn stains and can improve the lifespan of equipment.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Trisodium Phosphate 98% is often used in:\n\nIndustrial Cleaning: Cuts through grease and grime in kitchens, food factories, and workshops.\n\nMetal Work: Prepares surfaces before painting or coating so the finish lasts longer.\n\nWater Systems: Helps soften water and stop scale from building up in pipes and boilers.\n\nFood Processing: Used in small amounts for cleaning equipment (where allowed).",
+      },
+      {
+        type: "",
+        title: "Why Buy from Pascom",
+        content:
+          "Pascom supplies Trisodium Phosphate 98% in Australia. You can get it in 25 kg bags or in bulk. We keep stock ready for quick delivery.\n\nWe offer simple supply options without hassle. Request a quote here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling and Storage",
+        content:
+          "Wear gloves, goggles, and protective clothing when using TSP. Work in a ventilated area to avoid breathing in dust. It can irritate skin and eyes.\n\nStore it in a dry, cool place away from acids. Request the full safety sheet here.",
+      },
+      {
+        type: "",
+        title: "Order Trisodium Phosphate 98% in Australia",
+        content:
+          "We offer delivery and pickup options across Australia. Small or bulk orders are available. Contact us to place an order.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "7601-54-9",
+          },
+          {
+            label: "Look",
+            value: "White powder",
+          },
+          {
+            label: "Smell",
+            value: "None",
+          },
+          {
+            label: "Solubility",
+            value: "Dissolves in water",
+          },
+          {
+            label: "pH (1% solution)",
+            value: "11.5 – 12.5",
+          },
+          {
+            label: "Density",
+            value: "~2.5 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "Breaks down over 100°C",
+          },
+          {
+            label: "Storage",
+            value: "Stays stable in normal storage",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Summary",
+        properties: [
+          {
+            label: "Safety Summary",
+            value:
+              "Can irritate skin and eyes\n\nAvoid breathing in the dust\n\nHarmful if swallowed in large amounts\n\nKeep away from acids, store in a dry place",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "urea",
+    name: "Urea",
+    description:
+      "Urea is a colorless, crystalline compound commonly used in fertilizers, pharmaceuticals, and cosmetics. It is a byproduct of protein metabolism in the body and is known for its ability to retain moisture and improve the texture of various products.",
+    sections: [
+      {
+        type: "overview",
+        title: "Urea – A Reliable Nitrogen Fertiliser for Farms and Industry",
+        content:
+          "Urea is a simple, effective fertiliser used widely in Australian farming and industry. It contains about 46% nitrogen, making it one of the strongest solid nitrogen fertilisers available. It helps crops grow well and is also useful in different industrial processes.\n\nUrea's chemical makeup means it's not just for farms. It's used in factories, animal feed, and other industries. You can get it in granular or prilled forms, which makes it easy to use in broadacre farming, horticulture, and industrial work across Australia.",
+      },
+      {
+        type: "",
+        title: "What Is It?",
+        content:
+          "Urea (CO(NH₂)₂) is made by reacting ammonia and carbon dioxide under pressure. It comes out as white, odourless crystals or small granules. It dissolves quickly in water, so plants can absorb it fast.\n\nBesides farming, it is used in making resins, glues, and diesel exhaust fluids like AdBlue®. Its high nitrogen level and wide uses make it a key product in many industries around the world.",
+      },
+      {
+        type: "",
+        title: "Main Uses in Farming and Industry",
+        content:
+          "On farms, it is a go-to source of nitrogen. It helps crops like wheat, grasses, sugarcane, and vegetables grow stronger and give better yields. In industry, it's used to make things like urea-formaldehyde resins, melamine, and AdBlue® for diesel engines.\n\nFarmers and businesses like this chemical because it's easy to use, affordable, and effective at supplying nitrogen or working as a chemical ingredient.",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us?",
+        content:
+          "Pascom is a reliable Urea supplier in Australia. We supply high-quality chemicals in bulk or smaller packs, depending on what you need. Everything goes through strict quality checks to make sure it's safe and works well.\n\nWe offer both granular and prilled Urea with flexible delivery across Australia. You can get it fast, whether you're running a farm or a factory. To ask a question or get a price, Request a Quote.",
+      },
+      {
+        type: "safety",
+        title: "How to Store and Handle Safely",
+        content:
+          "Keep Urea in a cool, dry spot with good airflow. Don't let it get wet or sit in the sun, or it might clump together. Wear gloves and eye protection when handling, especially if it's dusty. For full safety details, request the Urea SDS here.",
+      },
+      {
+        type: "",
+        title: "Urea Available Across Australia",
+        content:
+          "If you need fertiliser or raw materials, Urea is available for delivery or pick-up anywhere in Australia. For info on bulk orders or packing options, get in touch.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS",
+            value: "57-13-6",
+          },
+          {
+            label: "Looks Like",
+            value: "White powder or small granules",
+          },
+          {
+            label: "Smell",
+            value: "None",
+          },
+          {
+            label: "Solubility",
+            value: "Dissolves easily in water",
+          },
+          {
+            label: "pH",
+            value: "Neutral when mixed with water",
+          },
+          {
+            label: "Nitrogen Level",
+            value: "About 46%",
+          },
+          {
+            label: "Melting Point",
+            value: "132°C (breaks down before boiling)",
+          },
+          {
+            label: "Stability",
+            value:
+              "Safe under normal conditions but can break down slowly in humid air",
+          },
+          {
+            label: "Delivery and Pick-Up",
+            value:
+              "Available in bulk bags, 25 kg bags, or custom sizes. Contact us for options that fit your needs.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "urea-solution-20-50",
+    name: "Urea solution 20%, 50%",
+    description:
+      "Urea solutions 20% and 50% are concentrated aqueous solutions of urea, commonly used in industrial applications, agriculture, and as a fertilizer. This clear liquid is utilized for its ability to provide essential nitrogen and as a source of nutrients for various processes.",
+    sections: [
+      {
+        type: "overview",
+        title: "Urea Solution – 20% and 50% Grades for Industry Use",
+        content:
+          "We supply Urea Solution in two grades: 20% and 50%. It's used in farming, medicine, cosmetics, and water treatment. Our products are easy to handle and mix well with water. We deliver across Australia and focus on quality and reliable supply.",
+      },
+      {
+        type: "",
+        title: "What Is This Solution?",
+        content:
+          "Urea, also called Carbamide, is a simple organic compound (CO(NH2)2). It's colourless, dissolves easily in water, and has no smell. People use it as a nitrogen fertilizer, in skincare products, and in industrial processes like making resins. You might also hear it called Urea Water or Industrial Urea Liquid.",
+      },
+      {
+        type: "",
+        title: "Available Urea Grades",
+        content:
+          "Urea Solution 20%\n20% solution is a lower strength option where you need more control over nitrogen levels. It's often used for:\n\nSkin creams and moisturisers\nMedicines and veterinary treatments\nSpray fertilizers for fast nitrogen absorption\nLooks like: clear, colourless liquid with no strong smell. Mixes easily with water.\n\nUrea Solution 50%\n50% solution is more concentrated. It's a good choice when you need a higher nitrogen level. Common uses include:\n\nDiesel Exhaust Fluid (AdBlue®/DEF)\nHigh-strength fertilizers\nMaking adhesives and resins\nLooks like: clear, thicker liquid with no strong smell. Mixes well with water.",
+      },
+      {
+        type: "",
+        title: "Where People Use It",
+        content:
+          "Urea solution is useful in many industries. Some common uses are:\n\nFarming, as a nitrogen fertilizer\nReducing exhaust emissions in diesel engines\nControlling corrosion in industrial systems\nHydrating skin in personal care products\nIt's flexible, easy to use, and follows industry safety rules.",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us?",
+        content:
+          "Clean and stable product\nDifferent packaging options\nFast delivery around Australia\nWe supply both 20% and 50% urea solutions for small or bulk orders.\nRequest a Quote",
+      },
+      {
+        type: "safety",
+        title: "Packaging, Delivery, and Safety",
+        content:
+          "CAS Number: 57-13-6\nPackaging: 5L, 20L, 200L drums, or 1000L IBCs\nDelivery: Pickup or delivery across Australia\nStorage: Keep in a cool, dry place out of direct sunlight\nRequest Safety Data Sheet",
+      },
+      {
+        type: "",
+        title: "Order Urea Solution in Australia",
+        content:
+          "Need Urea Solution in 20% or 50%? We've got it. Choose the right option for farming, industry, or personal care. Fast delivery, flexible orders.\nGet a Quote",
+      },
+    ],
+  },
+  {
+    slug: "xylene-isomers",
+    name: "Xylene Isomers",
+    description:
+      "Xylene isomers are a group of three related aromatic hydrocarbons: ortho-xylene, meta-xylene, and para-xylene. These colorless liquids are widely used as solvents in industrial applications, paint thinners, and chemical synthesis. They have a sweet, aromatic odor and are known for their effectiveness in dissolving various substances.",
+    sections: [
+      {
+        type: "overview",
+        title: "Xylene Isomer – A Reliable Industrial Solvent",
+        content:
+          "Xylene Isomer is a clear, colourless liquid used in many industries across Australia. It's known for good solvency and a steady evaporation rate. You'll find it in paints, coatings, adhesives, and cleaning products.\n\nIt works well to dissolve grease, oil, and resins. This makes it a solid choice for anyone needing a dependable solvent.",
+      },
+      {
+        type: "",
+        title: "What Is It?",
+        content:
+          "Xylene Isomer is a mix of three types: ortho-xylene, meta-xylene, and para-xylene. The chemical formula is C₈H₁₀. It comes from petroleum and has a sweet smell.\n\nPeople use it because it's strong, doesn't mix with water, and works in lots of settings. Some just call it \"Xylene,\" but the isomer mix gives more stable performance in industrial jobs.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "Xylene Isomer is used in:\n\nPaints and Coatings – Helps paints and varnishes go on smoothly and dry well.\n\nAdhesives and Sealants – Improves how adhesives spread and set.\n\nPrinting – Cleans inks and keeps printing equipment in good shape.\n\nCleaning – Removes oils and residues from machines and metal surfaces.\n\nIts steady evaporation rate and strength make it useful anywhere clean surfaces and smooth finishes are important.",
+      },
+      {
+        type: "",
+        title: "Xylene Isomer from Pascom",
+        content:
+          "Pascom supplies Xylene Isomer in Australia. You can get it in 20L drums, 200L drums, or IBC containers. Delivery is fast and packaging is flexible.\n\nWe stick to strict quality checks and reliable service. Request a quote to see what we can do for you.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling",
+        content:
+          "Xylene Isomer is flammable. Use it in well-ventilated spaces with gloves, goggles, and protective clothing. Store it in sealed containers away from heat or flames.\n\nFor full safety advice, check the Safety Data Sheet (SDS). Always follow local rules for safe use and disposal.",
+      },
+      {
+        type: "",
+        title: "Order Xylene Isomer in Australia",
+        content:
+          "Need Xylene Isomer? Pascom offers nationwide delivery and pickup. Choose the right size and order what you need. Contact us here to get started.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "1330-20-7",
+          },
+          {
+            label: "Look",
+            value: "Clear, colourless liquid",
+          },
+          {
+            label: "Smell",
+            value: "Sweet, aromatic",
+          },
+          {
+            label: "Water Solubility",
+            value: "Doesn't mix with water",
+          },
+          {
+            label: "Mixes With",
+            value: "Most organic solvents",
+          },
+          {
+            label: "Density",
+            value: "About 0.86 g/cm³ (20°C)",
+          },
+          {
+            label: "Flash Point",
+            value: "27°C",
+          },
+          {
+            label: "Boiling Point Range",
+            value: "137–144°C",
+          },
+          {
+            label: "Stability",
+            value: "Stable if stored right, flammable",
+          },
+          {
+            label: "Packaging Options",
+            value:
+              "20L drums, 200L drums, IBC containers. Custom options available.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sulfamic-acid-powder-100",
+    name: "Sulfamic Acid Powder 100%",
+    description:
+      "Sulfamic acid 100% is a highly concentrated, solid acid used primarily as a descaling agent and in various industrial applications. This white, crystalline powder is effective in removing mineral deposits and is also utilized in chemical synthesis. It requires careful handling due to its acidic nature.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sulfamic Acid Powder 100% – Simple and Reliable Cleaning Agent",
+        content:
+          "Sulfamic Acid Powder 100% is a straightforward way to clean and remove scale in many industries. It's a white, odourless powder that's easy to use and doesn't absorb moisture from the air. You'll find it in places like metal workshops, food factories, and water treatment plants.\n\nIn Australia, it's a trusted choice for getting rid of limescale, rust, and mineral deposits. It cleans well without giving off dangerous fumes. It also helps keep equipment running smoothly without long downtime.",
+      },
+      {
+        type: "",
+        title: "What Is Sulfamic Acid?",
+        content:
+          "Sulfamic acid (CAS 5329-14-6) comes from sulphuric acid and urea. It's a stable, crystalline powder that dissolves quickly in water. The solution is clear and odourless.\n\nPeople use it because it works well for cleaning and adjusting pH, and it's safer than stronger acids. It does the job without the risks of more hazardous chemicals.",
+      },
+      {
+        type: "",
+        title: "Where It's Used",
+        content:
+          "Here's where Sulfamic Acid Powder 100% usually comes in handy:\n\nDescaling: Clears out scale in boilers, heat exchangers, and cooling systems.\n\nCleaning: Good for tiles, bathrooms, and kitchen surfaces. It doesn't corrode most metals.\n\nFood industry: Safe for cleaning stainless steel in food plants.\n\nPaper mills: Helps clean production equipment like felt wires.\n\npH control: Used in different formulations to balance pH.\n\nIt's a solid choice when you need something safer than hydrochloric acid but just as effective.",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us",
+        content:
+          "We supply Sulfamic Acid Powder 100% in Australia with reliable quality. You get high purity and secure packaging. Whether you need a few bags or a bulk order, we've got options.\nRequest a quote here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling Tips",
+        content:
+          "Wear gloves, goggles, and protective clothing when using it. Work in a place with good airflow so you don't breathe in dust. It's safer than many other acids, but you should still avoid direct contact. Store it somewhere cool and dry, away from moisture and strong chemicals.\nRequest the full safety guide (SDS) here.",
+      },
+      {
+        type: "",
+        title: "Order Sulfamic Acid Powder 100% in Australia",
+        content:
+          "You can order Sulfamic Acid Powder 100% for quick delivery or pickup. We offer flexible packaging for whatever amount you need.\nGet a quote today.",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "5329-14-6",
+          },
+          {
+            label: "Form",
+            value: "White, crystalline powder",
+          },
+          {
+            label: "Smell",
+            value: "None",
+          },
+          {
+            label: "Water Solubility",
+            value: "High",
+          },
+          {
+            label: "pH (1% solution)",
+            value: "1.0–1.5",
+          },
+          {
+            label: "Density",
+            value: "About 2.126 g/cm³",
+          },
+          {
+            label: "Melting Point",
+            value: "205°C (breaks down at this point)",
+          },
+          {
+            label: "Stability",
+            value: "Stays stable in normal conditions",
+          },
+          {
+            label: "Reacts With",
+            value: "Strong bases and oxidisers",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Packaging and Delivery",
+        properties: [
+          {
+            label: "Sizes",
+            value: "25 kg bags, 50 kg drums, or custom packaging",
+          },
+          {
+            label: "Delivery",
+            value: "Pickup or Australia-wide shipping",
+          },
+          {
+            label: "Inquiries",
+            value: "Ask us about bulk orders here.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sodium-hypochlorite-solutions",
+    name: "Sodium Hypochlorite Solutions 5%, 12.5%",
+    description:
+      "Sodium hypochlorite 5% and 12.5% solutions are commonly used as disinfectants and bleach. This clear to slightly yellow liquid is effective for sanitizing surfaces, purifying water, and removing stains. Its strength varies based on concentration, but it requires careful handling due to its corrosive nature.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Hypochlorite – Industrial-Grade Solutions",
+        content:
+          "Sodium Hypochlorite is used in many industries. We supply it in two common strengths: 5% and 12.5%. It's used for water treatment, cleaning in food production, general disinfection, and more. As a sodium hypochlorite supplier in Australia, we provide reliable products with simple ordering and delivery.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Hypochlorite?",
+        content:
+          'Sodium Hypochlorite (NaOCl) is a clear or pale yellow liquid with a strong smell, like chlorine. Most people know it as liquid bleach. It kills bacteria, viruses, and algae. It\'s also used to whiten fabrics and clean surfaces. You might also see it called "Hypochlorous acid sodium salt."',
+      },
+      {
+        type: "",
+        title: "Product Options",
+        content:
+          "🧪 5% Solution\nThis lower concentration is often used in food production, cleaning, and small water systems. It's easier to handle and safer for regular use. You'll see it as a pale yellow liquid with a bleach smell.\n\n🧪 12.5% Solution\nThis stronger option is used for bigger jobs — like treating public water, disinfecting large areas, and industrial bleaching. It's common for pool cleaning, laundry services, and waste treatment plants.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "Industries use Sodium Hypochlorite because it works well and is easy to apply. Common uses include:\n\n✅ Keeping water clean and safe to drink\n\n✅ Sanitising food areas (at low concentrations)\n\n✅ Disinfecting hospitals and hotels\n\n✅ Bleaching and cleaning in factories\n\nIt's useful because it does the job quickly and doesn't cost much to use.",
+      },
+      {
+        type: "",
+        title: "Why Buy from Us?",
+        content:
+          "✅ We keep quality consistent across every batch\n\n✅ Our products follow Australian safety rules\n\n✅ You can choose packaging sizes based on your needs\n\n✅ Fast delivery across Australia\n\nRequest a Quote",
+      },
+      {
+        type: "safety",
+        title: "📦 Packaging and Delivery",
+        content:
+          "CAS Number: 7681-52-9\n\nWe offer options from small 5L packs to large bulk containers. Store it in a cool place, away from sunlight and incompatible materials. You can pick it up or get it delivered anywhere in Australia.\n\nRequest SDS",
+      },
+      {
+        type: "",
+        title: "🇦🇺 Order Sodium Hypochlorite in Australia",
+        content:
+          "Get the grade you need, 5% or 12.5%, delivered to your site. We make it simple to order, with flexible pack sizes and quick service.\n\nGet a Quote Today",
+      },
+    ],
+  },
+  {
+    slug: "sodium-chlorite-31",
+    name: "Sodium Chlorite 31%",
+    description:
+      "Sodium Chlorite 31% is a concentrated aqueous solution of sodium chlorite, commonly used as a powerful oxidizing agent and disinfectant. This clear, yellowish liquid is widely applied in water treatment for disinfection, in the textile industry for bleaching, and in the production of chlorine dioxide.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sodium Chlorite 31% – Reliable Water Treatment Chemical",
+        content:
+          "Sodium Chlorite 31% is a clear or slightly yellow liquid used for water treatment, disinfection, and industrial bleaching. It's common in Australia for making chlorine dioxide, which is useful in water plants, food processing, and the pulp and paper industry.\n\nIt helps remove harmful germs, keeps odours under control, and supports clean production environments. Since it's a stable liquid, it's easier to handle than chlorine gas.",
+      },
+      {
+        type: "",
+        title: "What Is Sodium Chlorite 31%?",
+        content:
+          "Sodium Chlorite 31% is made by reacting sodium chlorate with certain reducing agents. It contains 31% active sodium chlorite by weight. The main reason people use it is to produce chlorine dioxide when needed. This cuts down on risks because there's no need to store chlorine gas.\n\nIt's available in bulk, meets Australian water treatment standards, and comes with full traceability.",
+      },
+      {
+        type: "",
+        title: "Where It's Used and Why It Helps",
+        content:
+          "Sodium Chlorite 31% is used in many industries because it's reliable:\n\nIn water plants, it's used to make chlorine dioxide for disinfecting drinking water.\n\nIn food factories, it keeps equipment clean and helps lower contamination.\n\nIn paper mills, it's used for bleaching without making as many harmful by-products.\n\nIn wastewater plants, it helps with odour control and treating industrial waste.\n\nIt's more stable than other oxidisers, releases chlorine dioxide in a controlled way, and reduces unwanted reactions.",
+      },
+      {
+        type: "",
+        title: "Why Buy from Us",
+        content:
+          "We supply Sodium Chlorite 31% across Australia with consistent quality and flexible delivery. You can get it in 25L drums, 200L drums, or 1000L IBCs.\n\nWe also provide safety data sheets (SDS) and can help you figure out what's best for your operation. Get a Quote or contact us for advice.",
+      },
+      {
+        type: "safety",
+        title: "Handling and Storage",
+        content:
+          "This chemical needs careful handling. Always wear gloves, eye protection, and protective clothing. Keep it in a cool, ventilated space, away from heat, acids, and organic materials.\n\nRead the SDS",
+      },
+      {
+        type: "",
+        title: "Buying Options in Australia",
+        content:
+          "We offer pickup and delivery Australia-wide. Bulk supply or custom packaging available. Contact us to order or ask questions.\n\nPackaging Options: 25L, 200L, and 1000L IBCs.\n\nCAS Number: 7758-19-2",
+      },
+      {
+        type: "",
+        title: "Product Details",
+        properties: [
+          {
+            label: "Appearance",
+            value: "Clear to light yellow liquid",
+          },
+          {
+            label: "Smell",
+            value: "Mild chlorine-like odour",
+          },
+          {
+            label: "Solubility",
+            value: "Fully dissolves in water",
+          },
+          {
+            label: "pH",
+            value: "12–13 (alkaline)",
+          },
+          {
+            label: "Density",
+            value: "Around 1.15 g/cm³",
+          },
+          {
+            label: "Stability",
+            value: "Stable when stored properly",
+          },
+          {
+            label: "Reactivity",
+            value:
+              "Reacts with acids and organic materials, releases chlorine dioxide when activated",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Safety Notes",
+        properties: [
+          {
+            label: "Skin and Eyes",
+            value: "Can irritate, use proper protection",
+          },
+          {
+            label: "Breathing",
+            value: "Don't inhale fumes; good ventilation is important",
+          },
+          {
+            label: "Swallowing",
+            value: "Harmful if swallowed",
+          },
+          {
+            label: "Reactions",
+            value: "Keep away from acids and organics",
+          },
+          {
+            label: "Storage",
+            value: "Cool, dry, and ventilated area only",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-70",
+    name: "Ammonium Bisulphite – 70%",
+    description:
+      "Ammonium Bisulphite 70% is a high-concentration sulfur-based solution widely used in oxygen scavenging for boiler water treatment, oilfield applications, and industrial preservation. Known for its efficiency in preventing corrosion, this chemical is vital in ensuring system longevity in industrial environments.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Ammonium Bisulphite-70%: A Powerful Oxygen Scavenger for Industrial Use",
+        content:
+          "Ammonium Bisulphite – 70% is a high-strength reducing agent widely used in industries that require effective oxygen removal. With its potent 70% concentration, it is one of the most efficient chemicals for preventing corrosion and oxidation in systems exposed to air or dissolved gases.\n\nThis pale yellow liquid is chemically composed of NH₄HSO₃ and is typically applied in environments where metal components, pipelines, or storage systems are vulnerable to rust and degradation. Its ability to bind with and neutralize dissolved oxygen makes it ideal for water treatment, oil and gas production, and pulp bleaching applications.",
+      },
+      {
+        type: "",
+        title: "Key Applications and Industrial Benefits",
+        content:
+          "In the oil and gas industry, Ammonium Bisulphite – 70% is injected into water lines to eliminate oxygen before it reaches sensitive metal surfaces. This helps reduce the risk of corrosion, extending the lifespan of infrastructure. It's also essential in boiler feedwater treatment to prevent oxygen pitting and scaling.\n\nAdditionally, it's used in the pulp and paper industry as a reducing agent for lignin removal and brightness control. Its high reactivity ensures minimal chemical waste and improved processing efficiency.",
+      },
+      {
+        type: "safety",
+        title: "Storage and Handling Considerations",
+        content:
+          "While highly effective, Ammonium Bisulphite – 70% should be handled with care. It must be stored in cool, dry, and ventilated areas away from oxidizers. Proper PPE including gloves and eye protection is recommended.\n\nFor technical data and safety sheets,",
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-65",
+    name: "Ammonium Bisulphite – 65%",
+    description:
+      "Ammonium Bisulphite 65% is a versatile chemical solution used in industrial settings for oxygen scavenging, corrosion control, and preservation of pipelines and equipment. Its high sulfur content makes it effective in water treatment and oilfield processes.",
+    sections: [
+      {
+        type: "overview",
+        title: "Ammonium Bisulphite – 65%",
+        content:
+          "Ammonium Bisulphite 65% is a versatile chemical solution used in industrial settings for oxygen scavenging, corrosion control, and preservation of pipelines and equipment. Its high sulfur content makes it effective in water treatment and oilfield processes.",
+      },
+      {
+        type: "",
+        title: "Available for Delivery & Pick up",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Purchasing Options for Packaging",
+            value:
+              "Details are available upon request. Customizable options may be available. Please inquire about the options.",
+          },
+          {
+            label: "CAS",
+            value: "10192-30-0",
+          },
+          {
+            label: "Appearance",
+            value: "Clear to yellowish liquid",
+          },
+          {
+            label: "Odor",
+            value: "Sulfur-like odor",
+          },
+          {
+            label: "Solubility",
+            value: "Fully soluble in water",
+          },
+          {
+            label: "pH",
+            value: "Typically acidic (approx. 4.5 – 5.5)",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.28 g/cm³ at 65% concentration",
+          },
+          {
+            label: "Stability",
+            value: "Stable under normal handling conditions",
+          },
+          {
+            label: "Corrosive Properties",
+            value: "May corrode metal surfaces if exposed over long periods",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Other Names",
+        content:
+          "Ammonium Hydrogen Sulfite\nABS Solution\nBoiler Oxygen Scavenger",
+      },
+      {
+        type: "safety",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value: "Use gloves and goggles to prevent irritation",
+          },
+          {
+            label: "Inhalation Risk",
+            value: "Ensure good ventilation to minimize exposure to vapors",
+          },
+          {
+            label: "Ingestion Hazard",
+            value: "Do not ingest; harmful if swallowed",
+          },
+          {
+            label: "Reactivity Risk",
+            value: "Keep away from strong oxidizers and acids",
+          },
+          {
+            label: "Storage",
+            value: "Store in a cool, dark, well-ventilated location",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-60",
+    name: "Ammonium Bisulphite – 60%",
+    description:
+      "Ammonium Bisulphite – 60% is a moderately concentrated sulfur-based compound primarily used for oxygen scavenging in industrial water systems and oilfield operations. It is also applied in preservation and bleaching processes across various industries.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Ammonium Bisulphite – 60% – High-Concentration Oxygen Scavenger for Demanding Applications",
+        content:
+          "Ammonium Bisulphite – 60% is a high-purity oxygen scavenger chemical formulated for aggressive corrosion control in critical industrial systems. With a powerful 60% concentration, it rapidly reacts with dissolved oxygen, making it ideal for use in high-pressure boiler feedwater treatment, petrochemical processing, and oilfield operations.\n\nThis advanced formulation is used throughout Australia to protect valuable infrastructure from oxidation damage, ensuring safety, reliability, and efficiency.",
+      },
+      {
+        type: "",
+        title: "What Is Ammonium Bisulphite – 60%?",
+        content:
+          "Ammonium Bisulphite – 60% is a concentrated aqueous solution containing 60% ammonium bisulphite (NH₄HSO₃) by weight. It's made by combining ammonia and sulphur dioxide under controlled conditions to yield a pale yellow liquid with excellent solubility and reactivity. In American usage, this may also be referred to as ammonium bisulfite (US spelling).\n\nThe 60% strength provides increased efficiency for applications where fast oxygen elimination is necessary, especially under elevated temperatures and pressures.",
+      },
+      {
+        type: "",
+        title: "Key Industrial Applications",
+        content:
+          "Ammonium Bisulphite – 60% is used extensively in:\n\nHigh-temperature boiler feedwater treatment systems to prevent scaling and internal corrosion.\nAs a high-performance corrosion inhibitor in oil and gas pipelines, refineries, and offshore platforms.\nPaper manufacturing and food-grade caramel colour production, where reactivity must be tightly controlled.\n\nCompared to similar agents, it offers excellent results in both acidic and neutral systems. When evaluating sulphite vs bisulphite performance, bisulphite provides faster reaction times and superior solubility for demanding operations.",
+      },
+      {
+        type: "",
+        title: "Why Choose Us as Your Supplier?",
+        content:
+          "As a leading ammonium bisulphite supplier Australia, we provide high-concentration solutions like Ammonium Bisulphite – 60% in bulk quantities tailored to industrial specifications. Packaging options include drums, IBCs, and tanker loads.\n\nWe guarantee consistent product quality, technical support, and Australia-wide distribution. Enquire now to get a quote.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Storage",
+        content:
+          "Always store Ammonium Bisulphite – 60% in a cool, dry, and ventilated area. Avoid contact with oxidising agents and acids. Use protective gloves, safety glasses, and respirators where necessary. Refer to our SDS request form to access full safety documentation.\n\nFor best results, understanding sulphite vs bisulphite chemistry can help you choose the most effective solution for your operational needs.",
+      },
+      {
+        type: "",
+        title: "Buy Ammonium Bisulphite – 60% in Australia",
+        content:
+          "Looking for high-strength Ammonium Bisulphite – 60%? We supply this powerful scavenger to industries across Australia with fast shipping and expert support. Ideal for mission-critical systems requiring reliable oxygen removal.\n\nClick here to request a custom quote.",
+      },
+      {
+        type: "",
+        title: "✅ Additional Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10102-43-9",
+          },
+          {
+            label: "Concentration",
+            value: "60%",
+          },
+          {
+            label: "Appearance",
+            value: "Pale yellow liquid",
+          },
+          {
+            label: "Odour",
+            value: "Mild, sulphurous",
+          },
+          {
+            label: "Solubility",
+            value: "Fully water-soluble",
+          },
+          {
+            label: "pH",
+            value: "4.0–5.0",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.35–1.4 g/cm³",
+          },
+          {
+            label: "Stability",
+            value: "Stable under ambient conditions",
+          },
+          {
+            label: "Precautions",
+            value: "May irritate skin or respiratory system; PPE recommended",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-40",
+    name: "Ammonium Bisulphite – 40%",
+    description:
+      "Ammonium Bisulphite – 40% is a lower-concentration solution commonly used in water treatment, paper bleaching, and food preservation (in some cases). It serves as an efficient oxygen scavenger and is ideal for applications that require reduced reactivity or milder chemical action.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Ammonium Bisulphite – 40% – Reliable Oxygen Scavenger for Industrial Water Systems",
+        content:
+          "Ammonium Bisulphite – 40% is a widely used oxygen scavenger chemical engineered for safe, efficient removal of dissolved oxygen in industrial processes. Its 40% concentration makes it ideal for moderate-duty corrosion control, particularly in boiler feedwater treatment and oil & gas operations.\n\nThis stable, pale yellow solution is trusted across Australian industries to protect pipelines, heat exchangers, and storage tanks from oxygen-related corrosion. As a cost-effective and effective corrosion inhibitor, it ensures operational safety and equipment longevity.",
+      },
+      {
+        type: "",
+        title: "What Is Ammonium Bisulphite – 40%?",
+        content:
+          "Ammonium Bisulphite – 40% is a liquid blend of ammonia and sulphur dioxide, producing the active chemical NH₄HSO₃. This 40% concentration is carefully formulated to balance performance and safety. In the US, the term is often spelled as ammonium bisulfite (US spelling).\n\nThis solution is commonly used in closed-loop systems, where removing dissolved oxygen is vital to prevent pitting, scaling, and oxidation damage. The 40% grade is suitable for systems that don't require highly reactive scavengers, offering dependable performance across applications.",
+      },
+      {
+        type: "",
+        title: "Key Industrial Applications",
+        content:
+          "Ammonium Bisulphite – 40% is used extensively in:\n\nBoiler feedwater treatment to eliminate oxygen that causes corrosion and scale formation in boiler tubes.\nAs a corrosion inhibitor in cooling systems, pipelines, and oilfield water injection processes.\nFood-grade processes such as caramel colour production, where controlled reactivity is required.\n\nWhen comparing sulphite vs bisulphite solutions, the bisulphite variant is generally preferred for water-based systems due to its higher solubility and effectiveness at lower pH levels.",
+      },
+      {
+        type: "",
+        title: "Why Choose Us as Your Supplier?",
+        content:
+          "We are a leading ammonium bisulphite supplier Australia, offering high-quality 40% solutions tailored to your industrial needs. Our product is available in drums, IBCs, and bulk containers, ensuring flexibility for different scale requirements.\n\nWe guarantee product consistency, local support, and timely shipping. Request a quote or product consultation here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Storage",
+        content:
+          "Store in a cool, dry, and ventilated space away from oxidising agents. Use gloves, eye protection, and protective clothing while handling the chemical. Refer to the SDS for full safety details, which you can request via our SDS Request Form.\n\nUnderstanding sulphite vs bisulphite chemistry is important for selecting the right solution for your process requirements.",
+      },
+      {
+        type: "",
+        title: "Buy Ammonium Bisulphite – 40% in Australia",
+        content:
+          "Ammonium Bisulphite – 40% is available for nationwide delivery and local pickup. We support industries across mining, food production, and water treatment with high-purity chemical solutions.\n\nContact us today to learn more or to place an order.",
+      },
+      {
+        type: "",
+        title: "✅ Additional Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10102-43-9",
+          },
+          {
+            label: "Concentration",
+            value: "40%",
+          },
+          {
+            label: "Appearance",
+            value: "Pale yellow liquid",
+          },
+          {
+            label: "Odour",
+            value: "Mild sulphurous",
+          },
+          {
+            label: "Solubility",
+            value: "Fully water-soluble",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.3 g/cm³",
+          },
+          {
+            label: "pH",
+            value: "4.0–5.0",
+          },
+          {
+            label: "Stability",
+            value: "Stable under ambient conditions",
+          },
+          {
+            label: "Safety Notes",
+            value: "May cause irritation on contact; always use PPE",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-food-grade",
+    name: "Ammonium Bisulphite Food Grade",
+    description:
+      "Ammonium Bisulphite Food Grade is a high-purity additive used in the food and beverage industry as a preservative and antioxidant. It is especially effective in preventing microbial growth and maintaining product freshness in processing environments.",
+    sections: [
+      {
+        type: "overview",
+        title: "Ammonium Bisulphite Food Grade",
+        content:
+          "Ammonium Bisulphite Food Grade is a high-purity additive used in the food and beverage industry as a preservative and antioxidant. It is especially effective in preventing microbial growth and maintaining product freshness in processing environments.\n\nThe document titled Ammonium Bisulphite Food Grade provides comprehensive information on the quality and specifications of Ammonium Bisulphite Food Grade. This formal document serves as a detailed guide for understanding the properties and applications of Ammonium Bisulphite Food Grade in various food-related industries. For those seeking precise details on Ammonium Bisulphite Food Grade, this document is an invaluable resource.",
+      },
+      {
+        type: "",
+        title: "Available for Delivery & Pick up",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Purchasing Options for Packaging",
+            value:
+              "Details are available upon request. Customizable options may be available. Please inquire about the options.",
+          },
+          {
+            label: "CAS",
+            value: "10192-30-0",
+          },
+          {
+            label: "Appearance",
+            value: "Clear to slightly yellow liquid",
+          },
+          {
+            label: "Odor",
+            value: "Low to no detectable odor",
+          },
+          {
+            label: "Solubility",
+            value: "Completely soluble in water",
+          },
+          {
+            label: "pH",
+            value: "Around 5.0 – 6.0",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.14 g/cm³",
+          },
+          {
+            label: "Stability",
+            value: "Stable in sealed packaging when stored properly",
+          },
+          {
+            label: "Corrosive Properties",
+            value: "Non-corrosive under typical food-grade storage conditions",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Other Names",
+        content: "ABS Food Grade\nAmmonium Hydrogen Sulfite\nPreservative EBS",
+      },
+      {
+        type: "safety",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value: "Low risk, but use gloves and protection in bulk handling",
+          },
+          {
+            label: "Inhalation Risk",
+            value: "Minimal; ensure basic ventilation in enclosed environments",
+          },
+          {
+            label: "Ingestion Hazard",
+            value: "Approved for controlled food use; avoid unregulated intake",
+          },
+          {
+            label: "Reactivity Risk",
+            value: "Do not mix with strong oxidizers",
+          },
+          {
+            label: "Storage",
+            value: "Keep in food-safe containers in a clean, dry location",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-sulphite-solution-40",
+    name: "Ammonium Sulphite Solution – 40%",
+    description:
+      "Ammonium Sulphite Solution – 40% is a clear, water-soluble liquid widely used in pulp and paper bleaching, photographic development, and as a reducing agent in various industrial processes. Its moderate concentration makes it suitable for controlled applications.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Ammonium Sulphite Solution – 40% – Premium Oxygen Scavenger for Industrial Applications",
+        content:
+          "Ammonium Sulphite Solution – 40% is a widely used oxygen scavenger chemical designed for medium-strength corrosion control in industrial water systems. Its carefully maintained 40% concentration ensures predictable performance, especially in applications such as boiler feedwater treatment, chemical processing, and pulp and paper operations.\n\nWith its effective oxygen-removal properties, Ammonium Sulphite Solution – 40% helps extend the life of your equipment by preventing oxidation and corrosion inside pipes, heat exchangers, and tanks. It is trusted across Australia in sectors including power generation, oil refining, and manufacturing.",
+      },
+      {
+        type: "",
+        title: "What Is Ammonium Sulphite Solution – 40%?",
+        content:
+          "Ammonium Sulphite Solution – 40% is produced by reacting sulphur dioxide with aqueous ammonia. This process results in a pale yellow, water-soluble liquid containing 40% active ammonium sulphite by weight. Though chemically different, some industries may refer to it as ammonium bisulfite (US spelling) in the United States.\n\nThe 40% strength formulation provides a reliable balance between stability and reactivity, making it a safer alternative to stronger reductive agents for oxygen control.",
+      },
+      {
+        type: "",
+        title: "Key Industrial Applications",
+        content:
+          "This solution is ideal for:\n\nBoiler feedwater treatment to eliminate dissolved oxygen before it causes scale and internal corrosion.\nUse as a corrosion inhibitor in cooling towers, pipework, and closed-loop systems.\nBleaching and lignin breakdown in the pulp and paper industry.\n\nThe debate between sulphite vs bisulphite is often resolved in favour of sulphite when lower reactivity and thermal stability are key priorities. That's why Ammonium Sulphite Solution – 40% is an ideal fit for moderate-risk systems needing controlled protection.",
+      },
+      {
+        type: "",
+        title: "Why Choose Our Supply?",
+        content:
+          "As an experienced ammonium bisulphite supplier Australia, we also offer reliable, industrial-grade Ammonium Sulphite Solution – 40%. Our solutions come with technical support, fast shipping, and optional safety training. Packaging options include drums, IBCs, and tankers for various volumes.\n\nRequest a quote for bulk orders here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Storage",
+        content:
+          "Store in cool, well-ventilated areas away from oxidising materials. Use gloves, eye protection, and respiratory masks as needed. For safety guidance, refer to the official SDS via our SDS Request Form.\n\nA proper understanding of sulphite vs bisulphite helps ensure correct product selection based on risk, temperature, and application intensity.",
+      },
+      {
+        type: "",
+        title: "Buy Ammonium Sulphite Solution – 40% in Australia",
+        content:
+          "If you're looking for high-quality Ammonium Sulphite Solution – 40% in Australia, we provide fast dispatch, local support, and reliable packaging. Available for delivery and pickup in all states.\n\nGet in touch to learn more or place an order.",
+      },
+      {
+        type: "",
+        title: "✅ Additional Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10196-04-0",
+          },
+          {
+            label: "Concentration",
+            value: "40%",
+          },
+          {
+            label: "Appearance",
+            value: "Pale yellow liquid",
+          },
+          {
+            label: "Odour",
+            value: "Mild sulphur-like",
+          },
+          {
+            label: "Solubility",
+            value: "Fully soluble in water",
+          },
+          {
+            label: "pH",
+            value: "4.0–5.5",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.3 g/cm³",
+          },
+          {
+            label: "Stability",
+            value: "Stable under ambient conditions",
+          },
+          {
+            label: "Precautions",
+            value: "May irritate skin and eyes; use proper PPE",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-solution",
+    name: "Ammonium Bisulphite Solution",
+    description:
+      "Ammonium Bisulphite Solution is a clear, sulfur-based liquid used in industrial water treatment, pulp bleaching, and as an effective oxygen scavenger in boiler feedwater systems. It is known for reducing corrosion and maintaining system performance.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Ammonium Bisulphite Solution – High-Performance Oxygen Scavenger",
+        content:
+          "Ammonium Bisulphite Solution is a powerful and reliable oxygen scavenger chemical widely used in industrial systems that require protection from oxygen-induced corrosion. This pale yellow liquid contains a stable concentration of active NH₄HSO₃, typically ranging from 40% to 70%, and is ideal for applications in water treatment, oil and gas production, and food processing.\n\nIndustries across Australia and globally depend on Ammonium Bisulphite Solution to eliminate dissolved oxygen from pipelines, storage tanks, and process water loops. As a result, it helps extend equipment life and ensures safer, more efficient operations.",
+      },
+      {
+        type: "",
+        title: "What Is Ammonium Bisulphite Solution?",
+        content:
+          "This solution is formulated by reacting ammonia with sulfur dioxide, creating a stable liquid that is both reactive and easy to handle. In the U.S., it's commonly referred to as ammonium bisulfite (US spelling). Its chemical properties make it ideal for oxygen removal in various closed-loop systems such as cooling towers and feedwater lines.",
+      },
+      {
+        type: "",
+        title: "Industrial Applications & Benefits",
+        content:
+          "In boiler feedwater treatment systems, Ammonium Bisulphite Solution is injected to remove oxygen before it can cause internal rusting or pitting. The compound also works as a corrosion inhibitor in high-pressure pipelines found in oil refineries and offshore rigs. In the paper and pulp sector, it plays a role in bleaching processes and lignin breakdown. It's also approved for certain food manufacturing processes like caramel color production.\n\nAs a sulphite vs bisulphite comparison shows, the bisulphite form is often preferred in industries where stability and controlled reactivity are crucial.",
+      },
+      {
+        type: "",
+        title: "Why Choose Pascom as Your Supplier?",
+        content:
+          "As a trusted ammonium bisulphite supplier Australia, Pascom provides reliable bulk supply with packaging options ranging from drums to IBCs. We ensure product quality, fast delivery across regions, and technical support for your specific application needs. For inquiries or bulk orders, click here to contact us.",
+      },
+      {
+        type: "safety",
+        title: "Safe Use & Product Documentation",
+        content:
+          "Always store Ammonium Bisulphite Solution in a cool, well-ventilated environment, away from heat sources and oxidizers. Use gloves and eye protection when handling. For a detailed safety guide, refer to Hydrite's official data sheet.",
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-nickel",
+    name: "Ammonium Bisulphite Nickel",
+    description:
+      "Ammonium Bisulphite Nickel is a specialized formulation employed in metal finishing, electroplating, and catalyst applications. It integrates nickel ions with the reducing power of bisulphite to enhance deposition control, corrosion resistance, and bath stability in industrial processes.",
+    sections: [
+      {
+        type: "overview",
+        title: "Ammonium Bisulphite Nickel",
+        content:
+          "Ammonium Bisulphite Nickel is a specialized formulation employed in metal finishing, electroplating, and catalyst applications. It integrates nickel ions with the reducing power of bisulphite to enhance deposition control, corrosion resistance, and bath stability in industrial processes.\n\nThe document titled Ammonium Bisulphite Nickel examines the properties and applications of ammonium bisulphite nickel in various industrial processes. This compound, known for its high purity and stability, plays a crucial role in the production of nickel-based products. The research delves into the chemical composition and reactions involving ammonium bisulphite nickel, shedding light on its significance in the metallurgical sector.",
+      },
+      {
+        type: "",
+        title: "Available for Delivery & Pick up",
+        sub: "Available for Delivery & Pick up",
+        properties: [
+          {
+            label: "Purchasing Options for Packaging",
+            value:
+              "Details are available upon request. Customizable options may be available. Please inquire about the options.",
+          },
+          {
+            label: "CAS",
+            value: "10192-30-0 (Base Component)",
+          },
+          {
+            label: "Appearance",
+            value:
+              "Pale green to yellowish solution, depending on nickel content",
+          },
+          {
+            label: "Odor",
+            value: "Mild sulfurous odor",
+          },
+          {
+            label: "Solubility",
+            value: "Fully soluble in water",
+          },
+          {
+            label: "pH",
+            value: "Acidic (typically 3.5 – 5.0)",
+          },
+          {
+            label: "Density",
+            value: "Varies by formulation; approx. 1.25 – 1.30 g/cm³",
+          },
+          {
+            label: "Stability",
+            value:
+              "Stable in sealed containers under controlled conditions; avoid prolonged air exposure",
+          },
+          {
+            label: "Corrosive Properties",
+            value:
+              "May exhibit corrosivity to unprotected metal surfaces and sensitive alloys",
+          },
+        ],
+      },
+      {
+        type: "",
+        title: "Other Names",
+        content:
+          "Nickel-Bisulphite Complex Solution\nNickel-Ammonium Bisulfite\nNickel Reducing Agent Blend",
+      },
+      {
+        type: "safety",
+        title: "Safety Considerations",
+        properties: [
+          {
+            label: "Skin & Eye Irritation",
+            value:
+              "Use appropriate PPE as contact may cause irritation or allergic reaction due to nickel",
+          },
+          {
+            label: "Inhalation Risk",
+            value:
+              "Mist or vapor may lead to respiratory discomfort; use local exhaust ventilation",
+          },
+          {
+            label: "Ingestion Hazard",
+            value: "Toxic if ingested; do not allow oral exposure",
+          },
+          {
+            label: "Reactivity Risk",
+            value:
+              "Avoid mixing with oxidizers, acids, and incompatible metals",
+          },
+          {
+            label: "Storage",
+            value:
+              "Store in a cool, well-ventilated facility, protected from light and heat",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ammonium-bisulphite-cobalt",
+    name: "Ammonium Bisulphite Cobalt",
+    description:
+      "Ammonium Bisulphite Cobalt is a specialized chemical solution containing cobalt ions, designed for applications in catalyst systems, electronics, and electroplating. It offers enhanced redox performance and is frequently used in petrochemical and gas treatment processes.",
+    sections: [
+      {
+        type: "overview",
+        title:
+          "Ammonium Bisulphite Cobalt – Premium Oxygen Scavenger for Industrial Systems",
+        content:
+          "Ammonium Bisulphite Cobalt is a high-performance oxygen scavenger chemical designed for industries requiring advanced corrosion protection. Formulated with cobalt as a catalyst, it enhances the oxygen removal rate, making it highly effective for boiler feedwater treatment, oil & gas systems, and closed-loop water cycles.\n\nThis specialised blend is widely used across industrial plants in Australia to protect pipelines, heaters, and tanks from oxygen-induced deterioration. Its efficiency as a corrosion inhibitor makes it a reliable choice for critical operations demanding high purity and rapid oxygen reduction.",
+      },
+      {
+        type: "",
+        title: "What Is Ammonium Bisulphite Cobalt?",
+        content:
+          "Ammonium Bisulphite Cobalt is a modified solution of ammonium bisulphite (NH₄HSO₃), containing trace amounts of cobalt salt as a catalyst. This results in faster oxygen scavenging reactions and higher stability in feedwater systems. In American usage, it may be referred to as ammonium bisulfite (US spelling).\n\nThe product typically appears as a pale yellow to amber liquid with concentration levels ranging from 40% to 70%. It is water-soluble, reactive, and engineered to meet demanding industrial conditions.",
+      },
+      {
+        type: "",
+        title: "Key Industrial Applications",
+        content:
+          "As a rapid-response oxygen scavenger chemical, Ammonium Bisulphite Cobalt is crucial in environments where dissolved oxygen must be eliminated efficiently. Its primary uses include:\n\nInjection into boiler feedwater treatment systems to prevent rust and metal fatigue.\nCorrosion prevention in oil refineries, offshore drilling rigs, and petrochemical facilities, acting as a powerful corrosion inhibitor.\nApplicable in pulp and paper processing, especially where bleaching requires precise oxygen control.\n\nCompared to other compounds, its formulation highlights the distinction between sulphite vs bisulphite, with the bisulphite variant providing controlled reactivity and better solubility for industrial dosing.",
+      },
+      {
+        type: "",
+        title: "Why Choose Us as Your Supplier?",
+        content:
+          "As a reliable ammonium bisulphite supplier Australia, we offer this cobalt-enhanced solution in bulk volumes suitable for commercial-scale operations. Our product is backed by technical documentation, prompt delivery, and safe packaging solutions tailored to your application.\n\nPackaging options include IBCs, drums, and custom configurations. To discuss your exact needs, request a quote here.",
+      },
+      {
+        type: "safety",
+        title: "Safe Handling & Storage",
+        content:
+          "Handle with care using gloves, eye protection, and appropriate PPE. Ensure adequate ventilation when using. Avoid exposure to acids to prevent decomposition. Understanding the chemistry of sulphite vs bisulphite compounds can help determine the correct chemical for your system.\n\nFor detailed product handling protocols and documentation, visit the SDS request page.",
+      },
+      {
+        type: "",
+        title: "Buy Ammonium Bisulphite Cobalt in Australia",
+        content:
+          "Whether you require pick-up or Australia-wide delivery, we offer fast dispatch and expert support for bulk chemical supply. Our Ammonium Bisulphite Cobalt is ideal for industries that value performance, stability, and compliance.\n\nContact us to inquire about your packaging and bulk requirements today.",
+      },
+      {
+        type: "",
+        title: "✅ Additional Product Details",
+        properties: [
+          {
+            label: "CAS Number",
+            value: "10102-40-6",
+          },
+          {
+            label: "Appearance",
+            value: "Pale yellow to amber liquid",
+          },
+          {
+            label: "Solubility",
+            value: "Fully soluble in water",
+          },
+          {
+            label: "Density",
+            value: "Approx. 1.3–1.4 g/cm³ (varies with concentration)",
+          },
+          {
+            label: "pH",
+            value: "Slightly acidic (3.5–5.5)",
+          },
+          {
+            label: "Stability",
+            value: "Stable at room temperature; degrades at high heat",
+          },
+          {
+            label: "Safety",
+            value:
+              "Use in ventilated areas; avoid inhalation and skin contact; refer to SDS for full handling guide",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sulfuric-acid-solutions",
+    name: "Sulfuric Acid Solutions 60%, 93%, 98%",
+    description:
+      "Sulfuric Acid Solutions, available in 60%, 93%, and 98% concentrations, are versatile and highly corrosive liquids essential across numerous industries. These clear to slightly yellow solutions are widely utilized in the production of fertilizers, chemicals, and detergents, as well as in petroleum refining, metal processing (such as pickling and electroplating), and water treatment applications. Their strong acidic, oxidizing, and dehydrating properties make them indispensable as catalysts and reactants in a vast array of industrial and chemical synthesis processes, including the manufacturing of explosives, dyes, pigments, and in lead-acid batteries.",
+    sections: [
+      {
+        type: "overview",
+        title: "Sulfuric Acid Solutions – 60%, 93%, and 98%",
+        content:
+          "We supply sulfuric acid in 60%, 93%, and 98% strengths. These are industrial grades, used in manufacturing, water treatment, mining, and chemical processing. We deliver across Australia.",
+      },
+      {
+        type: "",
+        title: "What Is It?",
+        content:
+          'Sulfuric acid (H₂SO₄) is a strong, corrosive acid. People have called it "oil of vitriol" for centuries. It\'s one of the most used industrial chemicals in the world. It looks clear or slightly yellow and has a sharp smell.',
+      },
+      {
+        type: "",
+        title: "Concentration Grades We Offer",
+        content:
+          "60% Solution:\nThis is a mid-strength option. It's common in wastewater treatment, pH adjustment, and some chemical processes. It's easier to handle than stronger acids. It's usually clear or light yellow and thick like syrup.\n\n93% Solution:\nThis is standard for most industrial uses. It's used to make fertiliser, refine oil, and in battery acid. It's strong but still manageable in typical industrial settings.\n\n98% Solution:\nThis is the strongest and purest option. It's used in chemical manufacturing, explosives, and labs. It has very little water and a heavy, oily feel.",
+      },
+      {
+        type: "",
+        title: "Common Uses",
+        content:
+          "Industries use our sulfuric acid for things like:\n\nMaking chemicals\n\nTreating wastewater\n\nProcessing minerals in mining\n\nControlling pH levels\n\nBenefits include:\n\nHigh reactivity for faster processing\n\nReliable performance in industrial systems\n\nBulk supply options to cut costs",
+      },
+      {
+        type: "",
+        title: "Why Buy from Us?",
+        content:
+          "We supply quality sulfuric acid in Australia with:\n\nConsistent purity\n\nCompliance with local standards\n\nDrums, IBCs, or bulk delivery\n\nFast shipping and local pickup options\n\n👉 Request a Quote",
+      },
+      {
+        type: "safety",
+        title: "Packaging and Delivery Info",
+        content:
+          "CAS Number: 7664-93-9\n\nPackaging: Drums, IBCs, or bulk tankers\n\nStorage: Keep in a cool, dry, acid-safe area\n\nHandling: Wear proper safety gear; avoid contact with metals and organic stuff\n\nDelivery: Fast and flexible options across Australia\n\n👉 Request SDS",
+      },
+      {
+        type: "",
+        title: "Order Sulfuric Acid in Australia",
+        content:
+          "Get 60%, 93%, or 98% sulfuric acid from a reliable Australian supplier. We offer safe packaging, fast delivery, and good service.\n\n👉 Contact Us to get a quick quote.",
+      },
+    ],
+  },
+  {
+    slug: "ferric-chloride-40-42",
+    name: "Ferric chloride – 40%, 42%",
+    description:
+      "Ferric Chloride – High-Purity Options for Industrial Use. Ferric chloride is a chemical used in many industries. It comes in 40% and 42% solutions and works well for things like water treatment, electronics, and metal processing. We supply high-quality ferric chloride that's reliable for both regular and heavy-duty work.",
+    sections: [
+      {
+        type: "overview",
+        title: "Ferric Chloride – High-Purity Options for Industrial Use",
+        content:
+          "Ferric chloride is a chemical used in many industries. It comes in 40% and 42% solutions and works well for things like water treatment, electronics, and metal processing. We supply high-quality ferric chloride that's reliable for both regular and heavy-duty work.",
+      },
+      {
+        type: "",
+        title: "What is it?",
+        content:
+          "Ferric chloride (FeCl₃) is an inorganic compound. In liquid form, it's dark brown or yellowish. People also call it Iron(III) chloride. It dissolves easily in water and produces hydrochloric acid. It's known for strong oxidizing properties and is used in many industrial jobs.",
+      },
+      {
+        type: "",
+        title: "Concentration Options",
+        content:
+          "Ferric Chloride 40% Solution\nThe 40% solution is common in:\n\nWater treatment plants, to help remove impurities\n\nPCB (printed circuit board) manufacturing, for etching\n\nIndustrial wastewater treatment, to remove heavy metals\n\nKey Details:\n\nColour: Dark brown liquid\n\nSmell: Slightly acidic\n\nLooks: Clear or murky, depends on storage\n\nThis option is easy to handle and works well for regular use.\n\nFerric Chloride 42% Solution\nThe 42% solution is stronger and used when more power is needed, like:\n\nAdvanced PCB production, for quicker etching\n\nMetal surface treatment, to reduce corrosion\n\nLarge-scale water purification, to improve clarity\n\nKey Details:\n\nColour: Dark brown liquid\n\nSmell: Stronger acidic smell\n\nLooks: Thicker than 40%\n\nIt's good for heavy-duty tasks and can cut down on how much you need to use.",
+      },
+      {
+        type: "",
+        title: "Where is it used?",
+        content:
+          "Industries use ferric chloride for:\n\nMaking water clearer\n\nEtching circuit boards\n\nProtecting metal surfaces\n\nMany other industrial processes",
+      },
+      {
+        type: "",
+        title: "Why Buy From Us",
+        content:
+          "Every batch is tested\n\nMeets Australian safety rules\n\nFlexible packaging (bulk, IBCs, drums)\n\nDelivery across Australia\n\nQuick customer support\n\n📎 Request a Quote",
+      },
+      {
+        type: "safety",
+        title: "Storage, Delivery & Safety",
+        content:
+          "CAS Number: 7705-08-0\n\nStorage: Keep in a cool, well-ventilated place\n\nHandling: Wear protective gear, it's corrosive\n\nDelivery: Australia-wide delivery or local pickup\n\n📎 Request SDS",
+      },
+      {
+        type: "",
+        title: "Ready to Order?",
+        content:
+          "We supply both 40% and 42% ferric chloride for industrial use. Get reliable supply, flexible packaging, and good prices.\n\n📎 Contact us to order.",
+      },
+    ],
+  },
 ];
