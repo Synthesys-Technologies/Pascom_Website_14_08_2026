@@ -15,22 +15,20 @@ const featuredProducts = [
     id: 1,
     category: "Featured Solutions",
     title: "Acetic acid 90%",
-    image:
-      "https://pascom.com.au/wp-content/uploads/2024/08/iStock-1278934193-1-768x513.jpg",
+    image: "/products/A-90.png",
     meta: [
-      { label: "Primary Industry", value: "Oil & Gas, Mining" },
-      { label: "Format / Volume", value: "Liquid / Bulk IBCs" },
+      { label: "Primary Industry", value: "Chemical Manufacturing" },
+      { label: "Grade Standard", value: "Industrial Grade" },
     ],
   },
   {
     id: 2,
     category: "Industrial Supply",
     title: "Alcohol gel hand sanitizer",
-    image:
-      "https://pascom.com.au/wp-content/uploads/2024/06/pexels-piotr-arnoldes-7862031-6109677-scaled.jpg",
+    image: "/products/hand-gel.jpg",
     meta: [
-      { label: "Primary Industry", value: "Water Treatment" },
-      { label: "Grade Standard", value: "Technical & Purified" },
+      { label: "Primary Industry", value: "Healthcare & Hygiene" },
+      { label: "Product Type", value: "Alcohol-Based Hand Sanitizer" },
     ],
   },
 ];
@@ -44,7 +42,7 @@ export default function FeaturedProducts() {
       if (!cardsRef.current) return;
 
       const cards = Array.from(
-        cardsRef.current.querySelectorAll<HTMLElement>(".featured-card")
+        cardsRef.current.querySelectorAll<HTMLElement>(".featured-card"),
       );
 
       // =========================================
@@ -64,7 +62,7 @@ export default function FeaturedProducts() {
             start: "top 75%",
             once: true,
           },
-        }
+        },
       );
 
       // =========================================
@@ -79,13 +77,12 @@ export default function FeaturedProducts() {
 
         // 2. Attach hover logic
         cards.forEach((card, index) => {
-          
           card.addEventListener("mouseenter", () => {
             gsap.to(cards[0], {
               width: index === 0 ? "60%" : "40%",
               duration: 0.8,
               ease: "expo.out",
-              overwrite: "auto", 
+              overwrite: "auto",
             });
 
             gsap.to(cards[1], {
@@ -119,7 +116,6 @@ export default function FeaturedProducts() {
       mm.add("(max-width: 1023px)", () => {
         gsap.set(cards, { width: "100%" });
       });
-
     }, sectionRef);
 
     return () => ctx.revert();
